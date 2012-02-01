@@ -1,0 +1,30 @@
+.container {
+	width: 600px;
+}
+.mainContent {
+	border-radius: 10px; border: thick solid rgb(127, 129, 171); background-color: rgb(214, 216, 247);
+}
+.registerRegion {
+	margin: 15px; border-radius: 10px; border: thick solid rgb(117, 153, 169); width: 80%; background-color: rgb(214, 238, 247);
+}
+.joinText {
+	margin: 0px; color: orange;
+}
+.textLayout {
+	margin: 20px 10px 5px; color: rgb(117, 153, 169); font-size: 21px; font-weight: bold;
+}
+.registerTextEntry {
+	border-radius: 7px; border: 0px currentColor; left: 200px; width: 330px; height: 24px; position: absolute;
+}
+.loginTextEntry {
+	margin: 5px 0px 0px 5px; border-radius: 5px; border: 2px solid rgb(127, 129, 171); width: 140px;
+}
+.registerText {
+	padding: 0px 20px; text-align: left; font-size: 20px;
+}
+.homeButtons {
+	margin: 4px 8px 8px; border-radius: 3px; border: 1px solid rgb(0, 0, 0); width: 70px; color: rgb(238, 238, 238); font-family: "Times New Roman"; font-size: 16px; box-shadow: 1px 1px 0px 0px #888888; background-color: rgb(69, 158, 166);
+}
+.bottomLinkRegion {
+	width: 600px;
+}
