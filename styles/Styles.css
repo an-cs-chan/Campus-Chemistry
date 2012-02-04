@@ -14,7 +14,7 @@
 	margin: 20px 10px 5px; color: rgb(117, 153, 169); font-size: 21px; font-weight: bold;
 }
 .registerTextEntry {
-	border-radius: 7px; border: 0px currentColor; left: 200px; width: 330px; height: 24px; position: absolute;
+	border-radius: 7px; border: 0px; left: 200px; width: 330px; height: 24px; position: absolute;
 }
 .loginTextEntry {
 	margin: 5px 0px 0px 5px; border-radius: 5px; border: 2px solid rgb(127, 129, 171); width: 140px;
