@@ -1,30 +1,120 @@
 .container {
 	width: 600px;
 }
+
 .mainContent {
-	border-radius: 10px; border: thick solid rgb(127, 129, 171); background-color: rgb(214, 216, 247);
+	border-radius: 10px; 
+	border: thick solid rgb(127, 129, 171); 
+	background-color: rgb(214, 216, 247);
 }
+
 .registerRegion {
-	margin: 15px; border-radius: 10px; border: thick solid rgb(117, 153, 169); width: 80%; background-color: rgb(214, 238, 247);
+	margin: 15px;
+	border-radius: 10px; 
+	border: thick solid rgb(117, 153, 169); 
+	width: 80%;
+	background-color: rgb(214, 238, 247);
 }
+
 .joinText {
-	margin: 0px; color: orange;
+	margin: 0px; 
+	color: orange;
 }
+
 .textLayout {
-	margin: 20px 10px 5px; color: rgb(117, 153, 169); font-size: 21px; font-weight: bold;
+	margin: 20px 10px 5px; 
+	color: rgb(117, 153, 169); 
+	font-size: 21px; 
+	font-weight: bold;
 }
+
 .registerTextEntry {
-	border-radius: 7px; border: 0px currentColor; left: 200px; width: 330px; height: 24px; position: absolute;
+	border-radius: 7px; 
+	border: 0px; 
+	left: 200px; 
+	width: 315px; 
+	height: 24px; 
+	position: absolute;
 }
+
 .loginTextEntry {
-	margin: 5px 0px 0px 5px; border-radius: 5px; border: 2px solid rgb(127, 129, 171); width: 140px;
+	margin: 5px 0px 0px 5px; 
+	border-radius: 5px; 
+	border: 2px solid rgb(127, 129, 171); 
+	width: 140px;
 }
+
 .registerText {
-	padding: 0px 20px; text-align: left; font-size: 20px;
+	padding: 0px 20px; 
+	text-align: left; 
+	font-size: 20px;
 }
+
 .homeButtons {
-	margin: 4px 8px 8px; border-radius: 3px; border: 1px solid rgb(0, 0, 0); width: 70px; color: rgb(238, 238, 238); font-family: "Times New Roman"; font-size: 16px; box-shadow: 1px 1px 0px 0px #888888; background-color: rgb(69, 158, 166);
+	border-radius: 3px; 
+	border: 1px solid rgb(0, 0, 0); 
+	width: 70px; 
+	color: rgb(238, 238, 238); 
+	font-family: "Times New Roman"; 
+	font-size: 16px; 
+	box-shadow: 1px 1px 0px 0px #888888; 
+	background-color: rgb(69, 158, 166);
+	padding: 1px 10px 1px 10px;
 }
+
 .bottomLinkRegion {
 	width: 600px;
+}
+
+#signUpButton {
+    text-decoration:none;
+}
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+  opacity: 0.6;
+}
+  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+
+#boxes #dialog {
+  width:375px; 
+  height:203px;
+  padding:10px;
+  background-color:#ffffff;
+}
+
+.formValidator:focus {
+    transform: scale(1.05);
+}
+
+/* The interesting bit */
+
+.formValidator:required {
+    background:url("../images/asterisk_orange.png") no-repeat 292px 4px;
+    background-color:white;                   
+}
+
+.formValidator:valid {
+    background:url("../images/tick.png") no-repeat 292px 6px;         
+    background-color:white;     
+}       
+
+.formValidator:focus:invalid {
+    background:url("../images/cancel.png") no-repeat 292px 4px;                       
+    background-color:white;     
 }
