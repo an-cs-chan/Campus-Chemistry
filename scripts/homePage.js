@@ -1,18 +1,59 @@
-$(document).ready(function() {  
+$(document).ready(function() { 
 
-    $("#signUpButton").click(function() {
-        //Gather the information from E-Mail and Password and Confirm
-        
+    //This function overrides the default form behavior so we can do validation
+    $('#registerForm').submit(function() 
+    {
         var passwordInput = $("#passwordInput").val()  
         var passwordConfim = $("#pwConfirmInput").val();
         var email = $("#emailInput").val();
-               
-        //if(passwordInput != passwordConfim)
-        //{
-        //    alert("Passwords do not match");
-        //}
+          
+        //Passwords okay?      
+        if(passwordInput != passwordConfim)
+        {
+            //Show error
+            $("#warningArea").show("fast");
+            $("#warningArea").text("Passwords do not match");
+        }
+        else
+        {
+            //Hide error and perform normal form action
+            $("#warningArea").hide("fast");
+            
+            //Send our POST request
+            $.post({
+                "python/register.py",
+                "email="+email+"&password="+passwordComfirm,
+                function(data)
+                {
+                    alert(data);
+                   //Process returned data here
+                }, "json";
+            });
+        }
+        
+        return false;
     });
-
+        
+    //This function overrides the default form behavior so we can do validation
+    $('#loginForm').submit(function() 
+    {
+        var email = $("#loginEmail").val()  
+        var password = $("#loginPassword").val();
+       
+        //Send our POST request
+        $.post({
+            "python/login.py",
+            "email="+email+"&password="+password,
+            function(data)
+            {
+                alert(data);
+               //Process returned data here
+            }, "json";
+        });
+        
+        return false;
+    });
+        
     //select all the a tag with name equal to modal
     $('.modalDialog').click(function(e) {
         //Cancel the link behavior

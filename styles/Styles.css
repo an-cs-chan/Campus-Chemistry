@@ -28,6 +28,17 @@
 	font-weight: bold;
 }
 
+#warningArea
+{
+    margin: 20px 10px 5px; 
+    color: rgb(117, 153, 169); 
+    font-size: 16px; 
+    background-color: red;
+    color: white;
+    border-radius: 2px;
+    text-align:center;
+}
+
 .registerTextEntry {
 	border-radius: 7px; 
 	border: 0px; 
@@ -96,10 +107,6 @@
   height:203px;
   padding:10px;
   background-color:#ffffff;
-}
-
-.formValidator:focus {
-    transform: scale(1.05);
 }
 
 /* The interesting bit */

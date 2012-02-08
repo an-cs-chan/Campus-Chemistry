@@ -7,31 +7,33 @@
         <script type="text/javascript" language="JavaScript" src="scripts/homePage.js"></script>
     </head>
     <body>
-        <div class="container">
-            <div style="margin: 10px 10px 7px; text-align: center">
-                <span style="left: 200px; color: rgb(127, 129, 171); font-size: 21px;"> 
-                    User Name 
-                </span>
-                <span style="left: 200px;"> 
-                    <input class="loginTextEntry" type="text" required> 
-                </span>
-                <span style="left: 360px; color: rgb(127, 129, 171); font-size: 21px;"> 
-                    Password  
-                </span>                
-                <span style="left: 360px;"> 
-                    <input class="loginTextEntry" type="password" required> 
-                </span>
-                <span align="right" style="padding:10px;">
-                    <a class="homeButtons">Log In</a>
-                </span>
-            </div>
+        <div class="container">       
+            <form id="loginForm" name="login">           
+                <div style="margin: 10px 10px 7px; text-align: center">
+                    <span style="left: 200px; color: rgb(127, 129, 171); font-size: 21px;"> 
+                        User Name 
+                    </span>
+                    <span style="left: 200px;"> 
+                        <input id="loginEmail" class="loginTextEntry" type="email" required> 
+                    </span>
+                    <span style="left: 360px; color: rgb(127, 129, 171); font-size: 21px;"> 
+                        Password  
+                    </span>                
+                    <span style="left: 360px;"> 
+                        <input id="loginPassword" class="loginTextEntry" type="password" required> 
+                    </span>
+                    <span align="right">
+                        <input type="submit" id="loginButton" class="homeButtons" value="Log In" />
+                    </span>
+                </div>
+            </form>
             <div class="mainContent" align="center">
                 <h1 style="color: rgb(127, 129, 171); font-size: 40px;"> 
                     Campus Chemistry 
                 </h1>
                 <img alt="logo" src="images/Logo.png">
                 <h2 style="color: rgb(127, 129, 171);"> 
-                    "Once I think of slogan, this is where it will go!" 
+                    "Let us find your perfect mate." 
                 </h2>
                 <div class="registerRegion" align="center">
                     <h1 style="color: rgb(117, 153, 169); font-size: 28px;"> 
@@ -39,7 +41,7 @@
                         <span class="joinText"> Free to Join! </span> 
                     </h1>
                     <div style="width: 80%; height: 3px; background-color: rgb(117, 153, 169);"></div>
-                    <form name="register" action="python/register.py" method="post">
+                    <form id="registerForm" action="">
                         <div class="registerText">
                             <div class="textLayout">
                                 E-mail:   
@@ -47,12 +49,14 @@
                             </div>
                             <div class="textLayout"> 
                                 Password: 
-                                <input id="passwordInput" class="registerTextEntry" type="password" required />        
+                                <input id="passwordInput" class="registerTextEntry formValidator" type="password" required />        
                             </div>
                             <div class="textLayout"> 
                                 Confirm:  
-                                <input id="pwConfirmInput" class="registerTextEntry" type="password" required /> 
+                                <input id="pwConfirmInput" class="registerTextEntry formValidator" type="password" required /> 
                             </div>
+                            <div id="warningArea" style="display:none;">
+                            </div>                           
                             <div align="center" style="padding:10px;">
                                 <input type="submit" id="signUpButton" class="homeButtons" value="Sign Up" />
                             </div>
