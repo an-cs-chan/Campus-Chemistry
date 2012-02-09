@@ -1,0 +1,71 @@
+<head>
+	<title>Campus Chemistry</title>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+	<div id="topBar">
+		<div id="logo">Campus Chemistry</div>
+		<div class="tabs">
+			<ul>
+				<li class="selected">Quiz</li>
+				<li>Search</li>
+				<li>Profile</li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="mainContent">
+		<div class="contentHeader">Compatability Test</div>
+		<div id="quizPanelMain">
+			<div id="quizPanelLeft">
+				<div id="progressBox" class="secondaryContent">
+					<div class="contentHeader">Progress</div>
+					<div id="quizSubjects">
+						<div class="subjectLabel complete">subject 1</div>
+						<div class="subjectLabel inProgress">subject 2</div>
+						<div class="subjectLabel">subject 3</div>
+						<div class="subjectLabel">subject 4</div>
+					</div>
+				</div>
+			</div>
+			<div id="quizPanelRight">
+				<div class="secondaryContent">
+					<div id="progressBar">
+						&nbsp;<!-- Progress bar goes here -->&nbsp;
+					</div>
+				</div>
+				<div id="questionBox" class="secondaryContent">
+					<div class="contentHeader">
+						Question <span class="questionNumber">#</span>
+						<span id="progressPercentLabel">Progress: <span class="progressPercent">X</span>%</span>
+					</div>
+					<div id="questionContent">
+						<div id="questionText">This is a question about love, life, and the world as we know it. Its name is Excalibur.</div>
+						<div id="questionAnswers">
+							<div>
+								<input type="radio" name="quizQuestion" />&nbsp;<span>First answer</span>
+							</div>
+							<div>
+								<input type="radio" name="quizQuestion" />&nbsp;<span>Second answer</span>
+							</div>
+							<div>
+								<input type="radio" name="quizQuestion" />&nbsp;<span>Third answer</span>
+							</div>
+							<div>
+								<input type="radio"  name="quizQuestion"/>&nbsp;<span>Fourth answer</span>
+							</div> 
+						</div>
+						<div id="questionFooter">
+							<div id="prevQuestionButton" class="button">Prev</div>
+							<div id="nextQuestionButton" class="button">Next</div>
+							<div>Question <span class="questionNumber">X</span> of <span class="questionTotal">Y</span></div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</body>
