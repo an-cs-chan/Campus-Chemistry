@@ -7,38 +7,37 @@
         <script type="text/javascript" language="JavaScript" src="scripts/homePage.js"></script>
     </head>
     <body>
-        <div class="container">
-            <div style="margin: 10px 10px 7px; text-align: center">
-                <span style="left: 200px; color: rgb(127, 129, 171); font-size: 21px;"> 
-                    User Name 
+        <div class="homePanel">
+            <div class="loginPanel">
+                <span style="font-size: 21px;"> 
+                    User Name:
                 </span>
-                <span style="left: 200px;"> 
+                <span> 
                     <input class="loginTextEntry" type="text" required> 
                 </span>
-                <span style="left: 360px; color: rgb(127, 129, 171); font-size: 21px;"> 
-                    Password  
+                <span style="font-size: 21px;"> 
+                    Password:
                 </span>                
-                <span style="left: 360px;"> 
+                <span> 
                     <input class="loginTextEntry" type="password" required> 
                 </span>
-                <span align="right" style="padding:10px;">
-                    <a class="homeButtons">Log In</a>
+                <span>
+                    <a class="button">Log In</a>
                 </span>
             </div>
             <div class="mainContent" align="center">
-                <h1 style="color: rgb(127, 129, 171); font-size: 40px;"> 
+                <h1 style="font-size: 40px;"> 
                     Campus Chemistry 
                 </h1>
                 <img alt="logo" src="images/Logo.png">
-                <h2 style="color: rgb(127, 129, 171);"> 
+                <h2> 
                     "Once I think of slogan, this is where it will go!" 
                 </h2>
-                <div class="registerRegion" align="center">
-                    <h1 style="color: rgb(117, 153, 169); font-size: 28px;"> 
+                <div id="registerRegion" class="secondaryContent" align="center">
+                    <div class="contentHeader"> 
                         Register Now - 
-                        <span class="joinText"> Free to Join! </span> 
-                    </h1>
-                    <div style="width: 80%; height: 3px; background-color: rgb(117, 153, 169);"></div>
+                        <span class="joinNowText"> Free to Join! </span> 
+                    </div>
                     <form name="register" action="python/register.py" method="post">
                         <div class="registerText">
                             <div class="textLayout">
@@ -54,7 +53,7 @@
                                 <input id="pwConfirmInput" class="registerTextEntry" type="password" required /> 
                             </div>
                             <div align="center" style="padding:10px;">
-                                <input type="submit" id="signUpButton" class="homeButtons" value="Sign Up" />
+                                <input type="submit" id="signUpButton" class="button" value="Sign Up" />
                             </div>
                         </div>
                     </form>
