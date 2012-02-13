@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="styles/Styles.css">
 		<meta name="GENERATOR" content="MSHTML 9.00.8112.16440">
 		<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" language="JavaScript" src="scripts/search.js"></script>
 	</head>
 	<body>
 		<div style="float:left">
@@ -15,9 +16,11 @@
 			</span>
 		</div>
 		<div style="float:right; position:relative;">
-			<span id="userGreeting">Welcome Back first_name!
-				<input id="logoutButton" class="button" value="Log Out" type="button">
-			</span>			
+		    <form id="logoutForm">
+    			<span id="userGreeting">Welcome Back first_name!
+    				<input id="logoutButton" class="button" value="Log Out" type="submit" />
+    			</span>		
+			</form>	
 		</div>
 		</br>
 		</br>
@@ -26,7 +29,7 @@
 			<!--<div id="logo">Campus Chemistry</div>-->
 			<div class="tabs">
 				<ul>
-					<li>Quiz</li>
+					<li><a href="quiz.html" style="text-decoration:none">Quiz</a></li>
 					<li class="selected">Search</li>
 					<li>Profile</li>
 				</ul>
@@ -37,13 +40,8 @@
 			<div id="searchPanelMain">
 				<div id="searchPanelLeft">
 					<div id="advanceBox" class="secondaryContent">
-						<div class="contentHeader">Advance Search</div>
-						<div id="searchSubject"> 
-							<div class="advancedPanel">								 		<span id="genderLabel"> Gender </span>
-								<input type="radio" name="genderBox" value="Male">&nbsp; 	<span id="genderLabel"> M 	   </span>
-								<input type="radio" name="genderBox" value="Female">&nbsp; 	<span id="genderLabel"> F 	   </span>
-								<input type="radio" name="genderBox" value="Both">&nbsp; 	<span id="genderLabel"> Both   </span>
-							</div>								
+						<div class="contentHeader">Advanced Search</div>
+						<div id="searchSubject"> 							
 							<div class="advancedPanel">
 								<span>Hair Color</span>
 								<select id="hairComboBox" class ="advancedComboBox">
@@ -90,7 +88,10 @@
 							<option> Ethnicity </option>
 						</select>
 					</div>
-					</br>
+					<div id="searchPanelMiddle">
+					    Showing: <span id="searchGender">Women</span> interested in <span id="searchPref">Men</span> - ages <span id="searchAgeMin">21</span> to <span id="searchAgeMatch">45</span>
+					    <a id="editButton">Edit</a>
+					</div>
 					<div id="searchPanelBottom">
 						<div class="userPanel">
 							<div id="displayUser" style="float:left;">
@@ -113,7 +114,7 @@
 										<img id="mailUser" src="images/envelope.jpg">
 									</div>
 									<div class="userAction">
-										<img id="likeUser" src="images/heart.jpg">
+										<img id="likeUser" src="images/heart.png">
 									</div>
 								</div>	
 							</div>
@@ -137,7 +138,7 @@
 										<img id="mailUser" src="images/envelope.jpg">
 									</div>
 									<div class="userAction">
-										<img id="likeUser" src="images/heart.jpg">
+										<img id="likeUser" src="images/heart.png">
 									</div>
 								</div>	
 							</div>
@@ -163,7 +164,7 @@
 										<img id="mailUser" src="images/envelope.jpg">
 									</div>
 									<div class="userAction">
-										<img id="likeUser" src="images/heart.jpg">
+										<img id="likeUser" src="images/heart.png">
 									</div>
 								</div>	
 							</div>
@@ -187,7 +188,7 @@
 										<img id="mailUser" src="images/envelope.jpg">
 									</div>
 									<div class="userAction">
-										<img id="likeUser" src="images/heart.jpg">
+										<img id="likeUser" src="images/heart.png">
 									</div>
 								</div>	
 							</div>
@@ -213,7 +214,7 @@
 										<img id="mailUser" src="images/envelope.jpg">
 									</div>
 									<div class="userAction">
-										<img id="likeUser" src="images/heart.jpg">
+										<img id="likeUser" src="images/heart.png">
 									</div>
 								</div>	
 							</div>
@@ -237,7 +238,7 @@
 										<img id="mailUser" src="images/envelope.jpg">
 									</div>
 									<div class="userAction">
-										<img id="likeUser" src="images/heart.jpg">
+										<img id="likeUser" src="images/heart.png">
 									</div>
 								</div>	
 							</div>

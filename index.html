@@ -8,23 +8,25 @@
     </head>
     <body>
         <div class="homePanel">
-            <div class="loginPanel">
-                <span style="font-size: 21px;"> 
-                    User Name:
-                </span>
-                <span> 
-                    <input class="loginTextEntry" type="text" required> 
-                </span>
-                <span style="font-size: 21px;"> 
-                    Password:
-                </span>                
-                <span> 
-                    <input class="loginTextEntry" type="password" required> 
-                </span>
-                <span>
-                    <a class="button">Log In</a>
-                </span>
-            </div>
+            <form id="loginForm">
+                <div class="loginPanel">
+                    <span style="font-size: 21px;"> 
+                        User Name:
+                    </span>
+                    <span> 
+                        <input id="loginEmail" class="loginTextEntry" type="text" required> 
+                    </span>
+                    <span style="font-size: 21px;"> 
+                        Password:
+                    </span>                
+                    <span> 
+                        <input id="loginPassword" class="loginTextEntry" type="password" required> 
+                    </span>
+                    <span>
+                        <input type="submit" id="loginButton" class="button" value="Log In" />
+                    </span>
+                </div>
+            </form>
             <div class="mainContent" align="center">
                 <h1 style="font-size: 40px;"> 
                     Campus Chemistry 
@@ -38,7 +40,7 @@
                         Register Now - 
                         <span class="joinNowText"> Free to Join! </span> 
                     </div>
-                    <form id="registerForm" action="">
+                    <form id="registerForm">
                         <div class="registerText">
                             <div class="textLayout">
                                 E-mail:   
@@ -72,7 +74,7 @@
         <div id="boxes">
             <div id="dialog" class="window">
                 Thank You For Registering!
-                <a href="#"class="close"/>Close it</a>
+                <a href="#"class="close">Close it</a>
             </div>
             <!-- Mask to cover the whole screen -->
             <div id="mask"></div>
