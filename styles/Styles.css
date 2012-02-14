@@ -72,6 +72,10 @@ body {
 	margin:0;
 }
 
+.tabs a {
+	text-decoration: none;
+}
+
 .tabs li {
 	display: inline;
 	margin-right: 10px;
