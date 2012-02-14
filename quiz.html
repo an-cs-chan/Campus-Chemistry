@@ -2,6 +2,7 @@
 	<title>Campus Chemistry</title>
 	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
 	<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
+	<script type='text/javascript' src='scripts/quiz.js'></script>
 </head>
 <body>
 	<div id="topBar">
@@ -21,45 +22,40 @@
 			<div id="quizPanelLeft">
 				<div id="progressBox" class="secondaryContent">
 					<div class="contentHeader">Progress</div>
-					<div id="quizSubjects">
-						<div class="subjectLabel complete">subject 1</div>
-						<div class="subjectLabel inProgress">subject 2</div>
-						<div class="subjectLabel">subject 3</div>
-						<div class="subjectLabel">subject 4</div>
-					</div>
+					<div id="quizSubjects"></div>
 				</div>
 			</div>
 			<div id="quizPanelRight">
 				<div class="secondaryContent">
 					<div id="progressBar">
-						&nbsp;<!-- Progress bar goes here -->&nbsp;
+						<div>&nbsp;</div>
 					</div>
 				</div>
 				<div id="questionBox" class="secondaryContent">
 					<div class="contentHeader">
-						Question <span class="questionNumber">#</span>
-						<span id="progressPercentLabel">Progress: <span class="progressPercent">X</span>%</span>
+						Question <span class="questionNumber"></span>
+						<span id="progressPercentLabel">Progress: <span class="progressPercent"></span>%</span>
 					</div>
 					<div id="questionContent">
-						<div id="questionText">This is a question about love, life, and the world as we know it. Its name is Excalibur.</div>
+						<div id="questionText"></div>
 						<div id="questionAnswers">
-							<div>
-								<input type="radio" name="quizQuestion" />&nbsp;<span>First answer</span>
+							<div class="questionAnswer">
+								<input id="answer0" type="radio" name="questionAnswer" value="0" /><label for="answer0"></label>
 							</div>
-							<div>
-								<input type="radio" name="quizQuestion" />&nbsp;<span>Second answer</span>
+							<div class="questionAnswer">
+								<input id="answer1" type="radio" name="questionAnswer" value="1" /><label for="answer1"></label>
 							</div>
-							<div>
-								<input type="radio" name="quizQuestion" />&nbsp;<span>Third answer</span>
+							<div class="questionAnswer">
+								<input id="answer2" type="radio" name="questionAnswer" value="2" /><label for="answer2"></label>
 							</div>
-							<div>
-								<input type="radio"  name="quizQuestion"/>&nbsp;<span>Fourth answer</span>
+							<div class="questionAnswer">
+								<input id="answer3" type="radio" name="questionAnswer" value="3" /><label for="answer3"></label>
 							</div> 
 						</div>
 						<div id="questionFooter">
-							<div id="prevQuestionButton" class="button">Prev</div>
-							<div id="nextQuestionButton" class="button">Next</div>
-							<div>Question <span class="questionNumber">X</span> of <span class="questionTotal">Y</span></div>
+							<div id="prevQuestionButton" class="button disabled">Prev</div>
+							<div id="nextQuestionButton" class="button disabled">Next</div>
+							<div>Question <span class="questionNumber"></span> of <span class="questionTotal"></span></div>
 							<div class="clearfix"></div>
 						</div>
 					</div>
