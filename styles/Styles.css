@@ -203,9 +203,65 @@ body {
     background-color:white;     
 }
 
+/*--------------*/
+/* PROFILE PAGE */
+/*--------------*/
+#profilePicture{
+	width: 150px;
+	height: 200px;
+	display: block;
+	float: center;
+	margin: 10px;
+}
 
+#profilePanelLeft{
+	width: 30%;
+	margin: 20px;
+}
 
+#profilePanelRight{
+	width: 60%;
+	margin:20px;
+}
 
+#uploadPhoto{
+	margin:10px;
+}
+
+.profileTextEntry {
+	border-radius: 7px; 
+	border: 0px; 
+	left: 120px; 
+	right: 0px;
+	height: 24px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.profileFullText{
+	border-radius: 7px; 
+	border: 0px; 
+	left: 120px; 
+	right: 0px;
+	height: 24px;
+	position:inherit;
+	margin:20px;
+}
+
+#saveProfile{
+	display:block;
+	float:right;
+	margin:20px;
+}
+
+.user_fact{
+	margin-top:5px;
+}
+
+#user_fullname{
+	font-size:x-large;
+	font-family:"Rage Italic";
+}
 /*-----------*/
 /* QUIZ PAGE */
 /*-----------*/
