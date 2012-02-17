@@ -12,7 +12,7 @@
 	<body>
 		<div style="float:left">
 			<span style="font-size: 34px; color: rgb(127,129, 171)">Campus Chemistry
-				<img style="width: 35px; height: 50px" src="images/Logo.png">
+				<img style="width: 35px; alt="logo" height: 50px" src="images/Logo.png">
 			</span>
 		</div>
 		<div style="float:right; position:relative;">
@@ -75,12 +75,10 @@
 				</div>
 				<div id="searchPanelRight">
 					<div id="searchPanelTop">
-						<img id="displayGrid" 		class="searchTopOptions" src="images/grid.png">
-						<img id="displayVertical" 	class="searchTopOptions" src="images/vertical.png">
 						<span class="searchTopLabel">Display:</span>
-						<img id="show10Result" 		class="searchTopOptions" src="images/show10.png">
-						<img id="show25Result" 		class="searchTopOptions" src="images/show25.png">
-						<img id="show50Result" 		class="searchTopOptions" src="images/show50.png">
+                        <span class="searchTopOptions filterButton selectedFilter">10</span>
+                        <span class="searchTopOptions filterButton">15</span>
+                        <span class="searchTopOptions filterButton">20</span>
 						<span class="searchTopLabel">Sort By:</span>
 						<select id="sortComboBox" 	class="searchTopOptions">
 							<option> Age </option>
@@ -89,159 +87,14 @@
 						</select>
 					</div>
 					<div id="searchPanelMiddle">
-					    Showing: <span id="searchGender">Women</span> interested in <span id="searchPref">Men</span> - ages <span id="searchAgeMin">21</span> to <span id="searchAgeMatch">45</span>
+						<form id="basicForm">
+					    Showing: <span id="searchGender">M</span> interested in <span id="searchPref">M</span> - ages <span id="searchAgeMin">21</span> to <span id="searchAgeMatch">45</span>
 					    <a id="editButton">Edit</a>
+					   </form>
 					</div>
 					<div id="searchPanelBottom">
-						<div class="userPanel">
-							<div id="displayUser" style="float:left;">
-								<img id="closeButton" src="images/close.png">
-								<img id="userPicture" src="images/test.png">
-								<div class="userInfoPanel">								
-									<div id="userNameLabel" class="userInfoLabel">
-										<span id="userNameText" class="userInfoText">Jae Man Lim</span>
-									</div>
-									</br>
-									<div id="userAgeLabel" class="userInfoLabel">
-										<span id="userAgeText" class="userInfoText">24</span>
-									</div>
-									</br>
-									<div id="userFacultyLabel" class="userInfoLabel">
-										<span id="userFacultyText" class="userInfoText">Computer Science</span>
-									</div>
-									</br>
-									<div class="userAction">
-										<img id="mailUser" src="images/envelope.jpg">
-									</div>
-									<div class="userAction">
-										<img id="likeUser" src="images/heart.png">
-									</div>
-								</div>	
-							</div>
-							<div id="displayUser" style="float:right;">
-								<img id="closeButton" src="images/close.png">
-								<img id="userPicture" src="images/test.png">
-								<div class="userInfoPanel">								
-									<div id="userNameLabel" class="userInfoLabel">
-										<span id="userNameText" class="userInfoText">Jae Man Lim</span>
-									</div>
-									</br>
-									<div id="userAgeLabel" class="userInfoLabel">
-										<span id="userAgeText" class="userInfoText">24</span>
-									</div>
-									</br>
-									<div id="userFacultyLabel" class="userInfoLabel">
-										<span id="userFacultyText" class="userInfoText">Computer Science</span>
-									</div>
-									</br>
-									<div class="userAction">
-										<img id="mailUser" src="images/envelope.jpg">
-									</div>
-									<div class="userAction">
-										<img id="likeUser" src="images/heart.png">
-									</div>
-								</div>	
-							</div>
-						</div>
-						<div class="userPanel">
-							<div id="displayUser" style="float:left;">
-								<img id="closeButton" src="images/close.png">
-								<img id="userPicture" src="images/test.png">
-								<div class="userInfoPanel">								
-									<div id="userNameLabel" class="userInfoLabel">
-										<span id="userNameText" class="userInfoText">Jae Man Lim</span>
-									</div>
-									</br>
-									<div id="userAgeLabel" class="userInfoLabel">
-										<span id="userAgeText" class="userInfoText">24</span>
-									</div>
-									</br>
-									<div id="userFacultyLabel" class="userInfoLabel">
-										<span id="userFacultyText" class="userInfoText">Computer Science</span>
-									</div>
-									</br>
-									<div class="userAction">
-										<img id="mailUser" src="images/envelope.jpg">
-									</div>
-									<div class="userAction">
-										<img id="likeUser" src="images/heart.png">
-									</div>
-								</div>	
-							</div>
-							<div id="displayUser" style="float:right;">
-								<img id="closeButton" src="images/close.png">
-								<img id="userPicture" src="images/test.png">
-								<div class="userInfoPanel">								
-									<div id="userNameLabel" class="userInfoLabel">
-										<span id="userNameText" class="userInfoText">Jae Man Lim</span>
-									</div>
-									</br>
-									<div id="userAgeLabel" class="userInfoLabel">
-										<span id="userAgeText" class="userInfoText">24</span>
-									</div>
-									</br>
-									<div id="userFacultyLabel" class="userInfoLabel">
-										<span id="userFacultyText" class="userInfoText">Computer Science</span>
-									</div>
-									</br>
-									<div class="userAction">
-										<img id="mailUser" src="images/envelope.jpg">
-									</div>
-									<div class="userAction">
-										<img id="likeUser" src="images/heart.png">
-									</div>
-								</div>	
-							</div>
-						</div>		
-						<div class="userPanel">
-							<div id="displayUser" style="float:left;">
-								<img id="closeButton" src="images/close.png">
-								<img id="userPicture" src="images/test.png">
-								<div class="userInfoPanel">								
-									<div id="userNameLabel" class="userInfoLabel">
-										<span id="userNameText" class="userInfoText">Jae Man Lim</span>
-									</div>
-									</br>
-									<div id="userAgeLabel" class="userInfoLabel">
-										<span id="userAgeText" class="userInfoText">24</span>
-									</div>
-									</br>
-									<div id="userFacultyLabel" class="userInfoLabel">
-										<span id="userFacultyText" class="userInfoText">Computer Science</span>
-									</div>
-									</br>
-									<div class="userAction">
-										<img id="mailUser" src="images/envelope.jpg">
-									</div>
-									<div class="userAction">
-										<img id="likeUser" src="images/heart.png">
-									</div>
-								</div>	
-							</div>
-							<div id="displayUser" style="float:right;">
-								<img id="closeButton" src="images/close.png">
-								<img id="userPicture" src="images/test.png">
-								<div class="userInfoPanel">								
-									<div id="userNameLabel" class="userInfoLabel">
-										<span id="userNameText" class="userInfoText">Jae Man Lim</span>
-									</div>
-									</br>
-									<div id="userAgeLabel" class="userInfoLabel">
-										<span id="userAgeText" class="userInfoText">24</span>
-									</div>
-									</br>
-									<div id="userFacultyLabel" class="userInfoLabel">
-										<span id="userFacultyText" class="userInfoText">Computer Science</span>
-									</div>
-									</br>
-									<div class="userAction">
-										<img id="mailUser" src="images/envelope.jpg">
-									</div>
-									<div class="userAction">
-										<img id="likeUser" src="images/heart.png">
-									</div>
-								</div>	
-							</div>
+						<div id="resultsArea">
+							
 						</div>
 						<div id="resultFooter">
 							<input id="prevSearchButton" class="button" value="Prev" type="button">

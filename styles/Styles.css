@@ -381,6 +381,28 @@ body {
 /* SEARCH SORT0REGION  */
 /*---------------------*/
 
+.filterButton
+{
+    border-style:solid;
+    border-width:1px;
+    border-radius:3px;
+    border-color:#7f81ab;
+    padding: 5px 5px 5px 5px;
+    background-color: #fafafa;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.filterButton:hover
+{
+    background-color: #d5d8f7;
+}
+
+.selectedFilter
+{
+    background-color: #d5d8f7;
+}
+
 #searchPanelMiddle{
     color: rgb(127, 129, 171);
     font-size: 12px;

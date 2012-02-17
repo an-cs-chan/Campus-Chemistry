@@ -21,7 +21,7 @@ $(document).ready(function() {
                       
             //Send our POST request
             $.post(
-                "python/register.py",
+                "python/register.wsgi",
                 $("#registerForm").serialize(),
                 function(data)
                 {
