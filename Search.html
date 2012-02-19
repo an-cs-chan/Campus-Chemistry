@@ -5,9 +5,11 @@
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<title> Campus Chemistry </title>
 		<link rel="stylesheet" type="text/css" href="styles/Styles.css">
+		<link rel="stylesheet" type="text/css" href="styles/smartpaginator.css"></link>
 		<meta name="GENERATOR" content="MSHTML 9.00.8112.16440">
 		<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" language="JavaScript" src="scripts/search.js"></script>
+		<script type="text/javascript" language="JavaScript" src="scripts/smartpaginator.js"></script>
 	</head>
 	<body>
 		<div style="float:left">
@@ -74,38 +76,49 @@
 					</div>
 				</div>
 				<div id="searchPanelRight">
-					<div id="searchPanelTop">
-						<span class="searchTopLabel">Display:</span>
-                        <span class="searchTopOptions filterButton selectedFilter">10</span>
-                        <span class="searchTopOptions filterButton">15</span>
-                        <span class="searchTopOptions filterButton">20</span>
-						<span class="searchTopLabel">Sort By:</span>
-						<select id="sortComboBox" 	class="searchTopOptions">
-							<option> Age </option>
-							<option> Faculty </option>
-							<option> Ethnicity </option>
-						</select>
-					</div>
-					<div id="searchPanelMiddle">
-						<form id="basicForm">
-					    Showing: <span id="searchGender">M</span> interested in <span id="searchPref">M</span> - ages <span id="searchAgeMin">21</span> to <span id="searchAgeMatch">45</span>
-					    <a id="editButton">Edit</a>
-					   </form>
-					</div>
+					<form id="basicForm">
+						<div id="searchPanelTop">
+							<span class="searchTopLabel">Display:</span>
+	                        <span class="searchTopOptions filterButton selectedFilter">
+	                        	<img alt="small display" src="images/4x.png" />
+	                        </span>
+	                        <span class="searchTopOptions filterButton">
+	                        	<img alt="small display" src="images/2x.png" />	                        	
+	                        </span>			    
+                        	<span class="searchTopLabel">Sort By:</span>
+							<select id="sortComboBox" name="sort" class="searchTopOptions filterSearch">
+								<option name="User_Name"> Name </option>									
+								<option name="DOB"> Age </option>
+								<option name="Department"> Department </option>							
+							</select>
+							<select id="sortOrderComboBox" name="sortOrder" class="searchTopOptions filterSearch">
+								<option name="ASC"> ASC </option>
+								<option name="DESC"> DESC </option>
+							</select>	
+						</div>
+							<div id="searchPanelMiddle">
+							    <span>Showing: </span>	
+								<select name='gender' id='gender' class="filterSearch">
+									<option>Men</option>
+									<option>Women</option>
+									<option>Men/Women</option>							
+								</select>      
+								<span>Seeking: </span>    
+								<select name='orientation' id='seeking' class="filterSearch">
+									<option>Men</option>
+									<option selected="true">Women</option>
+									<option>Men/Women</option>		
+								</select>
+								<span>Ages: </span>
+								<input id='ageMin' name='minAge' value='18' min='1' max='99' type='number' class="filterSearch" style="width:45px" />
+								<span> to </span>
+								<input id='ageMax' name='maxAge' value='25' min='1' max='99' type='number' class="filterSearch" style="width:45px" />	
+					   		</div>
+					</form>
 					<div id="searchPanelBottom">
-						<div id="resultsArea">
-							
+						<div id="resultsArea">	
 						</div>
 						<div id="resultFooter">
-							<input id="prevSearchButton" class="button" value="Prev" type="button">
-							<span id="resultLabel">
-								Search Results
-							</span>
-							<input id="nextSearchButton" class="button" value="Next" type="button">
-							</br>
-							<span id="resultLabel">
-								(Showing 10 to 20 of 168)
-							</span>
 						</div>
 					</div>
 				</div>

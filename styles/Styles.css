@@ -343,7 +343,7 @@ body {
 
 #searchPanelLeft {
 	float: left;
-	width: 35%;	
+	width: 30%;	
 	padding: 5px;
 }
 
@@ -363,7 +363,7 @@ body {
 .advancedComboBox {
 	position: relative;
 	left: 10px;
-	width: 140px;
+	width: 100px;
 	color: rgb(117, 153, 169);
 	
 }
@@ -373,7 +373,7 @@ body {
 
 #searchPanelRight{
 	float: right;
-	width: 60%;
+	width: 65%;
 	margin: 10px 0px 0px 10px;	
 }
 
@@ -452,20 +452,26 @@ body {
 	color: rgb(127, 129, 171);
 }
 
+#sortOrderComboBox {
+	margin:12px 0px 0px 5px;
+	width: 80px;
+	color: rgb(127, 129, 171);
+}
+
 /*-----------------------*/
 /* SEARCH RESULT REGION  */
 /*-----------------------*/
 #searchPanelBottom {
 	background-color: white;
 	color: rgb(117, 153, 169);
-	min-height: 500px;
+	min-height: 480px;
 	padding: 15px 10px 10px 5px;
 	position: relative;
 	border-radius: 5px;
 }
 
-#displayUser {
-	margin: 5px 5px 5px 5px;
+.displayUser {
+	margin: 10px 10px 10px 10px;
 	color: rgb(117, 153, 169);
 	border-radius: 10px; 
 	border: thin solid rgb(117, 153, 169); 
@@ -475,21 +481,23 @@ body {
 	min-height: 120px;
 }
 
-#closeButton {
+.closeButton {
 	position: relative;
 	left: 53px;
 	top: -10px;	
+	cursor:pointer;
 }
 
 .userPicturePanel {
 	float: left;
 }
 
-#userPicture {
+.userPicture {
 	width: 32%;
 	min-height: 80px;	
 	float: left;
 	margin: 15px 10px 10px 15px;
+	cursor:pointer;	
 }
 
 .userInfoPanel {
@@ -550,4 +558,5 @@ body {
 	bottom: 20px;
 	left: 20px;
 	right: 20px;
+	margin: auto;
 }

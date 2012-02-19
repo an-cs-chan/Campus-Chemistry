@@ -1,4 +1,4 @@
-#!C:/Python27/python.exe
+#!/usr/local/bin/python
 
 import MySQLdb
 import cgi

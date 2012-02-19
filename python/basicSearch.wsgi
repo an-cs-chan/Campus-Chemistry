@@ -1,4 +1,4 @@
-#!C:/Python27/python.exe
+#!/usr/local/bin/python
 
 import MySQLdb
 import cgi
@@ -19,13 +19,42 @@ def application(environ, start_response):
     
     gender = form.getfirst('gender', 'empty')
     gender = cgi.escape(gender)
-    pref = form.getfirst('pref', 'empty')
+    pref = form.getfirst('orientation', 'empty')
     pref = cgi.escape(pref)
     minAge = form.getfirst('minAge', 'empty')
     minAge = cgi.escape(minAge)
     maxAge = form.getfirst('maxAge', 'empty')
     maxAge = cgi.escape(maxAge)
-        
+    sort = form.getfirst('sort', 'empty')
+    sort = cgi.escape(sort)
+    sortOrder = form.getfirst('sortOrder', 'empty')
+    sortOrder = cgi.escape(sortOrder)
+    
+    #Awful code that converts what we get into SQL parameters. Very dangerous for SQL injection
+    if sort == "Name":
+    	sort = 'User_Name'
+    
+    if sort == "Age":
+    	sort = 'DOB'   
+    
+    if gender == "Men":
+    	gender = "SEX = 'M'"
+    
+    if gender == "Women":
+    	gender = "SEX = 'F'"
+    
+    if gender == "Men/Women":
+    	gender = "SEX = 'F' OR SEX = 'M'"
+    
+    if pref == "Men":
+    	pref = "orientation = 'M'"
+    
+    if pref == "Women":
+    	pref = "orientation = 'F'"
+   
+    if pref == "Men/Women":
+    	pref = "orientation = 'F' OR orientation = 'M'"
+    	     
     #connect to the Database
     conn = MySQLdb.connect (host = "localhost",
                             user = "root",
@@ -33,7 +62,7 @@ def application(environ, start_response):
                             db = "campus chemistry")
     
     cursor = conn.cursor()
-    
+       
     #What we want to do: Take NOW and minus minBirthDate years and save it
     #then take NOW and minus maxBirthDate years and save it
     now = datetime.date.today()
@@ -42,11 +71,13 @@ def application(environ, start_response):
     maxAge = int(maxAge)
     
     #Takes todays date and minuses the years (365 * year) and spits out in proper format - yyyy-mm-dd
-    minBirthDate = (now - datetime.timedelta(minAge*365)).isoformat()
-    maxBirthDate = (now - datetime.timedelta(maxAge*365)).isoformat()
+    minBirthDate = (now - datetime.timedelta(maxAge*365)).isoformat()
+    maxBirthDate = (now - datetime.timedelta(minAge*365)).isoformat()
     
-    #Select the user_name, relationship type and martial status
-    cursor.execute("""SELECT User_Name, Department, Relationship_Type FROM user_profile WHERE SEX = %s AND DOB BETWEEN %s AND %s""", (gender,maxBirthDate,minBirthDate,))
+    
+    query = "SELECT User_Name, Department, Relationship_Type, User_ID FROM user_profile WHERE " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder 
+    
+    cursor.execute(query)
     rows = cursor.fetchall()
 
     output = json.dumps(rows)
