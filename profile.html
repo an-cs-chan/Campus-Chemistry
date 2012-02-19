@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+	
+<head>
+	<title>Campus Chemistry - Profile</title>
+	<link rel="stylesheet" type="text/css" href="styles/Styles.css" />
+	<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" language="JavaScript" src="scripts/profile.js"></script>
+</head>
+<body>
+	<div class="mainContent">		
+		
+		<div id="profilePanelLeft" class="secondaryContent">
+			<img src="media/alone.jpg" id="profilePicture"/>
+			<input type="submit" id="uploadPhoto" class="button" value="Upload Photo">
+		</div>
+		
+		<div id="profilePanelRight" class="homePanel">
+			<div id="user_fullname">Melissa Kendall</div>
+			
+			<input text id="tag_line" onclick="changeTagLine()" class="profileTextEntry" placeholder="Enter tag line here">
+			<div id="user_info">
+				<div id="seeking" class="user_fact">Seeking: Men (21-30)</div>
+				<div id="age" class="user_fact">Age: 21</div>
+				<div id="hair_color" class="user_fact">Hair Color: Brown</div>
+				<div id="faculty" class="user_fact">Faculty: Science</div>
+				<div id="department" class="user_fact">Department: Computer Science</div>	
+			</div>	
+		</div>
+		
+		<input text id="interests" onclick="changeInterests()" class="profileFullText" placeholder="Melissa's Interests" />	
+		
+		<div><input type="submit" id="saveProfile" class="button" value="Save" /></div>
+		
+	</div>
+	<div class="clearfix"></div>
+	<div class="bottomLinkRegion" align="center">
+        <p style="color: rgb(117, 153, 169); font-size: 16px;">     
+            About Us . Legal Information . Member Log In . Help. Online Safety
+        </p>
+    </div>
+
+</body>
+
