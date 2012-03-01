@@ -5,7 +5,7 @@ $(document).ready(function() {
     //var htmlStr = $('a#opener').live(html());
 	//alert("htmlStr");
 	
-(function($) {
+/*(function($) {
 	$.fn.ellipsis = function(enableUpdating){
 		var s = document.documentElement.style;
 		if (!('textOverflow' in s || 'OTextOverflow' in s)) {
@@ -47,20 +47,9 @@ $(document).ready(function() {
 		} else return this;
 	};
 })(jQuery);
+			*/
 			
-			
-	/*$('tbody tr[data-href]').addClass('clickable').click(function() { 
-			window.location = $(this).attr('data-href'); 
-		}).find('a').hover( function() { 
-			$(this).parents('tr').unbind('click'); 
-		}, function() { 
-			$(this).parents('tr').click( function() { 
-				window.location = $(this).attr('data-href'); 
-			}); 
-		}); */
-	                 
-
-    //This function overrides the default form behavior so we can do validation
+	//This function overrides the default form behavior so we can do validation
     $('#logoutForm').submit(function()
     {           
         $.post( "python/logout.py",function(data)
