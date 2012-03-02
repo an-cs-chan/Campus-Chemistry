@@ -1,7 +1,5 @@
 $(document).ready(function() { 
 	
-	processSearch();
-	
     $(".filterButton").on({
         click: function()
         {
@@ -101,19 +99,6 @@ function processBasicSearch(data)
     if(totRecords > 0)
     {
     	$("#resultsArea").html(html);
-    	    
-	    $('#resultFooter').smartpaginator({
-	        datacontainer: 'resultsArea',
-	        dataelement:'div',
-	    	totalrecords: totRecords,
-	    	recordsperpage: 6,
-	    	theme: 'teal',
-		 	length: 4,
-		 	next: 'Next',
-		 	prev: 'Prev',
-		 	first: 'First',
-		 	last: 'Last'
-	    });
     }
     else
     {
