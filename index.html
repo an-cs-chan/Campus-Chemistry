@@ -8,50 +8,54 @@
     </head>
     <body>
         <div class="homePanel">
-            <div class="loginPanel">
-                <span style="font-size: 21px;"> 
-                    User Name:
-                </span>
-                <span> 
-                    <input class="loginTextEntry" type="text" required> 
-                </span>
-                <span style="font-size: 21px;"> 
-                    Password:
-                </span>                
-                <span> 
-                    <input class="loginTextEntry" type="password" required> 
-                </span>
-                <span>
-                    <a class="button">Log In</a>
-                </span>
-            </div>
+            <form id="loginForm">
+                <div class="loginPanel">
+                    <span style="font-size: 21px;"> 
+                        User Name:
+                    </span>
+                    <span> 
+                        <input id="loginEmail" class="loginTextEntry" type="text" required> 
+                    </span>
+                    <span style="font-size: 21px;"> 
+                        Password:
+                    </span>                
+                    <span> 
+                        <input id="loginPassword" class="loginTextEntry" type="password" required> 
+                    </span>
+                    <span>
+                        <input type="submit" id="loginButton" class="button" value="Log In" />
+                    </span>
+                </div>
+            </form>
             <div class="mainContent" align="center">
                 <h1 style="font-size: 40px;"> 
                     Campus Chemistry 
                 </h1>
                 <img alt="logo" src="images/Logo.png">
                 <h2> 
-                    "Once I think of slogan, this is where it will go!" 
+                    "Let us find your perfect mate." 
                 </h2>
                 <div id="registerRegion" class="secondaryContent" align="center">
                     <div class="contentHeader"> 
                         Register Now - 
                         <span class="joinNowText"> Free to Join! </span> 
                     </div>
-                    <form name="register" action="python/register.py" method="post">
+                    <form id="registerForm">
                         <div class="registerText">
                             <div class="textLayout">
                                 E-mail:   
-                                <input id="emailInput" name="emailInput" class="registerTextEntry formValidator" type="email" required />
+                                <input id="emailInput" class="registerTextEntry formValidator" type="email" required />
                             </div>
                             <div class="textLayout"> 
                                 Password: 
-                                <input id="passwordInput" name="passwordInput" class="registerTextEntry" type="password" required />        
+                                <input id="passwordInput" class="registerTextEntry formValidator" type="password" required />        
                             </div>
                             <div class="textLayout"> 
                                 Confirm:  
-                                <input id="pwConfirmInput" name="pwConfirmInput" class="registerTextEntry" type="password" required /> 
+                                <input id="pwConfirmInput" class="registerTextEntry formValidator" type="password" required /> 
                             </div>
+                            <div id="warningArea" style="display:none;">
+                            </div>                           
                             <div align="center" style="padding:10px;">
                                 <input type="submit" id="signUpButton" class="button" value="Sign Up" />
                             </div>
@@ -70,7 +74,7 @@
         <div id="boxes">
             <div id="dialog" class="window">
                 Thank You For Registering!
-                <a href="#"class="close"/>Close it</a>
+                <a href="#"class="close">Close it</a>
             </div>
             <!-- Mask to cover the whole screen -->
             <div id="mask"></div>

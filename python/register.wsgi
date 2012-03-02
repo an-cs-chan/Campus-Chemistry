@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python
 
 import MySQLdb
 import cgi
@@ -21,7 +21,7 @@ def application(environ, start_response):
     #connect to the Database
     conn = MySQLdb.connect (host = "localhost",
                             user = "root",
-                            passwd = "6853558",
+                            passwd = "",
                             db = "campus chemistry")
     
     cursor = conn.cursor()
@@ -29,7 +29,7 @@ def application(environ, start_response):
     row = cursor.fetchone()
     
     if row == None:
-        cursor.execute("""INSERT INTO user_login (User_ID, User_Name, Password, User_Created, Last_Login, Session_ID) VALUES (NULL, %s, AES_ENCRYPT(%s,%s), CURRENT_TIMESTAMP, NOW(), NULL)""", (userName, password, KEY_STR,))
+        cursor.execute("""INSERT INTO user_login (User_ID, User_Name, Password, User_Created, Last_Login, Session_ID) VALUES (679, %s, AES_ENCRYPT(%s,%s), CURRENT_TIMESTAMP, NOW(), 55)""", (userName, password, KEY_STR,))
         data = [{"status":"Inserted user"}]
         output = json.dumps(data)
     else:
