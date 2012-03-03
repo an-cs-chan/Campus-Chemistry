@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Campus Chemistry</title>
+        <link rel="stylesheet" type="text/css" href="styles/Styles.css" />      
+        <script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" language="JavaScript" src="scripts/homePage.js"></script>
+    </head>
+    <body>
+        <div class="homePanel">
+            <form id="loginForm">
+                <div class="loginPanel">
+                    <span style="font-size: 21px;"> 
+                        User Name:
+                    </span>
+                    <span> 
+                        <input id="loginEmail" class="loginTextEntry" type="text" required> 
+                    </span>
+                    <span style="font-size: 21px;"> 
+                        Password:
+                    </span>                
+                    <span> 
+                        <input id="loginPassword" class="loginTextEntry" type="password" required> 
+                    </span>
+                    <span>
+                        <input type="submit" id="loginButton" class="button" value="Log In" />
+                    </span>
+                </div>
+            </form>
+            <div class="mainContent" align="center">
+                <h1 style="font-size: 40px;"> 
+                    Campus Chemistry 
+                </h1>
+                <img alt="logo" src="images/Logo.png">
+                <h2> 
+                    "Let us find your perfect mate." 
+                </h2>
+                <div id="registerRegion" class="secondaryContent" align="center">
+                    <div class="contentHeader"> 
+                        Register Now - 
+                        <span class="joinNowText"> Free to Join! </span> 
+                    </div>
+                    <form id="registerForm">
+                        <div class="registerText">
+                            <div class="textLayout">
+                                E-mail:   
+                                <input id="emailInput" class="registerTextEntry formValidator" type="email" required />
+                            </div>
+                            <div class="textLayout"> 
+                                Password: 
+                                <input id="passwordInput" class="registerTextEntry formValidator" type="password" required />        
+                            </div>
+                            <div class="textLayout"> 
+                                Confirm:  
+                                <input id="pwConfirmInput" class="registerTextEntry formValidator" type="password" required /> 
+                            </div>
+                            <div id="warningArea" style="display:none;">
+                            </div>                           
+                            <div align="center" style="padding:10px;">
+                                <input type="submit" id="signUpButton" class="button" value="Sign Up" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottomLinkRegion" align="center">
+            <p style="color: rgb(117, 153, 169); font-size: 16px;">     
+                About Us . Legal Information . Member Log In . Help. Online Safety
+            </p>
+        </div>
+        
+        <!-- Hidden Pop Up Dialog !-->
+        <div id="boxes">
+            <div id="dialog" class="window">
+                Thank You For Registering!
+                <a href="#"class="close">Close it</a>
+            </div>
+            <!-- Mask to cover the whole screen -->
+            <div id="mask"></div>
+        </div>        
+    </body>
+</HTML>

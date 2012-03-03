@@ -1,0 +1,68 @@
+<head>
+	<title>Campus Chemistry</title>
+	<link rel="stylesheet" type="text/css" href="styles/Styles.css" />
+	<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
+	<script type='text/javascript' src='scripts/quiz.js'></script>
+</head>
+<body>
+	<div id="topBar">
+		<div id="logo">Campus Chemistry</div>
+		<div class="tabs">
+			<ul>
+				<a href="quiz.html"><li class="selected">Quiz</li></a>
+				<a href="search.html"><li>Search</li></a>
+				<a href="profile.html"><li>Profile</li></a>				
+				<a href="inbox.html"><li>Inbox</li></a>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="mainContent">
+		<div class="contentHeader">Compatability Test</div>
+		<div id="quizPanelMain">
+			<div id="quizPanelLeft">
+				<div id="progressBox" class="secondaryContent">
+					<div class="contentHeader">Progress</div>
+					<div id="quizSubjects"></div>
+				</div>
+			</div>
+			<div id="quizPanelRight">
+				<div class="secondaryContent">
+					<div id="progressBar">
+						<div>&nbsp;</div>
+					</div>
+				</div>
+				<div id="questionBox" class="secondaryContent">
+					<div class="contentHeader">
+						Question <span class="questionNumber"></span>
+						<span id="progressPercentLabel">Progress: <span class="progressPercent"></span>%</span>
+					</div>
+					<div id="questionContent">
+						<div id="questionText"></div>
+						<div id="questionAnswers">
+							<div class="questionAnswer">
+								<input id="answer0" type="radio" name="questionAnswer" value="0" /><label for="answer0"></label>
+							</div>
+							<div class="questionAnswer">
+								<input id="answer1" type="radio" name="questionAnswer" value="1" /><label for="answer1"></label>
+							</div>
+							<div class="questionAnswer">
+								<input id="answer2" type="radio" name="questionAnswer" value="2" /><label for="answer2"></label>
+							</div>
+							<div class="questionAnswer">
+								<input id="answer3" type="radio" name="questionAnswer" value="3" /><label for="answer3"></label>
+							</div> 
+						</div>
+						<div id="questionFooter">
+							<div id="prevQuestionButton" class="button disabled">Prev</div>
+							<div id="nextQuestionButton" class="button disabled">Next</div>
+							<div>Question <span class="questionNumber"></span> of <span class="questionTotal"></span></div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</body>

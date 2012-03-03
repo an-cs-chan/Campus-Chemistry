@@ -1,3 +1,5 @@
-nothing here
-
-modification made
+Feb 11th 2012
+Melissa Kendall
+-> Fixed the login, my jQuery was broken :X
+-> Added logout button functionality (jQuery side)
+-> Added different basic search functionality
