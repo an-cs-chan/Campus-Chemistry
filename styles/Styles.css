@@ -153,6 +153,17 @@ body {
     text-align:center;
 }
 
+#alertArea
+{
+    margin: 20px 10px 5px; 
+    color: rgb(117, 153, 169); 
+    font-size: 16px; 
+    background-color: #00FF00;
+    color: black;
+    border-radius: 2px;
+    text-align:center;	
+}
+
 .registerTextEntry {
 	border-radius: 7px; 
 	border: 0px; 
@@ -615,9 +626,7 @@ table.sample td {
 }
 
 .closeButton {
-	position: relative;
-	left: 53px;
-	top: -10px;	
+	float:right;
 	cursor:pointer;
 }
 
@@ -626,8 +635,8 @@ table.sample td {
 }
 
 .userPicture {
-	width: 32%;
-	min-height: 80px;	
+	width: 38%;
+	min-height: 90px;	
 	float: left;
 	margin: 15px 10px 10px 15px;
 	cursor:pointer;	
@@ -659,11 +668,17 @@ table.sample td {
 #mailUser {
 	width: 30px; 
 	height: 20px;
+	cursor: pointer;
 }
 
 #likeUser {
 	width: 30px; 
 	height: 20px;
+	cursor: pointer;
+}
+
+#userNameText {
+	font-weight:bold;
 }
 
 /*-----------------------*/

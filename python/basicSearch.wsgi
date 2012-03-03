@@ -75,7 +75,7 @@ def application(environ, start_response):
     maxBirthDate = (now - datetime.timedelta(minAge*365)).isoformat()
     
     
-    query = "SELECT User_Name, Department, Relationship_Type, User_ID FROM user_profile WHERE " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder 
+    query = "SELECT User_Name, Department, User_ID, Body_type, About_Me FROM user_profile WHERE " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder 
     
     cursor.execute(query)
     rows = cursor.fetchall()
