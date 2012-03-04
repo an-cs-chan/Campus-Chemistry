@@ -5,13 +5,27 @@
 	<script type="text/javascript" language="JavaScript" src="scripts/profile.js"></script>
 </head>
 <body>
+	<div style="float:left">
+			<span style="font-size: 34px; color: rgb(127,129, 171)">Campus Chemistry
+				<img style="width: 35px; alt="logo" height: 50px" src="images/Logo.png">
+			</span>
+		</div>
+		<div style="float:right; position:relative;">
+		    <form id="logoutForm">
+    			<span id="userGreeting">Welcome Back first_name!
+    				<input id="logoutButton" class="button" value="Log Out" type="submit" />
+    			</span>		
+			</form>	
+		</div>
+		</br>
+		</br>
+		</br>
 	<div id="topBar">
-		<div id="logo">Campus Chemistry</div>
 		<div class="tabs">
 			<ul>
-				<a href="quiz.html"><li class="selected">Quiz</li></a>
+				<a href="quiz.html"><li>Quiz</li></a>
 				<a href="search.html"><li>Search</li></a>
-				<a href="profile.html"><li>Profile</li></a>				
+				<a href="profile.html"><li class="selected">Profile</li></a>				
 				<a href="inbox.html"><li>Inbox</li></a>
 			</ul>
 		</div>
@@ -23,7 +37,7 @@
 		<div id="profilePanelMain">
 			<div id="profilePanelLeft" class="secondaryContent">
 				<img src="media/alone.jpg" id="profilePicture"/>
-				<input type="submit" id="uploadPhoto" class="button" value="Upload Photo">
+				<input id="uploadPic" class="button" value="Upload Picture" type="submit">
 			</div>
 			
 			<div id="profilePanelRight" class="homePanel">
@@ -39,9 +53,23 @@
 				</div>	
 			</div>
 			
-			<div class="clearfix footer"><input text id="interests" onclick="changeInterests()" class="profileFullText" placeholder="Melissa's Interests" /></div>	
+			<div id="interests" class="clearfix footerPanel">Melissa's Interests</div>
 			
-			<div><input type="submit" id="saveProfile" class="button" value="Save" /></div>
+			<table width=100%>
+			<tr>
+				<td class="interest_col"><li>My Little Pony</li></td>
+				<td class="interest_col"><li>Gaming</li></td>
+				<td class="interest_col"><li>iQCommerce</li></td>
+			</tr>
+			<tr>
+				<td class="interest_col"><li>Software Engineering</li></td>
+				<td class="interest_col"><li>Web Development</li></td>
+				<td class="interest_col"><li>Anime</li></td>
+			</tr>	
+			</table>
+				
+			
+			<div class="bottom_profile"><input type="submit" id="editProfile" class="button" value="Save" /></div>
 		</div>
 	</div>
 	<div class="clearfix"></div>

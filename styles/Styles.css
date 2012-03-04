@@ -237,20 +237,19 @@ body {
 	width: 150px;
 	height: 200px;
 	display: block;
-	margin: 15px auto;
-	
+	margin-right:0px;
 }
 
 #profilePanelLeft{
 	display: block;
 	float: left;
-	width: 30%;
 }
 
 #profilePanelRight{
 	display: block;
-	float: right;
 	width: 50%;
+	position: relative;
+	left:100px;
 }
 
 #uploadPhoto{
@@ -271,6 +270,7 @@ body {
 	margin-top:10px;
 	margin-bottom:10px;
 	text-align: center;
+	width:350px;
 }
 
 .profileFullText{
@@ -285,12 +285,16 @@ body {
 	text-align: center;
 }
 
-#saveProfile{
+#editProfile{
 	display:block;
 	float:right;
 	margin:20px;
 }
 
+.bottom_profile{
+	bottom: 0px;
+	right:0px;
+}
 .user_fact{
 	margin-top:5px;
 }
@@ -298,20 +302,35 @@ body {
 #user_fullname{
 	font-size:xx-large;
 	font-family:"Rage Italic";
+	font-weight:bold;
 }
 
 #interests{
-	width: 100%;
+	margin-top: 50px;
+	font-family:"Rage Italic";
+	font-size:large;
+	font-weight:bold;
 }
+
+.interest_col{
+	width: 30%;
+	color: rgb(127, 129, 171);
+}
+
 
 #profilePanelMain {
-	padding: 15px;
-	min-height: 700px;
+	padding: 30px 50px 30px;
+	min-height: 600px;
+}
+.footerPanel{
+	margin: 0 auto;
+	color: rgb(127, 129, 171);
 }
 
-.footer{
-	padding-right:15px;
+#uploadPic{
+	visibility: hidden;
 }
+
 /*-----------*/
 /* QUIZ PAGE */
 /*-----------*/
