@@ -243,6 +243,7 @@ body {
 #profilePanelLeft{
 	display: block;
 	float: left;
+	position:relative;
 }
 
 #profilePanelRight{
@@ -252,14 +253,6 @@ body {
 	left:100px;
 }
 
-#uploadPhoto{
-	display: block;
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom: 15px;
-	text-align: center;
-	width: 120px;
-}
 
 .profileTextEntry {
 	border-radius: 7px; 
@@ -288,12 +281,15 @@ body {
 #editProfile{
 	display:block;
 	float:right;
-	margin:20px;
+	margin-bottom:20px;
 }
 
 .bottom_profile{
-	bottom: 0px;
-	right:0px;
+	position:relative;
+	bottom: 0;
+	right:0;
+	padding-bottom:30px;
+	padding-top:50px;
 }
 .user_fact{
 	margin-top:5px;
@@ -320,7 +316,7 @@ body {
 
 #profilePanelMain {
 	padding: 30px 50px 30px;
-	min-height: 600px;
+	max-height: 600px;
 }
 .footerPanel{
 	margin: 0 auto;
@@ -328,7 +324,12 @@ body {
 }
 
 #uploadPic{
-	visibility: hidden;
+	position:absolute;
+	z-index:1;
+	left:5px;
+	right:5px;
+	bottom:0;
+	visibility:hidden;
 }
 
 /*-----------*/
