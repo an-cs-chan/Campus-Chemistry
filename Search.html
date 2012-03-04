@@ -45,39 +45,66 @@
 		<div class="mainContent" align="center">
 			<div id="searchPanelMain">
 				<div id="searchPanelLeft">
-					<div id="advanceBox" class="secondaryContent">
-						<div class="contentHeader">Advanced Search</div>
-						<div id="searchSubject"> 							
-							<div class="advancedPanel">
-								<span>Hair Color</span>
-								<select id="hairComboBox" class ="advancedComboBox">
-									<option> Any </option>
-									<option> Black </option>
-									<option> Burnette </option>
-									<option> Blonde </option>
-									<option> Gray </option>
-									<option> Bald </option>
-								</select>
-							</div>						
-							<div class="advancedPanel">
-								<span>Eye Color</span>
-								<select id="eyeComboBox" class="advancedComboBox">
-									<option> Any </option>
-									<option> Black </option>
-									<option> Brown </option>
-									<option> Blue </option>
-									<option> Green </option>
-								</select>
-							</div>
-							<div class="advancedPanel">
-								<span>Faculty</span>
-								<select id="facultyComboBox" class="advancedComboBox" style="margin:0px 0px 0px 20px;">
-									<option> Any </option>
-									<option> Computer Science </option>
-								</select>
+					<form id="advancedForm">
+						<div id="advanceBox" class="secondaryContent">
+							<div class="contentHeader">Advanced Search</div>
+							<div id="searchSubject">
+								<div class="advancedPanel">
+									<span id="advancedSearchLabel">Ethnicity</span>
+									<select id="EthnicityComboBox" name="ethnicity" class="advancedComboBox">
+										<option> Any </option>
+										<option> Canadian </option>
+										<option> Chinese </option>
+										<option> Indian </option>
+										<option> Korean </option>
+										<option> American </option>
+										<option> British </option>
+										<option> French </option>
+									</select>
+								</div>								
+								<div class="advancedPanel">
+									<span id="advancedSearchLabel">Nationality</span>
+									<select id="nationalityComboBox" name="Birth_Country" class ="advancedComboBox">
+										<option> Any </option>
+										<option> Canada </option>
+										<option> US </option>
+										<option> Mexico </option>
+										<option> Brazil </option>
+										<option> Japan </option>
+										<option> China </option>
+										<option> South Korea </option>
+										<option> India </option>
+										<option> England </option>
+										<option> France </option>
+										<option> Italy </option>
+										<option> Spain </option>
+										<option> Switzerland </option>
+										<option> Germany </option>
+										<option> Russia </option>
+										<option> Singapore </option>
+										<option> Nageria </option>
+										<option> Ghana </option>
+										<option> Lybia </option>
+										<option> Australia </option>
+									</select>
+								</div>						
+								<div class="advancedPanel">
+									<span id="advancedSearchLabel"> City </span>
+									<select id="cityComboBox" name="city" class="advancedComboBox">
+										<option> Any </option>
+										<option> Toronto </option>
+										<option> Ottawa </option>
+										<option> Vancouver </option>
+										<option> Victoria </option>
+										<option> Winnipeg </option>
+										<option> Edmonton </option>
+										<option> Calgary </option>
+										<option> Regina </option>
+									</select>
+								</div>
 							</div>
 						</div>
-					</div>
+					</form>
 				</div>
 				<div id="searchPanelRight">
 					<form id="basicForm">

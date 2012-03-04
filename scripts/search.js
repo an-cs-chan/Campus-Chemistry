@@ -12,6 +12,19 @@ $(document).ready(function() {
         }
     });
     
+	$(".advancedComboBox").on({
+        change: function()
+        {       	
+			$.post(
+				"python/search.wsgi",
+				$("#advancedForm").serialize() + "&" + $("#basicForm").serialize(),
+				function(data)
+				{
+					processBasicSearch(data);              
+				}, "json");
+		}
+    });
+    
     $(".filterSearch").on({
         change: function()
         {           
@@ -103,8 +116,8 @@ function processSearch()
 		$("#warningArea").hide("fast");
 
 	    $.post(
-	        "python/basicSearch.wsgi",
-	        $("#basicForm").serialize(),
+	        "python/search.wsgi",
+			$("#advancedForm").serialize() + "&" + $("#basicForm").serialize(),
 	        function(data)
 	        {
 				processBasicSearch(data);              
@@ -181,7 +194,7 @@ function processBasicSearch(data)
 //This function will create those user profile squares we need for the search results area
 function createUserBlock (user, floatType, id, displayType)
 {
-	if(user.About_Me.length > 50)
+	if(user.About_Me != null && user.About_Me.length > 50)
 	{
 		var newString = user.About_Me.substring(0,50) + "...";
 		user.About_Me = newString;
