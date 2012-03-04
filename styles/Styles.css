@@ -520,13 +520,15 @@ table.sample td {
 	margin: 10px;
 }
 
-#genderLabel {
+#advancedSearchLabel {
 	padding: 4px 4px 4px 0px;
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .advancedComboBox {
 	position: relative;
-	left: 10px;
+	float: right;
 	width: 100px;
 	color: rgb(117, 153, 169);
 	

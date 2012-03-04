@@ -18,19 +18,17 @@ $(document).ready(function() {
         {
             //Hide error and perform normal form action
             $("#warningArea").hide("fast");
-                      
+            
             //Send our POST request
-            $.post(
-                "python/register.wsgi",
-                $("#registerForm").serialize(),
+            $.post({
+                "python/register.py",
+                "email="+email+"&password="+passwordComfirm,
                 function(data)
                 {
-                   //Bring up a modal dialog that says "Thanks!"
-                   //Then, redirect
-                    var url = "profile.html";
-                    $(location).attr('href',url);
-                   
-                }, "json");
+                    alert(data);
+                   //Process returned data here
+                }, "json";
+            });
         }
         
         return false;
@@ -43,22 +41,21 @@ $(document).ready(function() {
         var password = $("#loginPassword").val();
        
         //Send our POST request
-        $.post(
+        $.post({
             "python/login.py",
-            $("#loginForm").serialize(),
+            "email="+email+"&password="+password,
             function(data)
             {
                 alert(data);
-               
-               //Redirect OR bring up a modal dialog saying "ERROR"
-            }, "json");
-            
+               //Process returned data here
+            }, "json";
+        });
+        
         return false;
     });
         
     //select all the a tag with name equal to modal
     $('.modalDialog').click(function(e) {
-        
         //Cancel the link behavior
         e.preventDefault();
         
@@ -72,14 +69,14 @@ $(document).ready(function() {
         //Set heigth and width to mask to fill up the whole screen
         $('#mask').css({'width':maskWidth,'height':maskHeight});
         
-        //tMake it fade-y 
+        //transition effect     
         $('#mask').fadeIn(0);    
     
         //Get the window height and width
         var winH = $(window).height();
         var winW = $(window).width();
               
-        //Center this bi-atch 
+        //Set the popup window to center
         $(id).css('top',  winH/2-$(id).height()/2);
         $(id).css('left', winW/2-$(id).width()/2);
     
@@ -88,7 +85,7 @@ $(document).ready(function() {
     
     });
     
-    //if close button is clicked, cancel out
+    //if close button is clicked
     $('.window .close').click(function (e) {
         //Cancel the link behavior
         e.preventDefault();
@@ -97,7 +94,7 @@ $(document).ready(function() {
         $('.window').hide();
     });     
     
-    //if mask is clicked, hide the window 
+    //if mask is clicked
     $('#mask').click(function () {
         $(this).hide();
         $('.window').hide();
