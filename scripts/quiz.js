@@ -131,6 +131,17 @@ $(document).ready(function () {
 
 });
 
+function loadQuiz() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = onLoadQuizComplete;
+    xmlhttp.open("POST", "python/getQuiz.py", true);
+    xmlhttp.send();
+}
+
+function onLoadQuizComplete() {
+    
+}
+
 function startQuiz() {
 	$("#questionText").text(questions[0].text);
 	
