@@ -1,673 +1,0 @@
-TCampus_Chemistry_iOS
-v7
-r0
-t352341531.629132
-cCheck dependencies
-cProcessInfoPlistFile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Info.plist Campus_Chemistry_iOS-Info.plist
-cCompileXIB /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/MainWindow.xib
-cCompileXIB /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/RootViewController.xib
-cCpResource Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Logo.png Logo.png
-cProcessPCH /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-cfzcfvmhgfwtjgeyvhdxcmkecbts/Campus_Chemistry_iOS_Prefix.pch.gch Campus_Chemistry_iOS_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS normal i386
-cGenerateDSYMFile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-cTouch /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
-c000000004F4D95830000000000000110
-t1330484611
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004D54CFFA00000000002999B0
-t1297403898
-s2726320
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004D54CFE5000000000029DA70
-t1297403877
-s2742896
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004D54CFB80000000000001466
-t1297403832
-s5222
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004D5615B40000000000000AA1
-t1297487284
-s2721
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004D5616030000000000766870
-t1297487363
-s7759984
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/Availability.h
-c000000004D4F7A2B0000000000001B19
-t1297054251
-s6937
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o
-t1330627093
-s53556
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_Chemistry_iOS.LinkFileList
-c000000004F4FC2130000000000000265
-t1330627091
-s613
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o
-t1330627093
-s41660
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o
-t1330627093
-s6364
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app
-t1330627198
-s272
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM
-t1330627093
-s102
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-t1330627093
-s18584
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Info.plist
-t1330627091
-s649
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Logo.png
-t1330627198
-s5377
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/MainWindow.nib
-t1330627091
-s5340
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/PkgInfo
-t1330627091
-s8
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/RootViewController.nib
-t1330627091
-s1518
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry_iOS_Prefix.pch
-c000000004F4F8A450000000000000152
-t1330612805
-s338
-i<Availability.h>
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.h
-c000000004F4F8A4500000000000001F8
-t1330612805
-s504
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m
-c000000004F4F8A450000000000000AED
-t1330612805
-s2797
-i"Campus_ChemistryAppDelegate.h"
-i"RootViewController.h"
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/RootViewController.h
-c000000004F4F8A4500000000000000FE
-t1330612805
-s254
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/RootViewController.m
-c000000004F4F8A4500000000000010D6
-t1330612805
-s4310
-i"RootViewController.h"
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Logo.png
-c000000004F4454040000000000001501
-t1329878020
-s5377
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/MainWindow.xib
-c000000004F4F95F30000000000008C96
-t1330615795
-s35990
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/RootViewController.xib
-c000000004F4F8A45000000000000445B
-t1330612805
-s17499
-
-N/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/main.m
-c000000004F4F8A45000000000000017C
-t1330612805
-s380
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o
-t1330648731
-s53588
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_Chemistry_iOS.LinkFileList
-c000000004F50169A0000000000000295
-t1330648730
-s661
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o
-t1330648731
-s41692
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o
-t1330648731
-s6396
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app
-t1330648731
-s272
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM
-t1330648731
-s102
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-t1330648731
-s18680
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Info.plist
-t1330627091
-s649
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Logo.png
-t1330627198
-s5377
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/MainWindow.nib
-t1330627091
-s5340
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/PkgInfo
-t1330627091
-s8
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/RootViewController.nib
-t1330627091
-s1518
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry_iOS_Prefix.pch
-c000000004F4F8A450000000000000152
-t1330612805
-s338
-i<Availability.h>
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.h
-c000000004F4F8A4500000000000001F8
-t1330612805
-s504
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m
-c000000004F4F8A450000000000000AED
-t1330612805
-s2797
-i"Campus_ChemistryAppDelegate.h"
-i"RootViewController.h"
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/RootViewController.h
-c000000004F4F8A4500000000000000FE
-t1330612805
-s254
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/RootViewController.m
-c000000004F4F8A4500000000000010D6
-t1330612805
-s4310
-i"RootViewController.h"
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Logo.png
-c000000004F4454040000000000001501
-t1329878020
-s5377
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/MainWindow.xib
-c000000004F4F95F30000000000008C96
-t1330615795
-s35990
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/RootViewController.xib
-c000000004F4F8A45000000000000445B
-t1330612805
-s17499
-
-N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/main.m
-c000000004F4F8A45000000000000017C
-t1330612805
-s380
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o
-t1330627588
-s53572
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_Chemistry_iOS.LinkFileList
-c000000004F4FC404000000000000027D
-t1330627588
-s637
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o
-t1330627588
-s41676
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o
-t1330627588
-s6380
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app
-t1330627588
-s272
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM
-t1330627588
-s102
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-t1330627588
-s18632
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Info.plist
-t1330627091
-s649
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Logo.png
-t1330627198
-s5377
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/MainWindow.nib
-t1330627091
-s5340
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/PkgInfo
-t1330627091
-s8
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/RootViewController.nib
-t1330627091
-s1518
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry_iOS_Prefix.pch
-c000000004F4F8A450000000000000152
-t1330612805
-s338
-i<Availability.h>
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.h
-c000000004F4F8A4500000000000001F8
-t1330612805
-s504
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m
-c000000004F4F8A450000000000000AED
-t1330612805
-s2797
-i"Campus_ChemistryAppDelegate.h"
-i"RootViewController.h"
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/RootViewController.h
-c000000004F4F8A4500000000000000FE
-t1330612805
-s254
-i<UIKit/UIKit.h>
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/RootViewController.m
-c000000004F4F8A4500000000000010D6
-t1330612805
-s4310
-i"RootViewController.h"
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Logo.png
-c000000004F4454040000000000001501
-t1329878020
-s5377
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/MainWindow.xib
-c000000004F4F95F30000000000008C96
-t1330615795
-s35990
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/RootViewController.xib
-c000000004F4F8A45000000000000445B
-t1330612805
-s17499
-
-N/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/main.m
-c000000004F4F8A45000000000000017C
-t1330612805
-s380
-i<UIKit/UIKit.h>
-
-N/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-cfzcfvmhgfwtjgeyvhdxcmkecbts/Campus_Chemistry_iOS_Prefix.pch.gch
-t1330648731
-s15814064
-
-N/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-dtlepqmofrvakcbhsztctbeudbfg/Campus_Chemistry_iOS_Prefix.pch.gch
-t1330627093
-s15814064
-
-N/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-ehugqfepkgclysgtmqnnjiekhdzm/Campus_Chemistry_iOS_Prefix.pch.gch
-t1330627588
-s15814064
-
-NCampus_Chemistry_iOS-Info.plist
-c000000004F4F8A45000000000000038D
-t1330612805
-s909
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies352341530#352341530#0(0"0(0#1#0"6879655750263204864#0"0#
-
-CCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s352319893.202936
-e352319893.279632
-r1
-xCompileC
-xCampus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o
-x/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@111"Compile /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m352319893#352319893#0(0"0(0#0#103"/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m8627920800#2678"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -include /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-dtlepqmofrvakcbhsztctbeudbfg/Campus_Chemistry_iOS_Prefix.pch -c /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m -o /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o0#
-
-CCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s352341531.159064
-e352341531.307328
-r1
-xCompileC
-xCampus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o
-x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@127"Compile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m352341531#352341531#0(0"0(0#0#119"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m8604123168#2854"    cd /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -include /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-cfzcfvmhgfwtjgeyvhdxcmkecbts/Campus_Chemistry_iOS_Prefix.pch -c /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m -o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o0#
-
-CCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s352320388.759189
-e352320388.826622
-r1
-xCompileC
-xCampus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o
-x/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@119"Compile /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m352320388#352320388#0(0"0(0#0#111"/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m8627202144#2766"    cd /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -include /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-ehugqfepkgclysgtmqnnjiekhdzm/Campus_Chemistry_iOS_Prefix.pch -c /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/Campus_ChemistryAppDelegate.m -o /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_ChemistryAppDelegate.o0#
-
-CCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s352319893.203506
-e352319893.274458
-r1
-xCompileC
-xCampus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o
-x/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/RootViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@102"Compile /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/RootViewController.m352319893#352319893#0(0"0(0#0#94"/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/RootViewController.m8627304960#2660"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -include /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-dtlepqmofrvakcbhsztctbeudbfg/Campus_Chemistry_iOS_Prefix.pch -c /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Classes/RootViewController.m -o /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o0#
-
-CCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s352341531.160193
-e352341531.304268
-r1
-xCompileC
-xCampus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o
-x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/RootViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@118"Compile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/RootViewController.m352341531#352341531#0(0"0(0#0#110"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/RootViewController.m8603937536#2836"    cd /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -include /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-cfzcfvmhgfwtjgeyvhdxcmkecbts/Campus_Chemistry_iOS_Prefix.pch -c /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Classes/RootViewController.m -o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o0#
-
-CCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s352320388.759755
-e352320388.798123
-r1
-xCompileC
-xCampus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o
-x/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/RootViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@110"Compile /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/RootViewController.m352320388#352320388#0(0"0(0#0#102"/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/RootViewController.m8624722496#2748"    cd /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -include /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-ehugqfepkgclysgtmqnnjiekhdzm/Campus_Chemistry_iOS_Prefix.pch -c /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Classes/RootViewController.m -o /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/RootViewController.o0#
-
-CCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s352319893.202237
-e352319893.266209
-r1
-xCompileC
-xCampus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o
-x/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/main.m352319893#352319893#0(0"0(0#0#72"/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/main.m8629284736#2624"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -include /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-dtlepqmofrvakcbhsztctbeudbfg/Campus_Chemistry_iOS_Prefix.pch -c /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/main.m -o /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o0#
-
-CCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s352341531.157500
-e352341531.299744
-r1
-xCompileC
-xCampus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o
-x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@96"Compile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/main.m352341531#352341531#0(0"0(0#0#88"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/main.m8604199232#2800"    cd /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -include /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-cfzcfvmhgfwtjgeyvhdxcmkecbts/Campus_Chemistry_iOS_Prefix.pch -c /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/main.m -o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o0#
-
-CCompileC Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s352320388.758379
-e352320388.788748
-r1
-xCompileC
-xCampus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o
-x/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@88"Compile /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/main.m352320388#352320388#0(0"0(0#0#80"/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/main.m8628056608#2712"    cd /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -include /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-ehugqfepkgclysgtmqnnjiekhdzm/Campus_Chemistry_iOS_Prefix.pch -c /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/main.m -o /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/MainWindow.xib
-s352319891.109734
-e352319892.099843
-r1
-xCompileXIB
-x/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/MainWindow.xib
-o/* com.apple.ibtool.document.warnings */
-o/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/MainWindow.xib:13: warning: 'Root View Controller (Campus Chemistry)' has both its 'View' and 'NIB Name' properties set. This configuration is not supported.
-lSLF07#2@25"CompileXIB MainWindow.xib352319891#352319892#0(265"/* com.apple.ibtool.document.warnings *//Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/MainWindow.xib:13: warning: 'Root View Controller (Campus Chemistry)' has both its 'View' and 'NIB Name' properties set. This configuration is not supported.1(22@129"'Root View Controller (Campus Chemistry)' has both its 'View' and 'NIB Name' properties set. This configuration is not supported.352319891#18446744073709551615#0#0(6@80"/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/MainWindow.xib352308595#13#0#13#0#0"0(0#0#80"/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/MainWindow.xib8614234208#681"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/MainWindow.nib /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
-
-CCompileXIB /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/RootViewController.xib
-s352319891.110246
-e352319891.669724
-r1
-xCompileXIB
-x/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/RootViewController.xib
-lSLF07#2@33"CompileXIB RootViewController.xib352319891#352319891#0(0"0(0#0#88"/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/RootViewController.xib8613294592#697"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/RootViewController.nib /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/RootViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
-
-CCompileXIB /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/MainWindow.xib
-r0
-
-CCompileXIB /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/RootViewController.xib
-r0
-
-CCompileXIB /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/MainWindow.xib
-r0
-
-CCompileXIB /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/RootViewController.xib
-r0
-
-CCpResource Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Logo.png Logo.png
-s352319998.867210
-e352319998.890240
-r1
-xCpResource
-xCampus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Logo.png
-xLogo.png
-lSLF07#2@13"Copy Logo.png352319998#352319998#0(0"0(0#0#74"/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Logo.png8614726592#577"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Logo.png /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app0#
-
-CGenerateDSYMFile /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-s352319893.369267
-e352319893.414118
-r1
-xGenerateDSYMFile
-x/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM
-x/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-lSLF07#2@182"GenerateDSYMFile Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS352319893#352319893#0(0"0(0#0#156"/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS8616001472#537"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS -o /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM0#
-
-CGenerateDSYMFile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-s352341531.546389
-e352341531.609162
-r1
-xGenerateDSYMFile
-x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM
-x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-lSLF07#2@182"GenerateDSYMFile Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS352341531#352341531#0(0"0(0#0#172"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS8600718368#585"    cd /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS -o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM0#
-
-CGenerateDSYMFile /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-s352320388.889533
-e352320388.944991
-r1
-xGenerateDSYMFile
-x/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM
-x/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-lSLF07#2@182"GenerateDSYMFile Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS352320388#352320388#0(0"0(0#0#164"/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS8612395840#561"    cd /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS -o /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app.dSYM0#
-
-CLd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS normal i386
-s352319893.279698
-e352319893.369187
-r1
-xLd
-x/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-xnormal
-xi386
-lSLF07#2@161"Link /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS352319893#352319893#0(0"0(0#0#0"8620145920#1168"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -F/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -filelist /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_Chemistry_iOS.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS0#
-
-CLd /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS normal i386
-s352341531.307394
-e352341531.546064
-r1
-xLd
-x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-xnormal
-xi386
-lSLF07#2@177"Link /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS352341531#352341531#0(0"0(0#0#0"8603704672#1248"    cd /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -F/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -filelist /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_Chemistry_iOS.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS0#
-
-CLd /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS normal i386
-s352320388.826687
-e352320388.889367
-r1
-xLd
-x/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS
-xnormal
-xi386
-lSLF07#2@169"Link /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS352320388#352320388#0(0"0(0#0#0"8623749856#1208"    cd /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -F/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -filelist /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Objects-normal/i386/Campus_Chemistry_iOS.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Campus_Chemistry_iOS0#
-
-CProcessInfoPlistFile /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Info.plist Campus_Chemistry_iOS-Info.plist
-s352319891.107010
-e352319891.109671
-r1
-xProcessInfoPlistFile
-x/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Info.plist
-xCampus_Chemistry_iOS-Info.plist
-lSLF07#2@39"Process Campus_Chemistry_iOS-Info.plist352319891#352319891#0(0"0(0#0#97"/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry_iOS-Info.plist8619938816#633"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Campus_Chemistry_iOS-Info.plist -genpkginfo /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Info.plist0#
-
-CProcessInfoPlistFile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Info.plist Campus_Chemistry_iOS-Info.plist
-r0
-
-CProcessInfoPlistFile /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app/Info.plist Campus_Chemistry_iOS-Info.plist
-r0
-
-CProcessPCH /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-cfzcfvmhgfwtjgeyvhdxcmkecbts/Campus_Chemistry_iOS_Prefix.pch.gch Campus_Chemistry_iOS_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s352341530.524482
-e352341531.157294
-r1
-xProcessPCH
-x/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-cfzcfvmhgfwtjgeyvhdxcmkecbts/Campus_Chemistry_iOS_Prefix.pch.gch
-xCampus_Chemistry_iOS_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@42"Precompile Campus_Chemistry_iOS_Prefix.pch352341530#352341531#0(0"0(0#0#113"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry_iOS_Prefix.pch7594869363256022016#2619"    cd /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -c /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry_iOS_Prefix.pch -o /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-cfzcfvmhgfwtjgeyvhdxcmkecbts/Campus_Chemistry_iOS_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-dtlepqmofrvakcbhsztctbeudbfg/Campus_Chemistry_iOS_Prefix.pch.gch Campus_Chemistry_iOS_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s352319892.099946
-e352319893.202078
-r1
-xProcessPCH
-x/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-dtlepqmofrvakcbhsztctbeudbfg/Campus_Chemistry_iOS_Prefix.pch.gch
-xCampus_Chemistry_iOS_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@42"Precompile Campus_Chemistry_iOS_Prefix.pch352319892#352319893#0(0"0(0#0#97"/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry_iOS_Prefix.pch8627726656#2459"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -c /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry_iOS_Prefix.pch -o /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-dtlepqmofrvakcbhsztctbeudbfg/Campus_Chemistry_iOS_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-ehugqfepkgclysgtmqnnjiekhdzm/Campus_Chemistry_iOS_Prefix.pch.gch Campus_Chemistry_iOS_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s352320388.150739
-e352320388.758304
-r1
-xProcessPCH
-x/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-ehugqfepkgclysgtmqnnjiekhdzm/Campus_Chemistry_iOS_Prefix.pch.gch
-xCampus_Chemistry_iOS_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@42"Precompile Campus_Chemistry_iOS_Prefix.pch352320388#352320388#0(0"0(0#0#105"/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry_iOS_Prefix.pch8613709568#2539"    cd /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-generated-files.hmap -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-own-target-headers.hmap -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-all-target-headers.hmap -iquote /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/Campus_Chemistry_iOS-project-headers.hmap -F/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/include -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources/i386 -I/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Campus_Chemistry_iOS.build/Debug-iphonesimulator/Campus_Chemistry_iOS.build/DerivedSources -c /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry_iOS_Prefix.pch -o /var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus_Chemistry_iOS_Prefix-ehugqfepkgclysgtmqnnjiekhdzm/Campus_Chemistry_iOS_Prefix.pch.gch0#
-
-CTouch /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app
-s352319998.891040
-e352319998.894239
-r1
-xTouch
-x/Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app
-lSLF07#2@141"Touch /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app352319998#352319998#0(0"0(0#0#0"8627349216#362"    cd /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Trevor/Documents/University/COMP_4350/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app0#
-
-CTouch /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app
-s352341531.609225
-e352341531.629075
-r1
-xTouch
-x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app
-lSLF07#2@157"Touch /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app352341531#352341531#0(0"0(0#0#0"8598880160#394"    cd /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app0#
-
-CTouch /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app
-s352320388.945066
-e352320388.952044
-r1
-xTouch
-x/Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app
-lSLF07#2@149"Touch /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app352320388#352320388#0(0"0(0#0#0"8624584320#378"    cd /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Trevor/Documents/University/Comp_4350/project/iOS/Campus_Chemistry/Campus_Chemistry/build/Debug-iphonesimulator/Campus_Chemistry_iOS.app0#
-
