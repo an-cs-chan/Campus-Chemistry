@@ -233,13 +233,11 @@ body {
 /*--------------*/
 /* PROFILE PAGE */
 /*--------------*/
-#profilePicture{
-	width: 150px;
-	height: 200px;
-	display: block;
-	margin-right:0px;
+/*----layout-----*/
+#profilePanelMain {
+	padding: 30px 50px 30px;
+	max-height: 600px;
 }
-
 #profilePanelLeft{
 	display: block;
 	float: left;
@@ -253,37 +251,6 @@ body {
 	left:100px;
 }
 
-
-.profileTextEntry {
-	border-radius: 7px; 
-	border: 0px; 
-	left: 120px; 
-	right: 0px;
-	height: 24px;
-	margin-top:10px;
-	margin-bottom:10px;
-	text-align: center;
-	width:350px;
-}
-
-.profileFullText{
-	border-radius: 7px; 
-	border: 0px; 
-	left: 120px; 
-	right: 0px;
-	height: 24px;
-	position:inherit;
-	margin-top:20px;
-	margin-bottom:20px;
-	text-align: center;
-}
-
-#editProfile{
-	display:block;
-	float:right;
-	margin-bottom:20px;
-}
-
 .bottom_profile{
 	position:relative;
 	bottom: 0;
@@ -291,6 +258,42 @@ body {
 	padding-bottom:30px;
 	padding-top:50px;
 }
+
+/*----buttons-----*/
+.bottombutton{
+	display:block;
+	float:right;
+	margin-bottom:20px;
+}
+
+#uploadPic{
+	position:absolute;
+	z-index:1;
+	left:5px;
+	right:5px;
+	bottom:0;
+	visibility:hidden;
+}
+
+/*----text entry-----*/
+.profileTextEntry {
+	border-radius: 7px; 
+	border: 0px; 
+	left: 120px; 
+	right: 0px;
+	height: 24px;
+	text-align: center;
+	width:350px;
+}
+
+/*----misc-----*/
+#profilePicture{
+	width: 150px;
+	height: 200px;
+	display: block;
+	margin-right:0px;
+}
+
 .user_fact{
 	margin-top:5px;
 }
@@ -313,25 +316,29 @@ body {
 	color: rgb(127, 129, 171);
 }
 
-
-#profilePanelMain {
-	padding: 30px 50px 30px;
-	max-height: 600px;
+#tag_line{
+	margin-top:10px;
+	margin-bottom:10px;
+	font-style:italic;	
 }
+
 .footerPanel{
 	margin: 0 auto;
 	color: rgb(127, 129, 171);
 }
 
-#uploadPic{
-	position:absolute;
-	z-index:1;
-	left:5px;
-	right:5px;
-	bottom:0;
-	visibility:hidden;
+.descripProfile{
+	font-size:small;
+	font-style:italic;
+	display:inline;
 }
 
+/*--------------------*/
+/* OTHER PROFILE PAGE */
+/*--------------------*/
+
+margin-top:10px;
+	margin-bottom:10px;
 /*-----------*/
 /* QUIZ PAGE */
 /*-----------*/
