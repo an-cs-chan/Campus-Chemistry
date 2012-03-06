@@ -1,4 +1,4 @@
-$(document).ready(function() { 
+s$(document).ready(function() { 
 
     //This function overrides the default form behavior so we can do validation
     $('#registerForm').submit(function() 
@@ -18,11 +18,11 @@ $(document).ready(function() {
         {
             //Hide error and perform normal form action
             $("#warningArea").hide("fast");
-            
+                      
             //Send our POST request
-            $.post({
-                "python/register.py",
-                "email="+email+"&password="+passwordComfirm,
+            $.post(
+                "python/register.wsgi",
+                "email="+email+"&password="+passwordConfirm,
                 function(data)
                 {
                     alert(data);
@@ -42,7 +42,7 @@ $(document).ready(function() {
        
         //Send our POST request
         $.post({
-            "python/login.py",
+            "python/login.wsgi",
             "email="+email+"&password="+password,
             function(data)
             {
