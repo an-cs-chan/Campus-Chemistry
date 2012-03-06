@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `user_survey_answers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_survey_answers` (
-  `user_id` varchar(20) NOT NULL,
+  `user_id` varchar(60) NOT NULL,
   `Ques_ID_1` int(11) DEFAULT NULL,
   `Ques_ID_2` int(11) DEFAULT NULL,
   `Ques_ID_3` int(11) DEFAULT NULL,

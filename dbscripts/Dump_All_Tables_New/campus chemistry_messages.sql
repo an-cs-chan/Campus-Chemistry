@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `messages`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `messages` (
   `Message_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `To_User_ID` varchar(20) NOT NULL,
-  `From_User_ID` varchar(20) NOT NULL,
+  `To_User_ID` varchar(60) NOT NULL,
+  `From_User_ID` varchar(60) NOT NULL,
   `Message` varchar(200) DEFAULT NULL,
   `Read_Status` varchar(1) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL DEFAULT '0',
   `Time_Stamp` datetime NOT NULL,
