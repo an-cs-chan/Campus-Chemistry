@@ -187,34 +187,6 @@ body {
     text-decoration:none;
 }
 
-#mask {
-  position:absolute;
-  left:0;
-  top:0;
-  z-index:9000;
-  background-color:#000;
-  display:none;
-  opacity: 0.6;
-}
-  
-#boxes .window {
-  position:absolute;
-  left:0;
-  top:0;
-  width:440px;
-  height:200px;
-  display:none;
-  z-index:9999;
-  padding:20px;
-}
-
-#boxes #dialog {
-  width:375px; 
-  height:203px;
-  padding:10px;
-  background-color:#ffffff;
-}
-
 .formValidator:required {
     background:url("../images/asterisk_orange.png") no-repeat 292px 4px;
     background-color:white;                   
