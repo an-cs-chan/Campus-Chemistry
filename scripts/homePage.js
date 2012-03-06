@@ -44,7 +44,7 @@ $(document).ready(function() {
        
         //Send our POST request
         $.post(
-            "python/login.py",
+            "python/login.wsgi",
             $("#loginForm").serialize(),
             function(data)
             {

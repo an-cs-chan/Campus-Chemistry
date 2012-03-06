@@ -13,11 +13,13 @@ def application(environ, start_response):
                             environ=environ,
                             keep_blank_values=True)
     
-    userName = form.getfirst('emailInput', 'empty')
-    userName = cgi.escape(userName)
+    userId = form.getfirst('emailInput', 'empty')
+    userId = cgi.escape(userId)
+    userName = userId[:userId.index('@')]
+    userId = userId.lower()
     password = form.getfirst('passwordInput', 'empty')
     password = cgi.escape(password)
-    
+
     #connect to the Database
     conn = MySQLdb.connect (host = "localhost",
                             user = "root",
@@ -25,11 +27,12 @@ def application(environ, start_response):
                             db = "campus chemistry")
     
     cursor = conn.cursor()
-    cursor.execute("""SELECT * FROM user_login WHERE User_Name = %s""", (userName,))
+    cursor.execute("""SELECT * FROM user_login WHERE User_ID = %s""", (userId,))
     row = cursor.fetchone()
     
     if row == None:
-        cursor.execute("""INSERT INTO user_login (User_ID, User_Name, Password, User_Created, Last_Login, Session_ID) VALUES (679, %s, AES_ENCRYPT(%s,%s), CURRENT_TIMESTAMP, NOW(), 55)""", (userName, password, KEY_STR,))
+        cursor.execute("""INSERT INTO user_login (User_ID, User_Name, Password, Email_ID, User_Created, Last_Login, Session_ID) VALUES (%s, %s, AES_ENCRYPT(%s,%s), %s, CURRENT_TIMESTAMP, NOW(), NULL)""", (userId, userName, password, KEY_STR, userId,))
+        cursor.execute("""INSERT INTO user_profile (User_ID, User_Name, Email_ID, User_Created) VALUES (%s, %s, %s, CURRENT_TIMESTAMP)""", (userId, userName, userId,))
         data = [{"status":"Inserted user"}]
         output = json.dumps(data)
     else:
