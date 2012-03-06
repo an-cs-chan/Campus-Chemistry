@@ -6,10 +6,13 @@
 		<title> Campus Chemistry </title>
 		<link rel="stylesheet" type="text/css" href="styles/Styles.css">
 		<link rel="stylesheet" type="text/css" href="styles/smartpaginator.css"></link>
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"></link>		
 		<meta name="GENERATOR" content="MSHTML 9.00.8112.16440">
 		<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" language="JavaScript" src="scripts/search.js"></script>
 		<script type="text/javascript" language="JavaScript" src="scripts/smartpaginator.js"></script>
+		<script type="text/javascript" language="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
+
 	</head>
 	<body>
 		<div style="float:left">
@@ -42,49 +45,76 @@
 		<div class="mainContent" align="center">
 			<div id="searchPanelMain">
 				<div id="searchPanelLeft">
-					<div id="advanceBox" class="secondaryContent">
-						<div class="contentHeader">Advanced Search</div>
-						<div id="searchSubject"> 							
-							<div class="advancedPanel">
-								<span>Hair Color</span>
-								<select id="hairComboBox" class ="advancedComboBox">
-									<option> Any </option>
-									<option> Black </option>
-									<option> Burnette </option>
-									<option> Blonde </option>
-									<option> Gray </option>
-									<option> Bald </option>
-								</select>
-							</div>						
-							<div class="advancedPanel">
-								<span>Eye Color</span>
-								<select id="eyeComboBox" class="advancedComboBox">
-									<option> Any </option>
-									<option> Black </option>
-									<option> Brown </option>
-									<option> Blue </option>
-									<option> Green </option>
-								</select>
-							</div>
-							<div class="advancedPanel">
-								<span>Faculty</span>
-								<select id="facultyComboBox" class="advancedComboBox" style="margin:0px 0px 0px 20px;">
-									<option> Any </option>
-									<option> Computer Science </option>
-								</select>
+					<form id="advancedForm">
+						<div id="advanceBox" class="secondaryContent">
+							<div class="contentHeader">Advanced Search</div>
+							<div id="searchSubject">
+								<div class="advancedPanel">
+									<span id="advancedSearchLabel">Ethnicity</span>
+									<select id="EthnicityComboBox" name="ethnicity" class="advancedComboBox">
+										<option> Any </option>
+										<option> Canadian </option>
+										<option> Chinese </option>
+										<option> Indian </option>
+										<option> Korean </option>
+										<option> American </option>
+										<option> British </option>
+										<option> French </option>
+									</select>
+								</div>								
+								<div class="advancedPanel">
+									<span id="advancedSearchLabel">Nationality</span>
+									<select id="nationalityComboBox" name="Birth_Country" class ="advancedComboBox">
+										<option> Any </option>
+										<option> Canada </option>
+										<option> US </option>
+										<option> Mexico </option>
+										<option> Brazil </option>
+										<option> Japan </option>
+										<option> China </option>
+										<option> South Korea </option>
+										<option> India </option>
+										<option> England </option>
+										<option> France </option>
+										<option> Italy </option>
+										<option> Spain </option>
+										<option> Switzerland </option>
+										<option> Germany </option>
+										<option> Russia </option>
+										<option> Singapore </option>
+										<option> Nageria </option>
+										<option> Ghana </option>
+										<option> Lybia </option>
+										<option> Australia </option>
+									</select>
+								</div>						
+								<div class="advancedPanel">
+									<span id="advancedSearchLabel"> City </span>
+									<select id="cityComboBox" name="city" class="advancedComboBox">
+										<option> Any </option>
+										<option> Toronto </option>
+										<option> Ottawa </option>
+										<option> Vancouver </option>
+										<option> Victoria </option>
+										<option> Winnipeg </option>
+										<option> Edmonton </option>
+										<option> Calgary </option>
+										<option> Regina </option>
+									</select>
+								</div>
 							</div>
 						</div>
-					</div>
+					</form>
 				</div>
 				<div id="searchPanelRight">
 					<form id="basicForm">
 						<div id="searchPanelTop">
 							<span class="searchTopLabel">Display:</span>
 	                        <span class="searchTopOptions filterButton selectedFilter">
-	                        	<img alt="small display" src="images/4x.png" />
+	                        	<img id="smallDisplay" alt="small display" src="images/4x.png" />
 	                        </span>
 	                        <span class="searchTopOptions filterButton">
-	                        	<img alt="small display" src="images/2x.png" />	                        	
+	                        	<img id="largeDisplay" alt="large display" src="images/2x.png" />	                        	
 	                        </span>			    
                         	<span class="searchTopLabel">Sort By:</span>
 							<select id="sortComboBox" name="sort" class="searchTopOptions filterSearch">
@@ -116,6 +146,10 @@
 								<input id='ageMax' name='maxAge' value='25' min='1' max='99' type='number' class="filterSearch" style="width:45px" />	
 					   		</div>
 					</form>
+                    <div id="alertArea" style="display:none; margin:0px 0px 5px 0px;">
+                    </div>   
+                    <div id="warningArea" style="display:none; margin:0px 0px 5px 0px;">
+                    </div>                        
 					<div id="searchPanelBottom">
 						<div id="resultsArea">	
 						</div>
@@ -126,5 +160,16 @@
 			</div>	
 			<div class="clearfix"></div>
 		</div>
+		<div id="dialog-form"  style="font-size: 62.5%;label, input{display:block}" title="Create message">
+			<p class="validateTips">All form fields are required.</p>
+			<form>
+			<fieldset>
+				<label for="name">Send To: (Username)</label>
+				<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+				<label for="message">Message</label>
+				<textarea name="message" id="message" value="" class="text ui-widget-content ui-corner-all" style="width: 310px; height: 139px;" placeholder="Enter Your Message"></textarea>
+			</fieldset>
+			</form>
+		</div>		
 		</body>
 	</html>

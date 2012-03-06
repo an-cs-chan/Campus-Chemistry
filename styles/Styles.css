@@ -153,6 +153,17 @@ body {
     text-align:center;
 }
 
+#alertArea
+{
+    margin: 20px 10px 5px; 
+    color: rgb(117, 153, 169); 
+    font-size: 16px; 
+    background-color: #00FF00;
+    color: black;
+    border-radius: 2px;
+    text-align:center;	
+}
+
 .registerTextEntry {
 	border-radius: 7px; 
 	border: 0px; 
@@ -222,62 +233,65 @@ body {
 /*--------------*/
 /* PROFILE PAGE */
 /*--------------*/
-#profilePicture{
-	width: 150px;
-	height: 200px;
-	display: block;
-	margin: 15px auto;
-	
+/*----layout-----*/
+#profilePanelMain {
+	padding: 30px 50px 30px;
+	max-height: 600px;
 }
-
 #profilePanelLeft{
 	display: block;
 	float: left;
-	width: 30%;
+	position:relative;
 }
 
 #profilePanelRight{
 	display: block;
-	float: right;
 	width: 50%;
+	position: relative;
+	left:100px;
 }
 
-#uploadPhoto{
-	display: block;
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom: 15px;
-	text-align: center;
-	width: 120px;
+.bottom_profile{
+	position:relative;
+	bottom: 0;
+	right:0;
+	padding-bottom:30px;
+	padding-top:50px;
 }
 
+/*----buttons-----*/
+.bottombutton{
+	display:block;
+	float:right;
+	margin-bottom:20px;
+}
+
+#uploadPic{
+	position:absolute;
+	z-index:1;
+	left:5px;
+	right:5px;
+	bottom:0;
+	visibility:hidden;
+}
+
+/*----text entry-----*/
 .profileTextEntry {
 	border-radius: 7px; 
 	border: 0px; 
 	left: 120px; 
 	right: 0px;
 	height: 24px;
-	margin-top:10px;
-	margin-bottom:10px;
 	text-align: center;
+	width:350px;
 }
 
-.profileFullText{
-	border-radius: 7px; 
-	border: 0px; 
-	left: 120px; 
-	right: 0px;
-	height: 24px;
-	position:inherit;
-	margin-top:20px;
-	margin-bottom:20px;
-	text-align: center;
-}
-
-#saveProfile{
-	display:block;
-	float:right;
-	margin:20px;
+/*----misc-----*/
+#profilePicture{
+	width: 150px;
+	height: 200px;
+	display: block;
+	margin-right:0px;
 }
 
 .user_fact{
@@ -287,20 +301,44 @@ body {
 #user_fullname{
 	font-size:xx-large;
 	font-family:"Rage Italic";
+	font-weight:bold;
 }
 
 #interests{
-	width: 100%;
+	margin-top: 50px;
+	font-family:"Rage Italic";
+	font-size:large;
+	font-weight:bold;
 }
 
-#profilePanelMain {
-	padding: 15px;
-	min-height: 700px;
+.interest_col{
+	width: 30%;
+	color: rgb(127, 129, 171);
 }
 
-.footer{
-	padding-right:15px;
+#tag_line{
+	margin-top:10px;
+	margin-bottom:10px;
+	font-style:italic;	
 }
+
+.footerPanel{
+	margin: 0 auto;
+	color: rgb(127, 129, 171);
+}
+
+.descripProfile{
+	font-size:small;
+	font-style:italic;
+	display:inline;
+}
+
+/*--------------------*/
+/* OTHER PROFILE PAGE */
+/*--------------------*/
+
+margin-top:10px;
+	margin-bottom:10px;
 /*-----------*/
 /* QUIZ PAGE */
 /*-----------*/
@@ -489,13 +527,15 @@ table.sample td {
 	margin: 10px;
 }
 
-#genderLabel {
+#advancedSearchLabel {
 	padding: 4px 4px 4px 0px;
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .advancedComboBox {
 	position: relative;
-	left: 10px;
+	float: right;
 	width: 100px;
 	color: rgb(117, 153, 169);
 	
@@ -615,9 +655,7 @@ table.sample td {
 }
 
 .closeButton {
-	position: relative;
-	left: 53px;
-	top: -10px;	
+	float:right;
 	cursor:pointer;
 }
 
@@ -626,8 +664,8 @@ table.sample td {
 }
 
 .userPicture {
-	width: 32%;
-	min-height: 80px;	
+	width: 38%;
+	min-height: 90px;	
 	float: left;
 	margin: 15px 10px 10px 15px;
 	cursor:pointer;	
@@ -659,11 +697,17 @@ table.sample td {
 #mailUser {
 	width: 30px; 
 	height: 20px;
+	cursor: pointer;
 }
 
 #likeUser {
 	width: 30px; 
 	height: 20px;
+	cursor: pointer;
+}
+
+#userNameText {
+	font-weight:bold;
 }
 
 /*-----------------------*/

@@ -42,3 +42,30 @@ describe("ProcessBasicSearch", function() {
 	});		
 });
 
+describe("ProcessAdvancedSearch", function() {
+	it("Shows nothing when there is no data", function()
+	{
+		setFixtures('<div id="resultsArea"></div><div id="resultsFooter"></div>');
+
+		var data = "";
+		
+		processAdvancedSearch(data);
+
+		expect($("#resultsFooter").html()).toBe("");
+		expect($("#resultsArea").html()).toBe("<p>No Results To Display</p>");
+	});	
+	
+	it("Shows results when there IS data", function()
+	{
+		setFixtures('<div id="resultsArea"></div><div id="resultsFooter"></div>');
+
+		var data = new Array();
+		data[0] = "test";
+		
+		processAdvancedSearch(data);
+
+		expect($("#resultsFooter").html()).toBe("");
+		expect($("#resultsArea").html()).not.toBeEmpty();
+	});		
+});
+

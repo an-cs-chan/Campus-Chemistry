@@ -49,7 +49,7 @@ def application(environ, start_response):
         	user_cookie['userid'] = userId
         	user_cookie['userid']['path'] = '/'
         else:
-        	#data = [{"status":"Incorrect credentials"}]
+        	data = [{"status":"Incorrect credentials"}]
         output = json.dumps(data)
     
     status = '200 OK'
