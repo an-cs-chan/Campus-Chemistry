@@ -43,7 +43,7 @@ def application(environ, start_response):
         	data = [{"status":"User found"}]
         	rand_digs = string.ascii_uppercase + string.ascii_lowercase + string.digits
         	session_id = ''.join(random.sample(rand_digs,24))
-        	cursor.execute("""UPDATE user_login SET Session_ID = %s WHERE User_ID = %s""", (session_id, userId,))
+        	cursor.execute("""UPDATE user_login SET Session_ID = %s, Last_Login = NOW() WHERE User_ID = %s""", (session_id, userId,))
         	sess_cookie['sessionid'] = session_id
         	sess_cookie['sessionid']['path'] = '/'
         	user_cookie['userid'] = userId
