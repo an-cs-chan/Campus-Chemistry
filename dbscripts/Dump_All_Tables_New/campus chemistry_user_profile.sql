@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `user_profile`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_profile` (
-  `User_ID` varchar(20) NOT NULL,
+  `User_ID` varchar(60) NOT NULL,
   `User_Name` varchar(100) NOT NULL,
   `Email_ID` varchar(60) NOT NULL,
   `User_Created` datetime NOT NULL,

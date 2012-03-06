@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `user_profile_images`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_profile_images` (
-  `user_ID` varchar(20) NOT NULL,
+  `user_ID` varchar(60) NOT NULL,
   `Image_ID` varchar(45) NOT NULL,
   `Image_File` varchar(150) NOT NULL,
   `Profile_Image` varchar(5) NOT NULL,

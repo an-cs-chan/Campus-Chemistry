@@ -25,13 +25,13 @@ DROP TABLE IF EXISTS `user_login`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_login` (
-  `User_ID` varchar(20) NOT NULL,
+  `User_ID` varchar(60) NOT NULL,
   `User_Name` varchar(100) NOT NULL,
-  `Password` varchar(200) NOT NULL,
+  `Password` blob NOT NULL,
   `Email_ID` varchar(60) NOT NULL,
   `User_Created` datetime NOT NULL,
   `Last_Login` datetime NOT NULL,
-  `Session_ID` varchar(100) NOT NULL,
+  `Session_ID` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`User_ID`),
   KEY `User_ID` (`User_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
