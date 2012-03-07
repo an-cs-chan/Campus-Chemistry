@@ -3,36 +3,40 @@
 import MySQLdb
 import cgi
 import json
-import datetime
-
-from wsgiref.simple_server import make_server
-from cgi import parse_qs, escape
+import string
+import random
+import Cookie
 
 KEY_STR = 'umprojkey6853558'
 
-#this wsgi is to get data for MY profile or another user's profile
-
 def application(environ, start_response):
-
-	#get proper fields
+    
+    #get proper fields
     form = cgi.FieldStorage(fp=environ['wsgi.input'],
                             environ=environ,
                             keep_blank_values=True)
+    
+    sessionID = form.getfirst('session', 'empty')
+    sessionID = cgi.escape(sessionID)
 
-	#get user id
-
-	#connect to the Database
+    #connect to the Database
     conn = MySQLdb.connect (host = "localhost",
                             user = "root",
                             passwd = "",
                             db = "campus chemistry")
+    
+    cursor = conn.cursor()
+    
+    cmd = "SELECT Last_Login FROM user_login WHERE Session_ID = '"+sessionID+"'"
+    cursor.execute(cmd)
+    row = cursor.fetchone()
+    
+    if row == None:
+        data = [{"status":"Invalid SessionID"}]
+    else:
+        data = [{"status":"Valid SessionID"}]
 
-	cursor = conn.cursor()
-	
-	cursor.execute("""SELECT * FROM user_profile WHERE User_ID = %s""", (userId,))
-	row = cursor.fetchone()
-	
-	output = json.dumps(data)
+    output = json.dumps(data)        
     status = '200 OK'
     
     cursor.close()

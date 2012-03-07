@@ -88,23 +88,23 @@ function showMessage(data)
 						"</tr>" +
 					"</thead>" +	
  				"<tbody>"; 
-	//Pagination will be done by our nifty jPaginate :D
 	
-	$.each(data, function(index) {
+	$.each(data, function(index) {  //Code for showing messages in the table from the DB
 	//Todo:
 	//if (len(data[index][2])>50)
 	 // clip clip Add ...
 	//$("#opener").ellipsis()
       htmla += "<tr id='displayMessage_" + data[index][0] + "' class='even' data-href=''>" + 
 				"<td><input type='checkbox' name='message_id' value=" + data[index][0] + " /></td>" +
-				"<td><a class='opener' id='"+index+"' href='#'>" + data[index][2] + "</a></td>" + 
-				"<td>" + data[index][1] + "</td>" + 
-				"<td>" + data[index][3] + "</td>" + 
+				"<td name = 'message'><a class='opener' id='"+index+"' href='#'>" + data[index][2] + "</a></td>" + 
+				"<td name = 'from'>" + data[index][1] + "</td>" + 
+				"<td name='time'>" + data[index][3] + "</td>" + 
 				"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='test("+data[index][0]+");' /></td>" + 
 			"</tr>";
 			totRecords++;
     });
 	
+	//Start of code for showing the message with Reply button.
 	var $dialog=new Array();
 	$.each(data, function(index){
 	$dialog[index] = $('<div style="background-color:#D6EEF7"></div>').html(data[index][2])
@@ -113,60 +113,31 @@ function showMessage(data)
 				height: 300,
 				width: 350,
 				title: 'Message',
-				/*modal: true,
-				buttons: {
-				"Reply": function() {
-					var bValid = true;
-					allFields.removeClass( "ui-state-error" );
-
-					//bValid = bValid && checkLength( name, "username", 3, 16 );
-					//bValid = bValid && checkLength( subject, "subject", 6, 80 );
-					//bValid = bValid && checkLength( message, "message", 5, 16 );
-
-					//bValid = bValid && checkRegexp( name, /^[a-z]([0-9a-z_])+$/i, "Username may consist of a-z, 0-9, underscores, begin with a letter." );
-					//bValid = bValid && checkRegexp( subject, /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i, "eg. ui@jquery.com" );
-					//bValid = bValid && checkRegexp( message, /^([0-9a-zA-Z])+$/, "message field only allow : a-z 0-9" );
-
-					if ( bValid ) {
-										
-					// we want to store the values from the form input box, then send via ajax below
-						var name = $( "#name" ).val()
-						//alert(name);
-						//var subject = subject.val()
-						var message = $("#message").val()
-							$.ajax({
-								type: "POST",
-								url: "python/send.wsgi",
-								data: "name="+name+"&message="+message,
-								});
-						$( this ).dialog( "close" );					
-					}
-				},
-			},*/
-			
-		});			
-		});
+				modal: true,
+			  	buttons: { "Reply": function(){ 
+				  $(this).dialog('close');
+					reply(data[index][1]);
+				  }
+				 }
+				}); 
+	   	});
 		
-	//$.each(data, function(index){	
-	$('.opener').live("click", function(event) {
+	$('.opener').live("click", function(event) {          //code for opening the dialog with respective messages	
 			var match_id = $(this).attr("id");
 			$dialog[match_id].dialog('open');
 			//alert(event.target.id);
 			//$(this).append("Clicked");
-			//$dialog[document.getElementById("opener")].dialog('open');
 			// prevent the default action, e.g., following a link
 			return false;
 			});
-    //});
-
+    
 	htmla += "</tbody>" +
 	        "</table>";
         
     if(totRecords > 0)
     {
     	$("#questionAnswers").html(htmla);
-    	    
-	    $('#resultFooter').smartpaginator({
+        $('#resultFooter').smartpaginator({
 	        datacontainer: 'questionAnswers',
 	        dataelement:'tr',
 	    	totalrecords: totRecords,
@@ -187,7 +158,50 @@ function showMessage(data)
     }
 }
 
-function test(id)
+function reply (from)
+{    
+    $( "#dialog-form" ).dialog( "open" );
+	$("#name").val(from);
+	$("#name").attr("readonly","true");
+	$("#dialog-form").dialog({
+					autoOpen: false,
+					height: 350,
+					width: 350,
+					modal: true,
+					buttons: {
+						"Send": function() {
+						//alert(name);
+							var bValid = true;
+							//allFields.removeClass( "ui-state-error" );
+							//bValid = bValid && checkLength( name, "username", 3, 16 );
+							//bValid = bValid && checkLength( subject, "subject", 6, 80 );
+							//bValid = bValid && checkLength( message, "message", 5, 16 );
+							//bValid = bValid && checkRegexp( name, /^[a-z]([0-9a-z_])+$/i, "Username may consist of a-z, 0-9, underscores, begin with a letter." );
+							//bValid = bValid && checkRegexp( subject, /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i, "eg. ui@jquery.com" );
+							//bValid = bValid && checkRegexp( message, /^([0-9a-zA-Z])+$/, "message field only allow : a-z 0-9" );
+							if ( bValid ) {
+								// we want to store the values from the form input box, then send via ajax below
+								var name = $("#name").val(from); 
+								var message = $("#message").val()
+									$.ajax({
+										type: "POST",
+										url: "python/send.wsgi",
+										data: "name="+name+"&message="+message,
+										});
+								$( this ).dialog( "close" );					
+							}
+						},
+						Cancel: function() {
+							$( this ).dialog( "close" );
+						}
+					},
+					close: function() {
+						allFields.val( "" ).removeClass( "ui-state-error" );
+					}
+				});
+}
+
+function test(id) // code for deleting the message form UI and DB calls deletemsg.wsgi script
 {
 	$("img.closeButton").click(function(){
                 //id = $(this).parent().attr("id");
@@ -201,7 +215,6 @@ function test(id)
                 });
 
         });
-
 		$("#displayMessage_"+id).css("display","none");
 	
 }

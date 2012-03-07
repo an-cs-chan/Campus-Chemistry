@@ -1,4 +1,14 @@
+//Get our session and user IDs
+var sessionID = getCookie("sessionid");
+var userID = getCookie("userid");
+
+//Check security
+checkSessionExpired(sessionID);
+
 $(document).ready(function() { 
+
+	//Set greeting message
+	$("#useridGreeting").html(userID);
 	
 	processSearch();
 	
@@ -11,6 +21,14 @@ $(document).ready(function() {
 			processSearch();  	      
         }
     });
+    
+    $("#logoutButton").on({
+        click: function()
+        {
+			//document.cookie = 'sessionid=; expires=Thu, 01-Jan-70 00:00:01 GMT;';	
+			//window.location.replace("index.html");
+        }
+    });    
     
 	$(".advancedComboBox").on({
         change: function()
@@ -64,22 +82,6 @@ $(document).ready(function() {
 			}
 		}
 	});
-             
-    //This function overrides the default form behavior so we can do validation
-    $('#logoutForm').submit(function()
-    {           
-        $.post(
-            "python/logout.py",
-            function(data)
-            {
-               //Redirect to home
-                var url = "index.html";
-                $(location).attr('href',url);
-               
-            }, "json");
-
-        return false;
-    });    
 });
 
 function processSearch()
@@ -264,7 +266,7 @@ function createUserBlock (user, floatType, id, displayType)
 
 function openMailDialog(name)
 {
-	$( "#dialog-form" ).dialog( "open" );
+	$("#dialog-form" ).dialog( "open" );
 	$("#name").val(name);
 	$("#name").attr("readonly","true");
 }
@@ -303,4 +305,39 @@ function UserInformation(User_Name, Department, User_ID, Body_type, About_Me)
 	this.User_ID = User_ID;
 	this.Body_type = Body_type;
 	this.About_Me = About_Me; 
+}
+
+function checkSessionExpired(session)
+{	
+	$.post(
+	    "python/checkSession.wsgi",
+		"session="+session,
+	    function(data)
+	    {
+			if(data[0].status == 'Invalid SessionID')
+			{
+				alert("Cookie expired! Please log in again =)");
+				window.location.replace("index.html");
+			}
+	    }, "json");	
+}
+
+function getCookie(value)
+{
+	var i,x,y,ARRcookies = document.cookie.split(";");
+	var userID, sessionid;
+	
+	for (i = 0; i < ARRcookies.length;i ++)
+	{
+		x = ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+		y = ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+		x = x.replace(/^\s+|\s+$/g,"");
+		
+		if (x == value)
+		{
+			return unescape(y);
+		}
+	}
+	
+	return "";
 }
