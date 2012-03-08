@@ -16,7 +16,8 @@ $(document).ready(function() {
 	});
 	
 	setPreferences();
-	processSearch();
+	
+	window.setTimeout(processSearch, 500);
 	
 	$("#advancedSearchHeader").on({
         click: function()
@@ -335,16 +336,13 @@ function setPreferences()
 	//Create cookies + get data
 	if(minAge == "" || maxAge == "" || gender == "" || pref == "")
 	{
-		
 		if(userID != "" && userID != null)
 		{
 			$.post(
 			    "python/getPreferences.wsgi",
 				"userid="+userID,
 			    function(data)
-			    {
-			    	alert("Gender: " + data[0] + " Pref: " + data[1]);
-			    	
+				{			    	
 					if(data[0] == 'M')
 					{
 						pref = 'Men';
