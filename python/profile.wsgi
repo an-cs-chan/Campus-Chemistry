@@ -20,6 +20,8 @@ def application(environ, start_response):
                             keep_blank_values=True)
 
 	#get user id
+	user_id = form.getfirst('userID', 'empty')
+    user_id = cgi.escape(user_id)
 
 	#connect to the Database
     conn = MySQLdb.connect (host = "localhost",
@@ -29,7 +31,7 @@ def application(environ, start_response):
 
 	cursor = conn.cursor()
 	
-	cursor.execute("""SELECT * FROM user_profile WHERE User_ID = %s""", (userId,))
+	cursor.execute("""SELECT * FROM user_profile WHERE User_ID = %s""", (user_id,))
 	row = cursor.fetchone()
 	
 	output = json.dumps(data)

@@ -18,6 +18,8 @@ def application(environ, start_response):
                             keep_blank_values=True)
 
 	#get user id
+	user_id = form.getfirst('userID', 'empty')
+    user_id = cgi.escape(user_id)
 	
 	#get fields from form
 
