@@ -418,7 +418,7 @@ margin-top:10px;
 
 #inboxPanelMain {
 	padding: 15px;
-	min-height: 700px;
+	min-height: 500px;
 }
 
 #inboxPanelLeft {
@@ -463,7 +463,15 @@ table.sample td {
 	padding: 3px;
 	border-style: inset;
 	border-color: gray;
+	background-color: #FFC;
 	background-color: rgb(214, 238, 247);
+}
+tr.read td{
+	border-width: 1px;
+	padding: 3px;
+	border-style: inset;
+	border-color: gray;
+	background-color: #FFFFF7;
 }
 
 /*-------------*/
