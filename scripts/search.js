@@ -9,8 +9,22 @@ $(document).ready(function() {
 
 	//Set greeting message
 	$("#useridGreeting").html(userID);
+	$("#accordion").accordion({
+		collapsible: true,
+		active: false,
+		autoHeight: false
+	});
 	
-	processSearch();
+	setPreferences();
+	
+	window.setTimeout(processSearch, 500);
+	
+	$("#advancedSearchHeader").on({
+        click: function()
+        {
+			$("#searchSubject").toggle("slow");
+        }		
+	});
 	
     $(".filterButton").on({
         click: function()
@@ -32,14 +46,14 @@ $(document).ready(function() {
     
 	$(".advancedComboBox").on({
         change: function()
-        {       	
-			$.post(
-				"python/search.wsgi",
-				$("#advancedForm").serialize() + "&" + $("#basicForm").serialize(),
-				function(data)
-				{
+        {   
+		    $.post(
+		        "python/search.wsgi",
+				$("#basicForm").serialize(),
+		        function(data)
+		        {
 					processBasicSearch(data);              
-				}, "json");
+		        }, "json");
 		}
     });
     
@@ -116,10 +130,10 @@ function processSearch()
 	else
 	{
 		$("#warningArea").hide("fast");
-
+	
 	    $.post(
 	        "python/search.wsgi",
-			$("#advancedForm").serialize() + "&" + $("#basicForm").serialize(),
+			$("#basicForm").serialize(),
 	        function(data)
 	        {
 				processBasicSearch(data);              
@@ -133,26 +147,17 @@ function processBasicSearch(data)
 	
 	//Check how many "displays" are currently selected and only show THAT many	
 	var totRecords = 0;
-	var floatType = "";
 	var displayType = "";
 	
 	//Pagination will be done by our nifty jPaginate :D
-    $.each(data, function(index) {
-    	
-    	if((index % 2) > 0)
-    	{
-    		floatType = "right";
-    	}
-    	else
-    	{
-    		floatType = "left";
-    	}
-    	    	    	
+    $.each(data, function(index) 
+    {
+    	    	    	    	
 		var user = new UserInformation(data[index][0],data[index][1],data[index][2], data[index][3], data[index][4]);
     	    	
     	displayType = $(".selectedFilter img").attr("id");
     	    	
-        html += createUserBlock(user, floatType, index, displayType);
+        html += createUserBlock(user, index, displayType);
         
         totRecords++;
     });
@@ -161,7 +166,7 @@ function processBasicSearch(data)
     
 	if(displayType == "smallDisplay")
     {
-    	showResults = 6;
+    	showResults = 9;
     }
     else
     {
@@ -178,7 +183,7 @@ function processBasicSearch(data)
 	    	totalrecords: totRecords,
 	    	recordsperpage: showResults,
 	    	theme: 'teal',
-		 	length: 4,
+		 	length: 10,
 		 	next: 'Next',
 		 	prev: 'Prev',
 		 	first: 'First',
@@ -191,36 +196,42 @@ function processBasicSearch(data)
 		 $("#resultFooter").removeClass("pager red");
 		 $("#resultsArea").html("<p>No Results To Display</p>");
     }
+    
+    //Set cookies to expire after session
+    setCookie("minAge",$("#ageMin").val(),null);
+	setCookie("maxAge",$("#ageMax").val(),null);
+	setCookie("gender",$("#gender").val(),null);
+	setCookie("pref",$("#seeking").val(),null);	
 }
 
 //This function will create those user profile squares we need for the search results area
-function createUserBlock (user, floatType, id, displayType)
+function createUserBlock (user, id, displayType)
 {
-	if(user.About_Me != null && user.About_Me.length > 50)
+	if(user.About_Me != null && user.About_Me.length > 99)
 	{
-		var newString = user.About_Me.substring(0,50) + "...";
+		var newString = user.About_Me.substring(0,99) + "...";
 		user.About_Me = newString;
 	}
 		
 	if(displayType == "smallDisplay")
 	{
 		var html = 
-		"<div id='displayUser_" + id + "' class='displayUser' style='float:"+floatType+"'>" +
+		"<div id='displayUser_" + id + "' class='displayUser' style='float:right'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
 			"<a href='Profile.html?uid="+user.User_ID+"'><img class='userPicture' src='images/test.png' /></a>" +
 			"<span class='userInfoPanel'>" +								
 				"<span class='userInfoLabel'>" +
 					"<span id='userNameText' class='userInfoText'>"+user.User_Name+"</span>" +
 				"</span>" +
-				"</br>" +
+				"<br />" +
 				"<span class='userInfoLabel'>" +
 					"<span class='userInfoText'>"+user.Body_type+"</span>" +
 				"</span>" +
-				"</br>" +
+				"<br />" +
 				"<span class='userInfoLabel'>" +
 					"<span class='userInfoText'>"+user.Department+"</span>" +
 				"</span>" +
-				"</br>" +
+				"<br />" +
 				"<span class='userAction'>" +
 					"<img id='mailUser' onclick='openMailDialog(\""+user.User_Name+"\");' src='images/envelope.jpg'>" +
 				"</span>" +
@@ -235,20 +246,12 @@ function createUserBlock (user, floatType, id, displayType)
 		var html = 
 		"<div id='displayUser_" + id + "' class='displayUser' style='width:96%;'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
-			"<a href='Profile.html?uid="+user.User_ID+"'><img class='userPicture' style='width:18%;' src='images/test.png' /></a>" +
+			"<a href='Profile.html?uid="+user.User_ID+"'><img class='userPicture' src='images/test.png' /></a>" +
 			"<span class='userInfoPanel' style='float:left; margin:21px 10px 10px 0px;'>" +								
 				"<span class='userInfoLabel'>" +
 					"<span id='userNameText' class='userInfoText'>"+user.User_Name+"</span>" +
 				"</span>" +
-				"<br /> " +
-				"<span class='userInfoLabel'>" +
-					"<span class='userInfoText'><b>Body Type: </b>"+user.Body_type+"</span>" +
-				"</span>" +
-				"</br>" +					
-				"<span class='userInfoLabel'>" +
-					"<span class='userInfoText'><b>Department: </b>"+user.Department+"</span>" +
-				"</span>" +
-				"</br>" +				
+				"<br /> " +		
 				"<span class='userInfoLabel'>" +
 					"<span class='userInfoText'><b>About Me: </b></span>" +
 				"</span>" +
@@ -322,6 +325,67 @@ function checkSessionExpired(session)
 	    }, "json");	
 }
 
+function setPreferences()
+{
+	//Get search preferences from cookie
+	var minAge = getCookie("minAge");
+	var maxAge = getCookie("maxAge");
+	var gender = getCookie("gender");
+	var pref = getCookie("pref");
+
+	//Create cookies + get data
+	if(minAge == "" || maxAge == "" || gender == "" || pref == "")
+	{
+		if(userID != "" && userID != null)
+		{
+			$.post(
+			    "python/getPreferences.wsgi",
+				"userid="+userID,
+			    function(data)
+				{			    	
+					if(data[0] == 'M')
+					{
+						pref = 'Men';
+					}
+					else if (data[0] == 'F')
+					{
+						pref = 'Women';
+					}
+					else
+					{
+						pref = 'Men/Women';
+					}
+					
+					if(data[1] == 'M')
+					{
+						gender = 'Men';
+					}
+					else if (data[1] == 'F')
+					{
+						gender = 'Women';
+					}
+					else
+					{
+						gender = 'Men/Women';
+					}					
+					
+					$("#gender").val(gender);
+					$("#seeking").val(pref);
+					$("#ageMin").val(data[2]+'');
+					$("#ageMax").val(data[3]+'');
+			    }, "json");	
+		}	
+	}
+	else
+	{
+		//We are good!
+		$("#gender").val(gender);
+		$("#seeking").val(pref);
+		$("#ageMin").val(minAge);
+		$("#ageMax").val(maxAge);			
+	}
+}
+
 function getCookie(value)
 {
 	var i,x,y,ARRcookies = document.cookie.split(";");
@@ -340,4 +404,12 @@ function getCookie(value)
 	}
 	
 	return "";
+}
+
+function setCookie(c_name, value, exdays)
+{
+	var exdate=new Date();
+	exdate.setDate(exdate.getDate() + exdays);
+	var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+	document.cookie=c_name + "=" + c_value;
 }

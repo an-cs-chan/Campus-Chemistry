@@ -51,7 +51,7 @@ def application(environ, start_response):
     	gender = "SEX = 'F'"
     
     if gender == "Men/Women":
-    	gender = "SEX = 'F' OR SEX = 'M'"
+    	gender = "(SEX = 'F' OR SEX = 'M')"
     
     if pref == "Men":
     	pref = "orientation = 'M'"
@@ -60,7 +60,7 @@ def application(environ, start_response):
     	pref = "orientation = 'F'"
    
     if pref == "Men/Women":
-    	pref = "orientation = 'F' OR orientation = 'M'"
+    	pref = "(orientation = 'F' OR orientation = 'M')"
     	
     #What we want to do: Take NOW and minus minBirthDate years and save it
     #then take NOW and minus maxBirthDate years and save it
