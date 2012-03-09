@@ -87,22 +87,22 @@ def application(environ, start_response):
     
     #UGH, BFI method. Horrible horrible coding.
   	
-    filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me FROM user_profile WHERE " + ethnicityCmd + " AND " + nationalityCmd + " AND " + cityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder 
+    filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture FROM user_profile WHERE " + ethnicityCmd + " AND " + nationalityCmd + " AND " + cityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder 
   	
     if ethnicity == "Any" and nationality == "Any" and city == "Any":
-        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me FROM user_profile WHERE " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder                
+        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture FROM user_profile WHERE " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder                
     elif ethnicity == "Any" and nationality != "Any" and city == "Any":
-        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me FROM user_profile WHERE " + nationalityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder
+        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture FROM user_profile WHERE " + nationalityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder
     elif ethnicity != "Any" and nationality == "Any" and city == "Any":
-        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me FROM user_profile WHERE " + ethnicityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder
+        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture FROM user_profile WHERE " + ethnicityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder
     elif ethnicity == "Any" and nationality == "Any" and city != "Any":
-        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me FROM user_profile WHERE " + cityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder    
+        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture FROM user_profile WHERE " + cityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder    
     elif ethnicity != "Any" and nationality != "Any" and city == "Any":
-        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me FROM user_profile WHERE " + ethnicityCmd + " AND " + nationalityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder
+        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture FROM user_profile WHERE " + ethnicityCmd + " AND " + nationalityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder
     elif ethnicity != "Any" and nationality == "Any" and city != "Any":
-        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me FROM user_profile WHERE " + ethnicityCmd + " AND " + cityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder    
+        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture FROM user_profile WHERE " + ethnicityCmd + " AND " + cityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder    
     elif ethnicity == "Any" and nationality != "Any" and city != "Any":
-        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me FROM user_profile WHERE " + nationalityCmd + " AND " + cityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder                
+        filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture FROM user_profile WHERE " + nationalityCmd + " AND " + cityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder                
         
     cursor.execute(filterPref)
     rows = cursor.fetchall()
