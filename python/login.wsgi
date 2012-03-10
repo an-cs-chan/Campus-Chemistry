@@ -6,6 +6,7 @@ import json
 import string
 import random
 import Cookie
+import datetime
 
 KEY_STR = 'umprojkey6853558'
 
@@ -35,6 +36,8 @@ def application(environ, start_response):
     sess_cookie = Cookie.SimpleCookie()
     user_cookie = Cookie.SimpleCookie()
     
+    expiration = datetime.datetime.now() + datetime.timedelta(days=2)
+    
     if row == None:
         data = [{"status":"Incorrect credentials"}]
         output = json.dumps(data)
@@ -46,8 +49,10 @@ def application(environ, start_response):
         	cursor.execute("""UPDATE user_login SET Session_ID = %s, Last_Login = NOW() WHERE User_ID = %s""", (session_id, userId,))
         	sess_cookie['sessionid'] = session_id
         	sess_cookie['sessionid']['path'] = '/'
+        	sess_cookie['sessionid']['expires'] = expiration.strftime("%a, %d-%b-%Y %H:%M:%S PST")
         	user_cookie['userid'] = userId
         	user_cookie['userid']['path'] = '/'
+        	user_cookie['userid']['expires'] = expiration.strftime("%a, %d-%b-%Y %H:%M:%S PST")
         else:
         	data = [{"status":"Incorrect credentials"}]
         output = json.dumps(data)

@@ -27,14 +27,6 @@ $(document).ready(function() {
         }
     });
     
-    $("#logoutButton").on({
-        click: function()
-        {
-			//document.cookie = 'sessionid=; expires=Thu, 01-Jan-70 00:00:01 GMT;';	
-			//window.location.replace("index.html");
-        }
-    });    
-    
 	$(".advancedComboBox").on({
         change: function()
         {   

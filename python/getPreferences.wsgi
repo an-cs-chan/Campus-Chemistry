@@ -17,7 +17,6 @@ def application(environ, start_response):
                             keep_blank_values=True)
     
     userID = form.getfirst('userid', 'empty')
-    userID = cgi.escape(userID)
 
     #connect to the Database
     conn = MySQLdb.connect (host = "localhost",
@@ -26,9 +25,7 @@ def application(environ, start_response):
                             db = "campus chemistry")
     
     cursor = conn.cursor()
-    
-    userID = 'flowacat@shaw.ca'
-    
+   
     cmd = "SELECT Sex, Orientation, MinAgePref, MaxAgePref FROM user_profile WHERE Email_ID = '"+userID+"'"
     cursor.execute(cmd)
     row = cursor.fetchone()
