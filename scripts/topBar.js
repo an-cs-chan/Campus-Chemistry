@@ -10,19 +10,30 @@ $(document).ready(function()
 	//Set greeting message
 	$("#useridGreeting").html(userID);
 	
+    $("#logoutButton").on({
+        click: function()
+        {
+        	window.location.replace("index.html");
+			
+			document.cookie = 'sessionid='+sessionID+'; expires=Thu, 2 Aug 2001 20:00:00 UTC; path=/ ';
+			
+			//Allows us to do what we want, overrides default
+			return false;
+        }
+    });    
 	
 });
 
 function getCookie(value)
 {
 	var i,x,y,ARRcookies = document.cookie.split(";");
-	var userID, sessionid;
 	
 	for (i = 0; i < ARRcookies.length;i ++)
 	{
 		x = ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
 		y = ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
 		x = x.replace(/^\s+|\s+$/g,"");
+		y = y.replace(/\"/g,"");
 		
 		if (x == value)
 		{
