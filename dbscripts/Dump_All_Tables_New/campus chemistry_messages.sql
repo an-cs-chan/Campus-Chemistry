@@ -31,8 +31,9 @@ CREATE TABLE `messages` (
   `Message` varchar(200) DEFAULT NULL,
   `Read_Status` varchar(1) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL DEFAULT '0',
   `Time_Stamp` datetime NOT NULL,
+  `Deleted` varchar(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`Message_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +42,7 @@ CREATE TABLE `messages` (
 
 LOCK TABLES `messages` WRITE;
 /*!40000 ALTER TABLE `messages` DISABLE KEYS */;
-INSERT INTO `messages` VALUES (1,'1','2','Hello','1','2012-02-21 17:00:59'),(2,'1','2','Hello','1','2012-02-21 17:01:35'),(3,'13','12','Hello','1','2012-02-21 17:16:26'),(4,'13','14','Hello, Wassup','1','2012-02-21 17:17:39'),(5,'13','14','Hello, Girl','1','2012-02-21 17:17:39'),(6,'13','14','Ping : Request Times out','1','2012-02-21 17:17:39'),(7,'12','1','sdfsd','1','2012-02-24 12:46:11'),(8,'12','1','empty','1','2012-02-24 12:54:35'),(13,'13','12','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravid','1','2012-02-26 01:00:15'),(14,'13','11','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus','1','2012-02-26 01:00:15'),(15,'13','11','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravid','1','2012-02-26 01:00:15'),(16,'13','11','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravid','1','2012-02-26 01:00:15'),(17,'13','12','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis','1','2012-02-26 01:00:15');
+INSERT INTO `messages` VALUES (1,'1','2','Hello','1','2012-02-21 17:00:59','0'),(2,'1','2','Hello','1','2012-02-21 17:01:35','0'),(3,'13','12','Hello','1','2012-02-21 17:16:26','1'),(4,'13','14','Hello, Wassup','1','2012-02-21 17:17:39','0'),(5,'13','14','Hello, Girl','1','2012-02-21 17:17:39','0'),(6,'13','14','Ping : Request Times out','1','2012-02-21 17:17:39','1'),(7,'12','1','sdfsd','1','2012-02-24 12:46:11','0'),(8,'12','1','empty','1','2012-02-24 12:54:35','0'),(13,'13','12','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravid','1','2012-02-26 01:00:15','0'),(14,'13','11','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus','1','2012-02-26 01:00:15','0'),(15,'13','11','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravid','1','2012-02-26 01:00:15','0'),(16,'13','11','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravid','1','2012-02-26 01:00:15','0'),(17,'13','12','Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis','1','2012-02-26 01:00:15','0'),(18,'12','1','swdef','1','2012-03-10 21:30:28','0');
 /*!40000 ALTER TABLE `messages` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-03-05 22:08:41
+-- Dump completed on 2012-03-11 15:26:45
