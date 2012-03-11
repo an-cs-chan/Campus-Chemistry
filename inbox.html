@@ -1,136 +1,27 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<title> Campus Chemistry </title>
-		<link rel="stylesheet" type="text/css" href="styles/Styles.css">
-		<link rel="stylesheet" type="text/css" href="styles/smartpaginator.css"></link>
-		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"></link>
-		<style  type="text/css">	
-		input.text { margin-bottom:12px; width:95%; padding: .4em; }
-		fieldset { padding:0; border:0; margin-top:25px; }
-		h1 { font-size: 1.2em; margin: .6em 0; }
-		.ui-dialog .ui-state-error { padding: .3em; }
-		.validateTips { border: 1px solid transparent; padding: 0.3em; }
-		
-		.overflow {
-			text-overflow: ellipsis;
-			-o-text-overflow: ellipsis;
-			width: 20%;
-			white-space: nowrap;
-			border: 1px solid black;
-			overflow: hidden;
-			margin-bottom: 15px;
-		}
-		
-		/* Vertical Tabs
-		----------------------------------*/
-		.ui-tabs-vertical { width: 55em; }
-		.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
-		.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
-		.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
-		.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-selected { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
-		.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
-		</style>
-		
-		<meta name="GENERATOR" content="MSHTML 9.00.8112.16440">
+		<link rel="stylesheet" type="text/css" href="styles/Styles.css" />
+		<link rel="stylesheet" type="text/css" href="styles/smartpaginator.css" />
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />	
+
 		<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" language="JavaScript" src="scripts/topBar.js"></script>
 		<script type="text/javascript" language="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
 		
 		<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/trunk/ui/jquery.ui.widget.js"></script>
 	    <script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/trunk/ui/jquery.ui.core.js"></script>
-	    <script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/trunk/ui/jquery.ui.tabs.js"></script>
 		
 		<script type="text/javascript" language="JavaScript" src="scripts/inbox.js"></script>
 		<script type="text/javascript" language="JavaScript" src="scripts/smartpaginator.js"></script>
-		<link type="text/css" href="http://jquery-ui.googlecode.com/svn/trunk/themes/base/jquery.ui.theme.css" rel="stylesheet" />
-		<script type="text/javascript">
-		$(function() {
-			$("#tabs").tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
-			$("#tabs li").removeClass('ui-corner-top').addClass('ui-corner-left');
-		});
-		</script>
-		<script>
-		$(function() {
-		$( "#dialog:ui-dialog" ).dialog( "destroy" );
-		    var name = $( "#name" ),
-			message = $( "#message" ),
-			allFields = $( [] ).add( name ).add( message ),
-			tips = $( ".validateTips" );
-
-	    	$( "#dialog-form" ).dialog({
-			autoOpen: false,
-			height: 370,
-			width: 350,
-			modal: true,
-			buttons: {
-				"Send": function() {
-					var bValid = true;
-					allFields.removeClass( "ui-state-error" );
-					$(".error").hide();
-					var name = $("#name").val();
-					var message = $("#message").val();
-				    if(name == '') 
-					{
-				      $("#name").after('<span class="error">You forgot to enter the user name</span><br/><br/>');
-				      bValid = false;
-				    } 
-					if (message == '')
-					{
-					  $("#message").after('<span class="error">You forgot to enter your message</span>');
-				      bValid = false;
-					}
-				   				
-					if ( bValid ) {
-				    	// we want to store the values from the form input box, then send via ajax below
-						$.ajax({
-								type: "POST",
-								url: "python/send.wsgi",
-								data: "name="+name+"&message="+message,
-								});
-						$( this ).dialog( "close" );
-						$("#alertArea").show("fast");
-						$("#alertArea").text("Message sent to "+name+"!");
-						//Remove the error in 3 seconds
-						$("#alertArea").delay(2000).hide("slow");							
-					}
-				},
-				Cancel: function() {
-					$( this ).dialog( "close" );
-				}
-			},
-			close: function() {
-				allFields.val( "" ).removeClass( "ui-state-error" );
-			}
-		});
-
-		$( "#compose" ).click(function() {
-				$( "#dialog-form" ).dialog( "open" );
-			});
-			
-		$("#delete_button").click(function(){   // Code for deleting multiple msgs
-			var ids = new Array()
-			a=0;
-			$("input:checked").each(function(){
-			ids[a]=$(this).val();
-			a++;
-			});
-		//alert (typeof ids);
-		
-		deletemsg(ids);
-		return false;
-	 });
-	//$("#displayMessage_"+id).css("display","none");	 
-	});		
-	</script>
 	</head>
-	
 	<body>
 		<div style="float:left">
-			<span style="font-size: 34px; color: rgb(127,129, 171)">Campus Chemistry
-				<img style="width: 35px; height: 50px" src="images/Logo.png">
+			<span style="font-size: 34px; color: rgb(127,129, 171)">
+				Campus Chemistry
+				<img style="width: 35px; height: 50px" alt="logo" src="images/Logo.png">
 			</span>
 		</div>
 		<div style="float:right; position:relative;">
@@ -141,44 +32,32 @@
     			</span>		
 			</form>	
 		</div>
-		</br>
-		</br>
-		</br>
+		<br/>
+		<br/>
+		<br/>
 		<div id="topBar">
 			<div class="tabs">
-			<ul>
-				<a href="quiz.html"><li>Quiz</li></a>
-				<a href="search.html"><li>Search</li></a>
-				<a href="profile.html"><li>Profile</li></a>
-				<a href="inbox.html"><li class="selected">Inbox</li></a>
-			</ul>
+				<ul>
+					<a href="quiz.html"><li>Quiz</li></a>
+					<a href="search.html"><li>Search</li></a>
+					<a href="profile.html"><li>Profile</li></a>
+					<a href="inbox.html"><li class="selected">Inbox</li></a>
+				</ul>
 			</div>
-		<div class="clearfix"></div>
 		</div>
-	<div class="mainContent">
-		<div class="contentHeader">Your Messages</div>
-		<div id="inboxPanelMain">
-			<!--<div id="quizPanelLeft">
-				<div id="progressBox" class="secondaryContent">
-					<div class="contentHeader">Progress</div>
-					<div id="quizSubjects"></div>
-				</div>
-			</div>-->
-			<div id="inboxPanelRight">
-				<div id="questionBox" class="secondaryContent">
-					<!--<div class="contentHeader">
-						Question <span class="questionNumber"></span>
-						<span id="progressPercentLabel">Progress: <span class="progressPercent"></span>%</span>
-					</div>-->
-					<div id="questionContent">
-						<div id="alertArea" style="display:none; margin:0px 0px 5px 0px;"></div> 
-						<div class="demo">
-							<div class="alignleft actions">
-							<button id="delete_button" style="margin-left: 30px;" >Delete Checked</button>
-							<!--<button id="sent_messages" style="margin-left: 280px;" onClick="window.open('/sentmessages.html', '_self')">Sent Messages</button>-->
-							<button id="compose" style="margin-left: 0px;">Compose Message</button>
+		<br/>
+		<div class="mainContent">
+			<div class="contentHeader">Your Messages</div>
+			<div id="inboxPanelMain">
+				<div id="inboxPanelRight">
+					<div class="secondaryContent">
+						<div>
+							<div class="alignleft actions" style="margin-bottom:10px;">
+								<button id="delete_button" class="button">Delete Checked</button>
+								<button id="compose" class="button">Compose Message</button>
 							</div>
-							<div id="tabs" style="width: 711px;">
+							<div id="alertArea" style="display:none; margin:0px 0px 5px 0px;"></div> 
+							<div id="tabs">
 								<ul>
 									<li><a href="#tabs-1">Inbox</a></li>
 									<li><a href="#tabs-2">Sent Messages</a></li>
@@ -186,38 +65,30 @@
 								<div id="tabs-1">
 									<h2>Inbox</h2>
 									<p id="ptabs1"></p>
-								  <div id="resultFooter-1"></div>
+									<div id="resultFooter-1" style="width:98%"></div>										
 								</div>
 								<div id="tabs-2">
 									<h2>Sent Messages</h2>
 									<p id="ptabs2"></p>
-								<div id="resultFooter-2"></div>
+									<div id="resultFooter-2" style="width:98%"></div>
 								</div>
 							</div>
-							</div>
-							
-							<!-- -->
-						<div id="dialog-form"  style="font-size: 62.5%;label, input{display:block}" title="Create message">
+						</div>
+					    <div id="dialog-form"  style="font-size: 62.5%;label" title="Create message">
 							<p class="alert">*All form fields are required.</p>
 							<form>
-							<fieldset>
-								<label for="name">Send To: (Username)</label>
-								<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
-								<label for="message">Message</label>
-								<textarea name="message" id="message" value="" class="text ui-widget-content ui-corner-all" style="width: 310px; height: 59px;" placeholder="Enter Your Message"></textarea>
-								<!--<input type="text" name="message" id="message" value="" class="text ui-widget-content ui-corner-all" />-->
-							</fieldset>
+								<fieldset>
+									<label for="name">Send To: (Username)</label>
+									<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+									<label for="message">Message</label>
+									<textarea name="message" id="message" class="text ui-widget-content ui-corner-all" style="width: 310px; height: 155px;" placeholder="Enter Your Message"></textarea>
+								</fieldset>
 							</form>
-					    </div>
-						<div id="questionAnswers">
-						</div>
-						<div id="resultFooter">
-						</div>
+				    	</div>
 					</div>
 				</div>
+				<div class="clearfix"></div>
 			</div>
-			<div class="clearfix"></div>
 		</div>
-	</div>
-	
-</body>
+	</body>
+</html>
