@@ -37,7 +37,7 @@ def application(environ, start_response):
     #then take NOW and minus maxBirthDate years and save it
     #now = datetime.date.today()
    
-    query = "INSERT INTO messages (To_User_ID, From_User_ID, Message, Read_Status, Time_Stamp) VALUES ((select User_ID from user_profile where User_Name='"+to_name+"'), '1', '" + message + "', '1', NOW())" 
+    query = "INSERT INTO messages (To_User_ID, From_User_ID, Message, Read_Status, Time_Stamp, deleted) VALUES ((select User_ID from user_profile where User_Name='"+to_name+"'), '1', '" + message + "', '1', NOW(), '0')" 
     print query
     try:
     #connect to the Database

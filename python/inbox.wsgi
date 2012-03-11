@@ -28,10 +28,10 @@ def application(environ, start_response):
      sys.exit (1)
 
     cursor = conn.cursor()      
-    query = " SELECT Message_ID, up.User_Name, Message, DATE_FORMAT(Time_Stamp, '%b %e, %l:%i %p') a FROM messages me left join user_profile up on up.User_ID = me.From_User_ID WHERE me.To_User_ID = '13' ORDER BY me.Read_Status DESC, a DESC"  
+    query = " SELECT Message_ID, up.User_Name, Message, DATE_FORMAT(Time_Stamp, '%b %e, %l:%i %p') a, Read_Status FROM messages me left join user_profile up on up.User_ID = me.From_User_ID WHERE me.To_User_ID = '13' and Deleted<>'1' ORDER BY me.Read_Status DESC, a DESC"  
     print query
-
     cursor.execute(query)
+   
     rows = cursor.fetchall()
     #for row in rows:
     # print "%s, %s, %s, %s" % (row[0], row[1], row[2], row[3])

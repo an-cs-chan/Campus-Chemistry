@@ -1,76 +1,25 @@
 $(document).ready(function() {
 
-
-	processMessage();
-    //var htmlStr = $('a#opener').live(html());
-	//alert("htmlStr");
+   	processMessage();
 	
-/*(function($) {
-	$.fn.ellipsis = function(enableUpdating){
-		var s = document.documentElement.style;
-		if (!('textOverflow' in s || 'OTextOverflow' in s)) {
-			return this.each(function(){
-				var el = $(this);
-				if(el.css("overflow") == "hidden"){
-					var originalText = el.html();
-					var w = el.width();
-					
-					var t = $(this.cloneNode(true)).hide().css({
-                        'position': 'absolute',
-                        'width': 'auto',
-                        'overflow': 'visible',
-                        'max-width': 'inherit'
-                    });
-					el.after(t);
-					
-					var text = originalText;
-					while(text.length > 0 && t.width() > el.width()){
-						text = text.substr(0, text.length - 1);
-						t.html(text + "...");
-					}
-					el.html(t.html());
-					
-					t.remove();
-					
-					if(enableUpdating == true){
-						var oldW = el.width();
-						setInterval(function(){
-							if(el.width() != oldW){
-								oldW = el.width();
-								el.html(originalText);
-								el.ellipsis();
-							}
-						}, 200);
-					}
-				}
-			});
-		} else return this;
-	};
-})(jQuery);
-			*/
-			
-	//This function overrides the default form behavior so we can do validation
-    $('#logoutForm').submit(function()
-    {           
-        $.post( "python/logout.py",function(data)
-            {
-               //Redirect to home
-                var url = "index.html";
-                $(location).attr('href',url);
-               
-            }, "json");
-
-        return false;
-    });
 });
 
 function processMessage()
 {
+    // showing received messages 
 	$.post( "python/inbox.wsgi", 
 	function(data) 
 	{
 		showMessage(data);
 	},"json");
+	
+	//showing sent messages
+	$.post( "python/sent_messages.wsgi", 
+	function(data1) 
+	{
+		showSentMessages(data1);
+	},"json");
+
 }
 
 function showMessage(data)
@@ -84,23 +33,48 @@ function showMessage(data)
 						"<th width=50%>Message</th>" +
 						"<th width=15%>From</th>" + 
 						"<th width=20%>Time</th>" + 
-						"<th width=10%>Delete</th>" + 
+						"<th width=10%></th>" + 
 						"</tr>" +
 					"</thead>" +	
  				"<tbody>"; 
 	
 	$.each(data, function(index) {  //Code for showing messages in the table from the DB
-	//Todo:
-	//if (len(data[index][2])>50)
-	 // clip clip Add ...
-	//$("#opener").ellipsis()
-      htmla += "<tr id='displayMessage_" + data[index][0] + "' class='even' data-href=''>" + 
-				"<td><input type='checkbox' name='message_id' value=" + data[index][0] + " /></td>" +
-				"<td name = 'message'><a class='opener' id='"+index+"' href='#'>" + data[index][2] + "</a></td>" + 
+	if(data[index][2] != null) // Clip the message
+	{
+	    if (data[index][2].length > 80)
+		{
+		 var newString = data[index][2].substring(0,80) + "...";
+		}
+		else
+		{
+		 var newString = data[index][2];
+		}
+	}
+	
+	var read = data[index][4]; 
+	if ( read == 1 )
+	{
+	   htmla += "<tr id='displayMessage_" + data[index][0] + "' class='read' data-href=''>" + 
+				"<td><input type='checkbox' class='check_select' name='message_id[]' value=" + data[index][0] + " /></td>" +
+				"<td name = 'message'><a class='opener' id='"+index+"' href='#'>" + newString + "</a></td>" + 
 				"<td name = 'from'>" + data[index][1] + "</td>" + 
 				"<td name='time'>" + data[index][3] + "</td>" + 
-				"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='test("+data[index][0]+");' /></td>" + 
+				"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index][0]+");' />" +
+				"<img class='replybutton' style='left: 18px; top: 0px' src='images/reply.png' onclick='reply(\""+data[index][1]+"\");' /></td>" + 
 			"</tr>";
+	}
+	else
+	{
+	   htmla += "<tr id='displayMessage_" + data[index][0] + "' class='even' data-href=''>" + 
+				"<td><input type='checkbox' class='check_select' name='message_id[]' value=" + data[index][0] + " /></td>" +
+				"<td name = 'message'><a class='opener' id='"+index+"' href='#'>" + newString + "</a></td>" + 
+				"<td name = 'from'>" + data[index][1] + "</td>" + 
+				"<td name='time'>" + data[index][3] + "</td>" + 
+				"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index][0]+");' />" + 
+				"<img class='replybutton' style='left: 18px; top: 0px' src='images/reply.png' onclick='reply(\""+data[index][1]+"\");' /></td>" + 
+			"</tr>";
+	}
+			
 			totRecords++;
     });
 	
@@ -121,27 +95,28 @@ function showMessage(data)
 				 }
 				}); 
 	   	});
-		
+	
+    if(totRecords > 0)
+	{	
 	$('.opener').live("click", function(event) {          //code for opening the dialog with respective messages	
+			//alert($(this).attr("id"));
 			var match_id = $(this).attr("id");
 			$dialog[match_id].dialog('open');
-			//alert(event.target.id);
-			//$(this).append("Clicked");
 			// prevent the default action, e.g., following a link
 			return false;
 			});
-    
+    }
 	htmla += "</tbody>" +
 	        "</table>";
         
     if(totRecords > 0)
     {
-    	$("#questionAnswers").html(htmla);
-        $('#resultFooter').smartpaginator({
-	        datacontainer: 'questionAnswers',
+    	$("p#ptabs1").html(htmla);
+        $('div#resultFooter-1').smartpaginator({
+	        datacontainer: 'div#ptabs1',
 	        dataelement:'tr',
 	    	totalrecords: totRecords,
-	    	recordsperpage: 6,
+	    	recordsperpage: 10,
 	    	theme: 'teal',
 		 	length: 4,
 		 	next: 'Next',
@@ -152,17 +127,128 @@ function showMessage(data)
     }
     else
     {
-		 $("#resultFooter").html("");
-		 $("#resultFooter").removeClass("pager red");
-		 $("#questionAnswers").html("<p>No Results To Display</p>");
+		 $("div#resultFooter-1").html("");
+		 $("div#resultFooter-1").removeClass("pager red");
+		 $("p#ptabs1").html("<p>No Results To Display</p>");
     }
+	//$('div#tabs-1').html(htmla);
+}
+
+function showSentMessages(data)
+{
+	var htmls = "";	
+	var totRecords2 = 0;
+	var floatType = "";
+	htmls = "<table class='sample'> " +
+				"<thead><tr> "+
+						//"<th width=5%>Select</th>" + 
+						"<th width=50%>Message</th>" +
+						"<th width=15%>To</th>" + 
+						"<th width=20%>Time</th>" + 
+						"<th width=10%></th>" + 
+						"</tr>" +
+					"</thead>" +	
+ 				"<tbody>"; 
+	
+	$.each(data, function(index) {  //Code for showing messages in the table from the DB
+	if(data[index][2] != null) // Clip the message
+	{
+	    if (data[index][2].length > 80)
+		{
+		 var newString = data[index][2].substring(0,80) + "...";
+		}
+		else
+		{
+		 var newString = data[index][2];
+		}
+		// user.About_Me = newString;
+	}
+	var read = data[index][4];
+	if ( read == 1 )
+	{
+	   htmls += "<tr id='displayMessage_" + data[index][0] + "' class='read' data-href=''>" + 
+				//"<td><input type='checkbox' class='check_select' name='message_id[]' value=" + data[index][0] + " /></td>" +
+				"<td name = 'message'><a class='opener' id='"+index+"' href='#'>" + newString + "</a></td>" + 
+				"<td name = 'from'>" + data[index][1] + "</td>" + 
+				"<td name='time'>" + data[index][3] + "</td>" + 
+				//"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index][0]+");' />" +
+				"<td><img class='replybutton' style='left: 18px; top: 0px' src='images/reply.png' onclick='reply(\""+data[index][1]+"\");' /></td>" + 
+			"</tr>";
+	}
+	else
+	{
+	   htmls += "<tr id='displayMessage_" + data[index][0] + "' class='even' data-href=''>" + 
+				//"<td><input type='checkbox' class='check_select' name='message_id[]' value=" + data[index][0] + " /></td>" +
+				"<td name = 'message'><a class='opener' id='"+index+"' href='#'>" + newString + "</a></td>" + 
+				"<td name = 'from'>" + data[index][1] + "</td>" + 
+				"<td name='time'>" + data[index][3] + "</td>" + 
+				//"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index][0]+");' />" + 
+				"<td><img class='replybutton' style='left: 18px; top: 0px' src='images/reply.png' onclick='reply(\""+data[index][1]+"\");' /></td>" + 
+			"</tr>";
+	}
+			
+			totRecords2++;
+    });
+	
+	//Start of code for showing the message with Reply button.
+	var $dialog=new Array();
+	$.each(data, function(index){
+	$dialog[index] = $('<div style="background-color:#D6EEF7"></div>').html(data[index][2])
+			.dialog({
+				autoOpen: false,
+				height: 300,
+				width: 350,
+				title: 'Message',
+				modal: true,
+			  	buttons: { "Reply": function(){ 
+				  $(this).dialog('close');
+					reply(data[index][1]);
+				  }
+				 }
+				}); 
+	   	});
+	if (totRecords2>0)
+	{	
+	$('.opener').live("click", function(event) {          //code for opening the dialog with respective messages	
+			var match_id = $(this).attr("id");
+			$dialog[match_id].dialog('open');
+			// prevent the default action, e.g., following a link
+			return false;
+			});
+    }
+	htmls += "</tbody>" +
+	        "</table>";
+        
+    if(totRecords2 > 0) // code for handling pagination
+    {
+    	$("p#ptabs2").html(htmls);
+        $('div#resultFooter-2').smartpaginator({
+	        datacontainer: 'ptabs2',
+	        dataelement:'tr',
+	    	totalrecords: totRecords2,
+	    	recordsperpage: 10,
+	    	theme: 'teal',
+		 	length: 4,
+		 	next: 'Next',
+		 	prev: 'Prev',
+		 	first: 'First',
+		 	last: 'Last'
+	    });
+    }
+    else // if no results
+    {
+		 $("div#resultFooter-2").html("");
+		 $("div#resultFooter-2").removeClass("pager red");
+		 $("p#ptabs2").html("<p>No Results To Display</p>");
+    }
+	//$('div#tabs-2').html(htmls);
 }
 
 function reply (from)
-{    
+{   
     $( "#dialog-form" ).dialog( "open" );
 	$("#name").val(from);
-	$("#name").attr("readonly","true");
+	//$("#name").attr("readonly","true");
 	$("#dialog-form").dialog({
 					autoOpen: false,
 					height: 350,
@@ -170,16 +256,23 @@ function reply (from)
 					modal: true,
 					buttons: {
 						"Send": function() {
-						//alert(name);
-							var bValid = true;
-							//allFields.removeClass( "ui-state-error" );
-							//bValid = bValid && checkLength( name, "username", 3, 16 );
-							//bValid = bValid && checkLength( subject, "subject", 6, 80 );
-							//bValid = bValid && checkLength( message, "message", 5, 16 );
-							//bValid = bValid && checkRegexp( name, /^[a-z]([0-9a-z_])+$/i, "Username may consist of a-z, 0-9, underscores, begin with a letter." );
-							//bValid = bValid && checkRegexp( subject, /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i, "eg. ui@jquery.com" );
-							//bValid = bValid && checkRegexp( message, /^([0-9a-zA-Z])+$/, "message field only allow : a-z 0-9" );
-							if ( bValid ) {
+						var bValid = true;
+						allFields.removeClass( "ui-state-error" );
+						$(".error").hide();
+						var name = $("#name").val();
+						var message = $("#message").val();
+						if(name == '') 
+						{
+						$("#name").after('<span class="error">You forgot to enter the user name</span><br/><br/>');
+						bValid = false;
+						} 
+						if (message == '')
+						{
+						$("#message").after('<span class="error">You forgot to enter your message</span>');
+						bValid = false;
+						}
+						
+						if ( bValid ) {
 								// we want to store the values from the form input box, then send via ajax below
 								var name = $("#name").val(from); 
 								var message = $("#message").val()
@@ -188,7 +281,12 @@ function reply (from)
 										url: "python/send.wsgi",
 										data: "name="+name+"&message="+message,
 										});
-								$( this ).dialog( "close" );					
+								$( this ).dialog( "close" );
+								$("#alertArea").show("fast");
+								$("#alertArea").text("Message sent to "+name+"!");
+					
+								//Remove the error in 3 seconds
+								$("#alertArea").delay(2000).hide("slow");	
 							}
 						},
 						Cancel: function() {
@@ -201,10 +299,9 @@ function reply (from)
 				});
 }
 
-function test(id) // code for deleting the message form UI and DB calls deletemsg.wsgi script
+function deletemsg(id) // code for deleting the message form UI and DB calls deletemsg.wsgi script
 {
-	$("img.closeButton").click(function(){
-                //id = $(this).parent().attr("id");
+	//id = $(this).parent().attr("id");
                 $.ajax({
                         type: "POST",
                         data: "id="+id,
@@ -213,8 +310,13 @@ function test(id) // code for deleting the message form UI and DB calls deletems
                                 jQuery(this).parent().remove();
                         }
                 });
-
-        });
+        //var i=0;
 		$("#displayMessage_"+id).css("display","none");
+		//alert(typeof id);
+		/*var ids = id.split(",");
+		for (i=0; i<=ids.length; i++)
+		{ 
+		 $("#displayMessage_"+ids[i]).css("display","none");
+		}*/
 	
 }

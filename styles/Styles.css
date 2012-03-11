@@ -474,6 +474,15 @@ tr.read td{
 	background-color: #FFFFF7;
 }
 
+.alert, .error {
+    color: #FF0000;
+}
+
+.replybutton {
+    cursor: pointer;
+    float: right;
+}
+
 /*-------------*/
 /* SEARCH PAGE */
 /*-------------*/

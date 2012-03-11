@@ -16,12 +16,6 @@ def application(environ, start_response):
     form = cgi.FieldStorage(fp=environ['wsgi.input'],
                             environ=environ,
                             keep_blank_values=True)
-    message_id = form.getfirst('id')
-    message_id = cgi.escape(message_id)
-        
-    #In this idiom you must issue a list containing a default value.
-    #message_id = str(d.get('id', 'empty'))
-    print message_id 
     try:
     #connect to the Database
      conn = MySQLdb.connect (host = "localhost",
@@ -34,21 +28,17 @@ def application(environ, start_response):
      sys.exit (1)
 
     cursor = conn.cursor()      
-    query = "update messages set deleted = 1 WHERE To_User_ID = '13' and Message_ID IN (" + message_id + ")" 
+    query = " SELECT Message_ID, up.User_Name, Message, DATE_FORMAT(Time_Stamp, '%b %e, %l:%i %p') a, Read_Status FROM messages me left join user_profile up on up.User_ID = me.To_User_ID WHERE me.From_User_ID = '13' and Deleted<>'1' ORDER BY me.Read_Status DESC, a DESC"  
+    
     print query
-
-    try:
-    #connect to the Database
-     cursor.execute(query)
-     data = [{"status":"Message Sent"}]
-     output = json.dumps(data)
-    except MySQLdb.Error, e:
-     data = [{"status":"Message Failed"}]
-     output = json.dumps(data)
+    cursor.execute(query)
+   
+    rows = cursor.fetchall()
     #for row in rows:
     # print "%s, %s, %s, %s" % (row[0], row[1], row[2], row[3])
     #print "Number of rows returned: %d" % cursor.rowcount
 
+    output = json.dumps(rows)
     status = '200 OK'
     
     cursor.close()

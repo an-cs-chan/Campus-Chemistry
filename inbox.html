@@ -23,82 +23,78 @@
 			overflow: hidden;
 			margin-bottom: 15px;
 		}
+		
+		/* Vertical Tabs
+		----------------------------------*/
+		.ui-tabs-vertical { width: 55em; }
+		.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+		.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+		.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+		.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-selected { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
+		.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
 		</style>
+		
 		<meta name="GENERATOR" content="MSHTML 9.00.8112.16440">
 		<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" language="JavaScript" src="scripts/topBar.js"></script>
 		<script type="text/javascript" language="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
+		
+		<script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/trunk/ui/jquery.ui.widget.js"></script>
+	    <script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/trunk/ui/jquery.ui.core.js"></script>
+	    <script type="text/javascript" src="http://jquery-ui.googlecode.com/svn/trunk/ui/jquery.ui.tabs.js"></script>
+		
 		<script type="text/javascript" language="JavaScript" src="scripts/inbox.js"></script>
 		<script type="text/javascript" language="JavaScript" src="scripts/smartpaginator.js"></script>
-		<!--<script type="text/javascript" language="JavaScript" src="scripts/jquery.text-overflow.js"></script>-->
+		<link type="text/css" href="http://jquery-ui.googlecode.com/svn/trunk/themes/base/jquery.ui.theme.css" rel="stylesheet" />
+		<script type="text/javascript">
+		$(function() {
+			$("#tabs").tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
+			$("#tabs li").removeClass('ui-corner-top').addClass('ui-corner-left');
+		});
+		</script>
 		<script>
 		$(function() {
 		$( "#dialog:ui-dialog" ).dialog( "destroy" );
-		
-		var name = $( "#name" ),
-			//subject = $( "#subject" ),
+		    var name = $( "#name" ),
 			message = $( "#message" ),
-			//allFields = $( [] ).add( name ).add( subject ).add( message ),
 			allFields = $( [] ).add( name ).add( message ),
 			tips = $( ".validateTips" );
 
-		function updateTips( t ) {
-			tips
-				.text( t )
-				.addClass( "ui-state-highlight" );
-			setTimeout(function() {
-				tips.removeClass( "ui-state-highlight", 1500 );
-			}, 500 );
-		}
-
-		function checkLength( o, n, min, max ) {
-			if ( o.val().length > max || o.val().length < min ) {
-				o.addClass( "ui-state-error" );
-				updateTips( "Length of " + n + " must be between " +
-					min + " and " + max + "." );
-				return false;
-			} else {
-				return true;
-			}
-		}
-
-		function checkRegexp( o, regexp, n ) {
-			if ( !( regexp.test( o.val() ) ) ) {
-				o.addClass( "ui-state-error" );
-				updateTips( n );
-				return false;
-			} else {
-				return true;
-			}
-		}
-		
-		$( "#dialog-form" ).dialog({
+	    	$( "#dialog-form" ).dialog({
 			autoOpen: false,
-			height: 350,
+			height: 370,
 			width: 350,
 			modal: true,
 			buttons: {
 				"Send": function() {
 					var bValid = true;
 					allFields.removeClass( "ui-state-error" );
-
-					//bValid = bValid && checkLength( name, "username", 3, 16 );
-					//bValid = bValid && checkLength( subject, "subject", 6, 80 );
-					//bValid = bValid && checkLength( message, "message", 5, 16 );
-					//bValid = bValid && checkRegexp( name, /^[a-z]([0-9a-z_])+$/i, "Username may consist of a-z, 0-9, underscores, begin with a letter." );
-					//bValid = bValid && checkRegexp( subject, /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i, "eg. ui@jquery.com" );
-					//bValid = bValid && checkRegexp( message, /^([0-9a-zA-Z])+$/, "message field only allow : a-z 0-9" );
+					$(".error").hide();
+					var name = $("#name").val();
+					var message = $("#message").val();
+				    if(name == '') 
+					{
+				      $("#name").after('<span class="error">You forgot to enter the user name</span><br/><br/>');
+				      bValid = false;
+				    } 
+					if (message == '')
+					{
+					  $("#message").after('<span class="error">You forgot to enter your message</span>');
+				      bValid = false;
+					}
+				   				
 					if ( bValid ) {
 				    	// we want to store the values from the form input box, then send via ajax below
-						var name = $( "#name" ).val()
-						//alert(name);
-						//var subject = subject.val()
-						var message = $("#message").val()
-							$.ajax({
+						$.ajax({
 								type: "POST",
 								url: "python/send.wsgi",
 								data: "name="+name+"&message="+message,
 								});
-						$( this ).dialog( "close" );					
+						$( this ).dialog( "close" );
+						$("#alertArea").show("fast");
+						$("#alertArea").text("Message sent to "+name+"!");
+						//Remove the error in 3 seconds
+						$("#alertArea").delay(2000).hide("slow");							
 					}
 				},
 				Cancel: function() {
@@ -110,11 +106,24 @@
 			}
 		});
 
-		$( "#compose" )
-			.click(function() {
+		$( "#compose" ).click(function() {
 				$( "#dialog-form" ).dialog( "open" );
 			});
-	});
+			
+		$("#delete_button").click(function(){   // Code for deleting multiple msgs
+			var ids = new Array()
+			a=0;
+			$("input:checked").each(function(){
+			ids[a]=$(this).val();
+			a++;
+			});
+		//alert (typeof ids);
+		
+		deletemsg(ids);
+		return false;
+	 });
+	//$("#displayMessage_"+id).css("display","none");	 
+	});		
 	</script>
 	</head>
 	
@@ -126,7 +135,8 @@
 		</div>
 		<div style="float:right; position:relative;">
 		    <form id="logoutForm">
-    			<span id="userGreeting">Welcome Back first_name!
+    			<span id="userGreeting">Welcome Back 
+    				<span id="useridGreeting">Guest</span>!
     				<input id="logoutButton" class="button" value="Log Out" type="submit" />
     			</span>		
 			</form>	
@@ -135,18 +145,16 @@
 		</br>
 		</br>
 		<div id="topBar">
-			<!--<div id="logo">Campus Chemistry</div>-->
-		<!--<div id="logo">Campus Chemistry</div>-->
-		<div class="tabs">
+			<div class="tabs">
 			<ul>
 				<a href="quiz.html"><li>Quiz</li></a>
 				<a href="search.html"><li>Search</li></a>
 				<a href="profile.html"><li>Profile</li></a>
 				<a href="inbox.html"><li class="selected">Inbox</li></a>
 			</ul>
-		</div>
+			</div>
 		<div class="clearfix"></div>
-	</div>
+		</div>
 	<div class="mainContent">
 		<div class="contentHeader">Your Messages</div>
 		<div id="inboxPanelMain">
@@ -162,18 +170,35 @@
 						Question <span class="questionNumber"></span>
 						<span id="progressPercentLabel">Progress: <span class="progressPercent"></span>%</span>
 					</div>-->
-					
 					<div id="questionContent">
-						<div id="questionText"></div>
+						<div id="alertArea" style="display:none; margin:0px 0px 5px 0px;"></div> 
+						<div class="demo">
 							<div class="alignleft actions">
-							<select name="action" style="margin-left: 28px;">
-								<option value="trash">Move to Trash</option>
-							</select>
-							<input type="submit" value="Apply" class="button-secondary action" id="doaction" name="">
-							<button id="compose" style="margin-left: 350px;">Compose Message</button>
+							<button id="delete_button" style="margin-left: 30px;" >Delete Checked</button>
+							<!--<button id="sent_messages" style="margin-left: 280px;" onClick="window.open('/sentmessages.html', '_self')">Sent Messages</button>-->
+							<button id="compose" style="margin-left: 0px;">Compose Message</button>
 							</div>
+							<div id="tabs" style="width: 711px;">
+								<ul>
+									<li><a href="#tabs-1">Inbox</a></li>
+									<li><a href="#tabs-2">Sent Messages</a></li>
+								</ul>
+								<div id="tabs-1">
+									<h2>Inbox</h2>
+									<p id="ptabs1"></p>
+								  <div id="resultFooter-1"></div>
+								</div>
+								<div id="tabs-2">
+									<h2>Sent Messages</h2>
+									<p id="ptabs2"></p>
+								<div id="resultFooter-2"></div>
+								</div>
+							</div>
+							</div>
+							
+							<!-- -->
 						<div id="dialog-form"  style="font-size: 62.5%;label, input{display:block}" title="Create message">
-							<p class="validateTips">All form fields are required.</p>
+							<p class="alert">*All form fields are required.</p>
 							<form>
 							<fieldset>
 								<label for="name">Send To: (Username)</label>
@@ -183,9 +208,9 @@
 								<!--<input type="text" name="message" id="message" value="" class="text ui-widget-content ui-corner-all" />-->
 							</fieldset>
 							</form>
-						</div>
+					    </div>
 						<div id="questionAnswers">
-						</div>						
+						</div>
 						<div id="resultFooter">
 						</div>
 					</div>
@@ -194,4 +219,5 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
+	
 </body>
