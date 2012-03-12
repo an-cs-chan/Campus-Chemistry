@@ -1,3 +1,5 @@
+var userID = getCookie("userid");
+
 $(document).ready(function() { 
 
 	$("#accordion").accordion({
@@ -60,11 +62,13 @@ $(document).ready(function() {
 				// we want to store the values from the form input box, then send via ajax below
 					var name = $( "#name" ).val()
 					var message = $("#message").val()
-						$.ajax({
-							type: "POST",
-							url: "python/send.wsgi",
-							data: "name="+name+"&message="+message,
-							});
+							
+					$.ajax({
+						type: "POST",
+						url: "python/send.wsgi",
+						data: "name="+name+"&message="+message+"&userid="+userID,
+					});							
+							
 					$( this ).dialog( "close" );	
 					
 					$("#alertArea").show("fast");
@@ -136,7 +140,7 @@ function processBasicSearch(data)
     $.each(data, function(index) 
     {
     	    	    	    	
-		var user = new UserInformation(data[index][0],data[index][1],data[index][2], data[index][3], data[index][4], data[index][5]);
+		var user = new UserInformation(data[index][0],data[index][1],data[index][2], data[index][3], data[index][4], data[index][5],data[index][6]);
     	    	
     	displayType = $(".selectedFilter img").attr("id");
     	    	
@@ -212,10 +216,10 @@ function createUserBlock (user, id, displayType)
 				"</span>" +
 				"<br />" +
 				"<span class='userAction'>" +
-					"<img id='mailUser' onclick='openMailDialog(\""+user.User_Name+"\");' src='images/envelope.png'>" +
+					"<img id='mailUser' onclick='openMailDialog(\""+user.Email_ID+"\");' src='images/envelope.png'>" +
 				"</span>" +
 				"<span class='userAction'>" +
-					"<img id='likeUser' onclick='sendWink(\""+user.User_Name+"\");' src='images/heart.png'>" +
+					"<img id='likeUser' onclick='sendWink(\""+user.Email_ID+"\");' src='images/heart.png'>" +
 				"</span>" +
 			"</span>	" +
 		"</div>";	
@@ -258,13 +262,13 @@ function openMailDialog(name)
 }
 
 function sendWink(name)
-{
+{	
 	$.ajax({
 		type: "POST",
 		url: "python/send.wsgi",
-		data: "name=Beau&message=You have recieved a wink!",
+		data: "name="+name+"&message=You have received a wink!&userid="+userID,
 	});	
-	
+
 	$("#alertArea").show("fast");
 	$("#alertArea").text("Wink sent to "+name+"!");
 	$("#alertArea").delay(3000).hide("slow");
@@ -344,7 +348,7 @@ function setPreferences()
 	}
 }
 //Javascript class for storing user information
-function UserInformation(User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture)
+function UserInformation(User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture, Email_ID)
 {
 	this.User_Name = User_Name;
 	this.Department = Department;
@@ -352,4 +356,5 @@ function UserInformation(User_Name, Department, User_ID, Body_type, About_Me, Pr
 	this.Body_type = Body_type;
 	this.About_Me = About_Me; 
 	this.Profile_Picture = Profile_Picture; 	
+	this.Email_ID = Email_ID;
 }

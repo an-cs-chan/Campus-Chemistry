@@ -3,10 +3,9 @@
 import MySQLdb
 import cgi
 import json
-import datetime
-
-from wsgiref.simple_server import make_server
-from cgi import parse_qs, escape
+import string
+import random
+import Cookie
 
 KEY_STR = 'umprojkey6853558'
 
@@ -17,14 +16,10 @@ def application(environ, start_response):
                             environ=environ,
                             keep_blank_values=True)
     
-    to_name = form.getfirst('name', 'empty')
-    to_name = cgi.escape(to_name)
-
     message = form.getfirst('message', 'empty')
-    message = cgi.escape(message)
-    
-    print message
-      
+    name = form.getfirst('name', 'empty')
+    userid = form.getfirst('userid', 'empty')
+
     #connect to the Database
     conn = MySQLdb.connect (host = "localhost",
                             user = "root",
@@ -32,22 +27,17 @@ def application(environ, start_response):
                             db = "campus chemistry")
     
     cursor = conn.cursor()
-       
-    #What we want to do: Take NOW and minus minBirthDate years and save it
-    #then take NOW and minus maxBirthDate years and save it
-    #now = datetime.date.today()
    
-    query = "INSERT INTO messages (To_User_ID, From_User_ID, Message, Read_Status, Time_Stamp, deleted) VALUES ((select User_ID from user_profile where User_Name='"+to_name+"'), '1', '" + message + "', '1', NOW(), '0')" 
-    print query
+    cmd = "INSERT INTO messages (To_User_ID, From_User_ID, Message, Read_Status, Time_Stamp, deleted) VALUES ('"+name+"', '"+userid+"', '"+ message +"', '1', NOW(), '0')" 
+
     try:
-    #connect to the Database
-     cursor.execute(query)
+     cursor.execute(cmd)
      data = [{"status":"Message Sent"}]
      output = json.dumps(data)
     except MySQLdb.Error, e:
      data = [{"status":"Message Failed"}]
      output = json.dumps(data)
-    
+
     status = '200 OK'
     
     cursor.close()

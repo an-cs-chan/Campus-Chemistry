@@ -1,6 +1,8 @@
+var userID = getCookie("userid");
+
 $(document).ready(function() {
 
-   	processMessage();
+   	getMessages();
 	
 	$(function() {
 		$("#tabs").tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
@@ -47,7 +49,7 @@ $(document).ready(function() {
 							$.ajax({
 									type: "POST",
 									url: "python/send.wsgi",
-									data: "name="+name+"&message="+message,
+									data: "name="+name+"&message="+message+"&userid="+userID,
 							});
 									
 							$( this ).dialog( "close" );
@@ -87,7 +89,12 @@ $(document).ready(function() {
 				i++;
 			});		
 			
-			deletemsg(ids);
+			var x = 0;
+			
+			for(x = 0; x < ids.length; x++)
+			{
+				deletemsg(ids[x]);
+			}
 			
 			return false;
 		 });	
@@ -95,17 +102,19 @@ $(document).ready(function() {
 });
 
 
-function processMessage()
-{
+function getMessages()
+{	
     // showing received messages 
-	$.post( "python/inbox.wsgi", 
+	$.post( "python/inbox.wsgi",
+		"userid="+userID,
 		function(data) 
 		{
 			showMessage(data);
 		},"json");
 		
 	//showing sent messages
-	$.post( "python/sent_messages.wsgi", 
+	$.post( "python/sent_messages.wsgi",
+		"userid="+userID,
 		function(data1) 
 		{
 			showSentMessages(data1);
@@ -239,6 +248,8 @@ function showSentMessages(data)
 	var htmls = "";	
 	var totRecords2 = 0;
 	var floatType = "";
+	var starter = 1523;
+	
 	htmls = "<table class='sample'> " +
 				"<thead><tr> " +
 						"<th width=50%>Message</th>" +
@@ -270,20 +281,20 @@ function showSentMessages(data)
 		{
 			htmls += 
 				"<tr id='displayMessage_" + data[index][0] + "' class='read' data-href=''>" + 
-					"<td name = 'message'><a class='opener' id='"+index+"' href='#'>" + newString + "</a></td>" + 
+					"<td name = 'message'><a class='opener2' id='"+index+"' href='#'>" + newString + "</a></td>" + 
 					"<td name = 'from'>" + data[index][1] + "</td>" + 
 					"<td name='time'>" + data[index][3] + "</td>" + 
-					"<td><img class='replybutton' style='left: 18px; top: 0px' src='images/reply.png' onclick='reply(\""+data[index][1]+"\");' /></td>" + 
+					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index][0]+");' />" + 					
 				"</tr>";
 		}
 		else
 		{
 		   htmls += 
 		   		"<tr id='displayMessage_" + data[index][0] + "' class='even' data-href=''>" + 
-						"<td name = 'message'><a class='opener' id='"+index+"' href='#'>" + newString + "</a></td>" + 
+						"<td name = 'message'><a class='opener2' id='"+index+"' href='#'>" + newString + "</a></td>" + 
 						"<td name = 'from'>" + data[index][1] + "</td>" + 
 						"<td name='time'>" + data[index][3] + "</td>" + 
-						"<td><img class='replybutton' style='left: 18px; top: 0px' src='images/reply.png' onclick='reply(\""+data[index][1]+"\");' /></td>" + 
+					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index][0]+");' />" + 						
 				"</tr>";
 		}
 			
@@ -317,12 +328,12 @@ function showSentMessages(data)
 	if (totRecords2>0)
 	{	
 		//code for opening the dialog with respective messages
-		$('.opener').live("click", function(event) 
+		$('.opener2').live("click", function(event) 
 		{	
-			var match_id = $(this).attr("id");
-			$dialog[match_id].dialog('open');
-			
-			return false;
+				var match_id = $(this).attr("id");
+				$dialog[match_id].dialog('open');
+				
+				return false;
 		});
     }
     
@@ -397,7 +408,7 @@ function reply (from)
 					$.ajax({
 						type: "POST",
 						url: "python/send.wsgi",
-						data: "name="+name+"&message="+message,
+						data: "name="+name+"&message="+message+"&userid="+userID,
 					});
 							
 					$( this ).dialog( "close" );
@@ -427,7 +438,7 @@ function deletemsg(id)
 {
     $.ajax({
         type: "POST",
-        data: "id="+id,
+        data: "messageid="+id,
         url: "python/deletemsg.wsgi",
         success: function(msg){
                 jQuery(this).parent().remove();
