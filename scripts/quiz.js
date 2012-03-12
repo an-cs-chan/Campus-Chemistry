@@ -1,24 +1,26 @@
+var sessionID = getCookie("sessionid");
+var userID = getCookie("userid");
+
 var questions;
 var answers;
 var questionIndex;
 
 $(document).ready(function () {
+
+    loadQuiz();
+    
 	
-	//test quiz
-	questions = [
-		{text: "First question", answers: ["first","second","third","fourth"], subject: "Life"},
-		{text: "Second question", answers: ["eeney","meeney","miney","moe"], subject: "Money"},
-		{text: "Question, the third", answers: ["herp","derp","herp derp","herp derp derp"], subject: "Money"},
-		{text: "FINAL QUESTION: THIS IS FOR ALL THE MARBLES", answers: ["(>'-')>","<( '-' )>","<('-'<)","<( ^-^ )>"], subject: "Rock and Roll"}
-	];
-		
-		
-	
-	answers = [];
-	questionIndex = 0;
-	startQuiz();
-	
-	
+    
+    $("body").keydown(function(e) {
+        if(e.keyCode == 37) {
+            $("#prevQuestionButton").trigger("click");
+        }
+        else if(e.keyCode == 39) {
+            $("#nextQuestionButton").trigger("click");
+        }
+    });
+            
+    
 	
 	$("#nextQuestionButton").click(function () {
 		if ($(this).hasClass("disabled")) {
@@ -132,17 +134,30 @@ $(document).ready(function () {
 });
 
 function loadQuiz() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = onLoadQuizComplete;
-    xmlhttp.open("POST", "python/getQuiz.py", true);
-    xmlhttp.send();
+    $("#quizPanelOverlay").find(".loader").css("display", "");
+    
+    $.ajax({
+        type: "POST",
+        url: "python/getQuiz.wsgi",
+        success: onLoadQuizComplete
+    });
 }
 
-function onLoadQuizComplete() {
+function onLoadQuizComplete(data) {
+    questions = data;
     
+    $("#quizPanelOverlay").find(".loader").css("display", "none");
+    $("#quizPanelOverlay").find(".overlayContent").css("display", "");
+    
+    $("#quizPanelOverlay").bind("click", function() {
+        startQuiz();
+    });
 }
 
 function startQuiz() {
+	answers = [];
+	questionIndex = 0;
+
 	$("#questionText").text(questions[0].text);
 	
 	$("#questionAnswers").find("label").each(function (i) {
@@ -161,13 +176,45 @@ function startQuiz() {
 	$(".questionNumber").text("1");
 	$(".questionTotal").text(questions.length);
 	$(".progressPercent").text("0");
+    
+    $("#quizPanelOverlay").find(".overlayContent").css("display", "none");
+    $("#quizPanelOverlay").css("display", "none");
+    $("#quizPanelLeft").css("display", "");
+    $("#quizPanelRight").css("display", "");
 }
 
 function finishQuiz() {
-	//for testing
-	alert( "Your answers:\n" + answers );
-	
-	//TODO: send the users answers for processing
+    $("#quizPanelLeft").css("display", "none");
+    $("#quizPanelRight").css("display", "none");
+    $("#quizPanelOverlay").css("display", "");
+    $("#quizPanelOverlay").find(".loader").css("display", "");
+    $("#quizPanelOverlay").find(".loader").find("p").text("Saving answers...");
+    
+	$.ajax({
+        type: "POST",
+        url: "python/saveAnswers.wsgi",
+        data: {
+            userID:userID, 
+            userAnswers:answers.join("")
+        },
+        success: onFinishQuizComplete
+    });
+}
+
+function onFinishQuizComplete(data) {
+    $("#quizPanelOverlay").find(".loader").css("display", "none");
+    $("#quizPanelOverlay").find(".overlayContent").css("display", "");
+    $("#quizPanelOverlay").find(".overlayContent").find("p").text("Compatability quiz complete!");
+    
+    setTimeout("location.href='profile.html'", 3000);
+}
+
+function generateTestAnswers() {
+    answers = [];
+    for(var i=0; i<50; i++){
+        answers.push(Math.floor(Math.random()*4));
+    }
+    return answers;
 }
 
 

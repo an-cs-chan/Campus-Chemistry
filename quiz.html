@@ -2,6 +2,7 @@
 	<title>Campus Chemistry</title>
 	<link rel="stylesheet" type="text/css" href="styles/Styles.css" />
 	<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
+    <script type='text/javascript' src='scripts/topBar.js'></script>
 	<script type='text/javascript' src='scripts/quiz.js'></script>
 </head>
 <body>
@@ -20,13 +21,13 @@
 	<div class="mainContent">
 		<div class="contentHeader">Compatability Test</div>
 		<div id="quizPanelMain">
-			<div id="quizPanelLeft">
+			<div id="quizPanelLeft" style="display:none">
 				<div id="progressBox" class="secondaryContent">
 					<div class="contentHeader">Progress</div>
 					<div id="quizSubjects"></div>
 				</div>
 			</div>
-			<div id="quizPanelRight">
+			<div id="quizPanelRight" style="display:none">
 				<div class="secondaryContent">
 					<div id="progressBar">
 						<div>&nbsp;</div>
@@ -62,6 +63,16 @@
 					</div>
 				</div>
 			</div>
+            <div id="quizPanelOverlay" class="secondaryContent">
+                <div class="overlayContent" style="display:none">
+                    <img src="images/Logo.png" />
+                    <p>Click anywhere to begin.</p>
+                </div>
+                <div class="loader" style="display:none">
+                    <img src="images/loader.gif" />
+                    <p>Loading quiz...</p>
+                </div>
+            </div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
