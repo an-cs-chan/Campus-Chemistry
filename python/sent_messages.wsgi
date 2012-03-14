@@ -26,7 +26,7 @@ def application(environ, start_response):
     
     cursor = conn.cursor()
    
-    cmd = "SELECT Message_ID, To_User_ID, Message, DATE_FORMAT(Time_Stamp, '%b %e, %l:%i %p'), Read_Status FROM messages WHERE From_User_ID = '"+userID+"' AND Deleted = '0' ORDER BY Read_Status DESC"
+    cmd = "SELECT Message_ID, To_User_ID, Message, DATE_FORMAT(Time_Stamp, '%b %e, %l:%i %p'), Read_Status FROM messages WHERE From_User_ID = '13' AND Deleted = '0' ORDER BY Read_Status DESC"
 
     cursor.execute(cmd)
     rows = cursor.fetchall()
