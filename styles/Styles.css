@@ -743,3 +743,113 @@ tr.read td{
 	margin: auto;
 	width:93%
 }
+
+/*-----------------*/
+/* Blind Date PAGE */
+/*-----------------*/
+
+#dateUserGreeting {
+	font-size: 17px; 
+	color: rgb(127,129, 171);
+}
+
+/*----------------------*/
+/* MATCH RESULT REGION  */
+/*----------------------*/
+#matchPanel {
+	background-color: white;
+	color: rgb(117, 153, 169);
+	min-height: 480px;
+	padding: 15px 10px 10px 5px;
+	position: relative;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	width:93%
+}
+
+#workArea {
+	position: relative;
+}
+
+#matchArea {
+	background-color: white;
+	min-height: 225px;
+	padding: 10px 5px 5px 0px;
+	position: relative;
+	float:left;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	width:99%
+}
+
+#openRequests {
+	background-color: white;
+	min-height: 225px;
+	padding: 10px 5px 5px 0px;
+	position: relative;
+	float:left;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	width:99%
+}
+
+.displayMatch {
+	margin: 10px 10px 10px 10px;
+	color: rgb(117, 153, 169);
+	border-radius: 10px; 
+	border: thin solid rgb(117, 153, 169); 
+	background-color: rgb(214, 238, 247);
+	width: 30%;	
+	font-size: 15px;
+	min-height: 120px;
+}
+
+.matchCloseButton {
+	float:right;
+	cursor:pointer;
+}
+
+.matchPicturePanel {
+	float: left;
+}
+
+.matchPicture {
+	height: 90px;	
+	width: 80px;
+	float: left;
+	margin: 15px 10px 10px 15px;
+	cursor:pointer;	
+}
+
+.matchInfoPanel {
+	float: right;
+}
+
+.matchInfoLabel {	
+	margin: 0px 7px 0px 0px;
+	position: relative;
+	top: -10px;
+}
+
+.matchInfoText {
+	font-size: 12px;
+	position: relative;
+	float: left;
+}
+
+.matchAction {
+	padding: 0px 10px 5px 0px;
+	float: left;
+	position: relative;
+	top: -10px;
+}
+
+#dateMatch {
+	width: 30px; 
+	height: 20px;
+	cursor: pointer;
+}
+
+#matchNameText {
+	font-weight:bold;
+}
