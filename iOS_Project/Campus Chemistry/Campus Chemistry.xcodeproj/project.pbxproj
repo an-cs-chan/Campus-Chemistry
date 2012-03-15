@@ -22,6 +22,9 @@
 		494A76021506E2C10000B1CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 494A76001506E2C10000B1CD /* InfoPlist.strings */; };
 		494A76051506E2C10000B1CD /* Campus_ChemistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 494A76041506E2C10000B1CD /* Campus_ChemistryTests.m */; };
 		494A760F1506E4090000B1CD /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 494A760E1506E4090000B1CD /* Logo.png */; };
+		49AAE7A315101DF000492AFF /* LoginConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AAE7A215101DF000492AFF /* LoginConnectionDelegate.m */; };
+		49AAE7A71510235700492AFF /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AAE7A51510235700492AFF /* Login.m */; };
+		49AAE7A81510235700492AFF /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AAE7A61510235700492AFF /* Login.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,11 @@
 		494A76031506E2C10000B1CD /* Campus_ChemistryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Campus_ChemistryTests.h; sourceTree = "<group>"; };
 		494A76041506E2C10000B1CD /* Campus_ChemistryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Campus_ChemistryTests.m; sourceTree = "<group>"; };
 		494A760E1506E4090000B1CD /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		49AAE7A115101DF000492AFF /* LoginConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginConnectionDelegate.h; path = ../LoginConnectionDelegate.h; sourceTree = "<group>"; };
+		49AAE7A215101DF000492AFF /* LoginConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginConnectionDelegate.m; path = ../LoginConnectionDelegate.m; sourceTree = "<group>"; };
+		49AAE7A41510235700492AFF /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		49AAE7A51510235700492AFF /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		49AAE7A61510235700492AFF /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,9 @@
 			children = (
 				494A75E51506E2C10000B1CD /* AppDelegate.h */,
 				494A75E61506E2C10000B1CD /* AppDelegate.m */,
+				49AAE7A41510235700492AFF /* Login.h */,
+				49AAE7A51510235700492AFF /* Login.m */,
+				49AAE7A61510235700492AFF /* Login.xib */,
 				494A75E81506E2C10000B1CD /* MainStoryboard_iPhone.storyboard */,
 				494A75EB1506E2C10000B1CD /* MainStoryboard_iPad.storyboard */,
 				494A75EE1506E2C10000B1CD /* MainViewController.h */,
@@ -129,6 +140,8 @@
 		494A75DD1506E2C10000B1CD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49AAE7A115101DF000492AFF /* LoginConnectionDelegate.h */,
+				49AAE7A215101DF000492AFF /* LoginConnectionDelegate.m */,
 				494A760E1506E4090000B1CD /* Logo.png */,
 				494A75DE1506E2C10000B1CD /* Campus Chemistry-Info.plist */,
 				494A75DF1506E2C10000B1CD /* InfoPlist.strings */,
@@ -231,6 +244,7 @@
 				494A75EA1506E2C10000B1CD /* MainStoryboard_iPhone.storyboard in Resources */,
 				494A75ED1506E2C10000B1CD /* MainStoryboard_iPad.storyboard in Resources */,
 				494A760F1506E4090000B1CD /* Logo.png in Resources */,
+				49AAE7A81510235700492AFF /* Login.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +282,8 @@
 				494A75E31506E2C10000B1CD /* main.m in Sources */,
 				494A75E71506E2C10000B1CD /* AppDelegate.m in Sources */,
 				494A75F01506E2C10000B1CD /* MainViewController.m in Sources */,
+				49AAE7A315101DF000492AFF /* LoginConnectionDelegate.m in Sources */,
+				49AAE7A71510235700492AFF /* Login.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,31 +12,44 @@
 @implementation MainViewController
 
 @synthesize usernameText;
-@synthesize passwordText;
+@synthesize logPasswordText;
+@synthesize emailText;
+@synthesize regPasswordText;
+@synthesize confirmText;
+
 @synthesize username;
-@synthesize password;
+@synthesize logPassword;
+@synthesize email;
+@synthesize regPassword;
+@synthesize confirm;
 
 
 -(IBAction)loginButtonPressed:(id)sender
 {     
-    //NSString *username = usernameText.text;
-    //NSString *password = passwordText.text;
+    username = [[NSString alloc] initWithFormat:(usernameText.text)];
+    logPassword = [[NSString alloc] initWithFormat:(logPasswordText.text)];
+    
+    username = usernameText.text;
+    logPassword = logPasswordText.text;
+
     
 }
 
 -(IBAction)registerButtonPressed:(id)sender
 {
-    //registerView = [[RegisterView alloc] initWithNibName:@"ReigsterView" bundle:nil];
-    //[self.view addSubview:registerView.view];
+
+    
 }
 
--(void) touchesBegan:(NSSet *) touches withEvent:(UIEvent *)event
+-(IBAction)logoutButtonPressed:(id)sender
 {
     
-    [usernameText resignFirstResponder];
-    [passwordText resignFirstResponder];
     
-    [super touchesBegan:touches withEvent:event];
+}
+
+-(IBAction)userDoneEnteringText:(id)sender
+{
+    [sender resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning

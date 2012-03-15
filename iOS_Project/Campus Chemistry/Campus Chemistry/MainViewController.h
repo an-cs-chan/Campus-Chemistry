@@ -10,25 +10,33 @@
 
 @interface MainViewController : UIViewController
 {
-    IBOutlet UIViewController *loginView;
-    
-    IBOutlet UITextField *usernameText;
-    IBOutlet UITextField *passwordText;
+
+    IBOutlet UITextField *emailText;
+    IBOutlet UITextField *regPasswordText;
+    IBOutlet UITextField *confirmText;
     
     NSString *username;
-    NSString *password;
+    NSString *logPassword;
+    NSString *email;
+    NSString *regPassword;
+    NSString *confirm;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *usernameText;
-@property (nonatomic, retain) IBOutlet UITextField *passwordText;
+@property (nonatomic, retain) IBOutlet UITextField *logPasswordText;
+@property (nonatomic, retain) IBOutlet UITextField *emailText;
+@property (nonatomic, retain) IBOutlet UITextField *regPasswordText;
+@property (nonatomic, retain) IBOutlet UITextField *confirmText;
 
 @property (nonatomic, copy) IBOutlet NSString *username;
-@property (nonatomic, copy) IBOutlet NSString *password;
-
+@property (nonatomic, copy) IBOutlet NSString *logPassword;
+@property (nonatomic, copy) IBOutlet NSString *email;
+@property (nonatomic, copy) IBOutlet NSString *regPassword;
+@property (nonatomic, copy) IBOutlet NSString *confirm;
 
 -(IBAction)loginButtonPressed:(id)sender;
 -(IBAction)registerButtonPressed:(id)sender;
--(void) touchesBegan:(UIEvent *)event;
-
+-(IBAction)logoutButtonPressed:(id)sender;
+-(IBAction)userDoneEnteringText:(id)sender;
 
 @end
