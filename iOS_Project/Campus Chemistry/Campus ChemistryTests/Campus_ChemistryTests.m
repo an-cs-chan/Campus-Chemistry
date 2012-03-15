@@ -2,7 +2,7 @@
 //  Campus_ChemistryTests.m
 //  Campus ChemistryTests
 //
-//  Created by Jae Man Lim on 3/5/12.
+//  Created by Jae Man Lim on 3/6/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
