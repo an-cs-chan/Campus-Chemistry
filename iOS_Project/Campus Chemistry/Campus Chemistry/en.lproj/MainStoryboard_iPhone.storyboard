@@ -8,7 +8,7 @@
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <viewController id="2" customClass="LoginView" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="2" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,8 +76,8 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginButtonPressed:" destination="4" eventType="touchDown" id="XuE-dt-Tcb"/>
-                                            <segue destination="9lZ-nE-dkE" kind="modal" id="sow-XG-RAM"/>
+                                            <action selector="loginButtonPressed:" destination="2" eventType="touchDown" id="6y7-v7-xDv"/>
+                                            <segue destination="9lZ-nE-dkE" kind="modal" id="Ipp-nD-wID"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="14" clearButtonMode="always" id="Aj5-ZY-3bf" userLabel="passwordText">
@@ -87,7 +87,6 @@
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <action selector="userDoneEnteringText:" destination="4" eventType="editingDidEndOnExit" id="0dJ-n3-ebw"/>
-                                            <outlet property="delegate" destination="4" id="4hV-aF-NJx"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password:" lineBreakMode="tailTruncation" minimumFontSize="10" id="llT-EI-yIz" userLabel="passworldLabel">
@@ -98,13 +97,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="14" clearButtonMode="always" id="1my-kM-ezp" userLabel="usernameText">
-                                        <rect key="frame" x="125" y="204" width="155" height="31"/>
+                                        <rect key="frame" x="125" y="205" width="155" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" label="usernameText"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <action selector="userDoneEnteringText:" destination="4" eventType="editingDidEndOnExit" id="vUj-xj-x1j"/>
-                                            <outlet property="delegate" destination="4" id="9XC-Mc-FRx"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="User Name:" lineBreakMode="tailTruncation" minimumFontSize="10" id="bnq-qu-xGM" userLabel="usernameLabel">
@@ -120,14 +119,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="57q-NS-7nv"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1379" y="-66"/>
+            <point key="canvasLocation" x="-1456" y="-77"/>
         </scene>
         <scene sceneID="Sl5-rq-DmL">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2s-C8-C6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Po5-Hd-1LL" customClass="RegisterView" sceneMemberID="viewController">
+                <viewController id="Po5-Hd-1LL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oLa-DV-NaR">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -207,7 +208,6 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="registerButtonPressed:" destination="c2s-C8-C6S" eventType="touchDown" id="fPj-bz-vYI"/>
                                                     <segue destination="9lZ-nE-dkE" kind="modal" id="6x1-hB-MvI"/>
                                                 </connections>
                                             </button>
@@ -227,12 +227,12 @@
                     <navigationItem key="navigationItem" id="2RC-j1-N4c"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-968" y="-73"/>
+            <point key="canvasLocation" x="-1024" y="-159"/>
         </scene>
         <scene sceneID="uTD-Po-fka">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ra-cJ-Rz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="jrp-c7-1gg" customClass="QuizView" sceneMemberID="viewController">
+                <viewController id="jrp-c7-1gg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rAa-6l-tJp">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -279,12 +279,12 @@
                     <tabBarItem key="tabBarItem" title="Quiz" id="OK1-OJ-A4k"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-593" y="-55"/>
+            <point key="canvasLocation" x="-549" y="-111"/>
         </scene>
         <scene sceneID="gK4-59-P3B">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gyt-l7-0Bo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="4Zp-sR-uIS" customClass="ProfileView" sceneMemberID="viewController">
+                <viewController id="4Zp-sR-uIS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AcQ-JJ-LqD">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -331,12 +331,12 @@
                     <tabBarItem key="tabBarItem" title="Profile" id="Mip-5r-n8d"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-358" y="585"/>
+            <point key="canvasLocation" x="-572" y="615"/>
         </scene>
         <scene sceneID="mBi-O9-DK4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6t-65-h3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController definesPresentationContext="YES" id="9lZ-nE-dkE" customClass="UserAreaView" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="9lZ-nE-dkE" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="dbF-a2-LLD">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -350,12 +350,12 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="-1188" y="593"/>
+            <point key="canvasLocation" x="-1638" y="615"/>
         </scene>
         <scene sceneID="uOc-W0-CoW">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8v2-zE-wcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="WNa-oc-W8S" customClass="SearchView" sceneMemberID="viewController">
+                <viewController id="WNa-oc-W8S" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dOw-Xa-A7l">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -402,19 +402,29 @@
                     <tabBarItem key="tabBarItem" title="Search" id="89z-ij-5nH"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-736" y="607"/>
+            <point key="canvasLocation" x="-1118" y="615"/>
         </scene>
     </scenes>
     <resources>
         <image name="Logo.png" width="72" height="107"/>
     </resources>
+    <classes>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonPressed:"/>
+                <relationship kind="outlet" name="passwordText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameText" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sow-XG-RAM"/>
-        <segue reference="LAL-bh-AJz"/>
+        <segue reference="Ipp-nD-wID"/>
+        <segue reference="wbb-Qy-iIw"/>
     </inferredMetricsTieBreakers>
 </document>

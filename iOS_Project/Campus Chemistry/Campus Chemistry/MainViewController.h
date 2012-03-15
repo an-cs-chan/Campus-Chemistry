@@ -14,12 +14,14 @@
     IBOutlet UITextField *emailText;
     IBOutlet UITextField *regPasswordText;
     IBOutlet UITextField *confirmText;
+    IBOutlet UITextField *usernameText;
+    IBOutlet UITextField *logPasswordText;
     
-    NSString *username;
-    NSString *logPassword;
-    NSString *email;
-    NSString *regPassword;
-    NSString *confirm;
+    //NSString *username;
+    //NSString *logPassword;
+    //NSString *email;
+    //NSString *regPassword;
+    //NSString *confirm;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *usernameText;
@@ -28,11 +30,11 @@
 @property (nonatomic, retain) IBOutlet UITextField *regPasswordText;
 @property (nonatomic, retain) IBOutlet UITextField *confirmText;
 
-@property (nonatomic, copy) IBOutlet NSString *username;
-@property (nonatomic, copy) IBOutlet NSString *logPassword;
-@property (nonatomic, copy) IBOutlet NSString *email;
-@property (nonatomic, copy) IBOutlet NSString *regPassword;
-@property (nonatomic, copy) IBOutlet NSString *confirm;
+//@property (nonatomic, copy) NSString *username;
+//@property (nonatomic, copy) NSString *logPassword;
+//@property (nonatomic, copy) NSString *email;
+//@property (nonatomic, copy) NSString *regPassword;
+//@property (nonatomic, copy) NSString *confirm;
 
 -(IBAction)loginButtonPressed:(id)sender;
 -(IBAction)registerButtonPressed:(id)sender;

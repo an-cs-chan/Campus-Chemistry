@@ -36,14 +36,28 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "Campus Chemistry/MainViewController.h"
-         timestampString = "353380875.7964"
+         filePath = "Campus Chemistry/MainViewController.m"
+         timestampString = "353455384.51423"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
-         landmarkName = "logPasswordText"
-         landmarkType = "19">
+         startingLineNumber = "32"
+         endingLineNumber = "32"
+         landmarkName = "-loginButtonPressed:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Campus Chemistry/MainViewController.m"
+         timestampString = "353462415.490785"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
+         landmarkName = "-loginButtonPressed:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
