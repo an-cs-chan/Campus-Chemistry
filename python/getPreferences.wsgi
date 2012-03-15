@@ -16,9 +16,7 @@ def application(environ, start_response):
                             environ=environ,
                             keep_blank_values=True)
     
-    touserid = form.getfirst('name', 'empty')
-    message = form.getfirst('message', 'empty')    
-    fromuserid = form.getfirst('userid', 'empty')
+    userID = form.getfirst('userid', 'empty')
 
     #connect to the Database
     conn = MySQLdb.connect (host = "localhost",
@@ -28,16 +26,11 @@ def application(environ, start_response):
     
     cursor = conn.cursor()
    
-    cmd = "INSERT INTO messages (To_User_ID, From_User_ID, Message, Read_Status, Time_Stamp, deleted) values ('"+touserid+"', '"+fromuserid+"', '"+ message +"', '1', NOW(), '0')"
-    print cmd 
-    try:
-     cursor.execute(cmd)
-     data = [{"status":"Message Sent"}]
-     output = json.dumps(data)
-    except MySQLdb.Error, e:
-     data = [{"status":"Message Failed"}]
-     output = json.dumps(data)
+    cmd = "SELECT Sex, Orientation, MinAgePref, MaxAgePref FROM user_profile WHERE Email_ID = '"+userID+"'"
+    cursor.execute(cmd)
+    row = cursor.fetchone()
 
+    output = json.dumps(row)        
     status = '200 OK'
     
     cursor.close()

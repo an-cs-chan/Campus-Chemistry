@@ -3,10 +3,9 @@
 import MySQLdb
 import cgi
 import json
-import datetime
-
-from wsgiref.simple_server import make_server
-from cgi import parse_qs, escape
+import string
+import random
+import Cookie
 
 KEY_STR = 'umprojkey6853558'
 
@@ -16,28 +15,23 @@ def application(environ, start_response):
     form = cgi.FieldStorage(fp=environ['wsgi.input'],
                             environ=environ,
                             keep_blank_values=True)
-    try:
+    
+    touserid = form.getfirst('userid', 'empty')
+
     #connect to the Database
-     conn = MySQLdb.connect (host = "localhost",
+    conn = MySQLdb.connect (host = "localhost",
                             user = "root",
                             passwd = "",
                             db = "campus chemistry")
-     print "Success"
-    except MySQLdb.Error, e:
-     print "Error %d: %s" % (e.args[0], e.args[1])
-     sys.exit (1)
+    
+    cursor = conn.cursor()
+   
+    cmd = "SELECT Message_ID, From_User_ID, Message, DATE_FORMAT(Time_Stamp, '%b %e, %l:%i %p'), Read_Status FROM messages WHERE To_User_ID = '"+touserid+"' AND Deleted = '0' ORDER BY Read_Status DESC, from_user_id ASC"
 
-    cursor = conn.cursor()      
-    query = " SELECT Message_ID, up.User_Name, Message, DATE_FORMAT(Time_Stamp, '%b %e, %l:%i %p') a FROM messages me left join user_profile up on up.User_ID = me.From_User_ID WHERE me.To_User_ID = '13' ORDER BY me.Read_Status DESC, a DESC"  
-    print query
-
-    cursor.execute(query)
+    cursor.execute(cmd)
     rows = cursor.fetchall()
-    #for row in rows:
-    # print "%s, %s, %s, %s" % (row[0], row[1], row[2], row[3])
-    #print "Number of rows returned: %d" % cursor.rowcount
 
-    output = json.dumps(rows)
+    output = json.dumps(rows)        
     status = '200 OK'
     
     cursor.close()

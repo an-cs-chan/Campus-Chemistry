@@ -6,6 +6,7 @@ import json
 import string
 import random
 import Cookie
+import datetime
 
 KEY_STR = 'umprojkey6853558'
 
@@ -16,11 +17,10 @@ def application(environ, start_response):
                             environ=environ,
                             keep_blank_values=True)
     
-    userId = form.getfirst('emailInput', 'empty')
+    userId = form.getfirst('loginEmail', 'empty')
     userId = cgi.escape(userId)
-    userName = userId[:userId.index('@')]
     userId = userId.lower()
-    password = form.getfirst('passwordInput', 'empty')
+    password = form.getfirst('loginPassword', 'empty')
     password = cgi.escape(password)
 
     #connect to the Database
@@ -30,27 +30,31 @@ def application(environ, start_response):
                             db = "campus chemistry")
     
     cursor = conn.cursor()
-    cursor.execute("""SELECT * FROM user_login WHERE User_ID = %s""", (userId,))
+    cursor.execute("""SELECT User_ID, AES_DECRYPT(Password,%s) FROM user_login WHERE User_ID = %s""", (KEY_STR, userId,))
     row = cursor.fetchone()
     
     sess_cookie = Cookie.SimpleCookie()
     user_cookie = Cookie.SimpleCookie()
     
+    expiration = datetime.datetime.now() + datetime.timedelta(days=2)
+    
     if row == None:
-    	rand_digs = string.ascii_uppercase + string.ascii_lowercase + string.digits
-        session_id = ''.join(random.sample(rand_digs,24))
-        cursor.execute("""INSERT INTO user_login (User_ID, User_Name, Password, Email_ID, User_Created, Last_Login, Session_ID) VALUES (%s, %s, AES_ENCRYPT(%s,%s), %s, CURRENT_TIMESTAMP, NOW(), %s)""", (userId, userName, password, KEY_STR, userId, session_id))
-        cursor.execute("""INSERT INTO user_profile (User_ID, User_Name, Email_ID, User_Created) VALUES (%s, %s, %s, CURRENT_TIMESTAMP)""", (userId, userName, userId,))
-        
-        sess_cookie['sessionid'] = session_id
-        sess_cookie['sessionid']['path'] = '/'
-        user_cookie['userid'] = userId
-        user_cookie['userid']['path'] = '/'
-        
-        data = [{"status":"Inserted user"}]
+        data = [{"status":"Incorrect credentials"}]
         output = json.dumps(data)
     else:
-        data = [{"status":"User already exists"}]
+    	if row[1] == password:
+        	data = [{"status":"User found"}]
+        	rand_digs = string.ascii_uppercase + string.ascii_lowercase + string.digits
+        	session_id = ''.join(random.sample(rand_digs,24))
+        	cursor.execute("""UPDATE user_login SET Session_ID = %s, Last_Login = NOW() WHERE User_ID = %s""", (session_id, userId,))
+        	sess_cookie['sessionid'] = session_id
+        	sess_cookie['sessionid']['path'] = '/'
+        	sess_cookie['sessionid']['expires'] = expiration.strftime("%a, %d-%b-%Y %H:%M:%S PST")
+        	user_cookie['userid'] = userId
+        	user_cookie['userid']['path'] = '/'
+        	user_cookie['userid']['expires'] = expiration.strftime("%a, %d-%b-%Y %H:%M:%S PST")
+        else:
+        	data = [{"status":"Incorrect credentials"}]
         output = json.dumps(data)
     
     status = '200 OK'

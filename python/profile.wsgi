@@ -3,41 +3,38 @@
 import MySQLdb
 import cgi
 import json
-import string
-import random
-import Cookie
+import datetime
+
+from wsgiref.simple_server import make_server
+from cgi import parse_qs, escape
 
 KEY_STR = 'umprojkey6853558'
 
+#this wsgi is to get data for MY profile or another user's profile
+
 def application(environ, start_response):
-    
-    #get proper fields
+
+	#get proper fields
     form = cgi.FieldStorage(fp=environ['wsgi.input'],
                             environ=environ,
                             keep_blank_values=True)
-    
-    touserid = form.getfirst('name', 'empty')
-    message = form.getfirst('message', 'empty')    
-    fromuserid = form.getfirst('userid', 'empty')
 
-    #connect to the Database
+	#get user id
+	user_id = form.getfirst('userID', 'empty')
+    user_id = cgi.escape(user_id)
+
+	#connect to the Database
     conn = MySQLdb.connect (host = "localhost",
                             user = "root",
                             passwd = "",
                             db = "campus chemistry")
-    
-    cursor = conn.cursor()
-   
-    cmd = "INSERT INTO messages (To_User_ID, From_User_ID, Message, Read_Status, Time_Stamp, deleted) values ('"+touserid+"', '"+fromuserid+"', '"+ message +"', '1', NOW(), '0')"
-    print cmd 
-    try:
-     cursor.execute(cmd)
-     data = [{"status":"Message Sent"}]
-     output = json.dumps(data)
-    except MySQLdb.Error, e:
-     data = [{"status":"Message Failed"}]
-     output = json.dumps(data)
 
+	cursor = conn.cursor()
+	
+	cursor.execute("""SELECT * FROM user_profile WHERE User_ID = %s""", (user_id,))
+	row = cursor.fetchone()
+	
+	output = json.dumps(data)
     status = '200 OK'
     
     cursor.close()
