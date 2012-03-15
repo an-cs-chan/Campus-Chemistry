@@ -16,9 +16,9 @@ def application(environ, start_response):
                             environ=environ,
                             keep_blank_values=True)
     
-    message = form.getfirst('message', 'empty')
-    name = form.getfirst('name', 'empty')
-    userid = form.getfirst('userid', 'empty')
+    touserid = form.getfirst('name', 'empty')
+    message = form.getfirst('message', 'empty')    
+    fromuserid = form.getfirst('userid', 'empty')
 
     #connect to the Database
     conn = MySQLdb.connect (host = "localhost",
@@ -28,8 +28,8 @@ def application(environ, start_response):
     
     cursor = conn.cursor()
    
-    cmd = "INSERT INTO messages (To_User_ID, From_User_ID, Message, Read_Status, Time_Stamp, deleted) VALUES ('"+name+"', '"+userid+"', '"+ message +"', '1', NOW(), '0')" 
-
+    cmd = "INSERT INTO messages (To_User_ID, From_User_ID, Message, Read_Status, Time_Stamp, deleted) values ('"+touserid+"', '"+fromuserid+"', '"+ message +"', '1', NOW(), '0')"
+    print cmd 
     try:
      cursor.execute(cmd)
      data = [{"status":"Message Sent"}]
