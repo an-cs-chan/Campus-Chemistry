@@ -37,7 +37,7 @@ CREATE TABLE `survey_answer` (
 
 LOCK TABLES `survey_answer` WRITE;
 /*!40000 ALTER TABLE `survey_answer` DISABLE KEYS */;
-INSERT INTO `survey_answer` VALUES (1,'Agree'),(2,'Somewhat Agree'),(3,'Disagree'),(4,'Somewhat Disagree');
+INSERT INTO `survey_answer` VALUES (1,'Disagree'),(2,'Somewhat Disagree'),(3,'Somewhate Agree'),(4,'Agree');
 /*!40000 ALTER TABLE `survey_answer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

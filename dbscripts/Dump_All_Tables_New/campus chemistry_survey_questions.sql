@@ -27,6 +27,7 @@ DROP TABLE IF EXISTS `survey_questions`;
 CREATE TABLE `survey_questions` (
   `Ques_ID` int(11) NOT NULL AUTO_INCREMENT,
   `Question` varchar(200) NOT NULL,
+  `Subject`  varchar(50) NOT NULL,
   PRIMARY KEY (`Ques_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -37,7 +38,62 @@ CREATE TABLE `survey_questions` (
 
 LOCK TABLES `survey_questions` WRITE;
 /*!40000 ALTER TABLE `survey_questions` DISABLE KEYS */;
-INSERT INTO `survey_questions` VALUES (1,'I like to plan things out in detail'),(2,'I like to be spontaneous at times'),(3,'I would rather eat dinner at a restaurant than at home'),(4,'Religion is important to me'),(5,'I actively practice my religion'),(6,'Politics are important to me'),(7,'In life, my goal is to be successful'),(8,'Culture is important to me'),(9,'I like being exposed to new cultures and food'),(10,'I like to joke around a lot'),(11,'I like being productive'),(12,'I play first rather than work first'),(13,'I tend to be studious'),(14,'I enjoy staying fit and being active'),(15,'I would rather go to a house party than a pub or bar'),(16,'I would rather stay at home than go out to a party'),(17,'I am up-to-date with the latest movies'),(18,'I really enjoy listening to music'),(19,'There is nothing wrong with flirting even if I am in a relationship'),(20,'Getting good grades is extremely important to me'),(21,'I am quite involved with extracurricular activities'),(22,'I spend a lot of my free time on the computer'),(23,'I am a generally enthusiastic person'),(24,'I like the outdoors'),(25,'Passing my courses is all I try to achieve'),(26,'I would rather go to a resort than backpack when travelling in a new country'),(27,'I am pretty good at managing my own money'),(28,'I like to be the one in charge'),(29,'I am extremely stubborn when I want something'),(30,'I am interested in sports'),(31,'I like to move fast in a relationship'),(32,'I like to cook'),(33,'I drink more than 3 times a week'),(34,'I never drink, regardless of the occasion'),(35,'I would never date a smoker'),(36,'I rarely get angry'),(37,'I rarely get sad'),(38,'I don’t experience strong emotions often'),(39,'I tend to talk more than I listen'),(40,'Money is extremely important in my life'),(41,'I tend to avoid answering personal questions'),(42,'I tend to follow rather than lead'),(43,'Family is extremely important to me'),(44,'I like volunteering and helping the less fortunate'),(45,'I would like to have kids in the future'),(46,'I don’t like hanging around campus, I just go to my classes'),(47,'World issues interest me'),(48,'I am comfortable in large groups of people'),(49,'I would prefer to know someone during one-on-one time'),(50,'I would like to get married soon');
+INSERT INTO `survey_questions` VALUES 
+    (1,'In life, my goal is to be successful.','Ethics'),
+    (2,'Religion is important to me.','Ethics'),
+    (3,'I like to plan things out in detail.','Ethics'),
+    (4,'I never drink, regardless of the occasion.','Ethics'),
+    (5,'Culture is important to me.','Ethics'),
+    (6,'Money is extremely important in my life.','Ethics'),
+    (7,'I actively practice my religion.','Ethics'),
+    (8,'Politics are important to me.','Ethics'),
+    
+    (9,'I am a generally enthusiastic person.','Personality'),
+    (10,'I would rather eat dinner at a restaurant than at home.','Personality'),
+    (11,'I rarely get angry.','Personality'),
+    (12,'I like to be spontaneous at times.','Personality'),
+    (13,'I would rather go to a resort than backpack when travelling in a new country.','Personality'),
+    (14,'I don’t experience strong emotions often.','Personality'),
+    (15,'I tend to follow rather than lead.','Personality'),
+    (16,'I like being exposed to new cultures and food.','Personality'),
+    (17,'I tend to talk more than I listen.','Personality'),
+    (18,'I am extremely stubborn when I want something.','Personality'),
+    (19,'I like being productive.','Personality'),
+    (20,'I tend to avoid answering personal questions.','Personality'),
+    (21,'I like to joke around a lot.','Personality'),
+    (22,'I am pretty good at managing my own money.','Personality'),
+    (23,'I rarely get sad.','Personality'),
+    (24,'I like to be the one in charge.','Personality'),
+    
+    (25,'I like the outdoors.','Hobbies / Interests'),
+    (26,'I would rather go to a house party than a pub or bar.','Hobbies / Interests'),
+    (27,'I am up-to-date with the latest movies.','Hobbies / Interests'),
+    (28,'I am quite involved with extracurricular activities.','Hobbies / Interests'),
+    (29,'I enjoy staying fit and being active.','Hobbies / Interests'),
+    (30,'I would rather stay at home than go out to a party.','Hobbies / Interests'),
+    (31,'I really enjoy listening to music.','Hobbies / Interests'),
+    (32,'I am interested in sports.','Hobbies / Interests'),
+    (33,'I like to cook.','Hobbies / Interests'),
+    (34,'I like volunteering and helping the less fortunate.','Hobbies / Interests'),
+    (35,'World issues interest me.','Hobbies / Interests'),
+    (36,'I drink more than 3 times a week.','Hobbies / Interests'),
+    (37,'I spend a lot of my free time on the computer.','Hobbies / Interests'),
+    
+    (38,'I am comfortable in large groups of people.','Relationships'),
+    (39,'Family is extremely important to me.','Relationships'),
+    (40,'I would prefer to know someone during one-on-one time.','Relationships'),
+    (41,'There is nothing wrong with flirting even if I am in a relationship.','Relationships'),
+    (42,'I would never date a smoker.','Relationships'),
+    (43,'I would like to get married soon.','Relationships'),
+    (44,'I like to move fast in a relationship.','Relationships'),
+    (45,'I would like to have kids in the future.','Relationships'),
+    
+    (46,'Getting good grades is extremely important to me.','Academics'),
+    (47,'I play first rather than work first.','Academics'),
+    (48,'I tend to be studious.','Academics'),
+    (49,'Passing my courses is all I try to achieve.','Academics'),
+    (50,'I don’t like hanging around campus, I just go to my classes.','Academics');
+    
 /*!40000 ALTER TABLE `survey_questions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
