@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="22" version="2.0">
+<workbenchAdvisor/>
+<window height="940" maximized="true" width="1200" x="150" y="100">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.aptana.ui.globalActionSet" itemType="typeToolBarContribution" x="168" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="137" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="53" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="91" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.aptana.editor.text" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.css" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.js" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page focus="true" label="Workspace - Web">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="2"/>
+<part id="3"/>
+<part id="1"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="profile.wsgi" partName="profile.wsgi" title="profile.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\profile.wsgi" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/profile.wsgi"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="785" selectionTopPixel="125"/>
+</editor>
+<editor id="com.aptana.editor.js" name="profile.js" partName="profile.js" title="profile.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\profile.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/profile.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="266" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.js" name="search.js" partName="search.js" title="search.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\search.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/search.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="7955" selectionTopPixel="4981"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="getPreferences.wsgi" partName="getPreferences.wsgi" title="getPreferences.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\getPreferences.wsgi" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/getPreferences.wsgi"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="372" selectionTopPixel="57"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="campus chemistry_user_profile.sql" partName="campus chemistry_user_profile.sql" title="campus chemistry_user_profile.sql" tooltip="C:\xampp\htdocs\Campus-Chemistry\dbscripts\Dump_All_Tables_New\campus chemistry_user_profile.sql" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_user_profile.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="606" selectionTopPixel="958"/>
+</editor>
+<editor id="com.aptana.editor.css" name="Styles.css" partName="Styles.css" title="Styles.css" tooltip="C:\xampp\htdocs\Campus-Chemistry\styles\Styles.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/styles/Styles.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="102"/>
+</editor>
+<editor id="com.aptana.editor.text" name="README" partName="README" title="README" tooltip="C:\xampp\htdocs\Campus-Chemistry\README" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/README"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="com.aptana.terminal.views.terminal" partName="Terminal"/>
+<view id="com.aptana.samples.ui.SamplesView" partName="Samples"/>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems"/>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="com.aptana.explorer.view" partName="App Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled=""/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.ui.DefaultTextEditor" activePerspective="com.aptana.ui.WebPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.aptana.ui.internal.WebPerspectiveFactory" id="com.aptana.ui.WebPerspective" label="Web"/>
+<alwaysOnActionSet id="com.aptana.browser.actionSet"/>
+<alwaysOnActionSet id="com.aptana.ruby.debug.ui.RubyDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.aptana.editor.common.presentation"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="com.aptana.js.debug.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.presentation"/>
+<alwaysOnActionSet id="com.aptana.ui.globalActionSet"/>
+<alwaysOnActionSet id="com.aptana.terminal.actionSet"/>
+<show_view_action id="com.aptana.browser.views.webbrowser"/>
+<show_view_action id="com.aptana.explorer.view"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="com.aptana.ui.io.remoteview"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="com.aptana.samples.ui.SamplesView"/>
+<show_view_action id="com.aptana.terminal.views.terminal"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<new_wizard_action id="com.aptana.ui.wizards.NewWebProject"/>
+<new_wizard_action id="com.aptana.ruby.core.ui.rubyProjectWizard"/>
+<new_wizard_action id="com.aptana.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.radrails.rails.ui.projectWizard"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.aptana.explorer.view"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="com.aptana.terminal.views.terminal"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="com.aptana.samples.ui.SamplesView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="com.aptana.explorer.view" label="App Explorer"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="882" ratioRight="294" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.39045182" ratioLeft="458" ratioRight="715" relationship="2" relative="left"/>
+<info folder="true" part="terminalArea" ratio="0.75" ratioLeft="636" ratioRight="212" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="com.aptana.terminal.views.terminal" label="Terminal"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@836727" ratio="0.75" ratioLeft="636" ratioRight="212" relationship="4" relative="left">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="com.aptana.samples.ui.SamplesView" label="Samples"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/profile.wsgi"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/profile.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/search.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/getPreferences.wsgi"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.systemInPlaceEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_user_profile.sql"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_user_profile.sql"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_routines.sql"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_messages.sql"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" uri="file:/C:/xampp/htdocs/Campus-Chemistry/styles/Styles.css"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.text" uri="file:/C:/xampp/htdocs/Campus-Chemistry/README"/>
+</editors>
+<item historyLabel="search.js" index="2">
+<position info="not_deleted" x="7955" y="4"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="498" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="502" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="502" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="profile.js" index="1">
+<position info="not_deleted" x="679" y="0"/>
+</item>
+<item historyLabel="search.js" index="2">
+<position info="not_deleted" x="7955" y="4"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="502" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="502" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="83" y="28"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="113" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="83" y="28"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="113" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="83" y="28"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="113" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="83" y="28"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="113" y="0"/>
+</item>
+<item historyLabel="search.js" index="2">
+<position info="not_deleted" x="7955" y="4"/>
+</item>
+<item historyLabel="profile.js" index="1">
+<position info="not_deleted" x="679" y="0"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="113" y="0"/>
+</item>
+<item historyLabel="search.js" index="2">
+<position info="not_deleted" x="7955" y="4"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="113" y="0"/>
+</item>
+<item historyLabel="profile.js" index="1">
+<position info="not_deleted" x="266" y="0"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="461" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="83" y="28"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="785" y="0"/>
+</item>
+<item historyLabel="campus chemistry_user_profile.sql" index="4"/>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="785" y="0"/>
+</item>
+<item historyLabel="campus chemistry_user_profile.sql" index="5">
+<position info="not_deleted" x="606" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="83" y="28"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="785" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="83" y="28"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="785" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="83" y="28"/>
+</item>
+<item historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="785" y="0"/>
+</item>
+<item historyLabel="getPreferences.wsgi" index="3">
+<position info="not_deleted" x="372" y="0"/>
+</item>
+<item historyLabel="campus chemistry_user_profile.sql" index="5">
+<position info="not_deleted" x="606" y="0"/>
+</item>
+<item historyLabel="campus chemistry_routines.sql" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="campus chemistry_messages.sql" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="campus chemistry_routines.sql" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Styles.css" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="README" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="campus chemistry_routines.sql" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="README" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="profile.wsgi" index="0">
+<position info="not_deleted" x="785" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.text" name="README" tooltip="C:\xampp\htdocs\Campus-Chemistry\README">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/README"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" name="Styles.css" tooltip="C:\xampp\htdocs\Campus-Chemistry\styles\Styles.css">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/styles/Styles.css"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="alone.jpg" tooltip="C:\xampp\htdocs\Campus-Chemistry\media\alone.jpg">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/media/alone.jpg"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="test.png" tooltip="C:\xampp\htdocs\Campus-Chemistry\images\test.png">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/images/test.png"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="campus chemistry_messages.sql" tooltip="C:\xampp\htdocs\Campus-Chemistry\dbscripts\Dump_All_Tables_New\campus chemistry_messages.sql">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_messages.sql"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="campus chemistry_routines.sql" tooltip="C:\xampp\htdocs\Campus-Chemistry\dbscripts\Dump_All_Tables_New\campus chemistry_routines.sql">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_routines.sql"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="campus chemistry_user_profile_images.sql" tooltip="C:\xampp\htdocs\Campus-Chemistry\dbscripts\Dump_All_Tables_New\campus chemistry_user_profile_images.sql">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_user_profile_images.sql"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="campus chemistry_user_profile.sql" tooltip="C:\xampp\htdocs\Campus-Chemistry\dbscripts\Dump_All_Tables_New\campus chemistry_user_profile.sql">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_user_profile.sql"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="getPreferences.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\getPreferences.wsgi">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/getPreferences.wsgi"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="search.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\search.js">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/search.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="profile.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\profile.js">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/profile.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="profile.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\profile.wsgi">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/profile.wsgi"/>
+</file>
+</mruList>
+</workbench>
