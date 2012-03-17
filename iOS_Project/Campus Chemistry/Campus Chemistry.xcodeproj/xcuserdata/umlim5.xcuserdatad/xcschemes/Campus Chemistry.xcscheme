@@ -13,7 +13,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "494A75D11506E2C00000B1CD"
+               BlueprintIdentifier = "494405211513D0FB0005BB97"
                BuildableName = "Campus Chemistry.app"
                BlueprintName = "Campus Chemistry"
                ReferencedContainer = "container:Campus Chemistry.xcodeproj">
@@ -31,7 +31,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "494A75F51506E2C10000B1CD"
+               BlueprintIdentifier = "494405451513D0FC0005BB97"
                BuildableName = "Campus ChemistryTests.octest"
                BlueprintName = "Campus ChemistryTests"
                ReferencedContainer = "container:Campus Chemistry.xcodeproj">
@@ -41,7 +41,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "494A75D11506E2C00000B1CD"
+            BlueprintIdentifier = "494405211513D0FB0005BB97"
             BuildableName = "Campus Chemistry.app"
             BlueprintName = "Campus Chemistry"
             ReferencedContainer = "container:Campus Chemistry.xcodeproj">
@@ -49,8 +49,8 @@
       </MacroExpansion>
    </TestAction>
    <LaunchAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
@@ -59,7 +59,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "494A75D11506E2C00000B1CD"
+            BlueprintIdentifier = "494405211513D0FB0005BB97"
             BuildableName = "Campus Chemistry.app"
             BlueprintName = "Campus Chemistry"
             ReferencedContainer = "container:Campus Chemistry.xcodeproj">
@@ -77,7 +77,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "494A75D11506E2C00000B1CD"
+            BlueprintIdentifier = "494405211513D0FB0005BB97"
             BuildableName = "Campus Chemistry.app"
             BlueprintName = "Campus Chemistry"
             ReferencedContainer = "container:Campus Chemistry.xcodeproj">
