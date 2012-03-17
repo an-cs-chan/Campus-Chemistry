@@ -20,21 +20,21 @@ def application(environ, start_response):
                             keep_blank_values=True)
 
 	#get user id
-	user_id = form.getfirst('userID', 'empty')
+    user_id = form.getfirst('userID', 'empty')
     user_id = cgi.escape(user_id)
 
-	#connect to the Database
+    #connect to the Database
     conn = MySQLdb.connect (host = "localhost",
                             user = "root",
                             passwd = "",
                             db = "campus chemistry")
 
-	cursor = conn.cursor()
+    cursor = conn.cursor()
 	
-	cursor.execute("""SELECT * FROM user_profile WHERE User_ID = %s""", (user_id,))
-	row = cursor.fetchone()
+    cursor.execute("""SELECT * FROM user_profile WHERE User_ID = %s""", (user_id,))
+    row = cursor.fetchone()
 	
-	output = json.dumps(data)
+    output = json.dumps(row)
     status = '200 OK'
     
     cursor.close()
