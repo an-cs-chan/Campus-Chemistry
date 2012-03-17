@@ -19,8 +19,8 @@ def application(environ, start_response):
                             environ=environ,
                             keep_blank_values=True)
 
-	#get user id
-	user_id = form.getfirst('userID', 'empty')
+    #get user id
+    user_id = form.getfirst('userID', 'empty')
     user_id = cgi.escape(user_id)
 
 	#connect to the Database
@@ -29,12 +29,12 @@ def application(environ, start_response):
                             passwd = "",
                             db = "campus chemistry")
 
-	cursor = conn.cursor()
+    cursor = conn.cursor()
 	
-	cursor.execute("""SELECT * FROM user_profile WHERE User_ID = %s""", (user_id,))
-	row = cursor.fetchone()
+    cursor.execute("""SELECT * FROM user_profile WHERE User_ID = %s""", (user_id,))
+    row = cursor.fetchone()
 	
-	output = json.dumps(data)
+    output = json.dumps(row)
     status = '200 OK'
     
     cursor.close()
