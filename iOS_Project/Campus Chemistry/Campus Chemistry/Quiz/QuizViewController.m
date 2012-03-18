@@ -1,38 +1,20 @@
 //
-//  UserAreaViewController.m
+//  QuizViewController.m
 //  Campus Chemistry
 //
-//  Created by Jae Man Lim on 3/16/12.
+//  Created by Jae Man Lim on 3/17/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "UserAreaViewController.h"
+#import "QuizViewController.h"
 
-@implementation UserAreaViewController
-@synthesize profileViewController;
-//@synthesize quizViewController;
-
-
-- (IBAction)logoutButtonPressed:(id)sender
-{
-    [self.view removeFromSuperview];
-    
-}
+@implementation QuizViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) 
-    {
-        /*if(self.quizViewController == nil)
-        {
-            QuizViewController *quizView = [[QuizViewController alloc] initWithNibName:@"Quiz/QuizViewController" bundle:nil];
-            [self presentModalViewController:quizViewController animated:YES];
-            self.quizViewController = quizView;
-            
-            self.selectedViewController = quizView;
-            
-        }*/
+    if (self) {
+        // Custom initialization
     }
     return self;
 }
@@ -55,11 +37,10 @@
 
 - (void)viewDidUnload
 {
-    [self setProfileViewController:nil];
-    //[self setQuizViewController:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -68,4 +49,8 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)logoutButtonPressed:(id)sender 
+{
+    [self.view removeFromSuperview];    
+}
 @end

@@ -19,7 +19,6 @@ def application(environ, start_response):
                             environ=environ,
                             keep_blank_values=True)
 
-	#get user id
     user_id = form.getfirst('userID', 'empty')
     user_id = cgi.escape(user_id)
 
