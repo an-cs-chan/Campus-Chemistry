@@ -4,13 +4,13 @@ describe("CreateUserBlock", function() {
 		//To make sure our HTML is returned properly, we create a DOM object to append our results to
 		setFixtures('<div id="test"></div>');
 		
+		var testUser = new UserInformation("Melissa", "Computer Science", "", "Athletic", "Blah Blah...", "/test.img", "flowacat@shaw.ca");
+
 		//Do the function and append the HTML
-		$("#test").append(createUserBlock("Melissa", 21, "Computer Science", 512, "right", 1));
+		$("#test").append(createUserBlock(testUser, 1, "smallDisplay"));
 		
 		//Do our tests
 		expect($("#userNameText").html()).toBe("Melissa");
-		expect($("#userAgeText").html()).toBe('21');
-		expect($("#userFacultyText").html()).toBe('Computer Science');
 
 	});	
 });
@@ -49,7 +49,7 @@ describe("ProcessAdvancedSearch", function() {
 
 		var data = "";
 		
-		processAdvancedSearch(data);
+		processBasicSearch(data);
 
 		expect($("#resultsFooter").html()).toBe("");
 		expect($("#resultsArea").html()).toBe("<p>No Results To Display</p>");
@@ -62,7 +62,7 @@ describe("ProcessAdvancedSearch", function() {
 		var data = new Array();
 		data[0] = "test";
 		
-		processAdvancedSearch(data);
+		processBasicSearch(data);
 
 		expect($("#resultsFooter").html()).toBe("");
 		expect($("#resultsArea").html()).not.toBeEmpty();
