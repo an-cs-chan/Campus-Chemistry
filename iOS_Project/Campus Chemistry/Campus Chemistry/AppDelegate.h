@@ -8,15 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class UIViewController;
+@class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-{
-    UIWindow *window;
-    UIViewController *loginViewController;
-}
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UIViewController *loginViewController;
+@property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) ViewController *viewController;
 
 @end

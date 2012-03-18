@@ -8,11 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegisterViewController : UIViewController
+#import "UserAreaViewController.h"
 
-@property (weak, nonatomic) IBOutlet UITextField *emailText;
-@property (weak, nonatomic) IBOutlet UITextField *passwordText;
-@property (weak, nonatomic) IBOutlet UITextField *confirmText;
+@interface RegisterViewController : UIViewController <UITextFieldDelegate>
+{
+    UserAreaViewController *userAreaViewController;
+}
+ 
+@property (nonatomic, retain) IBOutlet UITextField *emailText;
+@property (nonatomic, retain) IBOutlet UITextField *passwordText;
+@property (nonatomic, retain) IBOutlet UITextField *confirmText;
+
+@property (nonatomic, retain) UserAreaViewController *userAreaViewController;
 
 - (IBAction)registerButtonPressed:(id)sender;
 
