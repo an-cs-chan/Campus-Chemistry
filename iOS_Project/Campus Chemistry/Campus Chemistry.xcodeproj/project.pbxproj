@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		494405271513D0FB0005BB97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405261513D0FB0005BB97 /* UIKit.framework */; };
+		494405291513D0FB0005BB97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405281513D0FB0005BB97 /* Foundation.framework */; };
+		4944052B1513D0FB0005BB97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4944052A1513D0FB0005BB97 /* CoreGraphics.framework */; };
+		494405311513D0FB0005BB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4944052F1513D0FB0005BB97 /* InfoPlist.strings */; };
+		494405331513D0FB0005BB97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405321513D0FB0005BB97 /* main.m */; };
+		494405371513D0FB0005BB97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405361513D0FB0005BB97 /* AppDelegate.m */; };
+		4944053A1513D0FB0005BB97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405391513D0FB0005BB97 /* LoginViewController.m */; };
+		4944053D1513D0FC0005BB97 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4944053B1513D0FC0005BB97 /* ViewController_iPhone.xib */; };
+		494405401513D0FC0005BB97 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4944053E1513D0FC0005BB97 /* ViewController_iPad.xib */; };
+		494405481513D0FC0005BB97 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405471513D0FC0005BB97 /* SenTestingKit.framework */; };
+		494405491513D0FC0005BB97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405261513D0FB0005BB97 /* UIKit.framework */; };
+		4944054A1513D0FC0005BB97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405281513D0FB0005BB97 /* Foundation.framework */; };
+		494405521513D0FC0005BB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 494405501513D0FC0005BB97 /* InfoPlist.strings */; };
+		494405551513D0FC0005BB97 /* Campus_ChemistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405541513D0FC0005BB97 /* Campus_ChemistryTests.m */; };
+		4944055F1513D1740005BB97 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4944055E1513D1740005BB97 /* Logo.png */; };
+		49F2AF5A151412EB00478A94 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2AF58151412EB00478A94 /* RegisterViewController.m */; };
+		49F2AF5B151412EB00478A94 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F2AF59151412EB00478A94 /* RegisterViewController.xib */; };
+		49F2AF6315141AE900478A94 /* UserAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2AF6115141AE900478A94 /* UserAreaViewController.m */; };
+		49F2AF6415141AE900478A94 /* UserAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F2AF6215141AE900478A94 /* UserAreaViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4944054B1513D0FC0005BB97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 494405191513D0FB0005BB97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 494405211513D0FB0005BB97;
+			remoteInfo = "Campus Chemistry";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		494405221513D0FB0005BB97 /* Campus Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Campus Chemistry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		494405261513D0FB0005BB97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		494405281513D0FB0005BB97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4944052A1513D0FB0005BB97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4944052E1513D0FB0005BB97 /* Campus Chemistry-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Campus Chemistry-Info.plist"; sourceTree = "<group>"; };
+		494405301513D0FB0005BB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		494405321513D0FB0005BB97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		494405341513D0FB0005BB97 /* Campus Chemistry-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Campus Chemistry-Prefix.pch"; sourceTree = "<group>"; };
+		494405351513D0FB0005BB97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		494405361513D0FB0005BB97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		494405381513D0FB0005BB97 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		494405391513D0FB0005BB97 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4944053C1513D0FC0005BB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		4944053F1513D0FC0005BB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		494405461513D0FC0005BB97 /* Campus ChemistryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Campus ChemistryTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		494405471513D0FC0005BB97 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4944054F1513D0FC0005BB97 /* Campus ChemistryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Campus ChemistryTests-Info.plist"; sourceTree = "<group>"; };
+		494405511513D0FC0005BB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		494405531513D0FC0005BB97 /* Campus_ChemistryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Campus_ChemistryTests.h; sourceTree = "<group>"; };
+		494405541513D0FC0005BB97 /* Campus_ChemistryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Campus_ChemistryTests.m; sourceTree = "<group>"; };
+		4944055E1513D1740005BB97 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		49F2AF57151412EB00478A94 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		49F2AF58151412EB00478A94 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		49F2AF59151412EB00478A94 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		49F2AF6015141AE900478A94 /* UserAreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAreaViewController.h; sourceTree = "<group>"; };
+		49F2AF6115141AE900478A94 /* UserAreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAreaViewController.m; sourceTree = "<group>"; };
+		49F2AF6215141AE900478A94 /* UserAreaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAreaViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4944051F1513D0FB0005BB97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494405271513D0FB0005BB97 /* UIKit.framework in Frameworks */,
+				494405291513D0FB0005BB97 /* Foundation.framework in Frameworks */,
+				4944052B1513D0FB0005BB97 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494405421513D0FC0005BB97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494405481513D0FC0005BB97 /* SenTestingKit.framework in Frameworks */,
+				494405491513D0FC0005BB97 /* UIKit.framework in Frameworks */,
+				4944054A1513D0FC0005BB97 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		494405171513D0FB0005BB97 = {
+			isa = PBXGroup;
+			children = (
+				4944052C1513D0FB0005BB97 /* Campus Chemistry */,
+				4944054D1513D0FC0005BB97 /* Campus ChemistryTests */,
+				494405251513D0FB0005BB97 /* Frameworks */,
+				494405231513D0FB0005BB97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		494405231513D0FB0005BB97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				494405221513D0FB0005BB97 /* Campus Chemistry.app */,
+				494405461513D0FC0005BB97 /* Campus ChemistryTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		494405251513D0FB0005BB97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				494405261513D0FB0005BB97 /* UIKit.framework */,
+				494405281513D0FB0005BB97 /* Foundation.framework */,
+				4944052A1513D0FB0005BB97 /* CoreGraphics.framework */,
+				494405471513D0FC0005BB97 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4944052C1513D0FB0005BB97 /* Campus Chemistry */ = {
+			isa = PBXGroup;
+			children = (
+				49F2AF5F15141AAA00478A94 /* UserArea */,
+				49F2AF5E151415EC00478A94 /* Search */,
+				49F2AF5D151415E600478A94 /* Quiz */,
+				49F2AF5C151415DC00478A94 /* Profile */,
+				494405351513D0FB0005BB97 /* AppDelegate.h */,
+				494405361513D0FB0005BB97 /* AppDelegate.m */,
+				49F2AF5015140EAA00478A94 /* Login */,
+				49F2AF5215140F2B00478A94 /* Register */,
+				4944052D1513D0FB0005BB97 /* Supporting Files */,
+			);
+			path = "Campus Chemistry";
+			sourceTree = "<group>";
+		};
+		4944052D1513D0FB0005BB97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4944055E1513D1740005BB97 /* Logo.png */,
+				4944052E1513D0FB0005BB97 /* Campus Chemistry-Info.plist */,
+				4944052F1513D0FB0005BB97 /* InfoPlist.strings */,
+				494405321513D0FB0005BB97 /* main.m */,
+				494405341513D0FB0005BB97 /* Campus Chemistry-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4944054D1513D0FC0005BB97 /* Campus ChemistryTests */ = {
+			isa = PBXGroup;
+			children = (
+				494405531513D0FC0005BB97 /* Campus_ChemistryTests.h */,
+				494405541513D0FC0005BB97 /* Campus_ChemistryTests.m */,
+				4944054E1513D0FC0005BB97 /* Supporting Files */,
+			);
+			path = "Campus ChemistryTests";
+			sourceTree = "<group>";
+		};
+		4944054E1513D0FC0005BB97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4944054F1513D0FC0005BB97 /* Campus ChemistryTests-Info.plist */,
+				494405501513D0FC0005BB97 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49F2AF5015140EAA00478A94 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4944053E1513D0FC0005BB97 /* ViewController_iPad.xib */,
+				4944053B1513D0FC0005BB97 /* ViewController_iPhone.xib */,
+				494405381513D0FB0005BB97 /* LoginViewController.h */,
+				494405391513D0FB0005BB97 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		49F2AF5215140F2B00478A94 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				49F2AF57151412EB00478A94 /* RegisterViewController.h */,
+				49F2AF58151412EB00478A94 /* RegisterViewController.m */,
+				49F2AF59151412EB00478A94 /* RegisterViewController.xib */,
+			);
+			name = Register;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		49F2AF5C151415DC00478A94 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		49F2AF5D151415E600478A94 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Quiz;
+			sourceTree = "<group>";
+		};
+		49F2AF5E151415EC00478A94 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		49F2AF5F15141AAA00478A94 /* UserArea */ = {
+			isa = PBXGroup;
+			children = (
+				49F2AF6015141AE900478A94 /* UserAreaViewController.h */,
+				49F2AF6115141AE900478A94 /* UserAreaViewController.m */,
+				49F2AF6215141AE900478A94 /* UserAreaViewController.xib */,
+			);
+			name = UserArea;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		494405211513D0FB0005BB97 /* Campus Chemistry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 494405581513D0FC0005BB97 /* Build configuration list for PBXNativeTarget "Campus Chemistry" */;
+			buildPhases = (
+				4944051E1513D0FB0005BB97 /* Sources */,
+				4944051F1513D0FB0005BB97 /* Frameworks */,
+				494405201513D0FB0005BB97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Campus Chemistry";
+			productName = "Campus Chemistry";
+			productReference = 494405221513D0FB0005BB97 /* Campus Chemistry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		494405451513D0FC0005BB97 /* Campus ChemistryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4944055B1513D0FC0005BB97 /* Build configuration list for PBXNativeTarget "Campus ChemistryTests" */;
+			buildPhases = (
+				494405411513D0FC0005BB97 /* Sources */,
+				494405421513D0FC0005BB97 /* Frameworks */,
+				494405431513D0FC0005BB97 /* Resources */,
+				494405441513D0FC0005BB97 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4944054C1513D0FC0005BB97 /* PBXTargetDependency */,
+			);
+			name = "Campus ChemistryTests";
+			productName = "Campus ChemistryTests";
+			productReference = 494405461513D0FC0005BB97 /* Campus ChemistryTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		494405191513D0FB0005BB97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 4944051C1513D0FB0005BB97 /* Build configuration list for PBXProject "Campus Chemistry" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 494405171513D0FB0005BB97;
+			productRefGroup = 494405231513D0FB0005BB97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				494405211513D0FB0005BB97 /* Campus Chemistry */,
+				494405451513D0FC0005BB97 /* Campus ChemistryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		494405201513D0FB0005BB97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494405311513D0FB0005BB97 /* InfoPlist.strings in Resources */,
+				4944053D1513D0FC0005BB97 /* ViewController_iPhone.xib in Resources */,
+				494405401513D0FC0005BB97 /* ViewController_iPad.xib in Resources */,
+				4944055F1513D1740005BB97 /* Logo.png in Resources */,
+				49F2AF5B151412EB00478A94 /* RegisterViewController.xib in Resources */,
+				49F2AF6415141AE900478A94 /* UserAreaViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494405431513D0FC0005BB97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494405521513D0FC0005BB97 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		494405441513D0FC0005BB97 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4944051E1513D0FB0005BB97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494405331513D0FB0005BB97 /* main.m in Sources */,
+				494405371513D0FB0005BB97 /* AppDelegate.m in Sources */,
+				4944053A1513D0FB0005BB97 /* LoginViewController.m in Sources */,
+				49F2AF5A151412EB00478A94 /* RegisterViewController.m in Sources */,
+				49F2AF6315141AE900478A94 /* UserAreaViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494405411513D0FC0005BB97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494405551513D0FC0005BB97 /* Campus_ChemistryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4944054C1513D0FC0005BB97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 494405211513D0FB0005BB97 /* Campus Chemistry */;
+			targetProxy = 4944054B1513D0FC0005BB97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4944052F1513D0FB0005BB97 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494405301513D0FB0005BB97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4944053B1513D0FC0005BB97 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4944053C1513D0FC0005BB97 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		4944053E1513D0FC0005BB97 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4944053F1513D0FC0005BB97 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		494405501513D0FC0005BB97 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494405511513D0FC0005BB97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		494405561513D0FC0005BB97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		494405571513D0FC0005BB97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		494405591513D0FC0005BB97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Campus Chemistry/Campus Chemistry-Prefix.pch";
+				INFOPLIST_FILE = "Campus Chemistry/Campus Chemistry-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4944055A1513D0FC0005BB97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Campus Chemistry/Campus Chemistry-Prefix.pch";
+				INFOPLIST_FILE = "Campus Chemistry/Campus Chemistry-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4944055C1513D0FC0005BB97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Campus Chemistry.app/Campus Chemistry";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Campus Chemistry/Campus Chemistry-Prefix.pch";
+				INFOPLIST_FILE = "Campus ChemistryTests/Campus ChemistryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4944055D1513D0FC0005BB97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Campus Chemistry.app/Campus Chemistry";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Campus Chemistry/Campus Chemistry-Prefix.pch";
+				INFOPLIST_FILE = "Campus ChemistryTests/Campus ChemistryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4944051C1513D0FB0005BB97 /* Build configuration list for PBXProject "Campus Chemistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				494405561513D0FC0005BB97 /* Debug */,
+				494405571513D0FC0005BB97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		494405581513D0FC0005BB97 /* Build configuration list for PBXNativeTarget "Campus Chemistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				494405591513D0FC0005BB97 /* Debug */,
+				4944055A1513D0FC0005BB97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4944055B1513D0FC0005BB97 /* Build configuration list for PBXNativeTarget "Campus ChemistryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4944055C1513D0FC0005BB97 /* Debug */,
+				4944055D1513D0FC0005BB97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 494405191513D0FB0005BB97 /* Project object */;
+}
