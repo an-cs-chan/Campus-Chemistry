@@ -1,0 +1,15 @@
+!SESSION 2012-03-16 23:37:54.248 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2012-03-16 23:38:24.895
+!MESSAGE Unable to find Action Set: com.aptana.editor.php.presentation
+
+!ENTRY org.eclipse.ui 4 0 2012-03-16 23:47:47.056
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.jruby.exceptions.RaiseException: (Errno::EINVAL) =::
+	at org.jruby.RubyHash.replace(org/jruby/RubyHash.java:1623)
