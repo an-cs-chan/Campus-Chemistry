@@ -13,7 +13,7 @@
 		494405311513D0FB0005BB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4944052F1513D0FB0005BB97 /* InfoPlist.strings */; };
 		494405331513D0FB0005BB97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405321513D0FB0005BB97 /* main.m */; };
 		494405371513D0FB0005BB97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405361513D0FB0005BB97 /* AppDelegate.m */; };
-		4944053A1513D0FB0005BB97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405391513D0FB0005BB97 /* LoginViewController.m */; };
+		4944053A1513D0FB0005BB97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405391513D0FB0005BB97 /* ViewController.m */; };
 		4944053D1513D0FC0005BB97 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4944053B1513D0FC0005BB97 /* ViewController_iPhone.xib */; };
 		494405401513D0FC0005BB97 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4944053E1513D0FC0005BB97 /* ViewController_iPad.xib */; };
 		494405481513D0FC0005BB97 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405471513D0FC0005BB97 /* SenTestingKit.framework */; };
@@ -22,6 +22,8 @@
 		494405521513D0FC0005BB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 494405501513D0FC0005BB97 /* InfoPlist.strings */; };
 		494405551513D0FC0005BB97 /* Campus_ChemistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405541513D0FC0005BB97 /* Campus_ChemistryTests.m */; };
 		4944055F1513D1740005BB97 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4944055E1513D1740005BB97 /* Logo.png */; };
+		49BC6C21151560040054976B /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BC6C1F151560040054976B /* QuizViewController.m */; };
+		49BC6C22151560040054976B /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49BC6C20151560040054976B /* QuizViewController.xib */; };
 		49F2AF5A151412EB00478A94 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2AF58151412EB00478A94 /* RegisterViewController.m */; };
 		49F2AF5B151412EB00478A94 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F2AF59151412EB00478A94 /* RegisterViewController.xib */; };
 		49F2AF6315141AE900478A94 /* UserAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2AF6115141AE900478A94 /* UserAreaViewController.m */; };
@@ -49,8 +51,8 @@
 		494405341513D0FB0005BB97 /* Campus Chemistry-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Campus Chemistry-Prefix.pch"; sourceTree = "<group>"; };
 		494405351513D0FB0005BB97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		494405361513D0FB0005BB97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		494405381513D0FB0005BB97 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		494405391513D0FB0005BB97 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		494405381513D0FB0005BB97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		494405391513D0FB0005BB97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4944053C1513D0FC0005BB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		4944053F1513D0FC0005BB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		494405461513D0FC0005BB97 /* Campus ChemistryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Campus ChemistryTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,9 @@
 		494405531513D0FC0005BB97 /* Campus_ChemistryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Campus_ChemistryTests.h; sourceTree = "<group>"; };
 		494405541513D0FC0005BB97 /* Campus_ChemistryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Campus_ChemistryTests.m; sourceTree = "<group>"; };
 		4944055E1513D1740005BB97 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		49BC6C1E151560040054976B /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizViewController.h; path = Quiz/QuizViewController.h; sourceTree = "<group>"; };
+		49BC6C1F151560040054976B /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizViewController.m; path = Quiz/QuizViewController.m; sourceTree = "<group>"; };
+		49BC6C20151560040054976B /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuizViewController.xib; path = Quiz/QuizViewController.xib; sourceTree = "<group>"; };
 		49F2AF57151412EB00478A94 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		49F2AF58151412EB00478A94 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		49F2AF59151412EB00478A94 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -174,8 +179,8 @@
 			children = (
 				4944053E1513D0FC0005BB97 /* ViewController_iPad.xib */,
 				4944053B1513D0FC0005BB97 /* ViewController_iPhone.xib */,
-				494405381513D0FB0005BB97 /* LoginViewController.h */,
-				494405391513D0FB0005BB97 /* LoginViewController.m */,
+				494405381513D0FB0005BB97 /* ViewController.h */,
+				494405391513D0FB0005BB97 /* ViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -201,6 +206,9 @@
 		49F2AF5D151415E600478A94 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				49BC6C1E151560040054976B /* QuizViewController.h */,
+				49BC6C1F151560040054976B /* QuizViewController.m */,
+				49BC6C20151560040054976B /* QuizViewController.xib */,
 			);
 			name = Quiz;
 			sourceTree = "<group>";
@@ -298,6 +306,7 @@
 				4944055F1513D1740005BB97 /* Logo.png in Resources */,
 				49F2AF5B151412EB00478A94 /* RegisterViewController.xib in Resources */,
 				49F2AF6415141AE900478A94 /* UserAreaViewController.xib in Resources */,
+				49BC6C22151560040054976B /* QuizViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,9 +343,10 @@
 			files = (
 				494405331513D0FB0005BB97 /* main.m in Sources */,
 				494405371513D0FB0005BB97 /* AppDelegate.m in Sources */,
-				4944053A1513D0FB0005BB97 /* LoginViewController.m in Sources */,
+				4944053A1513D0FB0005BB97 /* ViewController.m in Sources */,
 				49F2AF5A151412EB00478A94 /* RegisterViewController.m in Sources */,
 				49F2AF6315141AE900478A94 /* UserAreaViewController.m in Sources */,
+				49BC6C21151560040054976B /* QuizViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

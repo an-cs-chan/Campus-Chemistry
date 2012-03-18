@@ -12,6 +12,25 @@
 @synthesize emailText;
 @synthesize passwordText;
 @synthesize confirmText;
+@synthesize userAreaViewController;
+
+-(IBAction)registerButtonPressed:(id)sender
+{
+    if(self.userAreaViewController == nil)
+    {
+        UserAreaViewController *userAreaView = [[UserAreaViewController alloc] initWithNibName:@"UserAreaViewController" bundle:nil];
+        [self presentModalViewController:userAreaView animated:YES];
+        self.userAreaViewController = userAreaView;
+        
+        
+    }
+    
+    
+    
+    [self.view removeFromSuperview];
+    [self.view addSubview:userAreaViewController.view];
+
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,10 +61,12 @@
 {
     [self setEmailText:nil];
     [self setPasswordText:nil];
-    [self setConfirmText:nil];
+    [self setConfirmText:nil];    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [self dismissModalViewControllerAnimated:YES];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -54,6 +75,4 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)registerButtonPressed:(id)sender {
-}
 @end
