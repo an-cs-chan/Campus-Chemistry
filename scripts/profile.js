@@ -12,7 +12,7 @@
 		alert("bye");
 		$.post(
 				"python/profile.wsgi",
-				"userID="+userID,
+				"userid="+userID,
 				function(data)
 				{
 					processProfileInfo(data);              
