@@ -844,9 +844,7 @@ tr.read td{
 	top: -10px;
 }
 
-#dateMatch {
-	width: 30px; 
-	height: 20px;
+#dateUser {
 	cursor: pointer;
 }
 
