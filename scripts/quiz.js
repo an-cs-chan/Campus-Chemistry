@@ -146,6 +146,19 @@ function loadQuiz() {
 function onLoadQuizComplete(data) {
     questions = data;
     
+    $.ajax({
+        type: "POST",
+        url: "python/getAnswers.wsgi",
+        data: { userID:userID },
+        success: onLoadAnswersComplete
+    });
+}
+
+function onLoadAnswersComplete(data) {
+    if (data != null) {
+        $("#quizAlreadyCompleteWarning").css("display", "");
+    }
+    
     $("#quizPanelOverlay").find(".loader").css("display", "none");
     $("#quizPanelOverlay").find(".overlayContent").css("display", "");
     
@@ -179,6 +192,7 @@ function startQuiz() {
     
     $("#quizPanelOverlay").find(".overlayContent").css("display", "none");
     $("#quizPanelOverlay").css("display", "none");
+    $("#quizAlreadyCompleteWarning").css("display", "none");
     $("#quizPanelLeft").css("display", "");
     $("#quizPanelRight").css("display", "");
 }
@@ -204,7 +218,7 @@ function finishQuiz() {
 function onFinishQuizComplete(data) {
     $("#quizPanelOverlay").find(".loader").css("display", "none");
     $("#quizPanelOverlay").find(".overlayContent").css("display", "");
-    $("#quizPanelOverlay").find(".overlayContent").find("p").text("Compatability quiz complete!");
+    $("#quizPanelOverlay").find(".overlayContent").find("p").text("Compatability test complete!");
     
     setTimeout("location.href='profile.html'", 3000);
 }

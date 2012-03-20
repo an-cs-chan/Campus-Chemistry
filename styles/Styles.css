@@ -336,7 +336,7 @@ h1 { font-size: 1.2em; margin: .6em 0; }
 
 #quizPanelMain {
 	padding: 15px;
-	min-height: 700px;
+	min-height: 600px;
 }
 
 #quizPanelLeft {
@@ -432,7 +432,7 @@ h1 { font-size: 1.2em; margin: .6em 0; }
 }
 
 #quizPanelOverlay {
-    height: 700px;
+    height: 600px;
     position: relative;
     text-align: center;
     font-size: 22px;
@@ -448,6 +448,11 @@ h1 { font-size: 1.2em; margin: .6em 0; }
     width: 100%;
     position: absolute;
     top: 45%;
+}
+
+#quizAlreadyCompleteWarning {
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 /*-----------*/
