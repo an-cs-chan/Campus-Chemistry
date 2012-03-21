@@ -105,8 +105,30 @@ def application(environ, start_response):
         filterPref = "SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture, Email_ID FROM user_profile WHERE " + nationalityCmd + " AND " + cityCmd + " AND " + gender + " AND " + pref + " AND DOB BETWEEN '" + minBirthDate + "' AND '" + maxBirthDate + "' ORDER BY " + sort + " " + sortOrder                
         
     cursor.execute(filterPref)
+    
     rows = cursor.fetchall()
-    output = json.dumps(rows)
+    names = []
+    departments = []
+    ids = []
+    types = []
+    abouts = []
+    pictures = []
+    emails = []
+
+    for row in rows:
+        names.append(row[0])
+        departments.append(row[1])
+        ids.append(row[2])
+        types.append(row[3])
+        abouts.append(row[4])
+        pictures.append(row[5])
+        emails.append(row[6])
+        
+    results = []
+    for i in range(0,len(names)):
+        results.append({"name":names[i], "department": departments[i], "id": ids[i], "type":types[i], "about":abouts[i], "picture":pictures[i],"email":emails[i] })
+     
+    output = json.dumps(results)
 
     status = '200 OK'
 

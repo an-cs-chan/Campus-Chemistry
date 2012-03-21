@@ -37,7 +37,7 @@ $(document).ready(function() {
 				$("#basicForm").serialize(),
 		        function(data)
 		        {
-					processBasicSearch(data);              
+		        	processBasicSearch(data);
 		        }, "json");
 		}
     });
@@ -129,7 +129,7 @@ function processSearch()
 }
 
 function processBasicSearch(data)
-{
+{	
 	var html = "";
 	
 	//Check how many "displays" are currently selected and only show THAT many	
@@ -138,10 +138,9 @@ function processBasicSearch(data)
 	
 	//Pagination will be done by our nifty jPaginate :D
     $.each(data, function(index) 
-    {
-    	    	    	    	
-		var user = new UserInformation(data[index][0],data[index][1],data[index][2], data[index][3], data[index][4], data[index][5],data[index][6]);
-    	    	
+    {      	
+		var user = new UserInformation(data[index].name,data[index].department,data[index].id,data[index].type,data[index].about,data[index].picture,data[index].email);
+
     	displayType = $(".selectedFilter img").attr("id");
     	    	
         html += createUserBlock(user, index, displayType);
