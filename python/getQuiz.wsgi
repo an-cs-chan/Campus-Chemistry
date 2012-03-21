@@ -16,12 +16,14 @@ def application(environ, start_response):
     conn = MySQLdb.connect (host = "localhost", user = "root", passwd = "", db = "campus chemistry")
 
     cursor = conn.cursor()
-    cursor.execute("SELECT Question FROM survey_questions")
+    cursor.execute("SELECT Question, Subject FROM survey_questions")
 
     rows = cursor.fetchall()
     questions = []
+    subjects = []
     for row in rows:
         questions.append(row[0])
+        subjects.append(row[1])
     
     cursor = conn.cursor()
     cursor.execute("SELECT answer FROM survey_answer")
@@ -32,8 +34,8 @@ def application(environ, start_response):
         answers.append(row[0])
     
     quiz = []
-    for question in questions:
-        quiz.append({"text":string.replace(question, "\x92", "'"),"answers":answers})
+    for i in range(0,len(questions)):
+        quiz.append({"text":string.replace(questions[i], "\x92", "'"),"subject":subjects[i],"answers":answers})
 
     output = json.dumps(quiz)
 
