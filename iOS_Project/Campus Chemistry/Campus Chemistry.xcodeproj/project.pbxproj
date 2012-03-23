@@ -7,27 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4918A071151BF11700C47A4D /* SentViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A064151BF11700C47A4D /* SentViewContoller.m */; };
+		4918A072151BF11700C47A4D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4918A065151BF11700C47A4D /* DetailViewController.xib */; };
+		4918A073151BF11700C47A4D /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4918A067151BF11700C47A4D /* ComposeViewController.xib */; };
+		4918A074151BF11700C47A4D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A069151BF11700C47A4D /* DetailViewController.m */; };
+		4918A075151BF11700C47A4D /* MailBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A06B151BF11700C47A4D /* MailBoxViewController.m */; };
+		4918A076151BF11700C47A4D /* SentViewContoller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4918A06E151BF11700C47A4D /* SentViewContoller.xib */; };
+		4918A077151BF11700C47A4D /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A06F151BF11700C47A4D /* ComposeViewController.m */; };
+		4918A078151BF11700C47A4D /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A070151BF11700C47A4D /* InboxViewController.m */; };
+		4918A07C151BF3D000C47A4D /* InboxDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A07B151BF3D000C47A4D /* InboxDelegate.m */; };
+		4918A084151BF90200C47A4D /* SearchOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A07E151BF90200C47A4D /* SearchOptionViewController.m */; };
+		4918A085151BF90200C47A4D /* SearchOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4918A07F151BF90200C47A4D /* SearchOptionViewController.xib */; };
+		4918A086151BF90200C47A4D /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4918A082151BF90200C47A4D /* SearchViewController.xib */; };
+		4918A087151BF90200C47A4D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A083151BF90200C47A4D /* SearchViewController.m */; };
 		494405271513D0FB0005BB97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405261513D0FB0005BB97 /* UIKit.framework */; };
 		494405291513D0FB0005BB97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405281513D0FB0005BB97 /* Foundation.framework */; };
 		4944052B1513D0FB0005BB97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4944052A1513D0FB0005BB97 /* CoreGraphics.framework */; };
 		494405311513D0FB0005BB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4944052F1513D0FB0005BB97 /* InfoPlist.strings */; };
 		494405331513D0FB0005BB97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405321513D0FB0005BB97 /* main.m */; };
 		494405371513D0FB0005BB97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405361513D0FB0005BB97 /* AppDelegate.m */; };
-		4944053A1513D0FB0005BB97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405391513D0FB0005BB97 /* ViewController.m */; };
-		4944053D1513D0FC0005BB97 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4944053B1513D0FC0005BB97 /* ViewController_iPhone.xib */; };
-		494405401513D0FC0005BB97 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4944053E1513D0FC0005BB97 /* ViewController_iPad.xib */; };
+		4944053D1513D0FC0005BB97 /* LoginViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4944053B1513D0FC0005BB97 /* LoginViewController_iPhone.xib */; };
+		494405401513D0FC0005BB97 /* LoginViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4944053E1513D0FC0005BB97 /* LoginViewController_iPad.xib */; };
 		494405481513D0FC0005BB97 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405471513D0FC0005BB97 /* SenTestingKit.framework */; };
 		494405491513D0FC0005BB97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405261513D0FB0005BB97 /* UIKit.framework */; };
 		4944054A1513D0FC0005BB97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405281513D0FB0005BB97 /* Foundation.framework */; };
 		494405521513D0FC0005BB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 494405501513D0FC0005BB97 /* InfoPlist.strings */; };
 		494405551513D0FC0005BB97 /* Campus_ChemistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405541513D0FC0005BB97 /* Campus_ChemistryTests.m */; };
 		4944055F1513D1740005BB97 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4944055E1513D1740005BB97 /* Logo.png */; };
-		49BC6C21151560040054976B /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BC6C1F151560040054976B /* QuizViewController.m */; };
-		49BC6C22151560040054976B /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49BC6C20151560040054976B /* QuizViewController.xib */; };
-		49F2AF5A151412EB00478A94 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2AF58151412EB00478A94 /* RegisterViewController.m */; };
-		49F2AF5B151412EB00478A94 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F2AF59151412EB00478A94 /* RegisterViewController.xib */; };
-		49F2AF6315141AE900478A94 /* UserAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F2AF6115141AE900478A94 /* UserAreaViewController.m */; };
-		49F2AF6415141AE900478A94 /* UserAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F2AF6215141AE900478A94 /* UserAreaViewController.xib */; };
+		4996BE3C151ABB5B0051EDEB /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4996BE39151ABB5B0051EDEB /* ProfileViewController.m */; };
+		4996BE3D151ABB5B0051EDEB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4996BE3A151ABB5B0051EDEB /* ProfileViewController.xib */; };
+		49A132AA151A96AE002C019D /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132A7151A96AD002C019D /* CustomCell.m */; };
+		49A132AB151A96AE002C019D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132A9151A96AD002C019D /* Person.m */; };
+		49A13304151A9B66002C019D /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132ED151A9B66002C019D /* SBJsonTokeniser.m */; };
+		49A13305151A9B66002C019D /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132EE151A9B66002C019D /* SBJsonUTF8Stream.m */; };
+		49A13306151A9B66002C019D /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132EF151A9B66002C019D /* SBJsonStreamParserAccumulator.m */; };
+		49A13307151A9B66002C019D /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132F0151A9B66002C019D /* NSObject+SBJson.m */; };
+		49A13308151A9B66002C019D /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132F4151A9B66002C019D /* SBJsonWriter.m */; };
+		49A13309151A9B66002C019D /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132F5151A9B66002C019D /* SBJsonStreamParser.m */; };
+		49A1330A151A9B66002C019D /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132F6151A9B66002C019D /* SBJsonStreamParserAdapter.m */; };
+		49A1330B151A9B66002C019D /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132FB151A9B66002C019D /* SBJsonStreamParserState.m */; };
+		49A1330C151A9B66002C019D /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132FF151A9B66002C019D /* SBJsonStreamWriterState.m */; };
+		49A1330D151A9B66002C019D /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A13300151A9B66002C019D /* SBJsonStreamWriter.m */; };
+		49A1330E151A9B66002C019D /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A13301151A9B66002C019D /* SBJsonParser.m */; };
+		49A1330F151A9B66002C019D /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A13303151A9B66002C019D /* SBJsonStreamWriterAccumulator.m */; };
+		49A345F11516619700B358F3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A345EF1516619700B358F3 /* RegisterViewController.m */; };
+		49A345F21516619700B358F3 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A345F01516619700B358F3 /* RegisterViewController.xib */; };
+		49A345F6151661A700B358F3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A345F5151661A700B358F3 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +66,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4918A064151BF11700C47A4D /* SentViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SentViewContoller.m; sourceTree = "<group>"; };
+		4918A065151BF11700C47A4D /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		4918A066151BF11700C47A4D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4918A067151BF11700C47A4D /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		4918A068151BF11700C47A4D /* SentViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentViewContoller.h; sourceTree = "<group>"; };
+		4918A069151BF11700C47A4D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		4918A06A151BF11700C47A4D /* MailBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailBoxViewController.h; sourceTree = "<group>"; };
+		4918A06B151BF11700C47A4D /* MailBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailBoxViewController.m; sourceTree = "<group>"; };
+		4918A06C151BF11700C47A4D /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
+		4918A06D151BF11700C47A4D /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		4918A06E151BF11700C47A4D /* SentViewContoller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SentViewContoller.xib; sourceTree = "<group>"; };
+		4918A06F151BF11700C47A4D /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		4918A070151BF11700C47A4D /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
+		4918A07A151BF3D000C47A4D /* InboxDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxDelegate.h; sourceTree = "<group>"; };
+		4918A07B151BF3D000C47A4D /* InboxDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxDelegate.m; sourceTree = "<group>"; };
+		4918A07E151BF90200C47A4D /* SearchOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchOptionViewController.m; sourceTree = "<group>"; };
+		4918A07F151BF90200C47A4D /* SearchOptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOptionViewController.xib; sourceTree = "<group>"; };
+		4918A080151BF90200C47A4D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		4918A081151BF90200C47A4D /* SearchOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchOptionViewController.h; sourceTree = "<group>"; };
+		4918A082151BF90200C47A4D /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		4918A083151BF90200C47A4D /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		494405221513D0FB0005BB97 /* Campus Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Campus Chemistry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		494405261513D0FB0005BB97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		494405281513D0FB0005BB97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,10 +97,8 @@
 		494405341513D0FB0005BB97 /* Campus Chemistry-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Campus Chemistry-Prefix.pch"; sourceTree = "<group>"; };
 		494405351513D0FB0005BB97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		494405361513D0FB0005BB97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		494405381513D0FB0005BB97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		494405391513D0FB0005BB97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4944053C1513D0FC0005BB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		4944053F1513D0FC0005BB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		4944053C1513D0FC0005BB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginViewController_iPhone.xib; sourceTree = "<group>"; };
+		4944053F1513D0FC0005BB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginViewController_iPad.xib; sourceTree = "<group>"; };
 		494405461513D0FC0005BB97 /* Campus ChemistryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Campus ChemistryTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		494405471513D0FC0005BB97 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4944054F1513D0FC0005BB97 /* Campus ChemistryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Campus ChemistryTests-Info.plist"; sourceTree = "<group>"; };
@@ -62,15 +106,43 @@
 		494405531513D0FC0005BB97 /* Campus_ChemistryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Campus_ChemistryTests.h; sourceTree = "<group>"; };
 		494405541513D0FC0005BB97 /* Campus_ChemistryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Campus_ChemistryTests.m; sourceTree = "<group>"; };
 		4944055E1513D1740005BB97 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
-		49BC6C1E151560040054976B /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizViewController.h; path = Quiz/QuizViewController.h; sourceTree = "<group>"; };
-		49BC6C1F151560040054976B /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizViewController.m; path = Quiz/QuizViewController.m; sourceTree = "<group>"; };
-		49BC6C20151560040054976B /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuizViewController.xib; path = Quiz/QuizViewController.xib; sourceTree = "<group>"; };
-		49F2AF57151412EB00478A94 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		49F2AF58151412EB00478A94 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		49F2AF59151412EB00478A94 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
-		49F2AF6015141AE900478A94 /* UserAreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAreaViewController.h; sourceTree = "<group>"; };
-		49F2AF6115141AE900478A94 /* UserAreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAreaViewController.m; sourceTree = "<group>"; };
-		49F2AF6215141AE900478A94 /* UserAreaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAreaViewController.xib; sourceTree = "<group>"; };
+		4996BE39151ABB5B0051EDEB /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		4996BE3A151ABB5B0051EDEB /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		4996BE3B151ABB5B0051EDEB /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		49A132A6151A96AD002C019D /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		49A132A7151A96AD002C019D /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		49A132A8151A96AD002C019D /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		49A132A9151A96AD002C019D /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		49A132EB151A9B66002C019D /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		49A132EC151A9B66002C019D /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		49A132ED151A9B66002C019D /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		49A132EE151A9B66002C019D /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		49A132EF151A9B66002C019D /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		49A132F0151A9B66002C019D /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		49A132F1151A9B66002C019D /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		49A132F2151A9B66002C019D /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		49A132F3151A9B66002C019D /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		49A132F4151A9B66002C019D /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		49A132F5151A9B66002C019D /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		49A132F6151A9B66002C019D /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		49A132F7151A9B66002C019D /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		49A132F8151A9B66002C019D /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		49A132F9151A9B66002C019D /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		49A132FA151A9B66002C019D /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		49A132FB151A9B66002C019D /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		49A132FC151A9B66002C019D /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		49A132FD151A9B66002C019D /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		49A132FE151A9B66002C019D /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		49A132FF151A9B66002C019D /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		49A13300151A9B66002C019D /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		49A13301151A9B66002C019D /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		49A13302151A9B66002C019D /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		49A13303151A9B66002C019D /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		49A345EE1516619700B358F3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = "Campus Chemistry/Register/RegisterViewController.h"; sourceTree = "<group>"; };
+		49A345EF1516619700B358F3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = "Campus Chemistry/Register/RegisterViewController.m"; sourceTree = "<group>"; };
+		49A345F01516619700B358F3 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = "Campus Chemistry/Register/RegisterViewController.xib"; sourceTree = "<group>"; };
+		49A345F4151661A700B358F3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
+		49A345F5151661A700B358F3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +169,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4918A063151BF11700C47A4D /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				4918A064151BF11700C47A4D /* SentViewContoller.m */,
+				4918A068151BF11700C47A4D /* SentViewContoller.h */,
+				4918A06E151BF11700C47A4D /* SentViewContoller.xib */,
+				4918A069151BF11700C47A4D /* DetailViewController.m */,
+				4918A065151BF11700C47A4D /* DetailViewController.xib */,
+				4918A066151BF11700C47A4D /* DetailViewController.h */,
+				4918A06A151BF11700C47A4D /* MailBoxViewController.h */,
+				4918A06B151BF11700C47A4D /* MailBoxViewController.m */,
+				4918A06C151BF11700C47A4D /* InboxViewController.h */,
+				4918A070151BF11700C47A4D /* InboxViewController.m */,
+				4918A067151BF11700C47A4D /* ComposeViewController.xib */,
+				4918A06D151BF11700C47A4D /* ComposeViewController.h */,
+				4918A06F151BF11700C47A4D /* ComposeViewController.m */,
+				4918A07A151BF3D000C47A4D /* InboxDelegate.h */,
+				4918A07B151BF3D000C47A4D /* InboxDelegate.m */,
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
+		4918A07D151BF90200C47A4D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4918A07E151BF90200C47A4D /* SearchOptionViewController.m */,
+				4918A07F151BF90200C47A4D /* SearchOptionViewController.xib */,
+				4918A080151BF90200C47A4D /* SearchViewController.h */,
+				4918A081151BF90200C47A4D /* SearchOptionViewController.h */,
+				4918A082151BF90200C47A4D /* SearchViewController.xib */,
+				4918A083151BF90200C47A4D /* SearchViewController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		494405171513D0FB0005BB97 = {
 			isa = PBXGroup;
 			children = (
@@ -130,13 +237,13 @@
 		4944052C1513D0FB0005BB97 /* Campus Chemistry */ = {
 			isa = PBXGroup;
 			children = (
-				49F2AF5F15141AAA00478A94 /* UserArea */,
-				49F2AF5E151415EC00478A94 /* Search */,
-				49F2AF5D151415E600478A94 /* Quiz */,
-				49F2AF5C151415DC00478A94 /* Profile */,
-				494405351513D0FB0005BB97 /* AppDelegate.h */,
 				494405361513D0FB0005BB97 /* AppDelegate.m */,
+				494405351513D0FB0005BB97 /* AppDelegate.h */,
+				49A1329F151A9557002C019D /* Classes */,
+				4918A063151BF11700C47A4D /* Inbox */,
+				4996BE38151ABB5B0051EDEB /* Profile */,
 				49F2AF5015140EAA00478A94 /* Login */,
+				4918A07D151BF90200C47A4D /* Search */,
 				49F2AF5215140F2B00478A94 /* Register */,
 				4944052D1513D0FB0005BB97 /* Supporting Files */,
 			);
@@ -146,6 +253,7 @@
 		4944052D1513D0FB0005BB97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49A132EA151A9B66002C019D /* SBJson */,
 				4944055E1513D1740005BB97 /* Logo.png */,
 				4944052E1513D0FB0005BB97 /* Campus Chemistry-Info.plist */,
 				4944052F1513D0FB0005BB97 /* InfoPlist.strings */,
@@ -174,13 +282,66 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4996BE38151ABB5B0051EDEB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4996BE39151ABB5B0051EDEB /* ProfileViewController.m */,
+				4996BE3A151ABB5B0051EDEB /* ProfileViewController.xib */,
+				4996BE3B151ABB5B0051EDEB /* ProfileViewController.h */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		49A1329F151A9557002C019D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				49A132A6151A96AD002C019D /* CustomCell.h */,
+				49A132A7151A96AD002C019D /* CustomCell.m */,
+				49A132A8151A96AD002C019D /* Person.h */,
+				49A132A9151A96AD002C019D /* Person.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		49A132EA151A9B66002C019D /* SBJson */ = {
+			isa = PBXGroup;
+			children = (
+				49A132EB151A9B66002C019D /* SBJsonStreamWriter.h */,
+				49A132EC151A9B66002C019D /* SBJsonStreamWriterState.h */,
+				49A132ED151A9B66002C019D /* SBJsonTokeniser.m */,
+				49A132EE151A9B66002C019D /* SBJsonUTF8Stream.m */,
+				49A132EF151A9B66002C019D /* SBJsonStreamParserAccumulator.m */,
+				49A132F0151A9B66002C019D /* NSObject+SBJson.m */,
+				49A132F1151A9B66002C019D /* SBJsonStreamWriterAccumulator.h */,
+				49A132F2151A9B66002C019D /* SBJsonUTF8Stream.h */,
+				49A132F3151A9B66002C019D /* SBJsonTokeniser.h */,
+				49A132F4151A9B66002C019D /* SBJsonWriter.m */,
+				49A132F5151A9B66002C019D /* SBJsonStreamParser.m */,
+				49A132F6151A9B66002C019D /* SBJsonStreamParserAdapter.m */,
+				49A132F7151A9B66002C019D /* SBJsonStreamParserAdapter.h */,
+				49A132F8151A9B66002C019D /* SBJsonWriter.h */,
+				49A132F9151A9B66002C019D /* SBJsonStreamParserState.h */,
+				49A132FA151A9B66002C019D /* SBJsonStreamParser.h */,
+				49A132FB151A9B66002C019D /* SBJsonStreamParserState.m */,
+				49A132FC151A9B66002C019D /* SBJson.h */,
+				49A132FD151A9B66002C019D /* SBJsonParser.h */,
+				49A132FE151A9B66002C019D /* SBJsonStreamParserAccumulator.h */,
+				49A132FF151A9B66002C019D /* SBJsonStreamWriterState.m */,
+				49A13300151A9B66002C019D /* SBJsonStreamWriter.m */,
+				49A13301151A9B66002C019D /* SBJsonParser.m */,
+				49A13302151A9B66002C019D /* NSObject+SBJson.h */,
+				49A13303151A9B66002C019D /* SBJsonStreamWriterAccumulator.m */,
+			);
+			path = SBJson;
+			sourceTree = "<group>";
+		};
 		49F2AF5015140EAA00478A94 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				4944053E1513D0FC0005BB97 /* ViewController_iPad.xib */,
-				4944053B1513D0FC0005BB97 /* ViewController_iPhone.xib */,
-				494405381513D0FB0005BB97 /* ViewController.h */,
-				494405391513D0FB0005BB97 /* ViewController.m */,
+				49A345F4151661A700B358F3 /* LoginViewController.h */,
+				49A345F5151661A700B358F3 /* LoginViewController.m */,
+				4944053E1513D0FC0005BB97 /* LoginViewController_iPad.xib */,
+				4944053B1513D0FC0005BB97 /* LoginViewController_iPhone.xib */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -188,46 +349,12 @@
 		49F2AF5215140F2B00478A94 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				49F2AF57151412EB00478A94 /* RegisterViewController.h */,
-				49F2AF58151412EB00478A94 /* RegisterViewController.m */,
-				49F2AF59151412EB00478A94 /* RegisterViewController.xib */,
+				49A345EE1516619700B358F3 /* RegisterViewController.h */,
+				49A345EF1516619700B358F3 /* RegisterViewController.m */,
+				49A345F01516619700B358F3 /* RegisterViewController.xib */,
 			);
 			name = Register;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		49F2AF5C151415DC00478A94 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Profile;
-			sourceTree = "<group>";
-		};
-		49F2AF5D151415E600478A94 /* Quiz */ = {
-			isa = PBXGroup;
-			children = (
-				49BC6C1E151560040054976B /* QuizViewController.h */,
-				49BC6C1F151560040054976B /* QuizViewController.m */,
-				49BC6C20151560040054976B /* QuizViewController.xib */,
-			);
-			name = Quiz;
-			sourceTree = "<group>";
-		};
-		49F2AF5E151415EC00478A94 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Search;
-			sourceTree = "<group>";
-		};
-		49F2AF5F15141AAA00478A94 /* UserArea */ = {
-			isa = PBXGroup;
-			children = (
-				49F2AF6015141AE900478A94 /* UserAreaViewController.h */,
-				49F2AF6115141AE900478A94 /* UserAreaViewController.m */,
-				49F2AF6215141AE900478A94 /* UserAreaViewController.xib */,
-			);
-			name = UserArea;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,12 +428,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				494405311513D0FB0005BB97 /* InfoPlist.strings in Resources */,
-				4944053D1513D0FC0005BB97 /* ViewController_iPhone.xib in Resources */,
-				494405401513D0FC0005BB97 /* ViewController_iPad.xib in Resources */,
+				4944053D1513D0FC0005BB97 /* LoginViewController_iPhone.xib in Resources */,
+				494405401513D0FC0005BB97 /* LoginViewController_iPad.xib in Resources */,
 				4944055F1513D1740005BB97 /* Logo.png in Resources */,
-				49F2AF5B151412EB00478A94 /* RegisterViewController.xib in Resources */,
-				49F2AF6415141AE900478A94 /* UserAreaViewController.xib in Resources */,
-				49BC6C22151560040054976B /* QuizViewController.xib in Resources */,
+				49A345F21516619700B358F3 /* RegisterViewController.xib in Resources */,
+				4996BE3D151ABB5B0051EDEB /* ProfileViewController.xib in Resources */,
+				4918A072151BF11700C47A4D /* DetailViewController.xib in Resources */,
+				4918A073151BF11700C47A4D /* ComposeViewController.xib in Resources */,
+				4918A076151BF11700C47A4D /* SentViewContoller.xib in Resources */,
+				4918A085151BF90200C47A4D /* SearchOptionViewController.xib in Resources */,
+				4918A086151BF90200C47A4D /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,10 +474,31 @@
 			files = (
 				494405331513D0FB0005BB97 /* main.m in Sources */,
 				494405371513D0FB0005BB97 /* AppDelegate.m in Sources */,
-				4944053A1513D0FB0005BB97 /* ViewController.m in Sources */,
-				49F2AF5A151412EB00478A94 /* RegisterViewController.m in Sources */,
-				49F2AF6315141AE900478A94 /* UserAreaViewController.m in Sources */,
-				49BC6C21151560040054976B /* QuizViewController.m in Sources */,
+				49A345F11516619700B358F3 /* RegisterViewController.m in Sources */,
+				49A345F6151661A700B358F3 /* LoginViewController.m in Sources */,
+				49A132AA151A96AE002C019D /* CustomCell.m in Sources */,
+				49A132AB151A96AE002C019D /* Person.m in Sources */,
+				49A13304151A9B66002C019D /* SBJsonTokeniser.m in Sources */,
+				49A13305151A9B66002C019D /* SBJsonUTF8Stream.m in Sources */,
+				49A13306151A9B66002C019D /* SBJsonStreamParserAccumulator.m in Sources */,
+				49A13307151A9B66002C019D /* NSObject+SBJson.m in Sources */,
+				49A13308151A9B66002C019D /* SBJsonWriter.m in Sources */,
+				49A13309151A9B66002C019D /* SBJsonStreamParser.m in Sources */,
+				49A1330A151A9B66002C019D /* SBJsonStreamParserAdapter.m in Sources */,
+				49A1330B151A9B66002C019D /* SBJsonStreamParserState.m in Sources */,
+				49A1330C151A9B66002C019D /* SBJsonStreamWriterState.m in Sources */,
+				49A1330D151A9B66002C019D /* SBJsonStreamWriter.m in Sources */,
+				49A1330E151A9B66002C019D /* SBJsonParser.m in Sources */,
+				49A1330F151A9B66002C019D /* SBJsonStreamWriterAccumulator.m in Sources */,
+				4996BE3C151ABB5B0051EDEB /* ProfileViewController.m in Sources */,
+				4918A071151BF11700C47A4D /* SentViewContoller.m in Sources */,
+				4918A074151BF11700C47A4D /* DetailViewController.m in Sources */,
+				4918A075151BF11700C47A4D /* MailBoxViewController.m in Sources */,
+				4918A077151BF11700C47A4D /* ComposeViewController.m in Sources */,
+				4918A078151BF11700C47A4D /* InboxViewController.m in Sources */,
+				4918A07C151BF3D000C47A4D /* InboxDelegate.m in Sources */,
+				4918A084151BF90200C47A4D /* SearchOptionViewController.m in Sources */,
+				4918A087151BF90200C47A4D /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,20 +529,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		4944053B1513D0FC0005BB97 /* ViewController_iPhone.xib */ = {
+		4944053B1513D0FC0005BB97 /* LoginViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4944053C1513D0FC0005BB97 /* en */,
 			);
-			name = ViewController_iPhone.xib;
+			name = LoginViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		4944053E1513D0FC0005BB97 /* ViewController_iPad.xib */ = {
+		4944053E1513D0FC0005BB97 /* LoginViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4944053F1513D0FC0005BB97 /* en */,
 			);
-			name = ViewController_iPad.xib;
+			name = LoginViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		494405501513D0FC0005BB97 /* InfoPlist.strings */ = {
@@ -410,6 +562,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -424,7 +577,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -436,6 +589,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -443,7 +597,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,6 +611,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Campus Chemistry/Campus Chemistry-Prefix.pch";
 				INFOPLIST_FILE = "Campus Chemistry/Campus Chemistry-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -468,6 +623,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Campus Chemistry/Campus Chemistry-Prefix.pch";
 				INFOPLIST_FILE = "Campus Chemistry/Campus Chemistry-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

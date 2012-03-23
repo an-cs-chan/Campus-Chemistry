@@ -8,12 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@class ViewController;
+@class LoginViewController;
+@class RegisterViewController;
+@class SearchViewController;
+@class ProfileViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    UINavigationController *navigationController;
+    
+    NSString *userID;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UINavigationController *navigationController;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) LoginViewController *loginViewController;
 
 @end
