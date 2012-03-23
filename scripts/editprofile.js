@@ -1,11 +1,10 @@
-	//Get user ID
+//Get user ID
 	var userID = getCookie("userid");
 
 
 	$(document).ready(function () {
 		Page_Load();
 	});
-
 
 	function Page_Load(){
 		
@@ -15,12 +14,23 @@
 				"userid="+userID,
 				function(data)
 				{
-					processProfileInfo(data);              
+					//processProfileInfo(data);              
 				}, "json");
+			//show button	
+			$("#profilePicture").mouseover(function(){
+			$("#uploadPic").css('visibility','visible');
+			$("#uploadPic").attr('disabled','false');
+		});
+		
+			//hide button
+			$("#profilePicture").mouseout(function(){
+			$("#uploadPic").css('visibility','hidden');
+			$("#uploadPic").attr('disabled','true');
+		});
+					
 	}
 	
-	function processProfileInfo(data)
-	{
+	function processProfileInfo(data){
 		var user = data[0];
 		//user full name
 		$("#user_fullname").text(user.name);
@@ -67,6 +77,4 @@
 		if(user.about_me!=null){
 			var interests = (user.about_me).split(",");
 		}
-			
-						
 	}
