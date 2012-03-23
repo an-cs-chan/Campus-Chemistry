@@ -27,11 +27,29 @@ def application(environ, start_response):
     cursor = conn.cursor()
    
     cmd = "SELECT Message_ID, To_User_ID, Message, DATE_FORMAT(Time_Stamp, '%b %e, %l:%i %p'), Read_Status FROM messages WHERE From_User_ID = '"+fromuserid+"' AND Deleted = '0' ORDER BY Read_Status DESC, to_user_id ASC"
-
+    
     cursor.execute(cmd)
     rows = cursor.fetchall()
+    
+    messageIDs = []
+    fromUserIDs = []
+    messageContents = []
+    dates = []
+    statuses = []    
+    
+    for row in rows:
+        messageIDs.append(row[0])
+        fromUserIDs.append(row[1])
+        messageContents.append(row[2])
+        dates.append(row[3])
+        statuses.append(row[4])
 
-    output = json.dumps(rows)        
+    results = []
+    
+    for i in range(0, len(dates)):
+        results.append({"messageid":messageIDs[i], "fromUserID": fromUserIDs[i], "message": messageContents[i], "date":dates[i], "readStatus":statuses[i] })
+    
+    output = json.dumps(results)     
     status = '200 OK'
     
     cursor.close()

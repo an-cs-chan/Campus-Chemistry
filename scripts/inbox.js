@@ -141,40 +141,40 @@ function showMessage(data)
 	//Code for showing messages in the table from the DB
 	$.each(data, function(index) 
 	{
-		if(data[index][2] != null) // Clip the message
+		if(data[index].message != null) // Clip the message
 		{
-		    if (data[index][2].length > 80)
+		    if (data[index].message.length > 80)
 			{
-			 var newString = data[index][2].substring(0,80) + "...";
+				var newString = data[index].message.substring(0,80) + "...";
 			}
 			else
 			{
-			 var newString = data[index][2];
+				var newString = data[index].message;
 			}
 		}
 		
-		var read = data[index][4]; 
+		var read = data[index].readStatus; 
 		
 		if ( read == 1 )
 		{
-		   htmla += "<tr id='displayMessage_" + data[index][0] + "' class='read' data-href=''>" + 
-					"<td><input type='checkbox' class='check_select' name='message_id[]' value=" + data[index][0] + " /></td>" +
+		   htmla += "<tr id='displayMessage_" + data[index].messageid + "' class='read' data-href=''>" + 
+					"<td><input type='checkbox' class='check_select' name='message_id[]' value=" + data[index].messageid  + " /></td>" +
 					"<td name = 'message'><a class='opener' id='"+index+"' href='#'>" + newString + "</a></td>" + 
-					"<td name = 'from'>" + data[index][1] + "</td>" + 
-					"<td name='time'>" + data[index][3] + "</td>" + 
-					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index][0]+");' />" +
-					"<img class='replybutton' style='left: 18px; top: 0px' src='images/reply.png' onclick='reply(\""+data[index][1]+"\");' /></td>" + 
+					"<td name = 'from'>" + data[index].fromUserID + "</td>" + 
+					"<td name='time'>" + data[index].date + "</td>" + 
+					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index].messageid +");' />" +
+					"<img class='replybutton' style='left: 18px; top: 0px' src='images/reply.png' onclick='reply(\""+data[index].fromUserID+"\");' /></td>" + 
 				"</tr>";
 		}
 		else
 		{
-		   htmla += "<tr id='displayMessage_" + data[index][0] + "' class='even' data-href=''>" + 
-					"<td><input type='checkbox' class='check_select' name='message_id[]' value=" + data[index][0] + " /></td>" +
+		   htmla += "<tr id='displayMessage_" + data[index].messageid  + "' class='even' data-href=''>" + 
+					"<td><input type='checkbox' class='check_select' name='message_id[]' value=" + data[index].messageid  + " /></td>" +
 					"<td name = 'message'><a class='opener' id='"+index+"' href='#'>" + newString + "</a></td>" + 
-					"<td name = 'from'>" + data[index][1] + "</td>" + 
-					"<td name='time'>" + data[index][3] + "</td>" + 
-					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index][0]+");' />" + 
-					"<img class='replybutton' style='left: 18px; top: 0px' src='images/reply.png' onclick='reply(\""+data[index][1]+"\");' /></td>" + 
+					"<td name = 'from'>" + data[index].fromUserID + "</td>" + 
+					"<td name='time'>" + data[index].date + "</td>" + 
+					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index].messageid +");' />" + 
+					"<img class='replybutton' style='left: 18px; top: 0px' src='images/reply.png' onclick='reply(\""+data[index].fromUserID+"\");' /></td>" + 
 				"</tr>";
 		}
 				
@@ -186,7 +186,7 @@ function showMessage(data)
 	
 	$.each(data, function(index)
 	{
-		$dialog[index] = $('<div style="background-color:#D6EEF7"></div>').html(data[index][2])
+		$dialog[index] = $('<div style="background-color:#D6EEF7"></div>').html(data[index].message)
 			.dialog({
 				autoOpen: false,
 				height: 300,
@@ -198,7 +198,7 @@ function showMessage(data)
 			  		"Reply": function()
 			  		{ 
 				 	 	$(this).dialog('close');
-						reply(data[index][1]);
+						reply(data[index].fromUserID);
 				  	}
 				}
 			}); 
@@ -259,42 +259,42 @@ function showSentMessages(data)
 						"</tr>" +
 					"</thead>" +	
  				"<tbody>"; 
-	
+		
 	$.each(data, function(index) 
 	{  //Code for showing messages in the table from the DB
-		if(data[index][2] != null)
+		if(data[index].message!= null)
 		{
 			// Clip the message
-		    if (data[index][2].length > 80)
+		    if (data[index].message.length > 80)
 			{
-				var newString = data[index][2].substring(0,80) + "...";
+				var newString = data[index].message.substring(0,80) + "...";
 			}
 			else
 			{
-				var newString = data[index][2];
+				var newString = data[index].message;
 			}
 		}
 		
-		var read = data[index][4];
+		var read = data[index].readStatus;
 		
 		if ( read == 1 )
 		{
 			htmls += 
-				"<tr id='displayMessage_" + data[index][0] + "' class='read' data-href=''>" + 
+				"<tr id='displayMessage_" + data[index].messageid + "' class='read' data-href=''>" + 
 					"<td name = 'message'><a class='opener2' id='"+index+"' href='#'>" + newString + "</a></td>" + 
-					"<td name = 'from'>" + data[index][1] + "</td>" + 
-					"<td name='time'>" + data[index][3] + "</td>" + 
-					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index][0]+");' />" + 					
+					"<td name = 'from'>" + data[index].fromUserID + "</td>" + 
+					"<td name='time'>" + data[index].date + "</td>" + 
+					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index].messageid+");' />" + 					
 				"</tr>";
 		}
 		else
 		{
 		   htmls += 
-		   		"<tr id='displayMessage_" + data[index][0] + "' class='even' data-href=''>" + 
+		   		"<tr id='displayMessage_" + data[index].messageid + "' class='even' data-href=''>" + 
 						"<td name = 'message'><a class='opener2' id='"+index+"' href='#'>" + newString + "</a></td>" + 
-						"<td name = 'from'>" + data[index][1] + "</td>" + 
-						"<td name='time'>" + data[index][3] + "</td>" + 
-					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index][0]+");' />" + 						
+						"<td name = 'from'>" + data[index].fromUserID + "</td>" + 
+						"<td name='time'>" + data[index].date + "</td>" + 
+					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index].messageid+");' />" + 						
 				"</tr>";
 		}
 			
@@ -306,7 +306,7 @@ function showSentMessages(data)
 	
 	$.each(data, function(index)
 	{
-		$dialog[index] = $('<div style="background-color:#D6EEF7"></div>').html(data[index][2])
+		$dialog[index] = $('<div style="background-color:#D6EEF7"></div>').html(data[index].message)
 			.dialog(
 			{
 				autoOpen: false,
@@ -319,7 +319,7 @@ function showSentMessages(data)
 			  		"Reply": function()
 			  		{ 
 				 		$(this).dialog('close');
-						reply(data[index][1]);
+						reply(data[index].fromUserID);
 				  	}
 				 }
 			}); 
