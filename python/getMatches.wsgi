@@ -68,7 +68,7 @@ def application(environ, start_response):
     if len(data) < 3:
     	random.shuffle(matches)
     	data.extend(matches[len(data):3])
-    output = json.dumps(matches, default=dthandler)
+    output = json.dumps(data, default=dthandler)
 
     status = '200 OK'
 
