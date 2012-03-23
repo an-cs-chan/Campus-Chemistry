@@ -61,13 +61,14 @@ def application(environ, start_response):
     				compat = compat + math.fabs(answer-match_answers[index])
     	matches[place].append(compat)
     	if compat >= 0:
-    		compat_matches.append(matches[place])
+    		compat_matches.append(matches.pop(place))
     
     random.shuffle(compat_matches)
     data = compat_matches[:3]
-    random.shuffle(matches)
-    data.extend(matches[len(data):3])
-    output = json.dumps(data, default=dthandler)
+    if len(data) < 3:
+    	random.shuffle(matches)
+    	data.extend(matches[len(data):3])
+    output = json.dumps(matches, default=dthandler)
 
     status = '200 OK'
 
