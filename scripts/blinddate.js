@@ -48,7 +48,6 @@ $(document).ready(function() {
 
 function makeMatches()
 {	
-	$("#matches").html("");
 	$("#warningArea").hide("fast");
 	
 	$.ajax({
@@ -73,7 +72,7 @@ function processMatches(data)
     $.each(data, function(index) 
     {
     	    	    	    	
-		var user = new UserInformation(data[index][0],data[index][1],data[index][2], data[index][3], data[index][4], data[index][5], data[index][6]);
+		var user = new UserInformation(data[index][0],data[index][1],data[index][2], data[index][3], data[index][4], data[index][5], data[index][6], data[index][7]);
     	    	
         html += createUserBlock(user, index, displayType);
     });
@@ -88,6 +87,13 @@ function createUserBlock (user, id, displayType)
 	{
 		var newString = user.About_Me.substring(0,99) + "...";
 		user.About_Me = newString;
+	}
+	
+	var compat = "?";
+	
+	if(user.Compatibility != -1)
+	{
+		compat = user.Compatibility.toString();
 	}
 		
 	var html = 
@@ -109,6 +115,9 @@ function createUserBlock (user, id, displayType)
 				"<br />" +
 				"<span class='userAction'>" +
 					"<img id='dateUser' onclick='openDateRequestDialog(\""+user.User_Name+"\","+user.User_ID+");' src='images/Martini_small.png'>" +
+				"</span>" +
+				"<span class='userAction'>" +
+					""+compat+"%" +
 				"</span>" +
 			"</span>	" +
 		"</div>";
@@ -182,7 +191,7 @@ function removeSearchItem(id)
 }
 
 //Javascript class for storing user information
-function UserInformation(User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture, Compatibility)
+function UserInformation(User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture, Email_ID, Compatibility)
 {
 	this.User_Name = User_Name;
 	this.Department = Department;
@@ -190,6 +199,7 @@ function UserInformation(User_Name, Department, User_ID, Body_type, About_Me, Pr
 	this.Body_type = Body_type;
 	this.About_Me = About_Me; 
 	this.Profile_Picture = Profile_Picture;
+	this.Email_ID = Email_ID;
 	this.Compatibility = Compatibility;
 }
 

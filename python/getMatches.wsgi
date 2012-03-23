@@ -8,6 +8,7 @@ import re
 import random
 
 from cgi import parse_qs, escape
+import math
 
 def application(environ, start_response):
     
@@ -54,11 +55,15 @@ def application(environ, start_response):
     	cursor.execute("""SELECT * FROM user_survey_answers usa WHERE usa.user_id = %s""", (matches[place][2]))
     	match_answers = cursor.fetchone()
     	compat = -1
+    	count = 0
     	if match_answers != None:
     		if user_answers != None:
     			compat = 0
     			for index, answer in enumerate(user_answers):
-    				compat = compat + math.fabs(answer-match_answers[index])
+    				if index != 0:
+    					count = count+1
+    					compat = compat + math.fabs(int(answer)-int(match_answers[index]))
+    			compat = round( (((4*count)-compat)*100) / (4*count) )
     	matches[place].append(compat)
     	if compat >= 0:
     		compat_matches.append(matches.pop(place))
