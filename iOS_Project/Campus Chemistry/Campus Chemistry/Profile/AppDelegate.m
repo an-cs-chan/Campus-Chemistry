@@ -15,14 +15,15 @@
 
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
+@synthesize profileViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+    self.profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
     
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.profileViewController];
     
     self.window.rootViewController = self.navigationController;
     

@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class ProfileViewController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    UINavigationController *navigationController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) UINavigationController *navigationController;
 
+@property (strong, nonatomic) ProfileViewController *profileViewController;
 @end

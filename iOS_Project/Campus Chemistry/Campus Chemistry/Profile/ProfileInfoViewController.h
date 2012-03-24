@@ -13,6 +13,6 @@
 @interface ProfileInfoViewController : UIViewController
 
 @property (strong, nonatomic) EditInfoViewController *editInfo;
-
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end
