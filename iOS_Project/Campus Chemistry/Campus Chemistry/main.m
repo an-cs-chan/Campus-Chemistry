@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "LoginViewController.h"
 
 int main(int argc, char *argv[])
 {

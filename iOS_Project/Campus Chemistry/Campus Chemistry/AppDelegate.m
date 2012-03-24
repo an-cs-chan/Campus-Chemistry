@@ -8,23 +8,37 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize loginViewController = _viewController;
+
+@synthesize navigationController;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //[[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) 
+    {
+        self.loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController_iPhone" bundle:nil];
+    } 
+    else 
+    {
+        self.loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController_iPad" bundle:nil];
     }
-    self.window.rootViewController = self.viewController;
+    
+    UINavigationController *tempNavi = [[UINavigationController alloc] initWithRootViewController:self.loginViewController];
+    [tempNavi setNavigationBarHidden:YES];
+    
+    navigationController = tempNavi;
+    
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -66,6 +80,16 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+- (void)assignUser:(NSString *)userEmail
+{
+    userID = userEmail;
+}
+
+- (NSString*)getUserEmail
+{
+    return userID;
 }
 
 @end

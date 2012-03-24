@@ -139,7 +139,7 @@ function processBasicSearch(data)
 	//Pagination will be done by our nifty jPaginate :D
     $.each(data, function(index) 
     {      	
-		var user = new UserInformation(data[index].name,data[index].department,data[index].id,data[index].type,data[index].about,data[index].picture,data[index].email);
+		var user = new UserInformation(data[index].name,data[index].department,data[index].type,data[index].about,data[index].picture,data[index].email);
 
     	displayType = $(".selectedFilter img").attr("id");
     	    	
@@ -347,11 +347,10 @@ function setPreferences()
 	}
 }
 //Javascript class for storing user information
-function UserInformation(User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture, Email_ID)
+function UserInformation(User_Name, Department, Body_type, About_Me, Profile_Picture, Email_ID)
 {
 	this.User_Name = User_Name;
 	this.Department = Department;
-	this.User_ID = User_ID;
 	this.Body_type = Body_type;
 	this.About_Me = About_Me; 
 	this.Profile_Picture = Profile_Picture; 	
