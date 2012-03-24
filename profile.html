@@ -25,6 +25,7 @@
 	<div id="topBar">
 		<div class="tabs">
 			<ul>
+				<a href="blinddate.html"><li>Blind Date</li></a>
 				<a href="quiz.html"><li>Quiz</li></a>
 				<a href="search.html"><li>Search</li></a>
 				<a href="profile.html"><li class="selected">Profile</li></a>				
@@ -39,20 +40,18 @@
 		<div id="profilePanelMain">
 			<div id="profilePanelLeft" class="secondaryContent">
 				<img src="media/alone.jpg" id="profilePicture"/>
-				<input id="uploadPic" class="button" value="Upload Picture" type="submit" disabled="true">
 			</div>
 			
 			<div id="profilePanelRight" class="homePanel">
-				<div id="user_fullname"></div>
+				<div id="user_fullname" class="homePanel"></div>
 				
-				<input text id="tag_line" onclick="changeTagLine()" class="profileTextEntry" placeholder="Enter tag line here">
 				<div id="user_info">
+					<div id="gender" class="user_fact"></div>
 					<div id="seeking" class="user_fact"></div>
 					<div id="age" class="user_fact"></div>
 					<div id="rstatus" class="user_fact"></div>
 					<div id="ethnicity" class="user_fact"></div>
 					<div id="bCountry" class="user_fact"></div>
-					<div id="hair_color" class="user_fact"></div>
 					<div id="faculty" class="user_fact"></div>
 					<div id="department" class="user_fact"></div>	
 				</div>	
@@ -73,13 +72,13 @@
 			</tr>	
 			</table>
 				
-			<div class="bottom_profile"><input type="submit" id="editProfile" class="button bottombutton" value="Edit" /></div>
+			<div class="bottom_profile"><input type="submit" id="editProfile" class="button bottombutton" value="Edit" onclick="parent.location='editprofile.html'" /></div>
 		</div>
 	</div>
 	<div class="clearfix"></div>
 	<div class="bottomLinkRegion" align="center">
         <p style="color: rgb(117, 153, 169); font-size: 16px;">     
-            About Us . Legal Information . Member Log In . Help. Online Safety
+            About Us . Legal Information . Member Log In . Help . Online Safety
         </p>
     </div>
 

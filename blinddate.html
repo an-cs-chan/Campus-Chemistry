@@ -5,12 +5,14 @@
 		<title> Campus Chemistry </title>
 		<link rel="stylesheet" type="text/css" href="styles/Styles.css">
 		<link rel="stylesheet" type="text/css" href="styles/smartpaginator.css" />
+		<link rel="stylesheet" type="text/css" href="styles/datepicker.css" />
 		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />		
 		<meta name="GENERATOR" content="MSHTML 9.00.8112.16440">
 		<script type="text/javascript" language="JavaScript" src="scripts/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" language="JavaScript" src="scripts/topBar.js"></script>		
 		<script type="text/javascript" language="JavaScript" src="scripts/blinddate.js"></script>
 		<script type="text/javascript" language="JavaScript" src="scripts/smartpaginator.js"></script>
+		<script type="text/javascript" language="JavaScript" src="scripts/datepicker.js"></script>
 		<script type="text/javascript" language="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
 	</head>
 	<body>
@@ -31,7 +33,15 @@
 		</br>
 		</br>
 		<div id="topBar">
-			<!--<div id="logo">Campus Chemistry</div>-->
+			<div class="tabs">
+				<ul>
+					<a href="blinddate.html"><li class="selected">Blind Date</li></a>
+					<a href="quiz.html"><li>Quiz</li></a>
+					<a href="search.html"><li>Search</li></a>
+					<a href="profile.html"><li>Profile</li></a>
+					<a href="inbox.html"><li>Inbox</li></a>
+				</ul>
+			</div>
 		</div>
 		</br>
 		<div class="mainContent" align="center">
@@ -57,6 +67,22 @@
 		</div>
 		</div>	
 			<div class="clearfix"></div>
+		</div>
+		<div id="dialog-form"  style="font-size: 62.5%;label, input{display:block}" title="Request a Date">
+			<p class="validateTips">All form fields are required.</p>
+			<form>
+			<fieldset>
+				<label for="name">Send To: (Username)</label>
+				<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+				Date: <input name="date" id="date">
+				<input type=button value="select" onclick="displayDatePicker('date');">
+				<br />
+				Time: <input name="time" id="time" />
+				<br />
+				<label for="message">Message</label>
+				<textarea name="message" id="message" value="" class="text ui-widget-content ui-corner-all" style="width: 310px; height: 139px;" placeholder="Enter Your Message"></textarea>
+			</fieldset>
+			</form>
 		</div>
 	</div>
 	</body>

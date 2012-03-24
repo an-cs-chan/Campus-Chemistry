@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="" key="selection"/>
+		<item value="selectgender" key="selection"/>
 		<list key="findhistory">
+			<item value="selectgender"/>
+			<item value="delete"/>
+			<item value="serialize"/>
+			<item value="wsgi"/>
+			<item value="send"/>
+			<item value="profileTextEntry"/>
 			<item value="\t"/>
 			<item value="/t"/>
-			<item value="processBasicSearch"/>
-			<item value="wsgi"/>
-			<item value="search"/>
-			<item value="setCookie"/>
-			<item value="minAge"/>
-			<item value="ethnicity"/>
 		</list>
 		<list key="replacehistory">
 		</list>

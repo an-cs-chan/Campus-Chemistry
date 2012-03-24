@@ -14,13 +14,14 @@
 @synthesize userTabController;
 @synthesize scrollView;
 @synthesize registerViewController;
-@synthesize inboxViewController;
+@synthesize mailBoxViewController;
 //@synthesize quizViewController;
 @synthesize searchViewController;
 @synthesize profileViewController;
 
 @synthesize usernameText;
 @synthesize passwordText;
+@synthesize activeTextField;
 
 - (void)setUpUserTabController
 {
@@ -29,11 +30,11 @@
         self.userTabController = [[UITabBarController alloc] init];
         
         
-        if(inboxViewController == nil)
+        if(mailBoxViewController == nil)
         {
-            InboxViewController *inboxView = [[InboxViewController alloc] initWithNibName:@"InboxViewController" bundle:nil];
+            MailBoxViewController *inboxView = [[MailBoxViewController alloc] initWithNibName:@"MailBoxViewController" bundle:nil];
             
-            self.inboxViewController = inboxView;
+            self.mailBoxViewController = inboxView;
         }
         
         /*if(quizViewController == nil)
@@ -57,7 +58,7 @@
             self.profileViewController = profileView;
         }
         
-        self.userTabController.viewControllers = [NSArray arrayWithObjects: self.inboxViewController, self.searchViewController, self.profileViewController, nil];
+        self.userTabController.viewControllers = [NSArray arrayWithObjects: self.mailBoxViewController.navigationController, self.searchViewController.navigationController, self.profileViewController.navigationController, nil];
         self.userTabController.selectedViewController = [self.userTabController.viewControllers objectAtIndex:0];
     }
 }
@@ -65,7 +66,8 @@
 - (BOOL)openLoginURL:(NSString *)username:(NSString *)password
 {
     NSString *message = @"";
-    NSString *args = [NSString stringWithFormat:@"loginEmail=%@&loginPassword=%@", username, password];
+    NSString *args = [NSString stringWithFormat:@"loginEmail=tsweet22@gmail.com&loginPassword=123", username, password];
+    //NSString *args = [NSString stringWithFormat:@"loginEmail=%@&loginPassword=%@", username, password];
     
     NSString *msgLength = [NSString stringWithFormat:@"@d", [args length]];
     
@@ -107,16 +109,6 @@
     return TRUE;
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    activeTextField = textField;
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    activeTextField = nil;
-}
-
 // Call this method somewhere in your view controller setup code.
 - (void)registerForKeyboardNotifications
 {
@@ -130,25 +122,23 @@
     
 }
 
-// Called when the UIKeyboardDidShowNotification is sent.
-- (void)keyboardWasShown:(NSNotification*)aNotification
+- (void)keyboardWasShown:(NSNotification *)notification
 {
-    NSDictionary* info = [aNotification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    // Step 1: Get the size of the keyboard.
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    // Step 2: Adjust the bottom content inset of your scroll view by the keyboard height.
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
     scrollView.contentInset = contentInsets;
     scrollView.scrollIndicatorInsets = contentInsets;
     
-    // If active text field is hidden by keyboard, scroll it so it's visible
-    // Your application might not need or want this behavior.
+    // Step 3: Scroll the target text field into view.
     CGRect aRect = self.view.frame;
-    aRect.size.height -= kbSize.height;
-    CGPoint origin = activeTextField.frame.origin;
-    origin.y -= scrollView.contentOffset.y;
-    if (!CGRectContainsPoint(aRect, origin)) 
+    aRect.size.height -= keyboardSize.height;
+    if (!CGRectContainsPoint(aRect, activeTextField.frame.origin)) 
     {
-        CGPoint scrollPoint = CGPointMake(0.0, activeTextField.frame.origin.y - (aRect.size.height)); 
+        CGPoint scrollPoint = CGPointMake(0.0, activeTextField.frame.origin.y - (keyboardSize.height-15));
         [scrollView setContentOffset:scrollPoint animated:YES];
     }
 }
@@ -178,13 +168,12 @@
     }
     
     else
-    {
-        NSLog(@"%@", username);
-        NSLog(@"%@", password);
-        
+    {        
         if([self openLoginURL:username :password])
         {
-            [self setUpUserTabController];        
+            [appDelegate assignUser:username];
+            
+            [self setUpUserTabController];
             [appDelegate.navigationController pushViewController:self.userTabController animated:YES];
         }
         
@@ -201,7 +190,6 @@
     if(self.registerViewController == nil)
     {
         RegisterViewController *registerView = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
-        //[self presentModalViewController:registerView animated:YES];
         self.registerViewController = registerView;
     }
     
@@ -209,6 +197,17 @@
     [appDelegate.navigationController pushViewController:self.registerViewController animated:YES];
     
 }
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.activeTextField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.activeTextField = nil;
+}
+
 - (IBAction)userDoneEditing:(id)sender 
 {
     [sender resignFirstResponder];
@@ -225,7 +224,10 @@
 - (void)viewDidLoad 
 {
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
     [self registerForKeyboardNotifications];
+    [passwordText setSecureTextEntry:YES];
+
     [super viewDidLoad];
     
 }
@@ -235,6 +237,7 @@
         // Release any retained subviews of the main view.
         // e.g. self.myOutlet = nil;
         [self setScrollView:nil];
+        [self setActiveTextField:nil];
         [self setUserTabController:nil];
         
         // unregister for keyboard notifications while not visible.
@@ -254,7 +257,6 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [usernameText becomeFirstResponder];
     [super viewDidAppear:animated];
 }
 

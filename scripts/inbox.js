@@ -282,7 +282,7 @@ function showSentMessages(data)
 			htmls += 
 				"<tr id='displayMessage_" + data[index].messageid + "' class='read' data-href=''>" + 
 					"<td name = 'message'><a class='opener2' id='"+index+"' href='#'>" + newString + "</a></td>" + 
-					"<td name = 'from'>" + data[index].fromUserID + "</td>" + 
+					"<td name = 'from'>" + data[index].toUserID + "</td>" + 
 					"<td name='time'>" + data[index].date + "</td>" + 
 					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index].messageid+");' />" + 					
 				"</tr>";
@@ -292,7 +292,7 @@ function showSentMessages(data)
 		   htmls += 
 		   		"<tr id='displayMessage_" + data[index].messageid + "' class='even' data-href=''>" + 
 						"<td name = 'message'><a class='opener2' id='"+index+"' href='#'>" + newString + "</a></td>" + 
-						"<td name = 'from'>" + data[index].fromUserID + "</td>" + 
+						"<td name = 'from'>" + data[index].toUserID + "</td>" + 
 						"<td name='time'>" + data[index].date + "</td>" + 
 					"<td><img class='closeButton' style='left: 18px; top: 0px' src='images/cancel.png' onclick='deletemsg("+data[index].messageid+");' />" + 						
 				"</tr>";
@@ -319,7 +319,7 @@ function showSentMessages(data)
 			  		"Reply": function()
 			  		{ 
 				 		$(this).dialog('close');
-						reply(data[index].fromUserID);
+						reply(data[index].toUserID);
 				  	}
 				 }
 			}); 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "../Inbox/InboxViewController.h"
+#import "../Inbox/MailBoxViewController.h"
 //#import "../Quiz/QuizViewController.h"
 #import "../Search/SearchViewController.h"
 #import "../Profile/ProfileViewController.h"
@@ -19,7 +19,7 @@
 {
     UITabBarController *userTabController;
     
-    InboxViewController *inboxViewController;
+    MailBoxViewController *mailBoxViewController;
     //QuizViewController *quizViewController;
     SearchViewController *searchViewController;
     ProfileViewController *profileViewController;
@@ -31,11 +31,10 @@
 
 @property (strong, nonatomic) UITabBarController *userTabController;
 
-@property (nonatomic, retain) InboxViewController *inboxViewController;
+@property (nonatomic, retain) MailBoxViewController *mailBoxViewController;
 //@property (nonatomic, retain) QuizViewController *quizViewController;
 @property (nonatomic, retain) SearchViewController *searchViewController;
 @property (nonatomic, retain) ProfileViewController *profileViewController;
-
 
 - (IBAction)registerButtonPressed:(id)sender;
 
