@@ -12,9 +12,6 @@
 @implementation ProfileInfoViewController
 
 @synthesize editInfo;
-@synthesize navigationController;
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

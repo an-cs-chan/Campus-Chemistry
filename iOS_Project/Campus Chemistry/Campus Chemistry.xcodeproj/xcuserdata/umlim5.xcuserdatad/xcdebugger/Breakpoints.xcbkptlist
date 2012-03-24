@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Campus Chemistry/Login/LoginViewController.m"
-         timestampString = "354160422.114137"
+         timestampString = "354306592.344609"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "209"
-         endingLineNumber = "209"
+         startingLineNumber = "197"
+         endingLineNumber = "197"
          landmarkName = "-registerButtonPressed:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Campus Chemistry/Login/LoginViewController.m"
-         timestampString = "354160422.114137"
+         timestampString = "354238825.002866"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "76"
-         endingLineNumber = "76"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
          landmarkName = "-openLoginURL::"
          landmarkType = "5">
       </FileBreakpoint>
@@ -51,11 +51,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Campus Chemistry/Login/LoginViewController.m"
-         timestampString = "354160422.114137"
+         timestampString = "354306592.344609"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "196"
-         endingLineNumber = "196"
+         startingLineNumber = "185"
+         endingLineNumber = "185"
          landmarkName = "-loginButtonPressed:"
          landmarkType = "5">
       </FileBreakpoint>

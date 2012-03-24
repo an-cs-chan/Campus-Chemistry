@@ -29,9 +29,12 @@
         self.title = NSLocalizedString(@"Profile", @"Profile");
         _dataArray = [[NSArray alloc] initWithObjects:@"Info",@"Photo",@"Interests", nil];
         
-        /*UINavigationController *tempNavi = [[UINavigationController alloc] init];
+        UINavigationController *tempNavi = [[UINavigationController alloc] init];
         [tempNavi setNavigationBarHidden:NO];
-        temp*/
+        
+        navigationController = tempNavi;
+        
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:self];
     }
     return self;
 }
@@ -84,21 +87,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        
     if (indexPath.row == 0) {
         self.info = [[ProfileInfoViewController alloc] initWithNibName:@"ProfileInfoViewController" bundle:nil];
-        [appDelegate.navigationController pushViewController:self.info animated:YES];
+        [self.navigationController pushViewController:self.info animated:YES];
     }
     
     else if (indexPath.row == 1) {
         self.photo = [[ProfilePhotoViewController alloc] initWithNibName:@"ProfilePhotoViewController" bundle:nil];
-        [appDelegate.navigationController pushViewController:self.photo animated:YES];
+        [self.navigationController pushViewController:self.photo animated:YES];
     }
     
     else {
         self.interests = [[ProfileInterestsViewController alloc] initWithNibName:@"ProfileInterestsViewController" bundle:nil];
-        [appDelegate.navigationController pushViewController:self.interests animated:YES];
+        [self.navigationController pushViewController:self.interests animated:YES];
     }
     
     NSLog(@"didSelectRowAtIndexPath: row=%d", indexPath.row);

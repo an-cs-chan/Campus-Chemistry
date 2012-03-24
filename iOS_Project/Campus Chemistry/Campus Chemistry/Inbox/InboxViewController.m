@@ -8,7 +8,7 @@
 
 #import "InboxViewController.h"
 #import "DetailViewController.h"
-#import "InboxDelegate.h"
+
 
 @implementation InboxViewController
 
@@ -24,8 +24,6 @@
         //_dataArray = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://icodeblog.com/wp-content/uploads/2009/08/foo.plist"]];
         //self.tabBarItem.image = [UIImage imageNamed:@"first"];
         
-        InboxDelegate *inboxDelegate = [[InboxDelegate alloc] init];
-        [inboxDelegate CreateInboxNavControl];
     }
     return self;
 }
@@ -77,12 +75,8 @@
     }
      NSLog(@"didSelectRowAtIndexPath: row=%d", indexPath.row);
     
-    // Inbox Delegate
-    InboxDelegate *inboxDelegate = (InboxDelegate*)[[UIApplication sharedApplication] delegate];
-    [inboxDelegate.navigationController pushViewController:self.detailViewInbox animated:YES];
-    
-    //[self.navigationController setNavigationBarHidden:NO];
-    //[self.navigationController pushViewController:self.detailViewInbox animated:YES];
+    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController pushViewController:self.detailViewInbox animated:YES];
 }
 
 - (void)viewDidUnload

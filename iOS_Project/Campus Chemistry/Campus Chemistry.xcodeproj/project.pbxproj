@@ -7,19 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4918A071151BF11700C47A4D /* SentViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A064151BF11700C47A4D /* SentViewContoller.m */; };
-		4918A072151BF11700C47A4D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4918A065151BF11700C47A4D /* DetailViewController.xib */; };
-		4918A073151BF11700C47A4D /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4918A067151BF11700C47A4D /* ComposeViewController.xib */; };
-		4918A074151BF11700C47A4D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A069151BF11700C47A4D /* DetailViewController.m */; };
-		4918A075151BF11700C47A4D /* MailBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A06B151BF11700C47A4D /* MailBoxViewController.m */; };
-		4918A076151BF11700C47A4D /* SentViewContoller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4918A06E151BF11700C47A4D /* SentViewContoller.xib */; };
-		4918A077151BF11700C47A4D /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A06F151BF11700C47A4D /* ComposeViewController.m */; };
-		4918A078151BF11700C47A4D /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A070151BF11700C47A4D /* InboxViewController.m */; };
-		4918A07C151BF3D000C47A4D /* InboxDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A07B151BF3D000C47A4D /* InboxDelegate.m */; };
-		4918A084151BF90200C47A4D /* SearchOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A07E151BF90200C47A4D /* SearchOptionViewController.m */; };
-		4918A085151BF90200C47A4D /* SearchOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4918A07F151BF90200C47A4D /* SearchOptionViewController.xib */; };
-		4918A086151BF90200C47A4D /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4918A082151BF90200C47A4D /* SearchViewController.xib */; };
-		4918A087151BF90200C47A4D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4918A083151BF90200C47A4D /* SearchViewController.m */; };
+		49344809151E3A2F00D214B1 /* SearchOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49344805151E3A2F00D214B1 /* SearchOptionViewController.m */; };
+		4934480A151E3A2F00D214B1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49344807151E3A2F00D214B1 /* SearchViewController.m */; };
+		4934480B151E3A2F00D214B1 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49344808151E3A2F00D214B1 /* SearchViewController.xib */; };
+		4934481B151E3A4600D214B1 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4934480D151E3A4600D214B1 /* ComposeViewController.m */; };
+		4934481C151E3A4600D214B1 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4934480E151E3A4600D214B1 /* ComposeViewController.xib */; };
+		4934481D151E3A4600D214B1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49344810151E3A4600D214B1 /* DetailViewController.m */; };
+		4934481E151E3A4600D214B1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49344811151E3A4600D214B1 /* DetailViewController.xib */; };
+		49344820151E3A4600D214B1 /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49344815151E3A4600D214B1 /* InboxViewController.m */; };
+		49344821151E3A4600D214B1 /* MailBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49344817151E3A4600D214B1 /* MailBoxViewController.m */; };
+		49344822151E3A4600D214B1 /* SentViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 49344819151E3A4600D214B1 /* SentViewContoller.m */; };
+		49344823151E3A4600D214B1 /* SentViewContoller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4934481A151E3A4600D214B1 /* SentViewContoller.xib */; };
 		494405271513D0FB0005BB97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405261513D0FB0005BB97 /* UIKit.framework */; };
 		494405291513D0FB0005BB97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494405281513D0FB0005BB97 /* Foundation.framework */; };
 		4944052B1513D0FB0005BB97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4944052A1513D0FB0005BB97 /* CoreGraphics.framework */; };
@@ -34,8 +32,20 @@
 		494405521513D0FC0005BB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 494405501513D0FC0005BB97 /* InfoPlist.strings */; };
 		494405551513D0FC0005BB97 /* Campus_ChemistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 494405541513D0FC0005BB97 /* Campus_ChemistryTests.m */; };
 		4944055F1513D1740005BB97 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4944055E1513D1740005BB97 /* Logo.png */; };
-		4996BE3C151ABB5B0051EDEB /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4996BE39151ABB5B0051EDEB /* ProfileViewController.m */; };
-		4996BE3D151ABB5B0051EDEB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4996BE3A151ABB5B0051EDEB /* ProfileViewController.xib */; };
+		4967D8F4151E4A1600BB674A /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967D8E0151E4A1600BB674A /* EditInfoViewController.m */; };
+		4967D8F5151E4A1600BB674A /* EditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4967D8E1151E4A1600BB674A /* EditInfoViewController.xib */; };
+		4967D8F6151E4A1600BB674A /* EditInterestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967D8E3151E4A1600BB674A /* EditInterestsViewController.m */; };
+		4967D8F7151E4A1600BB674A /* EditInterestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4967D8E4151E4A1600BB674A /* EditInterestsViewController.xib */; };
+		4967D8F8151E4A1600BB674A /* EditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967D8E6151E4A1600BB674A /* EditPhotoViewController.m */; };
+		4967D8F9151E4A1600BB674A /* EditPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4967D8E7151E4A1600BB674A /* EditPhotoViewController.xib */; };
+		4967D8FA151E4A1600BB674A /* ProfileInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967D8E9151E4A1600BB674A /* ProfileInfoViewController.m */; };
+		4967D8FB151E4A1600BB674A /* ProfileInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4967D8EA151E4A1600BB674A /* ProfileInfoViewController.xib */; };
+		4967D8FC151E4A1600BB674A /* ProfileInterestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967D8EC151E4A1600BB674A /* ProfileInterestsViewController.m */; };
+		4967D8FD151E4A1600BB674A /* ProfileInterestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4967D8ED151E4A1600BB674A /* ProfileInterestsViewController.xib */; };
+		4967D8FE151E4A1600BB674A /* ProfilePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967D8EF151E4A1600BB674A /* ProfilePhotoViewController.m */; };
+		4967D8FF151E4A1600BB674A /* ProfilePhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4967D8F0151E4A1600BB674A /* ProfilePhotoViewController.xib */; };
+		4967D900151E4A1600BB674A /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4967D8F2151E4A1600BB674A /* ProfileViewController.m */; };
+		4967D901151E4A1600BB674A /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4967D8F3151E4A1600BB674A /* ProfileViewController.xib */; };
 		49A132AA151A96AE002C019D /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132A7151A96AD002C019D /* CustomCell.m */; };
 		49A132AB151A96AE002C019D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132A9151A96AD002C019D /* Person.m */; };
 		49A13304151A9B66002C019D /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A132ED151A9B66002C019D /* SBJsonTokeniser.m */; };
@@ -66,27 +76,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4918A064151BF11700C47A4D /* SentViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SentViewContoller.m; sourceTree = "<group>"; };
-		4918A065151BF11700C47A4D /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
-		4918A066151BF11700C47A4D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		4918A067151BF11700C47A4D /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
-		4918A068151BF11700C47A4D /* SentViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentViewContoller.h; sourceTree = "<group>"; };
-		4918A069151BF11700C47A4D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		4918A06A151BF11700C47A4D /* MailBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailBoxViewController.h; sourceTree = "<group>"; };
-		4918A06B151BF11700C47A4D /* MailBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailBoxViewController.m; sourceTree = "<group>"; };
-		4918A06C151BF11700C47A4D /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
-		4918A06D151BF11700C47A4D /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
-		4918A06E151BF11700C47A4D /* SentViewContoller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SentViewContoller.xib; sourceTree = "<group>"; };
-		4918A06F151BF11700C47A4D /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
-		4918A070151BF11700C47A4D /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
-		4918A07A151BF3D000C47A4D /* InboxDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxDelegate.h; sourceTree = "<group>"; };
-		4918A07B151BF3D000C47A4D /* InboxDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxDelegate.m; sourceTree = "<group>"; };
-		4918A07E151BF90200C47A4D /* SearchOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchOptionViewController.m; sourceTree = "<group>"; };
-		4918A07F151BF90200C47A4D /* SearchOptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOptionViewController.xib; sourceTree = "<group>"; };
-		4918A080151BF90200C47A4D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		4918A081151BF90200C47A4D /* SearchOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchOptionViewController.h; sourceTree = "<group>"; };
-		4918A082151BF90200C47A4D /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		4918A083151BF90200C47A4D /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		49344804151E3A2F00D214B1 /* SearchOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchOptionViewController.h; sourceTree = "<group>"; };
+		49344805151E3A2F00D214B1 /* SearchOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchOptionViewController.m; sourceTree = "<group>"; };
+		49344806151E3A2F00D214B1 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		49344807151E3A2F00D214B1 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		49344808151E3A2F00D214B1 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		4934480C151E3A4600D214B1 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		4934480D151E3A4600D214B1 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		4934480E151E3A4600D214B1 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		4934480F151E3A4600D214B1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		49344810151E3A4600D214B1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		49344811151E3A4600D214B1 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		49344814151E3A4600D214B1 /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
+		49344815151E3A4600D214B1 /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
+		49344816151E3A4600D214B1 /* MailBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailBoxViewController.h; sourceTree = "<group>"; };
+		49344817151E3A4600D214B1 /* MailBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailBoxViewController.m; sourceTree = "<group>"; };
+		49344818151E3A4600D214B1 /* SentViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentViewContoller.h; sourceTree = "<group>"; };
+		49344819151E3A4600D214B1 /* SentViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SentViewContoller.m; sourceTree = "<group>"; };
+		4934481A151E3A4600D214B1 /* SentViewContoller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SentViewContoller.xib; sourceTree = "<group>"; };
 		494405221513D0FB0005BB97 /* Campus Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Campus Chemistry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		494405261513D0FB0005BB97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		494405281513D0FB0005BB97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,9 +113,27 @@
 		494405531513D0FC0005BB97 /* Campus_ChemistryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Campus_ChemistryTests.h; sourceTree = "<group>"; };
 		494405541513D0FC0005BB97 /* Campus_ChemistryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Campus_ChemistryTests.m; sourceTree = "<group>"; };
 		4944055E1513D1740005BB97 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
-		4996BE39151ABB5B0051EDEB /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		4996BE3A151ABB5B0051EDEB /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		4996BE3B151ABB5B0051EDEB /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		4967D8DF151E4A1600BB674A /* EditInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoViewController.h; sourceTree = "<group>"; };
+		4967D8E0151E4A1600BB674A /* EditInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
+		4967D8E1151E4A1600BB674A /* EditInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditInfoViewController.xib; sourceTree = "<group>"; };
+		4967D8E2151E4A1600BB674A /* EditInterestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInterestsViewController.h; sourceTree = "<group>"; };
+		4967D8E3151E4A1600BB674A /* EditInterestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInterestsViewController.m; sourceTree = "<group>"; };
+		4967D8E4151E4A1600BB674A /* EditInterestsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditInterestsViewController.xib; sourceTree = "<group>"; };
+		4967D8E5151E4A1600BB674A /* EditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPhotoViewController.h; sourceTree = "<group>"; };
+		4967D8E6151E4A1600BB674A /* EditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPhotoViewController.m; sourceTree = "<group>"; };
+		4967D8E7151E4A1600BB674A /* EditPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPhotoViewController.xib; sourceTree = "<group>"; };
+		4967D8E8151E4A1600BB674A /* ProfileInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInfoViewController.h; sourceTree = "<group>"; };
+		4967D8E9151E4A1600BB674A /* ProfileInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInfoViewController.m; sourceTree = "<group>"; };
+		4967D8EA151E4A1600BB674A /* ProfileInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileInfoViewController.xib; sourceTree = "<group>"; };
+		4967D8EB151E4A1600BB674A /* ProfileInterestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInterestsViewController.h; sourceTree = "<group>"; };
+		4967D8EC151E4A1600BB674A /* ProfileInterestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInterestsViewController.m; sourceTree = "<group>"; };
+		4967D8ED151E4A1600BB674A /* ProfileInterestsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileInterestsViewController.xib; sourceTree = "<group>"; };
+		4967D8EE151E4A1600BB674A /* ProfilePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePhotoViewController.h; sourceTree = "<group>"; };
+		4967D8EF151E4A1600BB674A /* ProfilePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePhotoViewController.m; sourceTree = "<group>"; };
+		4967D8F0151E4A1600BB674A /* ProfilePhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePhotoViewController.xib; sourceTree = "<group>"; };
+		4967D8F1151E4A1600BB674A /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		4967D8F2151E4A1600BB674A /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		4967D8F3151E4A1600BB674A /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		49A132A6151A96AD002C019D /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		49A132A7151A96AD002C019D /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		49A132A8151A96AD002C019D /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -172,21 +197,19 @@
 		4918A063151BF11700C47A4D /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
-				4918A064151BF11700C47A4D /* SentViewContoller.m */,
-				4918A068151BF11700C47A4D /* SentViewContoller.h */,
-				4918A06E151BF11700C47A4D /* SentViewContoller.xib */,
-				4918A069151BF11700C47A4D /* DetailViewController.m */,
-				4918A065151BF11700C47A4D /* DetailViewController.xib */,
-				4918A066151BF11700C47A4D /* DetailViewController.h */,
-				4918A06A151BF11700C47A4D /* MailBoxViewController.h */,
-				4918A06B151BF11700C47A4D /* MailBoxViewController.m */,
-				4918A06C151BF11700C47A4D /* InboxViewController.h */,
-				4918A070151BF11700C47A4D /* InboxViewController.m */,
-				4918A067151BF11700C47A4D /* ComposeViewController.xib */,
-				4918A06D151BF11700C47A4D /* ComposeViewController.h */,
-				4918A06F151BF11700C47A4D /* ComposeViewController.m */,
-				4918A07A151BF3D000C47A4D /* InboxDelegate.h */,
-				4918A07B151BF3D000C47A4D /* InboxDelegate.m */,
+				4934480C151E3A4600D214B1 /* ComposeViewController.h */,
+				4934480D151E3A4600D214B1 /* ComposeViewController.m */,
+				4934480E151E3A4600D214B1 /* ComposeViewController.xib */,
+				4934480F151E3A4600D214B1 /* DetailViewController.h */,
+				49344810151E3A4600D214B1 /* DetailViewController.m */,
+				49344811151E3A4600D214B1 /* DetailViewController.xib */,
+				49344814151E3A4600D214B1 /* InboxViewController.h */,
+				49344815151E3A4600D214B1 /* InboxViewController.m */,
+				49344816151E3A4600D214B1 /* MailBoxViewController.h */,
+				49344817151E3A4600D214B1 /* MailBoxViewController.m */,
+				49344818151E3A4600D214B1 /* SentViewContoller.h */,
+				49344819151E3A4600D214B1 /* SentViewContoller.m */,
+				4934481A151E3A4600D214B1 /* SentViewContoller.xib */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
@@ -194,12 +217,11 @@
 		4918A07D151BF90200C47A4D /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				4918A07E151BF90200C47A4D /* SearchOptionViewController.m */,
-				4918A07F151BF90200C47A4D /* SearchOptionViewController.xib */,
-				4918A080151BF90200C47A4D /* SearchViewController.h */,
-				4918A081151BF90200C47A4D /* SearchOptionViewController.h */,
-				4918A082151BF90200C47A4D /* SearchViewController.xib */,
-				4918A083151BF90200C47A4D /* SearchViewController.m */,
+				49344804151E3A2F00D214B1 /* SearchOptionViewController.h */,
+				49344805151E3A2F00D214B1 /* SearchOptionViewController.m */,
+				49344806151E3A2F00D214B1 /* SearchViewController.h */,
+				49344807151E3A2F00D214B1 /* SearchViewController.m */,
+				49344808151E3A2F00D214B1 /* SearchViewController.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -242,8 +264,8 @@
 				49A1329F151A9557002C019D /* Classes */,
 				4918A063151BF11700C47A4D /* Inbox */,
 				4996BE38151ABB5B0051EDEB /* Profile */,
-				49F2AF5015140EAA00478A94 /* Login */,
 				4918A07D151BF90200C47A4D /* Search */,
+				49F2AF5015140EAA00478A94 /* Login */,
 				49F2AF5215140F2B00478A94 /* Register */,
 				4944052D1513D0FB0005BB97 /* Supporting Files */,
 			);
@@ -285,9 +307,27 @@
 		4996BE38151ABB5B0051EDEB /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				4996BE39151ABB5B0051EDEB /* ProfileViewController.m */,
-				4996BE3A151ABB5B0051EDEB /* ProfileViewController.xib */,
-				4996BE3B151ABB5B0051EDEB /* ProfileViewController.h */,
+				4967D8DF151E4A1600BB674A /* EditInfoViewController.h */,
+				4967D8E0151E4A1600BB674A /* EditInfoViewController.m */,
+				4967D8E1151E4A1600BB674A /* EditInfoViewController.xib */,
+				4967D8E2151E4A1600BB674A /* EditInterestsViewController.h */,
+				4967D8E3151E4A1600BB674A /* EditInterestsViewController.m */,
+				4967D8E4151E4A1600BB674A /* EditInterestsViewController.xib */,
+				4967D8E5151E4A1600BB674A /* EditPhotoViewController.h */,
+				4967D8E6151E4A1600BB674A /* EditPhotoViewController.m */,
+				4967D8E7151E4A1600BB674A /* EditPhotoViewController.xib */,
+				4967D8E8151E4A1600BB674A /* ProfileInfoViewController.h */,
+				4967D8E9151E4A1600BB674A /* ProfileInfoViewController.m */,
+				4967D8EA151E4A1600BB674A /* ProfileInfoViewController.xib */,
+				4967D8EB151E4A1600BB674A /* ProfileInterestsViewController.h */,
+				4967D8EC151E4A1600BB674A /* ProfileInterestsViewController.m */,
+				4967D8ED151E4A1600BB674A /* ProfileInterestsViewController.xib */,
+				4967D8EE151E4A1600BB674A /* ProfilePhotoViewController.h */,
+				4967D8EF151E4A1600BB674A /* ProfilePhotoViewController.m */,
+				4967D8F0151E4A1600BB674A /* ProfilePhotoViewController.xib */,
+				4967D8F1151E4A1600BB674A /* ProfileViewController.h */,
+				4967D8F2151E4A1600BB674A /* ProfileViewController.m */,
+				4967D8F3151E4A1600BB674A /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -432,12 +472,17 @@
 				494405401513D0FC0005BB97 /* LoginViewController_iPad.xib in Resources */,
 				4944055F1513D1740005BB97 /* Logo.png in Resources */,
 				49A345F21516619700B358F3 /* RegisterViewController.xib in Resources */,
-				4996BE3D151ABB5B0051EDEB /* ProfileViewController.xib in Resources */,
-				4918A072151BF11700C47A4D /* DetailViewController.xib in Resources */,
-				4918A073151BF11700C47A4D /* ComposeViewController.xib in Resources */,
-				4918A076151BF11700C47A4D /* SentViewContoller.xib in Resources */,
-				4918A085151BF90200C47A4D /* SearchOptionViewController.xib in Resources */,
-				4918A086151BF90200C47A4D /* SearchViewController.xib in Resources */,
+				4934480B151E3A2F00D214B1 /* SearchViewController.xib in Resources */,
+				4934481C151E3A4600D214B1 /* ComposeViewController.xib in Resources */,
+				4934481E151E3A4600D214B1 /* DetailViewController.xib in Resources */,
+				49344823151E3A4600D214B1 /* SentViewContoller.xib in Resources */,
+				4967D8F5151E4A1600BB674A /* EditInfoViewController.xib in Resources */,
+				4967D8F7151E4A1600BB674A /* EditInterestsViewController.xib in Resources */,
+				4967D8F9151E4A1600BB674A /* EditPhotoViewController.xib in Resources */,
+				4967D8FB151E4A1600BB674A /* ProfileInfoViewController.xib in Resources */,
+				4967D8FD151E4A1600BB674A /* ProfileInterestsViewController.xib in Resources */,
+				4967D8FF151E4A1600BB674A /* ProfilePhotoViewController.xib in Resources */,
+				4967D901151E4A1600BB674A /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,15 +535,20 @@
 				49A1330D151A9B66002C019D /* SBJsonStreamWriter.m in Sources */,
 				49A1330E151A9B66002C019D /* SBJsonParser.m in Sources */,
 				49A1330F151A9B66002C019D /* SBJsonStreamWriterAccumulator.m in Sources */,
-				4996BE3C151ABB5B0051EDEB /* ProfileViewController.m in Sources */,
-				4918A071151BF11700C47A4D /* SentViewContoller.m in Sources */,
-				4918A074151BF11700C47A4D /* DetailViewController.m in Sources */,
-				4918A075151BF11700C47A4D /* MailBoxViewController.m in Sources */,
-				4918A077151BF11700C47A4D /* ComposeViewController.m in Sources */,
-				4918A078151BF11700C47A4D /* InboxViewController.m in Sources */,
-				4918A07C151BF3D000C47A4D /* InboxDelegate.m in Sources */,
-				4918A084151BF90200C47A4D /* SearchOptionViewController.m in Sources */,
-				4918A087151BF90200C47A4D /* SearchViewController.m in Sources */,
+				49344809151E3A2F00D214B1 /* SearchOptionViewController.m in Sources */,
+				4934480A151E3A2F00D214B1 /* SearchViewController.m in Sources */,
+				4934481B151E3A4600D214B1 /* ComposeViewController.m in Sources */,
+				4934481D151E3A4600D214B1 /* DetailViewController.m in Sources */,
+				49344820151E3A4600D214B1 /* InboxViewController.m in Sources */,
+				49344821151E3A4600D214B1 /* MailBoxViewController.m in Sources */,
+				49344822151E3A4600D214B1 /* SentViewContoller.m in Sources */,
+				4967D8F4151E4A1600BB674A /* EditInfoViewController.m in Sources */,
+				4967D8F6151E4A1600BB674A /* EditInterestsViewController.m in Sources */,
+				4967D8F8151E4A1600BB674A /* EditPhotoViewController.m in Sources */,
+				4967D8FA151E4A1600BB674A /* ProfileInfoViewController.m in Sources */,
+				4967D8FC151E4A1600BB674A /* ProfileInterestsViewController.m in Sources */,
+				4967D8FE151E4A1600BB674A /* ProfilePhotoViewController.m in Sources */,
+				4967D900151E4A1600BB674A /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,4 +25,7 @@
 
 @property (strong, nonatomic) LoginViewController *loginViewController;
 
+- (void)assignUser:(NSString *)userEmail;
+- (NSString *)getUserEmail;
+
 @end
