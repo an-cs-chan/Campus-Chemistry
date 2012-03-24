@@ -13,42 +13,47 @@ KEY_STR = 'umprojkey6853558'
 def application(environ, start_response):
 	
 	#get proper fields
-    form = cgi.FieldStorage(fp=environ['wsgi.input'],
-                            environ=environ,
-                            keep_blank_values=True)
+    form = cgi.FieldStorage(fp=environ['wsgi.input'],environ=environ,keep_blank_values=True)
 
 	#get user id
-	user_id = form.getfirst('userID', 'empty')
+    user_id = form.getfirst('userid', 'empty')
     user_id = cgi.escape(user_id)
-	
+    user_id = user_id.lower()
+    
 	#get fields from form
-
-	#connect to the Database
-    conn = MySQLdb.connect (host = "localhost",
-                            user = "root",
-                            passwd = "",
-                            db = "campus chemistry")
-	
-	cursor = conn.cursor()
-	query = "UPDATE user_profile SET Email_ID=eid,.... WHERE User_ID=uid" 
-    print query
-
-	try:
+    name = form.getfirst('name', 'empty')
+    gender = form.getfirst('gender', 'empty')    
+    seekGender = form.getfirst('seekGender', 'empty')
+    seekingStart = form.getfirst('seekStart', 'empty')
+    seekingEnd = form.getfirst('seekEnd', 'empty')
+    rStatus = form.getfirst('rStatus', 'empty')
+    ethnicity = form.getfirst('ethnicity', 'empty')
+    bCountry = form.getfirst('bCountry', 'empty')
+    faculty = form.getfirst('faculty', 'empty')
+    deptmt = form.getfirst('deptmt', 'empty')
+    print seekingStart
+    print seekingEnd
+    print ethnicity
+    
     #connect to the Database
-     cursor.execute(query)
-     data = [{"status":"Message Sent"}]
+    conn = MySQLdb.connect (host = "localhost", user = "root", passwd = "", db = "campus chemistry")
+	
+    cursor = conn.cursor()
+
+    try:
+    #connect to the Database
+     cursor.execute("""UPDATE user_profile SET user_name=%s, sex=%s, orientation=%s, marital_status=%s, ethinicity=%s, birth_country=%s, faculty=%s, department=%s WHERE User_ID=%s""",(name, gender, seekGender, rStatus, ethnicity, bCountry, faculty, deptmt, user_id))
+     data = [{"status":"Success"}]
      output = json.dumps(data)
     except MySQLdb.Error, e:
-     data = [{"status":"Message Failed"}]
+     data = [{"status":"Update Failed"}]
      output = json.dumps(data)
-
-    status = '200 OK'
     
+    status = '200 OK'
     cursor.close()
     conn.commit()
     conn.close()
 
-    response_headers = [('Content-Type', 'application/json'),
-                        ('Content-Length', str(len(output)))]
+    response_headers = [('Content-Type', 'application/json'),('Content-Length', str(len(output)))]
     start_response(status, response_headers)
     return [output]

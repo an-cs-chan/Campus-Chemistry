@@ -249,14 +249,46 @@ body {
 }
 
 /*----text entry-----*/
+.headerTextEntry {
+	border-radius: 7px; 
+	border: 0px; 
+	left: 120px; 
+	right: 0px;
+	height: 28px;
+	text-align: center;
+	width:350px;
+}
+
 .profileTextEntry {
 	border-radius: 7px; 
 	border: 0px; 
 	left: 120px; 
 	right: 0px;
 	height: 24px;
-	text-align: left;
+	text-align: center;
 	width:350px;
+}
+
+.profileLabelEntry{
+	text-align: left;
+}
+
+.interestTextEntry{
+	border-radius: 7px; 
+	border: 0px; 
+	left: 120px; 
+	right: 0px;
+	height: 20px;
+	width:200px;
+}
+
+.textEntry{
+	border-radius: 7px; 
+	border: 0px; 
+	left: 120px; 
+	right: 0px;
+	height: 20px;
+	width:200px;
 }
 
 /*----misc-----*/
