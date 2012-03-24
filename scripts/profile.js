@@ -9,6 +9,7 @@
 
 	function Page_Load(){
 		
+		
 		//get data about user profile
 		$.post(
 				"python/profile.wsgi",
@@ -26,12 +27,23 @@
 		$("#user_fullname").text(user.name);
 		$("#interests").text(user.name + "'s Interests");
 		
+		//gender of user
+		$("#gender").text("Gender: ");
+		if (user.gender=='F')
+			$("#gender").append("Female");
+		else if (user.gender=='M') 
+			$("#gender").append("Male");
+		else if(user.gender=="Both")
+			$("#gender").append("Both");
+		
 		//gender and age user is seeking for matches
 		$("#seeking").text("Seeking: ");
 		if (user.seeking=='F')
 			$("#seeking").append("Female");
 		else if (user.seeking=='M') 
 			$("#seeking").append("Male");
+		else if(user.seeking=="Both")
+			$("#seeking").append("Both");	
 		$("#seeking").append(" (" + user.minagepref + "-" + user.maxagepref +")");	
 		
 		//age of the user
@@ -45,15 +57,11 @@
 		
 		//ethnicity of user
 		$("#ethnicity").text("Ethnicity: ");
-		$("#seeking").append(user.ethnicity);
+		$("#ethnicity").append(user.ethnicity);
 		
 		//birth country of user
 		$("#bCountry").text("Country of Birth: ");
 		$("#bCountry").append(user.bCountry);
-		
-		//hair color of user
-		$("#hair_color").text("Hair Color: ");
-		$("#hair_color").append(user.hairColor);
 		
 		//faculty of user
 		$("#faculty").text("Faculty: ");
@@ -67,6 +75,14 @@
 		if(user.about_me!=null){
 			var interests = (user.about_me).split(",");
 		}
+		
+		var i=0;
+		$("li.interests_text").each(function(){
+			if(interests.length>i){
+				$(this).text(interests[i]);
+				i++;	
+			}
+		});
 			
 						
 	}

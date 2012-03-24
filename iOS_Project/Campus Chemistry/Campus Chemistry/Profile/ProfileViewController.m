@@ -11,6 +11,7 @@
 #import "ProfileInfoViewController.h"
 #import "ProfilePhotoViewController.h"
 #import "ProfileInterestsViewController.h"
+#import "AppDelegate.h"
 
 @implementation ProfileViewController
 
@@ -18,6 +19,7 @@
 @synthesize info;
 @synthesize photo;
 @synthesize interests;
+@synthesize navigationController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +29,12 @@
         self.title = NSLocalizedString(@"Profile", @"Profile");
         _dataArray = [[NSArray alloc] initWithObjects:@"Info",@"Photo",@"Interests", nil];
         
+        UINavigationController *tempNavi = [[UINavigationController alloc] init];
+        [tempNavi setNavigationBarHidden:NO];
+        
+        navigationController = tempNavi;
+        
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:self];
     }
     return self;
 }
@@ -77,21 +85,20 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (void)uiView:(UIView *)uiView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     if (indexPath.row == 0) {
-        self.info = [[ProfileInfoViewController alloc] initWithNibName:@"Info" bundle:nil];
+        self.info = [[ProfileInfoViewController alloc] initWithNibName:@"ProfileInfoViewController" bundle:nil];
         [self.navigationController pushViewController:self.info animated:YES];
     }
     
     else if (indexPath.row == 1) {
-        self.photo = [[ProfilePhotoViewController alloc] initWithNibName:@"Photo" bundle:nil];
+        self.photo = [[ProfilePhotoViewController alloc] initWithNibName:@"ProfilePhotoViewController" bundle:nil];
         [self.navigationController pushViewController:self.photo animated:YES];
     }
     
     else {
-        self.interests = [[ProfileInterestsViewController alloc] initWithNibName:@"Interests" bundle:nil];
+        self.interests = [[ProfileInterestsViewController alloc] initWithNibName:@"ProfileInterestsViewController" bundle:nil];
         [self.navigationController pushViewController:self.interests animated:YES];
     }
     

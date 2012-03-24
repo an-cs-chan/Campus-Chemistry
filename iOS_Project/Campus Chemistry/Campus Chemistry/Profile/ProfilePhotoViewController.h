@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class EditPhotoViewController;
+
 @interface ProfilePhotoViewController : UIViewController
+
+@property (strong, nonatomic) EditPhotoViewController *editphoto;
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end

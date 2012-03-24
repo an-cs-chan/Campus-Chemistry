@@ -1,24 +1,20 @@
 //
-//  ProfileInfo.m
+//  EditInterestsViewController.m
 //  Campus Chemistry
 //
-//  Created by Andrea Chan on 3/22/12.
+//  Created by Andrea Chan on 3/23/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ProfileInfoViewController.h"
-#import "EditInfoViewController.h"
+#import "EditInterestsViewController.h"
 
-@implementation ProfileInfoViewController
-
-@synthesize editInfo;
+@implementation EditInterestsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = NSLocalizedString(@"Info", @"Info");
     }
     return self;
 }

@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class EditInterestsViewController;
+
 @interface ProfileInterestsViewController : UIViewController
 
-
-
+@property (strong, nonatomic) EditInterestsViewController *editinfo;
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end

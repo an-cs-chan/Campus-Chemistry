@@ -1,41 +1,38 @@
 //
-//  RegisterViewController.h
+//  LoginDelegate.h
 //  Campus Chemistry
 //
-//  Created by Jae Man Lim on 3/16/12.
+//  Created by Jae Man Lim on 3/23/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 #import "../Inbox/MailBoxViewController.h"
 //#import "../Quiz/QuizViewController.h"
 #import "../Search/SearchViewController.h"
 #import "../Profile/ProfileViewController.h"
 
-#import "AppDelegate.h"
-
-@interface RegisterViewController : UIViewController <UITextFieldDelegate>
+@interface LoginDelegate : NSObject
 {
-    UITabBarController *userTabController;
-    
-    MailBoxViewController *mailBoxViewController;
+    /*MailBoxViewController *mailBoxViewController;
     //QuizViewController *quizViewController;
     SearchViewController *searchViewController;
     ProfileViewController *profileViewController;
+    UITabBarController *userTabController;
+    
+    UITextField *activeTextField;
+    BOOL keyboardShown;
+    BOOL viewMoved;*/
 }
- 
-@property (nonatomic, retain) IBOutlet UITextField *emailText;
-@property (nonatomic, retain) IBOutlet UITextField *passwordText;
-@property (nonatomic, retain) IBOutlet UITextField *confirmText;
-
-@property (strong, nonatomic) UITabBarController *userTabController;
 
 @property (nonatomic, retain) MailBoxViewController *mailBoxViewController;
 //@property (nonatomic, retain) QuizViewController *quizViewController;
 @property (nonatomic, retain) SearchViewController *searchViewController;
 @property (nonatomic, retain) ProfileViewController *profileViewController;
 
-- (IBAction)registerButtonPressed:(id)sender;
+@property (strong, nonatomic) UITabBarController *userTabController;
+
+- (void)setUpUserTabController:(UIViewController *)rootViewController;
 
 @end

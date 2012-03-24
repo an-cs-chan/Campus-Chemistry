@@ -25,6 +25,7 @@
 	<div id="topBar">
 		<div class="tabs">
 			<ul>
+				<a href="blinddate.html"><li>Blind Date</li></a>
 				<a href="quiz.html"><li>Quiz</li></a>
 				<a href="search.html"><li>Search</li></a>
 				<a href="profile.html"><li class="selected">Profile</li></a>				
@@ -43,16 +44,23 @@
 			</div>
 			
 			<div id="profilePanelRight" class="homePanel">
-				<div id="user_fullname">Melissa Kendall</div>
-				
-				<input text id="tag_line" onclick="changeTagLine()" class="profileTextEntry" placeholder="Enter tag line here">
+				<input text id="user_fullname" class="headerTextEntry">
 				<div id="user_info">
 					<div class="user_fact">
-						<div id="seeking" style="display: inline">Seeking:</div>
-						<select id"selectseekgender">
+						<div style="display: inline">Gender:</div>
+						<select id="selectgender">
 							<option value="M" selected="selected">Male</option>
 							<option value="F">Female</option>
-							<option value="both">Both</option>
+							<option value="Both">Both</option>
+						</select>
+						
+					</div>
+					<div class="user_fact">
+						<div id="seeking" style="display: inline">Seeking: </div>
+						<select id="selectseekgender">
+							<option value="M" selected="selected">Male</option>
+							<option value="F">Female</option>
+							<option value="Both">Both</option>
 						</select>
 						<select id="selectseekstart">
 							<option value="18">18</option>
@@ -79,78 +87,76 @@
 						</select>
 						<div class="descripProfile">years old</div>
 						</div>
-					<div id="age" class="user_fact">Age: 21</div>
 					<div class="user_fact">
-						<div id="haircolor" style="display: inline">Hair Color:</div>
-						<select id"selecthaircolor">
-							<option value="brown" selected="selected">Brown</option>
-							<option value="blonde">Blonde</option>
-							<option value="black">Black</option>
-							<option value="red">Red</option>
-							<option value="other">Other</option>
+						<div id="age" style="display: inline">Date of Birth: </div>
+						<select id="month">
+							<option value="1" selected="selected">Jan</option>
+							<option value="2">Feb</option>
+							<option value="3">Mar</option>
+							<option value="4">Apr</option>
+							<option value="5">May</option>
+							<option value="6">June</option>
+							<option value="7">July</option>
+							<option value="8">Aug</option>
+							<option value="9">Sept</option>
+							<option value="10">Oct</option>
+							<option value="11">Nov</option>
+							<option value="12">Dec</option>
+						</select>
+						<select id="day">
+						</select>
+						<select id="year">
 						</select>
 					</div>
 					<div class="user_fact">
-						<div id="faculty" style="display: inline">Faculty:</div>
-						<select id"selectfaculty">
-							<option value="agfoodsci">Agricultural and Food Sciences</option>
-							<option value="agr">Agriculture</option>
-							<option value="arch">Architecture</option>
-							<option value="finearts">Fine Arts</option>
-							<option value="arts">Arts</option>
-							<option value="env">Environment, Earth and Resources</option>
-							<option value="dentalhy">Dental Hygiene</option>
-							<option value="dent">Dentistry</option>
-							<option value="edu">Education</option>
-							<option value="eng">Engineering</option>
-							<option value="extedu">Extended Education</option>
-							<option value="grad">Graduate Studies</option>
-							<option value="humanec">Human Ecology</option>
-							<option value="business">Business</option>
-							<option value="kines">Kinesiology & Recreation Management</option>
-							<option value="law">Law</option>
-							<option value="medrehab">Medical Rehabilitation</option>
-							<option value="med">Medicine</option>
-							<option value="music">Music</option>
-							<option value="nursing">Nursing</option>
-							<option value="pharm">Pharmacy</option>
-							<option value="sci" selected="selected">Science</option>
-							<option value="social">Social Work</option>
-							<option value="u1">University 1</option>
-							<option value="other">Other</option>
-						</select>	
+					 	<div id="rstatus" style="display: inline">Relationship Status: </div>
+						<select id="selectstatus">
+							<option value="Single" selected="selected">Single</option>
+							<option value="Dating">Dating</option>
+							<option value="Engaged">Engaged</option>
+							<option value="Married">Married</option>
+							<option value="Separated">Separated</option>
+							<option value="Divorced">Divorced</option>
+							<option value="Widowed">Widowed</option>
+							<option value="Complicated">It's complicated</option>
+						</select> 	
 					</div>
 					<div class="user_fact">
-						<div id="department" style="display: inline">Department:</div>
-						<select id="selectdepartment">
-							<option value"bio">Biological Sciences</option>
-							<option value"chem">Chemistry</option>
-							<option value"cs" selected="selected">Computer Science</option>
-							<option value"math">Mathematics</option>
-							<option value"microbio">Microbiology</option>
-							<option value"phys">Physics & Astronomy</option>
-							<option value"stats">Statistics</option>
-						</select>
+						<div style="display: inline;">Ethnicity: </div>
+						<input text id="ethnicity" class="textEntry">
+					</div>
+					<div class="user_fact">
+						<div style="display: inline">Country of Birth: </div>
+						<input text id="bCountry" class="textEntry">
+					</div>
+					<div class="user_fact">
+						<div style="display: inline">Faculty: </div>
+						<input text id="faculty" class="textEntry">
+					</div>
+					<div class="user_fact">
+						<div style="display: inline">Department: </div>
+						<input text id="department" class="textEntry">
 					</div>	
 				</div>	
 			</div>
 			
-			<div id="interests" class="clearfix footerPanel">Melissa's Interests</div>
+			<div id="interests" class="clearfix footerPanel"></div>
 			
 			<table width=100%>
 			<tr>
-				<td class="interest_col"><li>My Little Pony</li></td>
-				<td class="interest_col"><li>Gaming</li></td>
-				<td class="interest_col"><li>iQCommerce</li></td>
+				<td class="interest_col"><input text class="interestTextEntry"></td>
+				<td class="interest_col"><input text class="interestTextEntry"></td>
+				<td class="interest_col"><input text class="interestTextEntry"></td>
 			</tr>
 			<tr>
-				<td class="interest_col"><li>Software Engineering</li></td>
-				<td class="interest_col"><li>Web Development</li></td>
-				<td class="interest_col"><li>Anime</li></td>
+				<td class="interest_col"><input text class="interestTextEntry"></td>
+				<td class="interest_col"><input text class="interestTextEntry"></td>
+				<td class="interest_col"><input text class="interestTextEntry"></td>
 			</tr>	
 			</table>
+
 				
-			<div class="bottom_profile"><input type="submit" id="saveProfile" class="button bottombutton" value="Save" /></div>
+			<div class="bottom_profile"><input type="submit" id="saveProfile" class="button bottombutton" value="Save" onclick="parent.location='profile.html'"/></div>
 		</div>
 	</div>
 	<div class="clearfix"></div>
@@ -161,4 +167,3 @@
     </div>
 
 </body>
-

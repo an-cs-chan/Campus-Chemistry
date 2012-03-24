@@ -15,7 +15,7 @@
 @synthesize confirmText;
 @synthesize userTabController;
 
-@synthesize inboxViewController;
+@synthesize mailBoxViewController;
 //@synthesize quizViewController;
 @synthesize searchViewController;
 @synthesize profileViewController;
@@ -23,7 +23,7 @@
 - (BOOL)openRegisterURL:(NSString *)username:(NSString *)password
 {
     NSString *message;
-    NSString *args = [NSString stringWithFormat:@"loginInput=%@&passwordInput=%@", username, password];
+    NSString *args = [NSString stringWithFormat:@"emailInput=%@&passwordInput=%@", username, password];
     
     NSString *msgLength = [NSString stringWithFormat:@"@d", [args length]];
     
@@ -41,7 +41,7 @@
     NSData* result = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&error];
     
     NSString *resultString = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];    
-    NSLog(@"%@", resultString);
+
     NSArray *lines = [resultString componentsSeparatedByString:@"["];
     
     for(NSString *str in lines)
@@ -53,7 +53,6 @@
         for (NSDictionary *dict in jsonObjets)
         {
             message = [dict objectForKey:@"status"];
-            NSLog(@"%@", message);
         }
     }
     
@@ -61,7 +60,7 @@
     {
         return FALSE;
     }
-  
+    
     return TRUE;
 }
 
@@ -73,11 +72,11 @@
         self.userTabController = [[UITabBarController alloc] init];
  
         
-        if(inboxViewController == nil)
+        if(mailBoxViewController == nil)
         {
-            InboxViewController *inboxView = [[InboxViewController alloc] initWithNibName:@"InboxViewController" bundle:nil];
+            MailBoxViewController *inboxView = [[MailBoxViewController alloc] initWithNibName:@"MailBoxViewController" bundle:nil];
             
-            self.inboxViewController = inboxView;
+            self.mailBoxViewController = inboxView;
         }
         
         /*if(quizViewController == nil)
@@ -101,7 +100,7 @@
             self.profileViewController = profileView;
         }
         
-        self.userTabController.viewControllers = [NSArray arrayWithObjects: self.inboxViewController, self.searchViewController, self.profileViewController, nil];
+        self.userTabController.viewControllers = [NSArray arrayWithObjects: self.mailBoxViewController.navigationController, self.searchViewController, self.profileViewController.navigationController, nil];
         self.userTabController.selectedViewController = [self.userTabController.viewControllers objectAtIndex:0];
     }
 }
@@ -125,11 +124,14 @@
     
     else
     {
-    
-        if([password isEqualToString:confirm])
+       if([password isEqualToString:confirm])
         {
             if([self openRegisterURL: email: password] == TRUE)
             {
+                [alert setTitle:@"Sucess"];
+                [alert setMessage:@"User account created."];
+                [alert show];
+                
                 [self setUpUserTabController];
         
                 AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
@@ -183,6 +185,9 @@
 
 - (void)viewDidLoad
 {
+    [passwordText setSecureTextEntry:YES];
+    [confirmText setSecureTextEntry:YES];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
