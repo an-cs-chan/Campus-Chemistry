@@ -49,9 +49,25 @@ def application(environ, start_response):
     cursor.execute("""SELECT * FROM user_survey_answers usa WHERE usa.user_id = %s""", (user_id))
     user_answers = cursor.fetchone()
     compat_matches = []
-    	
-    for place, match in enumerate(matches):
-    	matches[place] = list(match)
+    
+    matches[0] = list(matches[0])
+    cursor.execute("""SELECT * FROM user_survey_answers usa WHERE usa.user_id = %s""", (matches[0][2]))
+    match_answers = cursor.fetchone()
+    compat = -1
+    count = 0
+    if match_answers != None:
+    	if user_answers != None:
+    		compat = 0
+    		for index in range(1, len(user_answers)-1):
+    			count = count+1
+    			compat = compat + math.fabs(int(user_answers[index])-int(match_answers[index]))
+    		compat = round( (((3*count)-compat)*100) / (3*count) )
+    matches[0].append(compat)
+    if compat >= 0:
+    	compat_matches.append(matches.pop(0))
+    
+    for place in range(0, len(matches)):
+    	matches[place] = list(matches[place])
     	cursor.execute("""SELECT * FROM user_survey_answers usa WHERE usa.user_id = %s""", (matches[place][2]))
     	match_answers = cursor.fetchone()
     	compat = -1
@@ -59,11 +75,10 @@ def application(environ, start_response):
     	if match_answers != None:
     		if user_answers != None:
     			compat = 0
-    			for index, answer in enumerate(user_answers):
-    				if index != 0:
-    					count = count+1
-    					compat = compat + math.fabs(int(answer)-int(match_answers[index]))
-    			compat = round( (((4*count)-compat)*100) / (4*count) )
+    			for index in range(1, len(user_answers)-1):
+    				count = count+1
+    				compat = compat + math.fabs(int(user_answers[index])-int(match_answers[index]))
+    			compat = round( (((3*count)-compat)*100) / (3*count) )
     	matches[place].append(compat)
     	if compat >= 0:
     		compat_matches.append(matches.pop(place))

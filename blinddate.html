@@ -73,17 +73,22 @@
 			<p class="validateTips">All form fields are required.</p>
 			<form>
 			<fieldset>
-				<label for="name">Send To: (Username)</label>
+				<label for="name">Send To: </label>
 				<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
 				Date: <input name="date" id="date">
 				<input type=button value="select" onclick="displayDatePicker('date');">
 				<br />
 				Time: <input name="time" id="time" />
 				<br />
-				<label for="message">Message</label>
-				<textarea name="message" id="message" value="" class="text ui-widget-content ui-corner-all" style="width: 310px; height: 139px;" placeholder="Enter Your Message"></textarea>
+				<label for="date-message">Location & Message</label>
+				<textarea name="date-message" id="date-message" value="" class="text ui-widget-content ui-corner-all" style="width: 310px; height: 139px;" placeholder=""></textarea>
 			</fieldset>
 			</form>
+		</div>
+		<div id="date-Message-form"  style="font-size: 62.5%;label, input{display:block}" title="Date Message">
+			<fieldset>
+				<textarea name="message" id="message" value="" class="text ui-widget-content ui-corner-all" style="width: 310px; height: 139px;" placeholder="Enter Your Message"></textarea>
+			</fieldset>
 		</div>
 	</div>
 	</body>
