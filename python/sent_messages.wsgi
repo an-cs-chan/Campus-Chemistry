@@ -32,14 +32,14 @@ def application(environ, start_response):
     rows = cursor.fetchall()
     
     messageIDs = []
-    fromUserIDs = []
+    toUserIDs = []
     messageContents = []
     dates = []
     statuses = []    
     
     for row in rows:
         messageIDs.append(row[0])
-        fromUserIDs.append(row[1])
+        toUserIDs.append(row[1])
         messageContents.append(row[2])
         dates.append(row[3])
         statuses.append(row[4])
@@ -47,7 +47,7 @@ def application(environ, start_response):
     results = []
     
     for i in range(0, len(dates)):
-        results.append({"messageid":messageIDs[i], "fromUserID": fromUserIDs[i], "message": messageContents[i], "date":dates[i], "readStatus":statuses[i] })
+        results.append({"messageid":messageIDs[i], "toUserID": toUserIDs[i], "message": messageContents[i], "date":dates[i], "readStatus":statuses[i] })
     
     output = json.dumps(results)     
     status = '200 OK'
