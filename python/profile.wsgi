@@ -36,7 +36,7 @@ def application(environ, start_response):
     
     results = []	
     results.append({"name":row[0], "gender": row[1], "seeking": row[2], "minagepref": row[3], "maxagepref": row[4], "age": userAge, "rtype": row[6], "ethnicity": row[7], "bCountry": row[8], "faculty": row[9], "department": row[10], "about_me":row[11] })
-    print results
+
     output = json.dumps(results)
     status = '200 OK'
     

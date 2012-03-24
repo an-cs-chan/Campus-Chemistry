@@ -31,18 +31,22 @@ def application(environ, start_response):
     bCountry = form.getfirst('bCountry', 'empty')
     faculty = form.getfirst('faculty', 'empty')
     deptmt = form.getfirst('deptmt', 'empty')
+    interests = form.getfirst('interests', 'empty')
     print seekingStart
     print seekingEnd
-    print ethnicity
+    print interests
     
     #connect to the Database
     conn = MySQLdb.connect (host = "localhost", user = "root", passwd = "", db = "campus chemistry")
 	
     cursor = conn.cursor()
-
+    
+    #separate execution for this since they are not string values (unlike the execution below)
+    cursor.execute("UPDATE user_profile SET minagepref='"+seekingStart+"', maxagepref='"+seekingEnd+"' WHERE user_id='"+user_id+"'")
+	
     try:
     #connect to the Database
-     cursor.execute("""UPDATE user_profile SET user_name=%s, sex=%s, orientation=%s, marital_status=%s, ethinicity=%s, birth_country=%s, faculty=%s, department=%s WHERE User_ID=%s""",(name, gender, seekGender, rStatus, ethnicity, bCountry, faculty, deptmt, user_id))
+     cursor.execute("UPDATE user_profile SET user_name=%s, sex=%s, orientation=%s, marital_status=%s, ethinicity=%s, birth_country=%s, faculty=%s, department=%s, about_me=%s WHERE User_ID=%s",(name, gender, seekGender, rStatus, ethnicity, bCountry, faculty, deptmt, interests, user_id))
      data = [{"status":"Success"}]
      output = json.dumps(data)
     except MySQLdb.Error, e:

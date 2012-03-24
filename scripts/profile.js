@@ -9,6 +9,7 @@
 
 	function Page_Load(){
 		
+		
 		//get data about user profile
 		$.post(
 				"python/profile.wsgi",
@@ -74,6 +75,14 @@
 		if(user.about_me!=null){
 			var interests = (user.about_me).split(",");
 		}
+		
+		var i=0;
+		$("li.interests_text").each(function(){
+			if(interests.length>i){
+				$(this).text(interests[i]);
+				i++;	
+			}
+		});
 			
 						
 	}
