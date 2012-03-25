@@ -19,6 +19,8 @@
 //@synthesize quizViewController;
 @synthesize searchViewController;
 @synthesize profileViewController;
+@synthesize scrollView;
+@synthesize activeTextField;
 
 - (BOOL)openRegisterURL:(NSString *)username:(NSString *)password
 {
@@ -134,8 +136,7 @@
                 
                 [self setUpUserTabController];
         
-                AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-                [appDelegate.navigationController pushViewController:self.userTabController animated:YES];
+                appDelegate.window.rootViewController = userTabController;
             }
             else
             {
@@ -155,13 +156,68 @@
     }
 }
 
+
+// Call this method somewhere in your view controller setup code.
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification
+{
+    
+    // Step 1: Get the size of the keyboard.
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    // Step 2: Adjust the bottom content inset of your scroll view by the keyboard height.
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+    scrollView.contentInset = contentInsets;
+    scrollView.scrollIndicatorInsets = contentInsets;
+    
+    // Step 3: Scroll the target text field into view.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= keyboardSize.height;
+    if (!CGRectContainsPoint(aRect, activeTextField.frame.origin)) 
+    {
+        CGPoint scrollPoint = CGPointMake(0.0, activeTextField.frame.origin.y - (keyboardSize.height-5));
+        [scrollView setContentOffset:scrollPoint animated:YES];
+    }
+}
+
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    scrollView.contentInset = contentInsets;
+    scrollView.scrollIndicatorInsets = contentInsets;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.activeTextField = textField;
+    NSLog(@"%@", textField.text);
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.activeTextField = nil;
+    NSLog(@"%@", textField.text);
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) 
     {
-        //AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-        //[appDelegate.navigationController setNavigationBarHidden:NO];
+        appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     }
     return self;
 }
@@ -178,9 +234,6 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {    
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    [appDelegate.navigationController setNavigationBarHidden:YES];  
-
 }
 
 - (void)viewDidLoad
@@ -194,6 +247,7 @@
 
 - (void)viewDidUnload
 {
+    [self setScrollView:nil];
     [self setEmailText:nil];
     [self setPasswordText:nil];
     [self setConfirmText:nil];

@@ -12,20 +12,19 @@
 @implementation LoginViewController
 
 @synthesize userTabController;
-@synthesize scrollView;
 @synthesize registerViewController;
 @synthesize mailBoxViewController;
 //@synthesize quizViewController;
 @synthesize searchViewController;
 @synthesize profileViewController;
-
+@synthesize scrollView;
 @synthesize usernameText;
 @synthesize passwordText;
 @synthesize activeTextField;
 
 - (void)setUpUserTabController
 {
-    if(self.userTabController == nil)
+      if(self.userTabController == nil)
     {
         self.userTabController = [[UITabBarController alloc] init];
         
@@ -138,7 +137,7 @@
     aRect.size.height -= keyboardSize.height;
     if (!CGRectContainsPoint(aRect, activeTextField.frame.origin)) 
     {
-        CGPoint scrollPoint = CGPointMake(0.0, activeTextField.frame.origin.y - (keyboardSize.height-15));
+        CGPoint scrollPoint = CGPointMake(0.0, activeTextField.frame.origin.y - (keyboardSize.height-5));
         [scrollView setContentOffset:scrollPoint animated:YES];
     }
 }
@@ -174,8 +173,9 @@
             [appDelegate assignUser:username];
             
             [self setUpUserTabController];
-            [appDelegate.navigationController pushViewController:self.userTabController animated:YES];
-        }
+            
+            appDelegate.window.rootViewController = userTabController;
+       }
         
         else
         {
@@ -201,11 +201,13 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     self.activeTextField = textField;
+    NSLog(@"%@", textField.text);
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     self.activeTextField = nil;
+    NSLog(@"%@", textField.text);
 }
 
 - (IBAction)userDoneEditing:(id)sender 
@@ -234,20 +236,23 @@
 
 - (void)viewDidUnload
 {
-        // Release any retained subviews of the main view.
-        // e.g. self.myOutlet = nil;
-        [self setScrollView:nil];
-        [self setActiveTextField:nil];
-        [self setUserTabController:nil];
+    passwordText = nil;
+    usernameText = nil;
         
-        // unregister for keyboard notifications while not visible.
-        [[NSNotificationCenter defaultCenter] removeObserver:self 
-                                                        name:UIKeyboardWillShowNotification 
-                                                      object:nil]; 
-        // unregister for keyboard notifications while not visible.
-        [[NSNotificationCenter defaultCenter] removeObserver:self 
-                                                        name:UIKeyboardWillHideNotification 
-                                                      object:nil];  
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+    [self setScrollView:nil];
+    [self setActiveTextField:nil];
+    [self setUserTabController:nil];
+        
+    // unregister for keyboard notifications while not visible.
+    [[NSNotificationCenter defaultCenter] removeObserver:self 
+                                                    name:UIKeyboardWillShowNotification 
+                                                  object:nil]; 
+    // unregister for keyboard notifications while not visible.
+    [[NSNotificationCenter defaultCenter] removeObserver:self 
+                                                    name:UIKeyboardWillHideNotification 
+                                                  object:nil];  
 }
 
 - (void)viewWillAppear:(BOOL)animated

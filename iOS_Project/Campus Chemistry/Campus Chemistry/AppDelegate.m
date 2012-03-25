@@ -84,6 +84,8 @@
 
 - (void)assignUser:(NSString *)userEmail
 {
+    userID = [[NSString alloc] initWithFormat:userEmail];
+    
     userID = userEmail;
 }
 
