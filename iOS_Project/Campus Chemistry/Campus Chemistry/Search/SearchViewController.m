@@ -108,7 +108,8 @@
     NSString *maxAge = @"99";
     NSString *sort = @"Name";
     NSString *sortOrder = @"ASC";    
-    
+    NSString *userid = appDelegate.getUserEmail;
+        
     if(![appDelegate.searchParams isEqualToString:@""])
     {
         NSString *paramString = appDelegate.searchParams;
@@ -125,19 +126,15 @@
         
         temp = [[arr objectAtIndex:3] componentsSeparatedByString:@"="];
         orientation = [temp objectAtIndex:1];
-        
-        //NSLog(@"%@ %@ %@", [temp objectAtIndex:1], [temp2 objectAtIndex:1], [temp3 objectAtIndex:1]);
-    }
+    }        
 
     //The below code should work for NSUrl
     responseData = [NSMutableData data];
     
     people = [[NSMutableArray alloc] init];
     
-    NSString *args = [NSString stringWithFormat:@"ethnicity=%@&Birth_Country=%@&city=%@&gender=%@&orientation=%@&minAge=%@&maxAge=%@&sort=%@&sortOrder=%@", ethnicity,nationality,city,gender,orientation,minAge,maxAge,sort,sortOrder];    
-    
-    NSLog(args);
-    
+    NSString *args = [NSString stringWithFormat:@"ethnicity=%@&Birth_Country=%@&city=%@&gender=%@&orientation=%@&minAge=%@&maxAge=%@&sort=%@&sortOrder=%@&userid=%@", ethnicity,nationality,city,gender,orientation,minAge,maxAge,sort,sortOrder,userid];    
+        
     NSString *msgLength = [NSString stringWithFormat:@"@d", [args length]];
     NSURL *url = [NSURL URLWithString:@"http://ec2-107-22-123-18.compute-1.amazonaws.com/python/search.wsgi"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
@@ -152,8 +149,6 @@
     //Capturing server response
     NSData* result = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&error];   
     NSString *resultString = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];    
-        
-    //NSString *resultString = @"[{\"name\":\"melissa\", \"department\":\"computer science\", \"type\":\"Athletic\", \"about\":\"some crap\", \"picture\":\"asf\", \"email\":\"flowacat@shaw.ca\"}, {\"name\":\"samantha\", \"department\":\"computer science\", \"type\":\"Athletic\", \"about\":\"some crap\", \"picture\":\"asf\", \"email\":\"flowacat@shaw.ca\"},{\"name\":\"kayla\", \"department\":\"computer science\", \"type\":\"Athletic\", \"about\":\"some crap\", \"picture\":\"asf\", \"email\":\"flowacat@shaw.ca\"}]";
     
     //Parse json into dict
     SBJsonParser *jsonParser = [[SBJsonParser alloc] init];

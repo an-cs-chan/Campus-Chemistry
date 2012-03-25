@@ -112,15 +112,26 @@
             break;
     }
     
+    NSInteger minInt = [min intValue];
+    NSInteger maxInt = [max intValue];
+    
+    UIAlertView *someError;
+    
     //INPUT VALIDATION
+    if(minInt > 18 && maxInt < 99)
+    {
     
-    AppDelegate *del = [[UIApplication sharedApplication] delegate];
-    
-    NSString *args = [NSString stringWithFormat:@"min=%@&max=%@&gender=%@&orientation=%@", min,max,gender,orientation];    
-    
-    del.searchParams = args;
+        AppDelegate *del = [[UIApplication sharedApplication] delegate];
+        NSString *args = [NSString stringWithFormat:@"min=%@&max=%@&gender=%@&orientation=%@", min,max,gender,orientation];    
+        del.searchParams = args;
 
-    [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else 
+    {
+        someError = [[UIAlertView alloc] initWithTitle:@"Invalid Ages" message:@"Minimum age is 18, maxium age is 99" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        
+        [someError show];
+    }
 }
-
 @end
