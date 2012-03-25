@@ -34,7 +34,7 @@ $(document).ready(function() {
         {   
 		    $.post(
 		        "python/search.wsgi",
-				$("#basicForm").serialize(),
+				"userid=" + userID + "&" + $("#basicForm").serialize(),
 		        function(data)
 		        {
 		        	processBasicSearch(data);
@@ -120,7 +120,7 @@ function processSearch()
 	
 	    $.post(
 	        "python/search.wsgi",
-			$("#basicForm").serialize(),
+			"userid=" + userID + "&" + $("#basicForm").serialize(),
 	        function(data)
 	        {
 				processBasicSearch(data);              
