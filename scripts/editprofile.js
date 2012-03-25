@@ -1,13 +1,15 @@
 //Get user ID
 	var userID = getCookie("userid");
-
+	var ageArray = new Array();
 
 	$(document).ready(function () {
 		Page_Load();
 	});
-
+	
+	
 	function Page_Load(){
 		
+		generateAgeArray();
 		loadDays();
 		loadYears();
 		
@@ -31,7 +33,23 @@
 		$("#year").change(function(){
 			updateDays();
 		});
+		
+		$("#selectseekstart").change(function(){
+			updateSeekEnd();
+		});
 					
+	}
+	
+	function generateAgeArray(){
+			ageArray[0]=18;
+			ageArray[1]=20;
+			ageYoung=25;
+			ageOld=60;
+			
+			for (var age=ageYoung; age<=ageOld; age+=5){
+				ageArray.push(age);
+			}
+			
 	}
 	
 	function loadDays(){
@@ -71,6 +89,8 @@
 	
 	function updateDays(){
 		
+		var selectedDay = $("#day").val();
+		 
 		$("#day").children().remove()
 		var maxDays=31;
 		var month = parseInt($("#month").val());
@@ -108,7 +128,31 @@
 			objOption.value = dayOption;
 			
 			objSelect.add(objOption);
-		}	
+		
+		}
+		
+		$("#day option[selected]").removeAttr("selected");
+		option = "#day option[value='" + selectedDay + "']";
+		$(option).attr("selected", "selected");	
+	}
+	
+	function updateSeekEnd(){
+		
+		var minAge=$("#selectseekstart").val();
+		$("#selectseekend").children().remove();
+		
+		var objSelect = document.getElementById("selectseekend");
+		
+		for(var ageCounter=0;ageCounter<ageArray.length; ageCounter++){
+			if(ageArray[ageCounter]>minAge){
+				var objOption = document.createElement("option");
+				objOption.text = ageArray[ageCounter];
+				objOption.value = ageArray[ageCounter];
+			
+				objSelect.add(objOption);
+			}
+		}
+		
 	}
 	
 	function processProfileInfo(data){
