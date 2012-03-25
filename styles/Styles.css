@@ -256,7 +256,7 @@ body {
 	right: 0px;
 	height: 28px;
 	text-align: center;
-	width:350px;
+	width:390px;
 }
 
 .profileTextEntry {
@@ -290,6 +290,16 @@ body {
 	right: 0px;
 	height: 20px;
 	width:200px;
+	padding-left: 5px;
+}
+
+.longTextEntry{
+	border-radius: 7px; 
+	border: 0px; 
+	left: 120px; 
+	right: 0px;
+	height: 20px;
+	width:585px;
 	padding-left: 5px;
 }
 .interests_text{

@@ -26,15 +26,27 @@ def application(environ, start_response):
     seekGender = form.getfirst('seekGender', 'empty')
     seekingStart = form.getfirst('seekStart', 'empty')
     seekingEnd = form.getfirst('seekEnd', 'empty')
+    year = form.getfirst('year', 'empty')
+    year = int(year)
+    month = form.getfirst('month', 'empty')
+    month = int(month)
+    day = form.getfirst('day', 'empty')
+    day = int(day)
     rStatus = form.getfirst('rStatus', 'empty')
     ethnicity = form.getfirst('ethnicity', 'empty')
     bCountry = form.getfirst('bCountry', 'empty')
     faculty = form.getfirst('faculty', 'empty')
     deptmt = form.getfirst('deptmt', 'empty')
+    photo = form.getfirst('photo', 'empty')
     interests = form.getfirst('interests', 'empty')
+    dob = datetime.date(year, month, day)
     print seekingStart
     print seekingEnd
     print interests
+    print year
+    print month
+    print day
+    print dob
     
     #connect to the Database
     conn = MySQLdb.connect (host = "localhost", user = "root", passwd = "", db = "campus chemistry")
@@ -46,7 +58,7 @@ def application(environ, start_response):
 	
     try:
     #connect to the Database
-     cursor.execute("UPDATE user_profile SET user_name=%s, sex=%s, orientation=%s, marital_status=%s, ethinicity=%s, birth_country=%s, faculty=%s, department=%s, about_me=%s WHERE User_ID=%s",(name, gender, seekGender, rStatus, ethnicity, bCountry, faculty, deptmt, interests, user_id))
+     cursor.execute("UPDATE user_profile SET user_name=%s, sex=%s, orientation=%s, dob=%s, marital_status=%s, ethinicity=%s, birth_country=%s, faculty=%s, department=%s, profile_picture=%s, about_me=%s WHERE User_ID=%s",(name, gender, seekGender, dob, rStatus, ethnicity, bCountry, faculty, deptmt, photo, interests, user_id))
      data = [{"status":"Success"}]
      output = json.dumps(data)
     except MySQLdb.Error, e:

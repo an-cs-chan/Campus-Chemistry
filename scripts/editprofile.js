@@ -19,23 +19,16 @@
 				{
 					processProfileInfo(data);              
 				}, "json");
-			//show button	
-			$("#profilePicture").mouseover(function(){
-			$("#uploadPic").css('visibility','visible');
-			$("#uploadPic").attr('disabled','false');
-		});
-		
-			//hide button
-			$("#profilePicture").mouseout(function(){
-			$("#uploadPic").css('visibility','hidden');
-			$("#uploadPic").attr('disabled','true');
-		});
-		
+			
 		$("#saveProfile").click(function(){
 			saveProfileInfo()
 		});
 		
-		$("#day").change(function(){
+		$("#month").change(function(){
+			updateDays();
+		});
+		
+		$("#year").change(function(){
 			updateDays();
 		});
 					
@@ -77,6 +70,45 @@
 	}
 	
 	function updateDays(){
+		
+		$("#day").children().remove()
+		var maxDays=31;
+		var month = parseInt($("#month").val());
+		var year = parseInt($("#year").val()); 
+		
+		switch (month) {
+            case 1: case 3: case 5:
+            case 7: case 8: case 10:
+            case 12:
+                maxDays = 31;
+                break;
+            case 4: case 6:
+            case 9: case 11:
+                maxDays = 30;
+                break;
+            case 2:
+                if (((year % 4 == 0) && 
+                     !(year % 100 == 0))
+                     || (year % 400 == 0))
+                    maxDays = 29;
+                else
+                    maxDays = 28;
+                break;
+            default:
+                maxDays=31;	
+                break;
+        }
+		
+		
+		var objSelect = document.getElementById("day");
+		
+		for(var dayOption=1;dayOption<=maxDays; dayOption++){
+			var objOption = document.createElement("option");
+			objOption.text = dayOption;
+			objOption.value = dayOption;
+			
+			objSelect.add(objOption);
+		}	
 	}
 	
 	function processProfileInfo(data){
@@ -106,8 +138,18 @@
 		$(option).attr("selected", "selected");
 		
 		//age of the user
-		$("#age").text("Age: ");
-		$("#age").append(user.age);
+		//month
+		$("#month option[selected]").removeAttr("selected");
+		option = "#month option[value='" + user.bMonth + "']";
+		$(option).attr("selected", "selected");
+		//day
+		$("#day option[selected]").removeAttr("selected");
+		option = "#day option[value='" + user.bDay + "']";
+		$(option).attr("selected", "selected");
+		//year
+		$("#year option[selected]").removeAttr("selected");
+		option = "#year option[value='" + user.bYear + "']";
+		$(option).attr("selected", "selected");
 		
 		//relationship status of user
 		$("#selectstatus option[selected]").removeAttr("selected");
@@ -125,6 +167,10 @@
 		
 		//department of user
 		$("#department").val(user.department);		
+		
+		//profile picture URL
+		document.getElementById("profilePicture").src = user.photo;
+		$("#photo").val(user.photo);
 		
 		//display the interests of the user, to keep it short only 6 interests to be displayed
 		if(user.about_me!=null){
@@ -148,14 +194,17 @@
 		var seekingGender = $("#selectseekgender").val();
 		var seekingStart = $("#selectseekstart").val();
 		var seekingEnd = $("#selectseekend").val();
-		var month;
-		var day;
-		var year;
+		
+		var month=$("#month").val();
+		var day=$("#day").val();
+		var year=$("#year").val();
+		
 		var rStatus = $("#selectstatus").val();
 		var ethnicity = $("#ethnicity").val();
 		var bCountry = $("#bCountry").val();
 		var faculty = $("#faculty").val();
 		var deptmt = $("#department").val();
+		var photo = $("#photo").val();
 		var interests="";
 		
 		//concatenating each interest
@@ -169,8 +218,9 @@
 		$.ajax({
 				type: "POST",
 				url: "python/editprofile.wsgi",
-				data: "userid="+userID+"&name="+name+"&gender="+gender+"&seekGender="+seekingGender+"&seekStart="+seekingStart+"&seekEnd="+seekingEnd+"&rStatus="+rStatus+"&ethnicity="+ethnicity+"&bCountry="+bCountry+"&faculty="+faculty+"&deptmt="+deptmt+"&interests="+interests,
+				data: "userid="+userID+"&name="+name+"&gender="+gender+"&seekGender="+seekingGender+"&seekStart="+seekingStart+"&seekEnd="+seekingEnd+"&year="+year+"&month="+month+"&day="+day+"&rStatus="+rStatus+"&ethnicity="+ethnicity+"&bCountry="+bCountry+"&faculty="+faculty+"&deptmt="+deptmt+"&photo="+photo+"&interests="+interests,
 				success: function(msg){
+					parent.location='profile.html';
         		}
 		});
 		

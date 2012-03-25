@@ -9,11 +9,23 @@
 
 	function Page_Load(){
 		
+		var otherUserID = window.location.search;
+		var theID;
+		
+		if(otherUserID==""){
+			//we want to get our own profile page
+			theID=userID;
+		}
+		else{
+			//we want to get another user's profile page
+			var splitSearch = otherUserID.split("=");
+			theID=splitSearch[1];
+		}
 		
 		//get data about user profile
 		$.post(
 				"python/profile.wsgi",
-				"userid="+userID,
+				"userid="+theID,
 				function(data)
 				{
 					processProfileInfo(data);              
@@ -70,6 +82,8 @@
 		//department of user
 		$("#department").text("Department: ");
 		$("#department").append(user.department);
+		
+		document.getElementById("profilePicture").src = user.photo;
 		
 		//display the interests of the user, to keep it short only 6 interests to be displayed
 		if(user.about_me!=null){
