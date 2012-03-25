@@ -118,7 +118,7 @@
     UIAlertView *someError;
     
     //INPUT VALIDATION
-    if(minInt > 18 && maxInt < 99)
+    if(minInt >= 18 && maxInt <= 99)
     {
     
         AppDelegate *del = [[UIApplication sharedApplication] delegate];
