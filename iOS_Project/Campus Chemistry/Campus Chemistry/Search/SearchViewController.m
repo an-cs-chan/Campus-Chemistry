@@ -15,7 +15,20 @@
 
 @implementation SearchViewController
 
+// CHANGED BY JMAN
+@synthesize naviItem;
+@synthesize navigationController;
+@synthesize searchOptionViewController;
+
 -(void)awakeFromNib {
+
+}
+
+// CHANGED BY JMAN
+
+-(void)OptionButtonPressed
+{
+    [self.navigationController pushViewController:self.searchOptionViewController animated:YES];
 
 }
 
@@ -25,6 +38,22 @@
     if (self) 
     {
         [self setTitle:@"Search"];
+        
+        // CHANGED BY JMAN
+        if(searchOptionViewController == nil)
+        {
+            SearchOptionViewController *searchOptionView = [[SearchOptionViewController alloc] initWithNibName:@"SearchOptionViewController" bundle:nil];
+            
+            self.searchOptionViewController = searchOptionView;
+        }
+        
+        //self.naviItem = [[UINavigationItem alloc] initWithTitle:@"Option"];
+        
+        UINavigationController *tempNavi = [[UINavigationController alloc] initWithRootViewController:self];
+        [tempNavi setNavigationBarHidden:NO];
+        navigationController = tempNavi;
+        
+       
     }
     return self;
 }
@@ -117,7 +146,16 @@
         
         [people addObject:person];
     }
-        
+    
+    
+    // CHANGED BY JMAN
+
+    //self.naviItem = [[UINavigationItem alloc] initWithTitle:@"Search Results"];
+    
+    UIBarButtonItem *optionButton = [[UIBarButtonItem alloc] initWithTitle:@"Option" style:UIBarButtonItemStylePlain target:self action:@selector(OptionButtonPressed)];          
+    self.navigationItem.rightBarButtonItem = optionButton;    
+    
+    //self.navigationController.navigationItem = self.naviItem;
 }
 
 - (void)viewDidUnload
@@ -129,6 +167,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
+    
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
