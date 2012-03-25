@@ -262,6 +262,7 @@
 				494405361513D0FB0005BB97 /* AppDelegate.m */,
 				494405351513D0FB0005BB97 /* AppDelegate.h */,
 				49A1329F151A9557002C019D /* Classes */,
+				49DA1AC7151E9B6500794B0F /* User */,
 				4918A063151BF11700C47A4D /* Inbox */,
 				4996BE38151ABB5B0051EDEB /* Profile */,
 				4918A07D151BF90200C47A4D /* Search */,
@@ -373,6 +374,14 @@
 				49A13303151A9B66002C019D /* SBJsonStreamWriterAccumulator.m */,
 			);
 			path = SBJson;
+			sourceTree = "<group>";
+		};
+		49DA1AC7151E9B6500794B0F /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = User;
+			path = Inbox;
 			sourceTree = "<group>";
 		};
 		49F2AF5015140EAA00478A94 /* Login */ = {

@@ -12,15 +12,6 @@
 @interface LoginViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate>
 {
     AppDelegate *appDelegate;
-    
-    RegisterViewController *registrationViewController;
-    MailBoxViewController *mailBoxViewController;
-    //QuizViewController *quizViewController;
-    SearchViewController *searchViewController;
-    ProfileViewController *profileViewController;
-    UITabBarController *userTabController;
-    
-    UITextField *activeTextField;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *usernameText;

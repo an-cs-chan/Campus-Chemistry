@@ -34,7 +34,7 @@ $(document).ready(function() {
         {   
 		    $.post(
 		        "python/search.wsgi",
-				$("#basicForm").serialize(),
+				"userid=" + userID + "&" + $("#basicForm").serialize(),
 		        function(data)
 		        {
 		        	processBasicSearch(data);
@@ -120,7 +120,7 @@ function processSearch()
 	
 	    $.post(
 	        "python/search.wsgi",
-			$("#basicForm").serialize(),
+			"userid=" + userID + "&" + $("#basicForm").serialize(),
 	        function(data)
 	        {
 				processBasicSearch(data);              
@@ -200,7 +200,7 @@ function createUserBlock (user, id, displayType)
 		var html = 
 		"<div id='displayUser_" + id + "' class='displayUser' style='float:right'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
-			"<a href='Profile.html?uid="+user.Email_ID+"'><img class='userPicture' src='"+user.Profile_Picture+"' /></a>" +
+			"<a href='otherprofile.html?uid="+user.Email_ID+"'><img class='userPicture' src='"+user.Profile_Picture+"' /></a>" +
 			"<span class='userInfoPanel'>" +								
 				"<span class='userInfoLabel'>" +
 					"<span id='userNameText' class='userInfoText'>"+user.User_Name+"</span>" +
@@ -228,7 +228,7 @@ function createUserBlock (user, id, displayType)
 		var html = 
 		"<div id='displayUser_" + id + "' class='displayUser' style='width:96%;'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
-			"<a href='Profile.html?uid="+user.Email_ID+"'><img class='userPicture' src='"+user.Profile_Picture+"' /></a>" +
+			"<a href='otherprofile.html?uid="+user.Email_ID+"'><img class='userPicture' src='"+user.Profile_Picture+"' /></a>" +
 			"<span class='userInfoPanel' style='float:left; margin:21px 10px 10px 0px;'>" +								
 				"<span class='userInfoLabel'>" +
 					"<span id='userNameText' class='userInfoText'>"+user.User_Name+"</span>" +

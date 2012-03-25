@@ -47,7 +47,8 @@
 		<div class="mainContent" align="center">
 			<div class="contentHeader" align="left">Blind Date Workshop</div> 
 			<div id="matchPanel">
-				<div id="workArea">	
+				<div id="workArea">
+					Fill in the <a href="quiz.html">Quiz</a> for compatibility matching!
 					<div id="matchArea">
 						<div class="resultsHeader" align="left">Blind Date Suggestions</div>
 						<div id="warningArea" style="display:none; margin:0px 0px 5px 0px;">
@@ -72,17 +73,22 @@
 			<p class="validateTips">All form fields are required.</p>
 			<form>
 			<fieldset>
-				<label for="name">Send To: (Username)</label>
+				<label for="name">Send To: </label>
 				<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
 				Date: <input name="date" id="date">
 				<input type=button value="select" onclick="displayDatePicker('date');">
 				<br />
 				Time: <input name="time" id="time" />
 				<br />
-				<label for="message">Message</label>
+				<label for="date-message">Location & Message</label>
 				<textarea name="message" id="message" value="" class="text ui-widget-content ui-corner-all" style="width: 310px; height: 139px;" placeholder="Enter Your Message"></textarea>
 			</fieldset>
 			</form>
+		</div>
+		<div id="date-Message-form"  style="font-size: 62.5%;label, input{display:block}" title="Date Message">
+			<fieldset>
+				<textarea name="date-message" id="date-message" value="" class="text ui-widget-content ui-corner-all" style="width: 310px; height: 139px;" placeholder=""></textarea>
+			</fieldset>
 		</div>
 	</div>
 	</body>

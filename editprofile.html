@@ -39,13 +39,11 @@
 		<div class="contentHeader">My Profile</div>
 		<div id="profilePanelMain">
 			<div id="profilePanelLeft" class="secondaryContent">
-				<img src="media/alone.jpg" id="profilePicture"/>
-				<input id="uploadPic" class="button" value="Upload Picture" type="submit" disabled="true">
+				<img id="profilePicture"/>
 			</div>
 			
 			<div id="profilePanelRight" class="homePanel">
 				<input text id="user_fullname" class="headerTextEntry">
-				
 				<div id="user_info">
 					<div class="user_fact">
 						<div style="display: inline">Gender:</div>
@@ -123,7 +121,7 @@
 						</select> 	
 					</div>
 					<div class="user_fact">
-						<div style="display: inline">Ethnicity: </div>
+						<div style="display: inline;">Ethnicity: </div>
 						<input text id="ethnicity" class="textEntry">
 					</div>
 					<div class="user_fact">
@@ -140,6 +138,11 @@
 					</div>	
 				</div>	
 			</div>
+			<br/>
+			<div class="clearfix">
+				<div class="homePanel" style="display: inline">Edit photo: </div>
+				<input text id="photo" class="longTextEntry">
+			</div>
 			
 			<div id="interests" class="clearfix footerPanel"></div>
 			
@@ -155,8 +158,9 @@
 				<td class="interest_col"><input text class="interestTextEntry"></td>
 			</tr>	
 			</table>
+
 				
-			<div class="bottom_profile"><input type="submit" id="saveProfile" class="button bottombutton" value="Save" /></div>
+			<div class="bottom_profile"><input type="submit" id="saveProfile" class="button bottombutton" value="Save"/></div>
 		</div>
 	</div>
 	<div class="clearfix"></div>
@@ -167,4 +171,3 @@
     </div>
 
 </body>
-

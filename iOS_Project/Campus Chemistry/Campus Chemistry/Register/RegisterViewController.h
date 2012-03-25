@@ -15,16 +15,10 @@
 
 #import "AppDelegate.h"
 
-@interface RegisterViewController : UIViewController <UITextFieldDelegate>
+@interface RegisterViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate>
 {
-    UITabBarController *userTabController;
-    
-    MailBoxViewController *mailBoxViewController;
-    //QuizViewController *quizViewController;
-    SearchViewController *searchViewController;
-    ProfileViewController *profileViewController;
+    AppDelegate *appDelegate;
 }
- 
 @property (nonatomic, retain) IBOutlet UITextField *emailText;
 @property (nonatomic, retain) IBOutlet UITextField *passwordText;
 @property (nonatomic, retain) IBOutlet UITextField *confirmText;
@@ -35,6 +29,8 @@
 //@property (nonatomic, retain) QuizViewController *quizViewController;
 @property (nonatomic, retain) SearchViewController *searchViewController;
 @property (nonatomic, retain) ProfileViewController *profileViewController;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) UITextField *activeTextField;
 
 - (IBAction)registerButtonPressed:(id)sender;
 

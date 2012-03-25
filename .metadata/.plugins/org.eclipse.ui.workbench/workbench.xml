@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="39" version="2.0">
+<workbench progressCount="40" version="2.0">
 <workbenchAdvisor/>
-<window height="940" maximized="true" width="1200" x="-150" y="531">
+<window height="940" maximized="true" width="1200" x="394" y="192">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -33,6 +33,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="11"/>
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
@@ -42,50 +43,38 @@
 <part id="8"/>
 <part id="9"/>
 <part id="10"/>
-<part id="11"/>
+<part id="12"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="profile.wsgi" partName="profile.wsgi" title="profile.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\profile.wsgi" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="profile.wsgi" partName="profile.wsgi" title="profile.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\profile.wsgi" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/profile.wsgi"/>
-<editorState selectionHorizontalPixel="724" selectionLength="0" selectionOffset="832" selectionTopPixel="159"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1348" selectionTopPixel="159"/>
 </editor>
 <editor id="com.aptana.editor.html" name="profile.html" partName="profile.html" title="profile.html" tooltip="C:\xampp\htdocs\Campus-Chemistry\profile.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/profile.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1638" selectionTopPixel="510"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2657" selectionTopPixel="822"/>
 </editor>
 <editor id="com.aptana.editor.js" name="profile.js" partName="profile.js" title="profile.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\profile.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/profile.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1414" selectionTopPixel="703"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2039" selectionTopPixel="856"/>
 </editor>
 <editor id="com.aptana.editor.css" name="Styles.css" partName="Styles.css" title="Styles.css" tooltip="C:\xampp\htdocs\Campus-Chemistry\styles\Styles.css" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/styles/Styles.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="4175" selectionTopPixel="4182"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4223" selectionTopPixel="4108"/>
 </editor>
 <editor id="com.aptana.editor.js" name="editprofile.js" partName="editprofile.js" title="editprofile.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\editprofile.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/editprofile.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3344" selectionTopPixel="873"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5806" selectionTopPixel="1989"/>
 </editor>
-<editor activePart="true" focus="true" id="com.aptana.editor.html" name="editprofile.html" partName="editprofile.html" title="editprofile.html" tooltip="C:\xampp\htdocs\Campus-Chemistry\editprofile.html" workbook="DefaultEditorWorkbook">
+<editor id="com.aptana.editor.html" name="editprofile.html" partName="editprofile.html" title="editprofile.html" tooltip="C:\xampp\htdocs\Campus-Chemistry\editprofile.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/editprofile.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2295" selectionTopPixel="2267"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6060" selectionTopPixel="2301"/>
 </editor>
 <editor id="org.eclipse.ui.DefaultTextEditor" name="editprofile.wsgi" partName="editprofile.wsgi" title="editprofile.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\editprofile.wsgi" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/editprofile.wsgi"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1264" selectionTopPixel="244"/>
-</editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="inbox.wsgi" partName="inbox.wsgi" title="inbox.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\inbox.wsgi" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/inbox.wsgi"/>
-<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="1549" selectionTopPixel="380"/>
-</editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="makeDate.wsgi" partName="makeDate.wsgi" title="makeDate.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\makeDate.wsgi" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/makeDate.wsgi"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1479" selectionTopPixel="312"/>
-</editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="deletemsg.wsgi" partName="deletemsg.wsgi" title="deletemsg.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\deletemsg.wsgi" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/deletemsg.wsgi"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="512" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="246" selectionTopPixel="102"/>
 </editor>
 <editor id="com.aptana.editor.js" name="search.js" partName="search.js" title="search.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\search.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/search.js"/>
@@ -94,6 +83,22 @@
 <editor id="com.aptana.editor.js" name="inbox.js" partName="inbox.js" title="inbox.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\inbox.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/inbox.js"/>
 <editorState selectionHorizontalPixel="0" selectionLength="83" selectionOffset="11360" selectionTopPixel="7004"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="campus chemistry_user_profile.sql" partName="campus chemistry_user_profile.sql" title="campus chemistry_user_profile.sql" tooltip="C:\xampp\htdocs\Campus-Chemistry\dbscripts\Dump_All_Tables_New\campus chemistry_user_profile.sql" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_user_profile.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1995" selectionTopPixel="720"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="getQuiz.wsgi" partName="getQuiz.wsgi" title="getQuiz.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\getQuiz.wsgi" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/getQuiz.wsgi"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="51"/>
+</editor>
+<editor id="com.aptana.editor.html" name="otherprofile.html" partName="otherprofile.html" title="otherprofile.html" tooltip="C:\xampp\htdocs\Campus-Chemistry\otherprofile.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/otherprofile.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2885" selectionTopPixel="805"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="search.wsgi" partName="search.wsgi" title="search.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\search.wsgi" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/search.wsgi"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="612"/>
 </editor>
 </editors>
 <views>
@@ -113,7 +118,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.aptana.editor.html" activePerspective="com.aptana.ui.WebPerspective">
+<perspectives activePart="org.eclipse.ui.DefaultTextEditor" activePerspective="com.aptana.ui.WebPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.aptana.ui.internal.WebPerspectiveFactory" id="com.aptana.ui.WebPerspective" label="Web"/>
 <alwaysOnActionSet id="com.aptana.browser.actionSet"/>
@@ -210,166 +215,167 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/editprofile.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/editprofile.wsgi"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/profile.wsgi"/>
 <editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/C:/xampp/htdocs/Campus-Chemistry/editprofile.html"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/inbox.wsgi"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/deletemsg.wsgi"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/editprofile.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/editprofile.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/blinddate.js"/>
 <editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/makeDate.wsgi"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/C:/xampp/htdocs/Campus-Chemistry/blinddate.html"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/editprofile.wsgi"/>
 <editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/profile.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/inbox.js"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/C:/xampp/htdocs/Campus-Chemistry/profile.html"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" uri="file:/C:/xampp/htdocs/Campus-Chemistry/styles/Styles.css"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/profile.wsgi"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/search.wsgi"/>
 </editors>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="3374" y="0"/>
+<item historyLabel="editprofile.js" index="1">
+<position info="not_deleted" x="801" y="0"/>
 </item>
-<item historyLabel="editprofile.html" index="3">
-<position info="not_deleted" x="1728" y="0"/>
+<item historyLabel="editprofile.js" index="1">
+<position info="not_deleted" x="828" y="0"/>
 </item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position info="not_deleted" x="1814" y="0"/>
+<item historyLabel="editprofile.js" index="1">
+<position info="not_deleted" x="819" y="0"/>
 </item>
-<item historyLabel="profile.js" index="7">
-<position info="not_deleted" x="264" y="0"/>
+<item historyLabel="editprofile.js" index="1">
+<position info="not_deleted" x="1792" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="2700" y="0"/>
+<item historyLabel="editprofile.js" index="1">
+<position info="not_deleted" x="1794" y="0"/>
 </item>
-<item historyLabel="deletemsg.wsgi" index="5">
-<position info="not_deleted" x="512" y="0"/>
+<item historyLabel="editprofile.html" index="0">
+<position info="not_deleted" x="6320" y="0"/>
 </item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position info="not_deleted" x="1058" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="2588" y="0"/>
 </item>
-<item historyLabel="profile.wsgi" index="2">
-<position info="not_deleted" x="1341" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="1620" y="0"/>
 </item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position info="not_deleted" x="716" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="1656" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="2700" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="1665" y="0"/>
 </item>
-<item historyLabel="editprofile.html" index="3">
-<position info="not_deleted" x="1728" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="1662" y="0"/>
 </item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position info="not_deleted" x="765" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="4768" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="2700" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="4796" y="0"/>
 </item>
-<item historyLabel="profile.wsgi" index="2">
-<position info="not_deleted" x="1341" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="4827" y="0"/>
 </item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position info="not_deleted" x="1170" y="0"/>
+<item historyLabel="blinddate.js" index="3">
+<position info="not_deleted" x="531" y="0"/>
 </item>
-<item historyLabel="profile.js" index="7">
-<position info="not_deleted" x="264" y="0"/>
+<item historyLabel="makeDate.wsgi" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="2700" y="0"/>
+<item historyLabel="blinddate.html" index="5">
+<position info="not_deleted" x="3312" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="2757" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="4827" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="2757" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="4852" y="0"/>
 </item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="4894" y="0"/>
 </item>
-<item historyLabel="profile.wsgi" index="2">
-<position info="not_deleted" x="1341" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="5595" y="0"/>
 </item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position/>
-</item>
-<item historyLabel="makeDate.wsgi" index="6">
-<position info="not_deleted" x="1479" y="0"/>
-</item>
-<item historyLabel="deletemsg.wsgi" index="5">
-<position info="not_deleted" x="512" y="0"/>
-</item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position/>
-</item>
-<item historyLabel="inbox.wsgi" index="4">
-<position info="not_deleted" x="1549" y="17"/>
-</item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position info="not_deleted" x="727" y="0"/>
-</item>
-<item historyLabel="deletemsg.wsgi" index="5">
-<position info="not_deleted" x="512" y="0"/>
-</item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position info="not_deleted" x="727" y="0"/>
-</item>
-<item historyLabel="deletemsg.wsgi" index="5">
-<position info="not_deleted" x="512" y="0"/>
-</item>
-<item historyLabel="inbox.js" index="8">
-<position info="not_deleted" x="11360" y="83"/>
-</item>
-<item historyLabel="editprofile.js" index="0">
-<position/>
-</item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position info="not_deleted" x="1413" y="0"/>
-</item>
-<item historyLabel="profile.wsgi" index="2">
-<position info="not_deleted" x="1341" y="0"/>
+<item historyLabel="editprofile.wsgi" index="6">
+<position info="not_deleted" x="1219" y="0"/>
 </item>
 <item historyLabel="profile.js" index="7">
-<position info="not_deleted" x="1414" y="0"/>
+<position info="not_deleted" x="146" y="0"/>
 </item>
-<item historyLabel="editprofile.wsgi" index="1">
-<position info="not_deleted" x="1264" y="0"/>
+<item historyLabel="editprofile.html" index="0">
+<position info="not_deleted" x="1515" y="0"/>
+</item>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="5588" y="0"/>
+</item>
+<item historyLabel="editprofile.html" index="0">
+<position info="not_deleted" x="1404" y="0"/>
+</item>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="364" y="0"/>
+</item>
+<item historyLabel="editprofile.html" index="0">
+<position info="not_deleted" x="1404" y="0"/>
+</item>
+<item historyLabel="Styles.css" index="8">
+<position info="not_deleted" x="4825" y="0"/>
+</item>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="364" y="0"/>
+</item>
+<item historyLabel="Styles.css" index="8">
+<position info="not_deleted" x="4223" y="0"/>
+</item>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="364" y="0"/>
 </item>
 <item historyLabel="profile.js" index="7">
-<position info="not_deleted" x="1414" y="0"/>
+<position info="not_deleted" x="146" y="0"/>
 </item>
-<item historyLabel="editprofile.html" index="3">
-<position info="not_deleted" x="1728" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="364" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="1541" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="5133" y="0"/>
 </item>
-<item historyLabel="editprofile.html" index="3">
-<position info="not_deleted" x="1728" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="5448" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="1541" y="0"/>
+<item historyLabel="editprofile.wsgi" index="6">
+<position info="not_deleted" x="671" y="0"/>
 </item>
-<item historyLabel="editprofile.html" index="3">
-<position info="not_deleted" x="2328" y="0"/>
+<item historyLabel="profile.wsgi" index="9">
+<position info="not_deleted" x="1327" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="1541" y="0"/>
+<item historyLabel="profile.js" index="7">
+<position info="not_deleted" x="2039" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="2986" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="5448" y="0"/>
 </item>
-<item historyLabel="editprofile.html" index="3">
-<position info="not_deleted" x="2328" y="0"/>
+<item historyLabel="editprofile.wsgi" index="6">
+<position info="not_deleted" x="246" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="2989" y="0"/>
+<item historyLabel="editprofile.html" index="0">
+<position info="not_deleted" x="5326" y="13"/>
 </item>
-<item historyLabel="profile.wsgi" index="2">
-<position info="not_deleted" x="832" y="0"/>
+<item historyLabel="editprofile.wsgi" index="6">
+<position info="not_deleted" x="246" y="0"/>
 </item>
-<item historyLabel="editprofile.js" index="0">
-<position info="not_deleted" x="3344" y="0"/>
+<item historyLabel="editprofile.html" index="0">
+<position info="not_deleted" x="6060" y="0"/>
 </item>
-<item historyLabel="profile.html" index="9">
-<position info="not_deleted" x="1638" y="0"/>
+<item historyLabel="editprofile.js" index="2">
+<position info="not_deleted" x="5806" y="0"/>
 </item>
-<item active="true" historyLabel="editprofile.html" index="3">
-<position info="not_deleted" x="2328" y="0"/>
+<item historyLabel="profile.wsgi" index="9">
+<position info="not_deleted" x="1348" y="0"/>
+</item>
+<item historyLabel="search.wsgi" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="profile.wsgi" index="9">
+<position info="not_deleted" x="1348" y="0"/>
+</item>
+<item historyLabel="search.wsgi" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="profile.wsgi" index="9">
+<position info="not_deleted" x="1348" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -388,50 +394,50 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="search.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\search.wsgi">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/search.wsgi"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="blinddate.html" tooltip="C:\xampp\htdocs\Campus-Chemistry\blinddate.html">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/blinddate.html"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="makeDate.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\makeDate.wsgi">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/makeDate.wsgi"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="blinddate.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\blinddate.js">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/blinddate.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="otherprofile.html" tooltip="C:\xampp\htdocs\Campus-Chemistry\otherprofile.html">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/otherprofile.html"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="deletemsg.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\deletemsg.wsgi">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/deletemsg.wsgi"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="getQuiz.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\getQuiz.wsgi">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/getQuiz.wsgi"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="sent_messages.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\sent_messages.wsgi">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/sent_messages.wsgi"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="send.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\send.wsgi">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/send.wsgi"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="saveAnswers.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\saveAnswers.wsgi">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/saveAnswers.wsgi"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="getAnswers.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\getAnswers.wsgi">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/getAnswers.wsgi"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="campus chemistry_user_profile.sql" tooltip="C:\xampp\htdocs\Campus-Chemistry\dbscripts\Dump_All_Tables_New\campus chemistry_user_profile.sql">
+<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_user_profile.sql"/>
+</file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="inbox.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\inbox.js">
 <persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/inbox.js"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="search.js" tooltip="C:\xampp\htdocs\Campus-Chemistry\scripts\search.js">
 <persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/scripts/search.js"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="deletemsg.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\deletemsg.wsgi">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/deletemsg.wsgi"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="makeDate.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\makeDate.wsgi">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/makeDate.wsgi"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="sent_messages.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\sent_messages.wsgi">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/sent_messages.wsgi"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="saveAnswers.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\saveAnswers.wsgi">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/saveAnswers.wsgi"/>
-</file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="inbox.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\inbox.wsgi">
 <persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/inbox.wsgi"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="login.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\login.wsgi">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/login.wsgi"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="getPreferences.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\getPreferences.wsgi">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/getPreferences.wsgi"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="checkSession.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\checkSession.wsgi">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/checkSession.wsgi"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="editprofile.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\editprofile.wsgi">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/editprofile.wsgi"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="send.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\send.wsgi">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/send.wsgi"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="search.wsgi" tooltip="C:\xampp\htdocs\Campus-Chemistry\python\search.wsgi">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/python/search.wsgi"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="campus chemistry_user_login.sql" tooltip="C:\xampp\htdocs\Campus-Chemistry\dbscripts\Dump_All_Tables_New\campus chemistry_user_login.sql">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_user_login.sql"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="campus chemistry_user_profile.sql" tooltip="C:\xampp\htdocs\Campus-Chemistry\dbscripts\Dump_All_Tables_New\campus chemistry_user_profile.sql">
-<persistable uri="file:/C:/xampp/htdocs/Campus-Chemistry/dbscripts/Dump_All_Tables_New/campus%20chemistry_user_profile.sql"/>
 </file>
 </mruList>
 </workbench>
