@@ -33,11 +33,14 @@ def application(environ, start_response):
     
     #finding the age of the user
     now = datetime.date.today()
+    print now
+    print row[5]
+    print now - row[5]
+    print "a"
     userAge = now - row[5]
+    print "b"
     userAge = math.floor(userAge.days/365)
-    print row[5].year 
-    print row[5].month
-    print row[5].day
+    
     
     results = []	
     results.append({"name":row[0], "gender": row[1], "seeking": row[2], "minagepref": row[3], "maxagepref": row[4], "bYear": row[5].year, "bMonth": row[5].month, "bDay": row[5].day, "age": userAge, "rtype": row[6], "ethnicity": row[7], "bCountry": row[8], "faculty": row[9], "department": row[10], "photo": row[11], "about_me": row[12] })
