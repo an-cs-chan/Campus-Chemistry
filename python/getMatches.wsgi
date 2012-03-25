@@ -42,7 +42,7 @@ def application(environ, start_response):
     user_gender = user_data[4]
     user_pref = user_data[25]
     #Gets all matches not currently in a date that fit preferences
-    cursor.execute("""SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture, Email_ID FROM user_profile up WHERE up.DOB BETWEEN %s AND %s AND up.Orientation = %s AND up.Sex = %s AND NOT EXISTS (SELECT * FROM blinddates bd WHERE ((bd.From_User_ID = up.User_ID AND bd.To_User_ID = %s) OR (bd.To_User_ID = up.User_ID AND bd.From_User_ID = %s)) AND bd.State = 'Open')""", (minBirthDate, maxBirthDate, user_gender, user_pref, user_id, user_id))
+    cursor.execute("""SELECT User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture, Email_ID FROM user_profile up WHERE up.DOB BETWEEN %s AND %s AND up.Orientation = %s AND up.Sex = %s AND NOT EXISTS (SELECT * FROM blinddates bd WHERE ((bd.From_User_ID = up.User_ID AND bd.To_User_ID = %s) OR (bd.To_User_ID = up.User_ID AND bd.From_User_ID = %s)) AND bd.State != 'Closed')""", (minBirthDate, maxBirthDate, user_gender, user_pref, user_id, user_id))
     matches = cursor.fetchall()
     matches = list(matches)
     
