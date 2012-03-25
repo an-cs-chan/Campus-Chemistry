@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CustomCell.h"
 #import "Person.h"
+#import "SearchOptionViewController.h"
 
 @interface SearchViewController : UITableViewController {
     
@@ -16,6 +17,12 @@
     NSMutableData *responseData;
     NSMutableArray *people;
 }
+
+// CHANGED BY JMAN
+@property (nonatomic, strong) UINavigationItem *naviItem;
+@property (nonatomic, strong) UINavigationController *navigationController;
+
+@property (nonatomic, retain) SearchOptionViewController *searchOptionViewController;
 
 @end
 

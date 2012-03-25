@@ -22,6 +22,9 @@
 @synthesize tableSentMessages;
 @synthesize composeform;
 
+// CHANGE BY JMAN
+@synthesize navigationController;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +33,17 @@
         self.title = NSLocalizedString(@"MailBox", @"MailBox");
         _dataArray = [[NSArray alloc] initWithObjects:@"Inbox",@"Sent Messages",@"Compose", nil];
         //self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        
+        
+        // CHANGE BY JMAN
+        
+        UINavigationController *tempNavi = [[UINavigationController alloc] initWithRootViewController:self];
+        [tempNavi setNavigationBarHidden:NO];
+        navigationController = tempNavi;
+        
+        
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:self];
+        
     }
     return self;
 }
@@ -68,6 +82,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

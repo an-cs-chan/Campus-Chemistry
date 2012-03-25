@@ -20,4 +20,7 @@
 @property (strong, nonatomic) SentViewContoller *tableSentMessages;
 @property (strong, nonatomic) ComposeViewController *composeform;
 
+// CHANGE BY JMAN
+@property (strong, nonatomic) UINavigationController *navigationController;
+
 @end
