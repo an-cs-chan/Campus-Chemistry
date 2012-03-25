@@ -16,22 +16,11 @@ def application(environ, start_response):
                             environ=environ,
                             keep_blank_values=True)
 
-    #Fetch the userIDs
-    from_id = form.getfirst('userID', 'empty')
-    from_id = cgi.escape(from_id)
-    to_id = form.getfirst('toID', 'empty')
-    to_id = cgi.escape(to_id)
-    
-    #Fetch the time, date, message
-    time = form.getfirst('dateTime', 'empty')
-    time = cgi.escape(time)
-    date = form.getfirst('dateDate', 'empty')
-    date = cgi.escape(date)
-    mess = form.getfirst('dateMessage', 'empty')
-    mess = cgi.escape(mess)
-    
-    #Set up the date/time handler
-    dthandler = lambda obj: obj.isoformat() if isinstance(obj, datetime.datetime) else None
+    #Fetch the date info
+    date_id = form.getfirst('dateID', 'empty')
+    date_id = cgi.escape(date_id)
+    status = form.getfirst('State', 'empty')
+    status = cgi.escape(status)
     
     #connect to the Database
     conn = MySQLdb.connect (host = "localhost",
@@ -41,10 +30,10 @@ def application(environ, start_response):
 
     cursor = conn.cursor()
     
-    cursor.execute("""INSERT INTO blinddates (To_User_ID, From_User_ID, Date, Time, Message) VALUES (%s, %s, %s, %s, %s)""", (to_id, from_id, date, time, mess))
+    cursor.execute("""UPDATE blinddates SET State=%s WHERE date_id=%s""", (status,date_id))
     
     data = [{"Status":"Success"}]
-    output = json.dumps(data, default=dthandler)
+    output = json.dumps(data)
 
     status = '200 OK'
 

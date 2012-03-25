@@ -7,6 +7,7 @@ import string
 import random
 import Cookie
 import datetime
+import math
 
 KEY_STR = 'umprojkey6853558'
 
@@ -27,15 +28,22 @@ def application(environ, start_response):
 
     cursor = conn.cursor()
 	
-    cursor.execute("""SELECT user_name, sex, orientation, minagepref, maxagepref, dob, marital_status, ethinicity, birth_country, faculty, department, about_me FROM user_profile WHERE user_id = %s""",(user_id))
+    cursor.execute("""SELECT user_name, sex, orientation, minagepref, maxagepref, dob, marital_status, ethinicity, birth_country, faculty, department, profile_picture, about_me FROM user_profile WHERE user_id = %s""",(user_id))
     row = cursor.fetchone()
     
     #finding the age of the user
     now = datetime.date.today()
-    userAge = now.year - row[5].year
+    print now
+    print row[5]
+    print now - row[5]
+    print "a"
+    userAge = now - row[5]
+    print "b"
+    userAge = math.floor(userAge.days/365)
+    
     
     results = []	
-    results.append({"name":row[0], "gender": row[1], "seeking": row[2], "minagepref": row[3], "maxagepref": row[4], "age": userAge, "rtype": row[6], "ethnicity": row[7], "bCountry": row[8], "faculty": row[9], "department": row[10], "about_me":row[11] })
+    results.append({"name":row[0], "gender": row[1], "seeking": row[2], "minagepref": row[3], "maxagepref": row[4], "bYear": row[5].year, "bMonth": row[5].month, "bDay": row[5].day, "age": userAge, "rtype": row[6], "ethnicity": row[7], "bCountry": row[8], "faculty": row[9], "department": row[10], "photo": row[11], "about_me": row[12] })
 
     output = json.dumps(results)
     status = '200 OK'

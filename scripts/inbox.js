@@ -2,7 +2,7 @@ var userID = getCookie("userid");
 
 $(document).ready(function() {
 
-   	getMessages();
+   	getMessages(); //gets messages for inbox and sent messages
 	
 	$(function() {
 		$("#tabs").tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
@@ -10,8 +10,7 @@ $(document).ready(function() {
 	}); 
 	
 	$(function() {
-		
-		$( "#dialog:ui-dialog" ).dialog( "destroy" );
+			$( "#dialog:ui-dialog" ).dialog( "destroy" );
 		    var name = $( "#name" ),
 			message = $( "#message" ),
 			allFields = $( [] ).add( name ).add( message ),
@@ -34,7 +33,7 @@ $(document).ready(function() {
 						var name = $("#name").val();
 						var message = $("#message").val();
 						
-					    if(name == '') 
+					    if(name == '' || !validateEmail(name)) 
 						{
 					    	$("#name").after('<span class="error">*</span>');
 					    	bValid = false;
@@ -101,7 +100,15 @@ $(document).ready(function() {
 	});
 });
 
-
+function validateEmail(email)  //email validation
+	{ 
+	var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; 
+	if(!emailReg.test( email )) 
+		{ return false; } 
+	else 
+		{ return true; } 
+	} 
+	
 function getMessages()
 {	
     // showing received messages 
@@ -186,7 +193,7 @@ function showMessage(data)
 	
 	$.each(data, function(index)
 	{
-		$dialog[index] = $('<div style="background-color:#D6EEF7"></div>').html(data[index].message)
+		$dialog[index] = $('<div></div>').html(data[index].message)
 			.dialog({
 				autoOpen: false,
 				height: 300,
@@ -306,22 +313,22 @@ function showSentMessages(data)
 	
 	$.each(data, function(index)
 	{
-		$dialog[index] = $('<div style="background-color:#D6EEF7"></div>').html(data[index].message)
+		$dialog[index] = $('<div></div>').html(data[index].message)
 			.dialog(
 			{
 				autoOpen: false,
 				height: 300,
 				width: 350,
 				title: 'Message',
-				modal: true,
-			  	buttons: 
-			  	{
+				modal: true
+			  	/*buttons:  // fixed: could not reply to messages while seeing the sent messages
+				{
 			  		"Reply": function()
 			  		{ 
 				 		$(this).dialog('close');
 						reply(data[index].toUserID);
 				  	}
-				 }
+				 }*/
 			}); 
 	});
 	
@@ -388,7 +395,7 @@ function reply (from)
 				var name = $("#name").val();
 				var message = $("#message").val();
 				
-				if(name == '') 
+				if(name == '' || !validateEmail(name)) 
 				{
 					$("#name").after('<span class="error">*</span><br/><br/>');
 					bValid = false;
