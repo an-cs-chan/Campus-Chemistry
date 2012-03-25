@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchOptionViewController : UIViewController
+@interface SearchOptionViewController : UIViewController <UITextInputDelegate>
+{
+    
+}
+
+
+@property (unsafe_unretained, nonatomic) IBOutlet UISegmentedControl *orientationChoice;
+@property (unsafe_unretained, nonatomic) IBOutlet UISegmentedControl *genderChoice;
+@property (unsafe_unretained, nonatomic) IBOutlet UITextField *minAge;
+@property (unsafe_unretained, nonatomic) IBOutlet UITextField *maxAge;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *searchButton;
+- (IBAction)refineSearch:(id)sender;
 
 @end

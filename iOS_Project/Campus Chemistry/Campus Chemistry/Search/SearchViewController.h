@@ -10,12 +10,15 @@
 #import "CustomCell.h"
 #import "Person.h"
 #import "SearchOptionViewController.h"
+#import "AppDelegate.h"
 
 @interface SearchViewController : UITableViewController {
     
     IBOutlet UIView *search;
     NSMutableData *responseData;
     NSMutableArray *people;
+    AppDelegate *appDelegate;
+    
 }
 
 // CHANGED BY JMAN
