@@ -53,7 +53,7 @@ $(document).ready(function() {
 
 function makeMatches()
 {	
-	$("#warningArea").hide("fast");
+	$("#matches").html("");
 	
 	$.ajax({
         type: "POST",
@@ -132,6 +132,7 @@ function createUserBlock (user, id, displayType)
 
 function getDates()
 {
+	$("#requestsArea").html("");
 	$.ajax({
         type: "POST",
         url: "python/getDates.wsgi",
@@ -303,7 +304,7 @@ function removeSearchItem(id)
 
 //Javascript class for storing user information
 function UserInformation(User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture, Email_ID, Compatibility)
-{
+{ 
 	this.User_Name = User_Name;
 	this.Department = Department;
 	this.User_ID = User_ID;
