@@ -1,26 +1,28 @@
 //
-//  sentmessages.m
-//  tabbedapp
+//  SentMessagesController.m
+//  
 //
 //  Created by Inderjeet Singh on 12-03-21.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "SentViewContoller.h"
-#import "DetailViewController.h"
+#import "DetailViewSentController.h"
+#import "SBJson.h"
+#import "AppDelegate.h"
 
 @implementation SentViewContoller
 
 @synthesize detailViewSent;
-@synthesize dataArray;
+@synthesize sentmessages;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     //self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Sent Messages", @"Sent Messages");
-        dataArray = [[NSArray alloc] initWithObjects:@"SentMessage1",@"SentMessage2",@"SentMessage3", nil];
-        //self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        
     }
     return self;
 }
@@ -30,7 +32,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [dataArray count];
+    return [sentmessages count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -43,10 +45,22 @@
     }
     
     // Configure the cell.
-    cell.textLabel.text = [dataArray objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text =[dataArray objectAtIndex:indexPath.row];
+    if (indexPath.row < [sentmessages count]){
+    cell.textLabel.text = [[sentmessages objectAtIndex:indexPath.row] email];
+    cell.detailTextLabel.text =[[sentmessages objectAtIndex:indexPath.row] message];
+    }
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.detailViewSent = [[DetailViewSentController alloc] initWithNibName:@"DetailViewSentController" bundle:nil];
+    
+    self.detailViewSent.messagedetail = [[sentmessages objectAtIndex:indexPath.row] message];
+    NSLog(@"Show: %@, another:  %@", self.detailViewSent.messagedetail, [[sentmessages objectAtIndex:indexPath.row] message]);
+    
+    //NSLog(@"didSelectRowAtIndexPath: row=%d", indexPath.row);
+    [self.navigationController pushViewController:self.detailViewSent animated:YES];}
 
 - (void)didReceiveMemoryWarning
 {
@@ -61,30 +75,60 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    returnUser = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    sentmessages = [[NSMutableArray alloc] init];
+    
+    NSString *email = [returnUser getUserEmail];  
+    
+    NSString *args = [NSString stringWithFormat:@"userid=%@", email];    
+    
+    NSString *msgLength = [NSString stringWithFormat:@"@d", [args length]];
+    
+    NSURL *url = [NSURL URLWithString:@"http://ec2-107-22-123-18.compute-1.amazonaws.com/python/sent_messages.wsgi"];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
+    [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-type"];
+    [request addValue:msgLength forHTTPHeaderField:@"Content-Length" ];
+    [request setHTTPMethod:@"POST"];   
+    [request setHTTPBody:[args dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLResponse *response;
+    
+    NSError* error = nil;
+    
+    //Capturing server response
+    NSData* result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];   
+    
+    NSString *resultString = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];    
+    
+   //NSString *resultString = @"[{\"toUserID\": \"makendall@shaw.ca\", \"date\": \"Feb 24, 12:46 PM\", \"message\": \"sdfsd\", \"readStatus\": \"1\", \"messageid\": 7}, {\"toUserID\": \"makendall@shaw.ca\", \"date\": \"Feb 24, 12:54 PM\", \"message\": \"empty\", \"readStatus\": \"1\", \"messageid\": 8}, {\"toUserID\": \"makendall@shaw.ca\", \"date\": \"Feb 26, 1:00 AM\", \"message\": \"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravid\", \"readStatus\": \"1\", \"messageid\": 15}, {\"toUserID\": \"makendall@shaw.ca\", \"date\": \"Feb 26, 1:00 AM\", \"message\": \"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravid\", \"readStatus\": \"1\", \"messageid\": 16}]";
+    
+    NSLog(@"Output: %@", resultString);
+    
+    //Parse json into dict
+    SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+    NSArray *jsonObjets = [jsonParser objectWithString:resultString error:&error];
+    
+    
+    for (NSDictionary *dict in jsonObjets)
+    {
+        Message *sent = [[Message alloc] init];
+        [sent setEmail:[dict objectForKey:@"toUserID"]];
+        [sent setMessage:[dict objectForKey:@"message"]];
+        
+        [sentmessages addObject:sent];       
+    }
+    
 }
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (!self.detailViewSent) {
-        self.detailViewSent = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-        self.detailViewSent.detailDescriptionLabel =[dataArray objectAtIndex:indexPath.row];
-    }
-    [self.navigationController pushViewController:self.detailViewSent animated:YES];
-}
+
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -112,49 +156,5 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-#pragma mark - Table view data source
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 
 @end

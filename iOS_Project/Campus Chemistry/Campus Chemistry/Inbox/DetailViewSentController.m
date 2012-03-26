@@ -1,29 +1,23 @@
 //
-//  DetailViewController.m
+//  DetailViewSentController.m
 //  
 //
-//  Created by Inderjeet Singh on 12-03-19.
+//  Created by Inderjeet Singh on 12-03-24.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DetailViewController.h"
-#import "ComposeViewController.h"
+#import "DetailViewSentController.h"
 
-@interface DetailViewController ()
+
+@interface DetailViewSentController ()
 -(void) configureView;
 @end
 
-@implementation DetailViewController
+@implementation DetailViewSentController
 
 @synthesize detailItem;
 @synthesize detailDescriptionLabel;
-@synthesize emaildetail;
 @synthesize messagedetail;
-@synthesize composeform;
-
-
-
-#pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
 {
@@ -36,11 +30,7 @@
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-    
-    if (self.detailItem) {
-         
-        
+    if (self.detailItem) {       
     }
 }
 
@@ -48,7 +38,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Detail", @"Detail");       
+       self.title = NSLocalizedString(@"Detail", @"Detail"); 
     }
     return self;
 }
@@ -58,10 +48,7 @@
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
-    // Release any cached data, images, etc that aren't in use.
 }
-
-
 
 #pragma mark - View lifecycle
 
@@ -69,37 +56,22 @@
 {
     [super viewDidLoad];
     self.detailDescriptionLabel.text = self.messagedetail;
-    NSLog(@"Show Email: %@, Show Message: %@", self.emaildetail, self.messagedetail);
-    // Do any additional setup after loading the view from its nib.
+    NSLog(@"Show Label: %@", self.messagedetail);
     [self configureView];
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
-    //[self detailDescriptionLabel:nil];
     [super viewDidUnload];
-
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-
-
-- (IBAction)replymessagebutton:(id)sender {
-    
-    if(self.composeform == nil)
-    {
-    
-        self.composeform = [[ComposeViewController alloc] initWithNibName:@"ComposeViewController" bundle:nil];
-        composeform.emailinfo = self.emaildetail;
-
-    }
-    //pushing the compose view finally with email ID :)
-    [self.navigationController pushViewController:self.composeform animated:YES];
 }
 
 @end
