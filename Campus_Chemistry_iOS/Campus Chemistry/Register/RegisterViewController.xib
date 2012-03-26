@@ -45,7 +45,7 @@
 							<reference key="NSNextResponder" ref="446482845"/>
 							<int key="NSvFlags">1316</int>
 							<object class="NSPSMatrix" key="NSFrameMatrix"/>
-							<string key="NSFrame">{{20, 16}, {280, 60}}</string>
+							<string key="NSFrame">{{20, 11}, {280, 60}}</string>
 							<reference key="NSSuperview" ref="446482845"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="682644459"/>
@@ -285,7 +285,7 @@
 								</object>
 							</array>
 							<object class="NSPSMatrix" key="NSFrameMatrix"/>
-							<string key="NSFrame">{{20, 218}, {282, 193}}</string>
+							<string key="NSFrame">{{20, 213}, {282, 193}}</string>
 							<reference key="NSSuperview" ref="446482845"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="9073298"/>
@@ -299,10 +299,11 @@
 							<reference key="NSNextResponder" ref="446482845"/>
 							<int key="NSvFlags">1316</int>
 							<object class="NSPSMatrix" key="NSFrameMatrix"/>
-							<string key="NSFrame">{{121, 84}, {80, 100}}</string>
+							<string key="NSFrame">{{121, 79}, {80, 110}}</string>
 							<reference key="NSSuperview" ref="446482845"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="681813357"/>
+							<int key="IBUIContentMode">4</int>
 							<bool key="IBUIUserInteractionEnabled">NO</bool>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							<object class="NSCustomResource" key="IBUIImage">
@@ -312,7 +313,7 @@
 						</object>
 					</array>
 					<object class="NSPSMatrix" key="NSFrameMatrix"/>
-					<string key="NSFrameSize">{320, 480}</string>
+					<string key="NSFrame">{{0, 64}, {320, 416}}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="867879054"/>
@@ -326,7 +327,10 @@
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				</object>
 				<string key="IBUINibName">RegisterViewController</string>
-				<object class="IBUISimulatedMetricsInferredSentinel" key="IBUISimulatedStatusBarMetrics"/>
+				<object class="IBUISimulatedNavigationBarMetrics" key="IBUISimulatedTopBarMetrics">
+					<bool key="IBUIPrompted">NO</bool>
+				</object>
+				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 					<int key="IBUIInterfaceOrientation">1</int>
 					<int key="interfaceOrientation">1</int>
@@ -493,9 +497,9 @@
 						<int key="objectID">24</int>
 						<reference key="object" ref="446482845"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="682644459"/>
 							<reference ref="867879054"/>
 							<reference ref="681813357"/>
+							<reference ref="682644459"/>
 						</array>
 						<reference key="parent" ref="205665146"/>
 						<string key="objectName">registerView</string>

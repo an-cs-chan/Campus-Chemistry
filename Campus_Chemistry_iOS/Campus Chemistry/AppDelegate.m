@@ -19,15 +19,18 @@
 @synthesize profileNavController;
 @synthesize quizNavController;
 @synthesize mailBoxNavController;
+@synthesize loginNavController;
 
 @synthesize quizQuestions;
+@synthesize searchParams;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //[[UIApplication sharedApplication] setStatusBarHidden:YES];
+    searchParams = @"";
     
-    self.window.rootViewController = self.loginViewController;
+    self.window.rootViewController = self.loginNavController;
     [self.window makeKeyAndVisible];
     return YES;
 }

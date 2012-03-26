@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class ProfileInfoViewController;
+@class ProfileInterestsViewController;
+@class ProfilePhotoViewController;
 
 @interface ProfileViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *dataArray;
-
+@property (strong, nonatomic) ProfileInfoViewController *info;
+@property (strong, nonatomic) ProfilePhotoViewController *photo;
+@property (strong, nonatomic) ProfileInterestsViewController *interests;
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end

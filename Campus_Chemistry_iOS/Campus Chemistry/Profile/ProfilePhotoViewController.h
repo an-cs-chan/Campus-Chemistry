@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Profile.h"
+#import "AppDelegate.h"
 
 @class EditPhotoViewController;
 
-@interface ProfilePhotoViewController : UIViewController
+@interface ProfilePhotoViewController : UIViewController{
+    IBOutlet UIImageView *profilePhoto;
+    NSMutableArray *profiles;
+    AppDelegate *returnUser;
+}
 
-@property (strong, nonatomic) EditPhotoViewController *editphoto;
-@property (strong, nonatomic) UINavigationController *navigationController;
+
+@property (strong, nonatomic) EditPhotoViewController *editPhoto;
 
 @end

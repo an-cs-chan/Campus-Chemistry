@@ -16,8 +16,22 @@
 @implementation ProfileViewController
 
 @synthesize dataArray = _dataArray;
+@synthesize info;
+@synthesize photo;
+@synthesize interests;
+@synthesize navigationController;
 
-
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    //self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+        self.title = NSLocalizedString(@"Profile", @"Profile");
+        _dataArray = [[NSArray alloc] initWithObjects:@"Info",@"Photo",@"Interests", nil];
+        
+    }
+    return self;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -68,21 +82,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        
     if (indexPath.row == 0) {
-        ProfileInfoViewController *infoView = [[ProfileInfoViewController alloc] initWithNibName:@"ProfileInfoViewController" bundle:nil];
-        [delegate.profileNavController pushViewController:infoView animated:YES];
+        self.info = [[ProfileInfoViewController alloc] initWithNibName:@"ProfileInfoViewController" bundle:nil];
+        [appDelegate.profileNavController pushViewController:self.info animated:YES];
     }
     
     else if (indexPath.row == 1) {
-        ProfilePhotoViewController *photoView = [[ProfilePhotoViewController alloc] initWithNibName:@"ProfilePhotoViewController" bundle:nil];
-        [delegate.profileNavController pushViewController:photoView animated:YES];
+        self.photo = [[ProfilePhotoViewController alloc] initWithNibName:@"ProfilePhotoViewController" bundle:nil];
+        [appDelegate.profileNavController pushViewController:self.photo animated:YES];
     }
     
     else {
-        ProfileInterestsViewController *interestsView = [[ProfileInterestsViewController alloc] initWithNibName:@"ProfileInterestsViewController" bundle:nil];
-        [delegate.profileNavController pushViewController:interestsView animated:YES];
+        self.interests = [[ProfileInterestsViewController alloc] initWithNibName:@"ProfileInterestsViewController" bundle:nil];
+        [appDelegate.profileNavController pushViewController:self.interests animated:YES];
     }
     
     NSLog(@"didSelectRowAtIndexPath: row=%d", indexPath.row);
