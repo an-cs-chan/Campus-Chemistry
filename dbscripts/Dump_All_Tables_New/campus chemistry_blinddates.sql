@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `blinddates` (
   `From_User_New` varchar(5) NOT NULL DEFAULT 'TRUE',
   `State` varchar(10) NOT NULL DEFAULT 'Open',
   `Date` date NOT NULL,
-  `Time` time NOT NULL,
+  `Time` time NOT NULL DEFAULT 'TBD',
   `Message` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`date_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
