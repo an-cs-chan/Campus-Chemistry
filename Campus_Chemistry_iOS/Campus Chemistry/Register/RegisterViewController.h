@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "../Inbox/MailBoxViewController.h"
-//#import "../Quiz/QuizViewController.h"
-#import "../Search/SearchViewController.h"
-#import "../Profile/ProfileViewController.h"
-
 #import "AppDelegate.h"
 
 @interface RegisterViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate>

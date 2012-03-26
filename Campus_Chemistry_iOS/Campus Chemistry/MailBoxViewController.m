@@ -1,6 +1,6 @@
 //
 //  MailBoxViewController.m
-//  tabbedapp
+//  
 //
 //  Created by Inderjeet Singh on 12-03-19.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
@@ -13,7 +13,6 @@
 #import "SentViewContoller.h"
 
 #import "ComposeViewController.h"
-#import "AppDelegate.h"
 
 @implementation MailBoxViewController
 
@@ -22,35 +21,8 @@
 @synthesize tableInbox;
 @synthesize tableSentMessages;
 @synthesize composeform;
+@synthesize appDelegate;
 
-// CHANGE BY JMAN
-@synthesize navigationController;
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    
-    NSLog(@"For testing");
-    
-    //self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = NSLocalizedString(@"MailBox", @"MailBox");
-        _dataArray = [[NSArray alloc] initWithObjects:@"Inbox",@"Sent Messages",@"Compose", nil];
-        //self.tabBarItem.image = [UIImage imageNamed:@"first"];
-        
-        
-        // CHANGE BY JMAN
-        
-        UINavigationController *tempNavi = [[UINavigationController alloc] initWithRootViewController:self];
-        [tempNavi setNavigationBarHidden:NO];
-        navigationController = tempNavi;
-        
-        
-        self.navigationController = [[UINavigationController alloc] initWithRootViewController:self];
-        
-    }
-    return self;
-}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -87,33 +59,28 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     _dataArray = [[NSArray alloc] initWithObjects:@"Inbox",@"Sent Messages",@"Compose", nil];
-    
-    
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    
+
     if (indexPath.row == 0) {
-        InboxViewController *inboxView = [[InboxViewController alloc] initWithNibName:@"Inbox" bundle:nil];
-        [delegate.mailBoxNavController pushViewController:inboxView animated:YES];
+        self.tableInbox = [[InboxViewController alloc] initWithNibName:@"InboxViewController" bundle:nil];
+        [appDelegate.mailBoxNavController pushViewController:self.tableInbox animated:YES];
     }
     
     else if (indexPath.row == 1) {
-        SentViewContoller *sentView = [[SentViewContoller alloc] initWithNibName:@"Sent Messages" bundle:nil];
-        [delegate.mailBoxNavController pushViewController:sentView animated:YES];
+        self.tableSentMessages = [[SentViewContoller alloc] initWithNibName:@"SentViewContoller" bundle:nil];
+        [appDelegate.mailBoxNavController pushViewController:self.tableSentMessages animated:YES];
     }
     
     else {
-        ComposeViewController *composeView = [[ComposeViewController alloc] initWithNibName:@"Compose" bundle:nil];
-        [delegate.mailBoxNavController pushViewController:composeView animated:YES];
+        self.composeform = [[ComposeViewController alloc] initWithNibName:@"ComposeViewController" bundle:nil];
+        [appDelegate.mailBoxNavController pushViewController:self.composeform animated:YES];
     }
     
     NSLog(@"didSelectRowAtIndexPath: row=%d", indexPath.row);
-    
-    //[self.navigationController pushViewController:self.tableInbox animated:YES];
-    //[self.navigationController pushViewController:self.tableSentMessages animated:YES];
     
 }
 

@@ -1,12 +1,13 @@
 //
 //  DetailViewController.m
-//  tabbedapp
+//  
 //
 //  Created by Inderjeet Singh on 12-03-19.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "DetailViewController.h"
+#import "ComposeViewController.h"
 
 @interface DetailViewController ()
 -(void) configureView;
@@ -16,6 +17,9 @@
 
 @synthesize detailItem;
 @synthesize detailDescriptionLabel;
+@synthesize emaildetail;
+@synthesize messagedetail;
+@synthesize composeform;
 
 
 
@@ -35,7 +39,8 @@
     // Update the user interface for the detail item.
     
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+         
+        
     }
 }
 
@@ -56,21 +61,24 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.detailDescriptionLabel.text = self.messagedetail;
+    NSLog(@"Show Email: %@, Show Message: %@", self.emaildetail, self.messagedetail);
     // Do any additional setup after loading the view from its nib.
     [self configureView];
 }
 
 - (void)viewDidUnload
 {
+    //[self detailDescriptionLabel:nil];
     [super viewDidUnload];
 
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -80,5 +88,18 @@
 }
 
 
+
+- (IBAction)replymessagebutton:(id)sender {
+    
+    if(self.composeform == nil)
+    {
+    
+        self.composeform = [[ComposeViewController alloc] initWithNibName:@"ComposeViewController" bundle:nil];
+        composeform.emailinfo = self.emaildetail;
+
+    }
+    //pushing the compose view finally with email ID :)
+    [self.navigationController pushViewController:self.composeform animated:YES];
+}
 
 @end
