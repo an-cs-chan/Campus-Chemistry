@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Profile.h"
-//#import "AppDelegate.h"
+#import "AppDelegate.h"
 
 @class EditPhotoViewController;
 
 @interface ProfilePhotoViewController : UIViewController{
     IBOutlet UIImageView *profilePhoto;
     NSMutableArray *profiles;
-    //AppDelegate *returnUser;
+    AppDelegate *returnUser;
 }
 
 

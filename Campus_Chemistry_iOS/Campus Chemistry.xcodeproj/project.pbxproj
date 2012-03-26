@@ -71,6 +71,8 @@
 		C2107A12151FF8C100AF72CC /* FinishQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2107A0A151FF8C100AF72CC /* FinishQuizViewController.m */; };
 		C2107A13151FF8C100AF72CC /* FinishQuizView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2107A0B151FF8C100AF72CC /* FinishQuizView.xib */; };
 		C2107A14151FF8C100AF72CC /* QuizQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = C2107A0D151FF8C100AF72CC /* QuizQuestion.m */; };
+		C21E39E2152033A3009101A7 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E39E1152033A3009101A7 /* Profile.m */; };
+		C21E39E4152036EF009101A7 /* Alone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C21E39E3152036EF009101A7 /* Alone.jpg */; };
 		C2A2164D1520235300D515DD /* SearchOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A2164C1520235300D515DD /* SearchOptionViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -189,6 +191,9 @@
 		C2107A0B151FF8C100AF72CC /* FinishQuizView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinishQuizView.xib; sourceTree = "<group>"; };
 		C2107A0C151FF8C100AF72CC /* QuizQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizQuestion.h; sourceTree = "<group>"; };
 		C2107A0D151FF8C100AF72CC /* QuizQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizQuestion.m; sourceTree = "<group>"; };
+		C21E39E0152033A3009101A7 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		C21E39E1152033A3009101A7 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		C21E39E3152036EF009101A7 /* Alone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Alone.jpg; sourceTree = "<group>"; };
 		C2A2164C1520235300D515DD /* SearchOptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOptionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -301,6 +306,7 @@
 		4944052D1513D0FB0005BB97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C21E39E3152036EF009101A7 /* Alone.jpg */,
 				49A132EA151A9B66002C019D /* SBJson */,
 				4944055E1513D1740005BB97 /* Logo.png */,
 				4944052E1513D0FB0005BB97 /* Campus Chemistry-Info.plist */,
@@ -361,6 +367,8 @@
 		49A1329F151A9557002C019D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C21E39E0152033A3009101A7 /* Profile.h */,
+				C21E39E1152033A3009101A7 /* Profile.m */,
 				49A132A6151A96AD002C019D /* CustomCell.h */,
 				49A132A7151A96AD002C019D /* CustomCell.m */,
 				49A132A8151A96AD002C019D /* Person.h */,
@@ -540,6 +548,7 @@
 				C2107A11151FF8C100AF72CC /* QuizView.xib in Resources */,
 				C2107A13151FF8C100AF72CC /* FinishQuizView.xib in Resources */,
 				C2A2164D1520235300D515DD /* SearchOptionViewController.xib in Resources */,
+				C21E39E4152036EF009101A7 /* Alone.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +619,7 @@
 				C2107A10151FF8C100AF72CC /* QuizViewController.m in Sources */,
 				C2107A12151FF8C100AF72CC /* FinishQuizViewController.m in Sources */,
 				C2107A14151FF8C100AF72CC /* QuizQuestion.m in Sources */,
+				C21E39E2152033A3009101A7 /* Profile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

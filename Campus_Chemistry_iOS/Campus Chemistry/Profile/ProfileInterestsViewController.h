@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Profile.h"
-//#import "AppDelegate.h"
+#import "AppDelegate.h"
 
 @class EditInterestsViewController;
 
@@ -23,7 +23,7 @@
     UILabel *lblInterest6;
     NSMutableArray *profiles;
     NSMutableArray *array;
-    //AppDelegate *returnUser;
+    AppDelegate *returnUser;
 }
 
 @property (strong, nonatomic) EditInterestsViewController *editInterests;
