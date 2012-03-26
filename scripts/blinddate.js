@@ -104,7 +104,7 @@ function createUserBlock (user, id, displayType)
 	var html = 
 		"<div id='displayUser_" + id + "' class='displayMatch' style='float:right'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
-			"<a href='Profile.html?uid="+user.User_ID+"'><img class='userPicture' src='"+user.Profile_Picture+"' /></a>" +
+			"<a href='otherprofile.html?uid="+user.User_ID+"'><img class='userPicture' src='"+user.Profile_Picture+"' /></a>" +
 			"<span class='matchInfoPanel'>" +								
 				"<span class='matchInfoLabel'>" +
 					"<span id='matchNameText' class='matchInfoText'>"+user.User_Name+"</span>" +
@@ -190,7 +190,7 @@ function createDateBlock (date, id)
 		var html = 
 		"<div id='displayUser_" + id + "' class='displayMatch' style='float:right'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
-			"<a href='Profile.html?uid="+date.From_ID+"'><img class='userPicture' src='"+date.From_Pic+"' /></a>" +
+			"<a href='otherprofile?uid="+date.From_ID+"'><img class='userPicture' src='"+date.From_Pic+"' /></a>" +
 			"<span class='dateInfoPanel'>" +
 				"<br />" +							
 				"<span class='dateInfoLabel'>" +
@@ -230,7 +230,7 @@ function createDateBlock (date, id)
 		var html = 
 		"<div id='displayUser_" + id + "' class='displayMatch' style='float:right'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
-			"<a href='Profile.html?uid="+date.To_ID+"'><img class='userPicture' src='"+date.To_Pic+"' /></a>" +
+			"<a href='otherprofile?uid="+date.To_ID+"'><img class='userPicture' src='"+date.To_Pic+"' /></a>" +
 			"<span class='dateInfoPanel'>" +	
 				"<br />" +							
 				"<span class='dateInfoLabel'>" +

@@ -42,9 +42,6 @@ def application(environ, start_response):
     if sort == "Name":
     	sort = 'User_Name'
     
-    if sort == "Age":
-    	sort = 'DOB'   
-    
     if gender == "Men":
     	gender = "SEX = 'M'"
     
