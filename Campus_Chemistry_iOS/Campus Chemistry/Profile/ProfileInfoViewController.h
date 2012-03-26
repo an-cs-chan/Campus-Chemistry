@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Profile.h"
-//#import "AppDelegate.h"
+#import "AppDelegate.h"
 
 @class EditInfoViewController;
 
@@ -24,7 +24,7 @@
     UILabel *lblFaculty;
     UILabel *lblDepartment;
     NSMutableArray *profiles;
-    //AppDelegate *returnUser;
+    AppDelegate *returnUser;
 }
 
 @property (strong, nonatomic) EditInfoViewController *editInfo;

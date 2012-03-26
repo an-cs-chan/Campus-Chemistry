@@ -70,6 +70,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    _dataArray = [[NSArray alloc] initWithObjects:@"Info",@"Photo",@"Interests", nil];
 }
 
 - (void)viewDidUnload
@@ -85,17 +86,17 @@
         
     if (indexPath.row == 0) {
         self.info = [[ProfileInfoViewController alloc] initWithNibName:@"ProfileInfoViewController" bundle:nil];
-        [appDelegate.navigationController pushViewController:self.info animated:YES];
+        [appDelegate.profileNavController pushViewController:self.info animated:YES];
     }
     
     else if (indexPath.row == 1) {
         self.photo = [[ProfilePhotoViewController alloc] initWithNibName:@"ProfilePhotoViewController" bundle:nil];
-        [appDelegate.navigationController pushViewController:self.photo animated:YES];
+        [appDelegate.profileNavController pushViewController:self.photo animated:YES];
     }
     
     else {
         self.interests = [[ProfileInterestsViewController alloc] initWithNibName:@"ProfileInterestsViewController" bundle:nil];
-        [appDelegate.navigationController pushViewController:self.interests animated:YES];
+        [appDelegate.profileNavController pushViewController:self.interests animated:YES];
     }
     
     NSLog(@"didSelectRowAtIndexPath: row=%d", indexPath.row);

@@ -40,9 +40,9 @@
     self.navigationItem.title = @"Profile Photo";
     
     //get the user id
-    //returnUser = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    //NSString *email = [returnUser getUserEmail];
-    NSString *email=@"an.cs.chan@gmail.com";
+    returnUser = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSString *email = [returnUser getUserEmail];
+    //NSString *email=@"an.cs.chan@gmail.com";
     NSString *args = [NSString stringWithFormat:@"userid=%@", email];
      
     

@@ -40,12 +40,10 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIWindow" id="380026005">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">1316</int>
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
 				<string key="NSFrameSize">{320, 480}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -77,7 +75,7 @@
 					<bool key="IBUIMultipleTouchEnabled">YES</bool>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				</object>
-				<array key="IBUIViewControllers">
+				<array class="NSMutableArray" key="IBUIViewControllers">
 					<object class="IBUIViewController" id="200721734">
 						<object class="IBUINavigationItem" key="IBUINavigationItem" id="742638281">
 							<string key="IBUITitle">Login</string>
@@ -105,9 +103,9 @@
 				<bool key="IBUIDefinesPresentationContext">YES</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<bool key="IBUIHorizontal">NO</bool>
-				<object class="IBUINavigationController" key="IBUISelectedViewController" id="172537182">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="67302421">
-						<string key="IBUITitle">Inbox</string>
+				<object class="IBUINavigationController" key="IBUISelectedViewController" id="451673280">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="293942158">
+						<string key="IBUITitle">Profile</string>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 					<reference key="IBUIParentViewController" ref="379001489"/>
@@ -119,7 +117,7 @@
 					<bool key="IBUIDefinesPresentationContext">YES</bool>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					<bool key="IBUIHorizontal">NO</bool>
-					<object class="IBUINavigationBar" key="IBUINavigationBar" id="375333026">
+					<object class="IBUINavigationBar" key="IBUINavigationBar" id="748203584">
 						<nil key="NSNextResponder"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrameSize">{0, 0}</string>
@@ -129,12 +127,13 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 					<array class="NSMutableArray" key="IBUIViewControllers">
-						<object class="IBUITableViewController" id="230722340">
-							<object class="IBUINavigationItem" key="IBUINavigationItem" id="253539856">
-								<string key="IBUITitle">Mail Box</string>
+						<object class="IBUITableViewController" id="1044072118">
+							<object class="IBUINavigationItem" key="IBUINavigationItem" id="992226895">
+								<string key="IBUITitle">Profile</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
-							<reference key="IBUIParentViewController" ref="172537182"/>
+							<reference key="IBUIParentViewController" ref="451673280"/>
+							<string key="IBUINibName">ProfileViewController</string>
 							<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 							<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 								<int key="IBUIInterfaceOrientation">1</int>
@@ -146,9 +145,10 @@
 					</array>
 				</object>
 				<array class="NSMutableArray" key="IBUIViewControllers">
-					<object class="IBUINavigationController" id="451673280">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="293942158">
-							<string key="IBUITitle">Profile</string>
+					<reference ref="451673280"/>
+					<object class="IBUINavigationController" id="172537182">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="67302421">
+							<string key="IBUITitle">Inbox</string>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 						<reference key="IBUIParentViewController" ref="379001489"/>
@@ -160,7 +160,7 @@
 						<bool key="IBUIDefinesPresentationContext">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIHorizontal">NO</bool>
-						<object class="IBUINavigationBar" key="IBUINavigationBar" id="748203584">
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="375333026">
 							<nil key="NSNextResponder"/>
 							<int key="NSvFlags">256</int>
 							<string key="NSFrameSize">{0, 0}</string>
@@ -170,13 +170,12 @@
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 						<array class="NSMutableArray" key="IBUIViewControllers">
-							<object class="IBUITableViewController" id="1044072118">
-								<object class="IBUINavigationItem" key="IBUINavigationItem" id="992226895">
-									<string key="IBUITitle">Profile</string>
+							<object class="IBUITableViewController" id="230722340">
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="253539856">
+									<string key="IBUITitle">Mail Box</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
-								<reference key="IBUIParentViewController" ref="451673280"/>
-								<string key="IBUINibName">ProfileViewController</string>
+								<reference key="IBUIParentViewController" ref="172537182"/>
 								<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 								<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 									<int key="IBUIInterfaceOrientation">1</int>
@@ -187,7 +186,6 @@
 							</object>
 						</array>
 					</object>
-					<reference ref="172537182"/>
 					<object class="IBUINavigationController" id="614985821">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="407073059">
 							<string key="IBUITitle">Search</string>
@@ -274,7 +272,6 @@
 					<int key="NSvFlags">266</int>
 					<string key="NSFrame">{{0, 431}, {320, 49}}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSNextKeyView"/>
 					<object class="NSColor" key="IBUIBackgroundColor">
 						<int key="NSColorSpace">3</int>
 						<bytes key="NSWhite">MCAwAA</bytes>
