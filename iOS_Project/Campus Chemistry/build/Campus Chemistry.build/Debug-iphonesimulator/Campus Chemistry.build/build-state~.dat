@@ -1,0 +1,368 @@
+TCampus Chemistry
+v7
+r0
+t353520041.241255
+cCheck dependencies
+cProcessInfoPlistFile "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/Info.plist" "Campus Chemistry/Campus Chemistry-Info.plist"
+cProcessPCH "/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus Chemistry-Prefix-ffprdffbhyhggqejpordobvaauvx/Campus Chemistry-Prefix.pch.pth" "Campus Chemistry/Campus Chemistry-Prefix.pch" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/main.o" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/AppDelegate.o" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/MainViewController.o" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/LoginViewController.o" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCopyStringsFile "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/InfoPlist.strings" "Campus Chemistry/en.lproj/InfoPlist.strings"
+cCpResource "build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/MainStoryboard_iPhone.storyboard" "Campus Chemistry/en.lproj/MainStoryboard_iPhone.storyboard"
+cCpResource "build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/MainStoryboard_iPad.storyboard" "Campus Chemistry/en.lproj/MainStoryboard_iPad.storyboard"
+cCpResource "build/Debug-iphonesimulator/Campus Chemistry.app/Logo.png" "Campus Chemistry/Logo.png"
+cCompileXIB "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.xib"
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004F4D95830000000000000110
+t1330484611
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004D54CFFA00000000002999B0
+t1297403898
+s2726320
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D54CFE5000000000029DA70
+t1297403877
+s2742896
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D54CFB80000000000001466
+t1297403832
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D5615B40000000000000AA1
+t1297487284
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004D5616030000000000766870
+t1297487363
+s7759984
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/Availability.h
+c000000004D4F7A2B0000000000001B19
+t1297054251
+s6937
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h
+c000000004F620F040000000000000123
+t1331826436
+s291
+i<UIKit/UIKit.h>
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m
+c000000004F620F040000000000000850
+t1331826436
+s2128
+i"AppDelegate.h"
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/Campus Chemistry-Prefix.pch
+c000000004F620F04000000000000014F
+t1331826436
+s335
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.h
+c000000004F620F0400000000000001F4
+t1331826436
+s500
+i<UIKit/UIKit.h>
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.m
+c000000004F620F040000000000000E5A
+t1331826436
+s3674
+i"LoginViewController.h"
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.xib
+c000000004F620F040000000000007BE0
+t1331826436
+s31712
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/Logo.png
+c000000004F620F040000000000001501
+t1331826436
+s5377
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.h
+c000000004F620F04000000000000053E
+t1331826436
+s1342
+i<UIKit/UIKit.h>
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m
+c000000004F620F040000000000001917
+t1331826436
+s6423
+i"MainViewController.h"
+i"AppDelegate.h"
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/en.lproj/InfoPlist.strings
+c000000004F620F04000000000000002D
+t1331826436
+s45
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/en.lproj/MainStoryboard_iPad.storyboard
+c000000004F620F040000000000000645
+t1331826436
+s1605
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/en.lproj/MainStoryboard_iPhone.storyboard
+c000000004F620F040000000000009F76
+t1331826436
+s40822
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m
+c000000004F620F04000000000000015E
+t1331826436
+s350
+i<UIKit/UIKit.h>
+i"AppDelegate.h"
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/Campus Chemistry.LinkFileList
+c000000004F6212280000000000000300
+t1331827240
+s768
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/LoginViewController.o
+t1331827241
+s47244
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/MainViewController.o
+t2
+s0
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app
+t2
+s0
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app.dSYM
+t2
+s0
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/Campus Chemistry
+t2
+s0
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/Info.plist
+t1331827240
+s1068
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/LoginViewController.nib
+t2
+s0
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/Logo.png
+t1331827241
+s5377
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/PkgInfo
+t1331827240
+s8
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/InfoPlist.strings
+t1331827241
+s42
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/MainStoryboard_iPad.storyboard
+t1331827241
+s1605
+
+N/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/MainStoryboard_iPhone.storyboard
+t1331827241
+s40822
+
+N/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus Chemistry-Prefix-ffprdffbhyhggqejpordobvaauvx/Campus Chemistry-Prefix.pch.pth
+t1331827240
+s3346060
+
+NCampus Chemistry/Campus Chemistry-Info.plist
+c000000004F620F0400000000000006A7
+t1331826436
+s1703
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies353520040#353520040#0(0"0(0#1#0"32088628383449192#0"0#
+
+CCompileC "build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/AppDelegate.o" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s353520040.620301
+e353520040.730379
+r0
+xCompileC
+xbuild/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/AppDelegate.o
+x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m:9:
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:12: error: unknown property attribute 'strong'
+o @property (strong, nonatomic) UIWindow *window;
+o            ^
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed
+o @property (strong, nonatomic) UIWindow *window;
+o ^
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: default property attribute 'assign' not appropriate for non-gc object
+o2 warnings and 1 error generated.
+lSLF07#2@120"Compile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m353520040#353520040#0(854"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m:9:/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:12: error: unknown property attribute 'strong' @property (strong, nonatomic) UIWindow *window;            ^/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed @property (strong, nonatomic) UIWindow *window; ^/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: default property attribute 'assign' not appropriate for non-gc object2 warnings and 1 error generated.3(4@35"Unknown property attribute 'strong'353520040#138#163#2(7@137"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m:9:353520040#0#138#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m353519236#9#0#9#0#0"0(13@151"Unknown property attribute 'strong' in /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#12#0#0#0"0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#12#0#0#28"unknown property attribute *0(22@77"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed353520040#364#206#2(7@137"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m:9:353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m353519236#9#0#9#0#0"0(13@193"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed in /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#0"0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#77"no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed0(22@69"Default property attribute 'assign' not appropriate for non-gc object353520040#622#198#2(7@137"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m:9:353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m353519236#9#0#9#0#0"0(13@185"Default property attribute 'assign' not appropriate for non-gc object in /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#0"0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#69"default property attribute 'assign' not appropriate for non-gc object0(0#0#112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m8604741216#2671"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-generated-files.hmap" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-own-target-headers.hmap" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-all-target-headers.hmap" -iquote "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-project-headers.hmap" "-F/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/include" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/DerivedSources/i386" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/DerivedSources" -include "/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus Chemistry-Prefix-ffprdffbhyhggqejpordobvaauvx/Campus Chemistry-Prefix.pch" -c "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.m" -o "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/AppDelegate.o"1#
+
+CCompileC "build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/LoginViewController.o" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s353520040.621541
+e353520041.007002
+r1
+xCompileC
+xbuild/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/LoginViewController.o
+x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@128"Compile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.m353520040#353520041#0(0"0(0#0#120"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.m8603073056#2687"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-generated-files.hmap" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-own-target-headers.hmap" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-all-target-headers.hmap" -iquote "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-project-headers.hmap" "-F/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/include" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/DerivedSources/i386" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/DerivedSources" -include "/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus Chemistry-Prefix-ffprdffbhyhggqejpordobvaauvx/Campus Chemistry-Prefix.pch" -c "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.m" -o "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/LoginViewController.o"0#
+
+CCompileC "build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/MainViewController.o" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s353520040.620893
+e353520040.738118
+r0
+xCompileC
+xbuild/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/MainViewController.o
+x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m:10:
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:12: error: unknown property attribute 'strong'
+o @property (strong, nonatomic) UIWindow *window;
+o            ^
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed
+o @property (strong, nonatomic) UIWindow *window;
+o ^
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: default property attribute 'assign' not appropriate for non-gc object
+o2 warnings and 1 error generated.
+lSLF07#2@127"Compile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m353520040#353520040#0(862"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m:10:/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:12: error: unknown property attribute 'strong' @property (strong, nonatomic) UIWindow *window;            ^/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed @property (strong, nonatomic) UIWindow *window; ^/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: default property attribute 'assign' not appropriate for non-gc object2 warnings and 1 error generated.3(4@35"Unknown property attribute 'strong'353520040#146#163#2(7@145"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m:10:353520040#0#146#0(6@119"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m353519236#10#0#10#0#0"0(13@151"Unknown property attribute 'strong' in /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#12#0#0#0"0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#12#0#0#28"unknown property attribute *0(22@77"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed353520040#372#206#2(7@145"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m:10:353520040#18446744073709551615#0#0(6@119"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m353519236#10#0#10#0#0"0(13@193"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed in /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#0"0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#77"no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed0(22@69"Default property attribute 'assign' not appropriate for non-gc object353520040#630#198#2(7@145"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m:10:353520040#18446744073709551615#0#0(6@119"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m353519236#10#0#10#0#0"0(13@185"Default property attribute 'assign' not appropriate for non-gc object in /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#0"0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#69"default property attribute 'assign' not appropriate for non-gc object0(0#0#119"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m8603283968#2685"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-generated-files.hmap" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-own-target-headers.hmap" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-all-target-headers.hmap" -iquote "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-project-headers.hmap" "-F/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/include" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/DerivedSources/i386" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/DerivedSources" -include "/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus Chemistry-Prefix-ffprdffbhyhggqejpordobvaauvx/Campus Chemistry-Prefix.pch" -c "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/MainViewController.m" -o "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/MainViewController.o"1#
+
+CCompileC "build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/main.o" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s353520040.619587
+e353520040.730053
+r0
+xCompileC
+xbuild/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/main.o
+x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m:11:
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:12: error: unknown property attribute 'strong'
+o @property (strong, nonatomic) UIWindow *window;
+o            ^
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed
+o @property (strong, nonatomic) UIWindow *window;
+o ^
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: default property attribute 'assign' not appropriate for non-gc object
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m:15:5: error: unexpected '@' in program
+o     @autoreleasepool {
+o     ^
+o2 warnings and 2 errors generated.
+lSLF07#2@113"Compile /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m353520040#353520040#0(1025"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m:11:/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:12: error: unknown property attribute 'strong' @property (strong, nonatomic) UIWindow *window;            ^/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed @property (strong, nonatomic) UIWindow *window; ^/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h:13:1: warning: default property attribute 'assign' not appropriate for non-gc object/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m:15:5: error: unexpected '@' in program     @autoreleasepool {     ^2 warnings and 2 errors generated.4(4@35"Unknown property attribute 'strong'353520040#132#163#2(7@131"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m:11:353520040#0#132#0(6@105"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m353519236#11#0#11#0#0"0(13@151"Unknown property attribute 'strong' in /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#12#0#0#0"0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#12#0#0#28"unknown property attribute *0(22@77"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed353520040#358#206#2(7@131"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m:11:353520040#18446744073709551615#0#0(6@105"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m353519236#11#0#11#0#0"0(13@193"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed in /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#0"0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#77"no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed0(22@69"Default property attribute 'assign' not appropriate for non-gc object353520040#616#198#2(7@131"In file included from /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m:11:353520040#18446744073709551615#0#0(6@105"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m353519236#11#0#11#0#0"0(13@185"Default property attribute 'assign' not appropriate for non-gc object in /Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353520040#18446744073709551615#0#0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#0"0(6@112"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/AppDelegate.h353519236#13#1#0#0#69"default property attribute 'assign' not appropriate for non-gc object0(4@25"Unexpected '@' in program353520040#814#145#0(6@105"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m353519236#15#5#0#0#25"unexpected '@' in program0(0#0#105"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m8605057312#2657"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-generated-files.hmap" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-own-target-headers.hmap" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-all-target-headers.hmap" -iquote "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-project-headers.hmap" "-F/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/include" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/DerivedSources/i386" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/DerivedSources" -include "/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus Chemistry-Prefix-ffprdffbhyhggqejpordobvaauvx/Campus Chemistry-Prefix.pch" -c "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/main.m" -o "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Objects-normal/i386/main.o"1#
+
+CCompileXIB "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.xib"
+s353520041.009146
+e353520041.097297
+r0
+xCompileXIB
+x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.xib
+o2012-03-15 11:00:41.078 ibtool[540:607] Exception raised while decoding document objects - Could not instantiate class named IBUISimulatedMetricsInferredSentinel
+o/* com.apple.ibtool.errors */
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.xib: error: The document "LoginViewController.xib" could not be opened. An instance of IBUISimulatedMetricsInferredSentinel could not be decoded.
+o    Recovery Suggestion: Ensure all plug-ins used to create this document have been loaded.
+lSLF07#2@53"CompileXIB "Campus Chemistry/LoginViewController.xib"353520041#353520041#0(549"2012-03-15 11:00:41.078 ibtool[540:607] Exception raised while decoding document objects - Could not instantiate class named IBUISimulatedMetricsInferredSentinel/* com.apple.ibtool.errors *//Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.xib: error: The document "LoginViewController.xib" could not be opened. An instance of IBUISimulatedMetricsInferredSentinel could not be decoded.    Recovery Suggestion: Ensure all plug-ins used to create this document have been loaded.1(4@133"The document "LoginViewController.xib" could not be opened. An instance of IBUISimulatedMetricsInferredSentinel could not be decoded.353520041#18446744073709551615#0#0(6@122"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.xib353519236#0#0#0#0#0"0(0#0#122"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.xib8605026688#749"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/LoginViewController.nib" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/LoginViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk1#
+
+CCopyStringsFile "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/InfoPlist.strings" "Campus Chemistry/en.lproj/InfoPlist.strings"
+s353520041.007095
+e353520041.241179
+r1
+xCopyStringsFile
+x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/InfoPlist.strings
+xCampus Chemistry/en.lproj/InfoPlist.strings
+lSLF07#2@48"Copy Campus Chemistry/en.lproj/InfoPlist.strings353520041#353520041#0(0"0(0#0#125"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/en.lproj/InfoPlist.strings3345722827607138816#601"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary "Campus Chemistry/en.lproj/InfoPlist.strings" --outdir "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj"0#
+
+CCpResource "build/Debug-iphonesimulator/Campus Chemistry.app/Logo.png" "Campus Chemistry/Logo.png"
+s353520041.008760
+e353520041.115804
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Campus Chemistry.app/Logo.png
+xCampus Chemistry/Logo.png
+lSLF07#2@30"Copy Campus Chemistry/Logo.png353520041#353520041#0(0"0(0#0#107"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/Logo.png8605231616#627"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/Logo.png" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app"0#
+
+CCpResource "build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/MainStoryboard_iPad.storyboard" "Campus Chemistry/en.lproj/MainStoryboard_iPad.storyboard"
+s353520041.008326
+e353520041.115271
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/MainStoryboard_iPad.storyboard
+xCampus Chemistry/en.lproj/MainStoryboard_iPad.storyboard
+lSLF07#2@61"Copy Campus Chemistry/en.lproj/MainStoryboard_iPad.storyboard353520041#353520041#0(0"0(0#0#138"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/en.lproj/MainStoryboard_iPad.storyboard8605350976#667"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/en.lproj/MainStoryboard_iPad.storyboard" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj"0#
+
+CCpResource "build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/MainStoryboard_iPhone.storyboard" "Campus Chemistry/en.lproj/MainStoryboard_iPhone.storyboard"
+s353520041.007797
+e353520041.115625
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Campus Chemistry.app/en.lproj/MainStoryboard_iPhone.storyboard
+xCampus Chemistry/en.lproj/MainStoryboard_iPhone.storyboard
+lSLF07#2@63"Copy Campus Chemistry/en.lproj/MainStoryboard_iPhone.storyboard353520041#353520041#0(0"0(0#0#140"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/en.lproj/MainStoryboard_iPhone.storyboard8605438976#669"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/en.lproj/MainStoryboard_iPhone.storyboard" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/en.lproj"0#
+
+CGenerateDSYMFile "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app.dSYM" "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/Campus Chemistry"
+r0
+
+CLd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/Campus Chemistry" normal i386
+r0
+
+CProcessInfoPlistFile "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/Info.plist" "Campus Chemistry/Campus Chemistry-Info.plist"
+s353520040.188296
+e353520040.223766
+r1
+xProcessInfoPlistFile
+x/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/Info.plist
+xCampus Chemistry/Campus Chemistry-Info.plist
+lSLF07#2@52"Process Campus Chemistry/Campus Chemistry-Info.plist353520040#353520040#0(0"0(0#0#126"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/Campus Chemistry-Info.plist8097804704135017472#660"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility "Campus Chemistry/Campus Chemistry-Info.plist" -genpkginfo "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app/Info.plist"0#
+
+CProcessPCH "/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus Chemistry-Prefix-ffprdffbhyhggqejpordobvaauvx/Campus Chemistry-Prefix.pch.pth" "Campus Chemistry/Campus Chemistry-Prefix.pch" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s353520040.223919
+e353520040.619375
+r1
+xProcessPCH
+x/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus Chemistry-Prefix-ffprdffbhyhggqejpordobvaauvx/Campus Chemistry-Prefix.pch.pth
+xCampus Chemistry/Campus Chemistry-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/Campus Chemistry-Prefix.pch:8:2: warning: #warning "This project uses features only available in iOS SDK 5.0 and later." [-W#warnings]
+o #warning "This project uses features only available in iOS SDK 5.0 and later."
+o  ^
+o1 warning generated.
+lSLF07#2@55"Precompile Campus Chemistry/Campus Chemistry-Prefix.pch353520040#353520040#0(339"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/Campus Chemistry-Prefix.pch:8:2: warning: #warning "This project uses features only available in iOS SDK 5.0 and later." [-W#warnings] #warning "This project uses features only available in iOS SDK 5.0 and later."  ^1 warning generated.1(22@78"#warning "This project uses features only available in iOS SDK 5.0 and later."353520040#0#234#0(6@126"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/Campus Chemistry-Prefix.pch353519236#8#2#0#0#10"#warning *0(0#0#126"/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/Campus Chemistry-Prefix.pch8601159008#2495"    cd "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-generated-files.hmap" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-own-target-headers.hmap" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-all-target-headers.hmap" -iquote "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/Campus Chemistry-project-headers.hmap" "-F/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/include" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/DerivedSources/i386" "-I/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Campus Chemistry.build/Debug-iphonesimulator/Campus Chemistry.build/DerivedSources" -c "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/Campus Chemistry/Campus Chemistry-Prefix.pch" -o "/var/folders/2w/2wZaTc94HvuI+4hXEwcAw++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Campus Chemistry-Prefix-ffprdffbhyhggqejpordobvaauvx/Campus Chemistry-Prefix.pch.pth"0#
+
+CTouch "/Users/Trevor/Documents/University/COMP_4350/project/iOS_Project/Campus Chemistry/build/Debug-iphonesimulator/Campus Chemistry.app"
+r0
+
