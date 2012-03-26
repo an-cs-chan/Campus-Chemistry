@@ -8,6 +8,7 @@
 
 #import "DefaultQuizViewController.h"
 #import "QuizViewController.h"
+#import "BlindDateViewController.h"
 #import "QuizQuestion.h"
 #import "AppDelegate.h"
 #import "SBJson.h"
@@ -20,6 +21,8 @@
 @synthesize beginButton;
 @synthesize loader;
 
+bool quizCompleted = NO;
+
 
 - (IBAction) touchedBeginQuiz {
     
@@ -28,6 +31,24 @@
     
     [quizView setCurrSubject:[(QuizQuestion *)[delegate.quizQuestions objectAtIndex:0] subject]];
     [delegate.quizNavController pushViewController:quizView animated:YES];
+}
+
+- (void) touchedBlindDate {
+    
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+    if (!quizCompleted) {
+        UIAlertView *alert = [[UIAlertView alloc] init];
+        [alert setTitle:@"Alert"];
+        [alert setDelegate:self];
+        [alert addButtonWithTitle:@"OK"];
+        [alert setMessage:@"You must complete the compatibility quiz to user the Blind Date feature."];
+        [alert show];
+    }
+    else {
+        BlindDateViewController *blindDateView = [[BlindDateViewController alloc] initWithNibName:nil bundle:nil];
+        [delegate.quizNavController pushViewController:blindDateView animated:YES];
+    }
 }
 
 - (void) loadQuiz {
@@ -103,6 +124,7 @@
             }
             
             [quizCompletedText setHidden:NO];
+            quizCompleted = YES;
         }
     }
 
@@ -124,6 +146,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self performSelectorInBackground:@selector(loadQuiz) withObject:nil];
+    
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+    UIBarButtonItem *blindDateButton = [[UIBarButtonItem alloc] initWithTitle:@"Blind Date" style:UIBarButtonItemStylePlain target:self action:@selector(touchedBlindDate)];  
+    [[[delegate.quizNavController navigationBar] topItem] setRightBarButtonItem:blindDateButton];
 }
 
 

@@ -25,7 +25,7 @@
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *loader;
 
 - (IBAction) touchedBeginQuiz;
-- (void) loadQuestions;
+- (void) loadQuiz;
 - (void) loadAnswers;
 
 @end
