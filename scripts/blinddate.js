@@ -102,7 +102,7 @@ function createUserBlock (user, id, displayType)
 	}
 		
 	var html = 
-		"<div id='displayUser_" + id + "' class='displayMatch' style='float:right'>" +
+		"<div id='displayUser_" + id + "' class='displayUser' style='float:right'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
 			"<a href='otherprofile.html?uid="+user.User_ID+"'><img class='userPicture' src='"+user.Profile_Picture+"' /></a>" +
 			"<span class='matchInfoPanel'>" +								
@@ -111,15 +111,11 @@ function createUserBlock (user, id, displayType)
 				"</span>" +
 				"<br />" +
 				"<span class='matchInfoLabel'>" +
-					"<span class='matchInfoText'>"+user.Body_type+"</span>" +
-				"</span>" +
-				"<br />" +
-				"<span class='matchInfoLabel'>" +
 					"<span class='matchInfoText'>"+user.Department+"</span>" +
 				"</span>" +
 				"<br />" +
 				"<span class='matchAction'>" +
-					"<img id='dateUser' onclick='openDateRequestDialog(\""+user.User_Name+"\","+user.User_ID+");' src='images/Martini_small.png'>" +
+					"<img id='dateUser' onclick='openDateRequestDialog(\""+user.User_Name+"\",\""+user.User_ID+"\");' src='images/Martini_small.png'>" +
 				"</span>" +
 				"<span class='matchAction'>" +
 					""+compat+"%" +

@@ -49,24 +49,8 @@ def application(environ, start_response):
     cursor.execute("""SELECT * FROM user_survey_answers usa WHERE usa.user_id = %s""", (user_id))
     user_answers = cursor.fetchone()
     compat_matches = []
-    
-    matches[0] = list(matches[0])
-    cursor.execute("""SELECT * FROM user_survey_answers usa WHERE usa.user_id = %s""", (matches[0][2]))
-    match_answers = cursor.fetchone()
-    compat = -1
-    count = 0
-    if match_answers != None:
-    	if user_answers != None:
-    		compat = 0
-    		for index in range(1, len(user_answers)-1):
-    			count = count+1
-    			compat = compat + math.fabs(int(user_answers[index])-int(match_answers[index]))
-    		compat = round( (((3*count)-compat)*100) / (3*count) )
-    matches[0].append(compat)
-    if compat >= 0:
-    	compat_matches.append(matches.pop(0))
-    
-    for place in range(0, len(matches)):
+    place = 0
+    while place < len(matches):
     	matches[place] = list(matches[place])
     	cursor.execute("""SELECT * FROM user_survey_answers usa WHERE usa.user_id = %s""", (matches[place][2]))
     	match_answers = cursor.fetchone()
@@ -82,6 +66,8 @@ def application(environ, start_response):
     	matches[place].append(compat)
     	if compat >= 0:
     		compat_matches.append(matches.pop(place))
+    		place = place-1
+    	place = place+1
     
     random.shuffle(compat_matches)
     data = compat_matches[:3]
