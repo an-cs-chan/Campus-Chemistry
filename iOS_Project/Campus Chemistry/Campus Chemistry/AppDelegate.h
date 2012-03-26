@@ -16,7 +16,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     UINavigationController *navigationController;
-    
+    NSString *searchParams;
     NSString *userID;
 }
 
@@ -24,6 +24,7 @@
 @property (strong, nonatomic) UINavigationController *navigationController;
 
 @property (strong, nonatomic) LoginViewController *loginViewController;
+@property (nonatomic, retain) NSString *searchParams;
 
 - (void)assignUser:(NSString *)userEmail;
 - (NSString *)getUserEmail;

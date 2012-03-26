@@ -232,6 +232,7 @@
 										<int key="NSColorSpace">3</int>
 										<bytes key="NSWhite">MAA</bytes>
 									</object>
+									<bool key="IBUIClearsOnBeginEditing">YES</bool>
 									<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 									<float key="IBUIMinimumFontSize">14</float>
 									<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -266,6 +267,7 @@
 									<string key="IBUIText"/>
 									<int key="IBUIBorderStyle">3</int>
 									<reference key="IBUITextColor" ref="550566727"/>
+									<bool key="IBUIClearsOnBeginEditing">YES</bool>
 									<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 									<float key="IBUIMinimumFontSize">14</float>
 									<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -326,6 +328,7 @@
 							</array>
 							<string key="NSFrameSize">{320, 480}</string>
 							<reference key="NSSuperview" ref="24018192"/>
+							<reference key="NSNextKeyView" ref="590922569"/>
 							<bool key="IBUIClipsSubviews">YES</bool>
 							<bool key="IBUIMultipleTouchEnabled">YES</bool>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -338,7 +341,7 @@
 					<object class="NSPSMatrix" key="NSFrameMatrix"/>
 					<string key="NSFrameSize">{320, 480}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSNextKeyView" ref="590922569"/>
+					<reference key="NSNextKeyView" ref="800428364"/>
 					<object class="NSColor" key="IBUIBackgroundColor">
 						<int key="NSColorSpace">1</int>
 						<bytes key="NSRGB">MC44MzkyMTU2ODYzIDAuODQ3MDU4ODIzNSAwLjk2ODYyNzQ1MQA</bytes>
@@ -382,14 +385,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">passwordText</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="593160699"/>
-					</object>
-					<int key="connectionID">364</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">usernameText</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="628371559"/>
@@ -403,6 +398,14 @@
 						<reference key="destination" ref="800428364"/>
 					</object>
 					<int key="connectionID">621</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">passwordText</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="593160699"/>
+					</object>
+					<int key="connectionID">364</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -423,6 +426,14 @@
 					<int key="connectionID">542</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="628371559"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">624</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">userDoneEditing:</string>
 						<reference key="source" ref="593160699"/>
@@ -430,6 +441,14 @@
 						<int key="IBEventType">20</int>
 					</object>
 					<int key="connectionID">543</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="593160699"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">625</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -617,7 +636,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">621</int>
+			<int key="maxID">625</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

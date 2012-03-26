@@ -34,7 +34,7 @@ $(document).ready(function() {
         {   
 		    $.post(
 		        "python/search.wsgi",
-				$("#basicForm").serialize(),
+				"userid=" + userID + "&" + $("#basicForm").serialize(),
 		        function(data)
 		        {
 		        	processBasicSearch(data);
@@ -120,7 +120,7 @@ function processSearch()
 	
 	    $.post(
 	        "python/search.wsgi",
-			$("#basicForm").serialize(),
+			"userid=" + userID + "&" + $("#basicForm").serialize(),
 	        function(data)
 	        {
 				processBasicSearch(data);              
@@ -189,12 +189,36 @@ function processBasicSearch(data)
 //This function will create those user profile squares we need for the search results area
 function createUserBlock (user, id, displayType)
 {
+	if(user.User_Name.length > 16 && displayType == "smallDisplay")
+	{
+		user.User_Name = (user.User_Name).substring(0,16) + "...";	
+	}
+	
 	if(user.About_Me != null && user.About_Me.length > 99)
 	{
 		var newString = user.About_Me.substring(0,99) + "...";
 		user.About_Me = newString;
 	}
-		
+	
+	if(user.Body_type == "" || user.Body_type == null)
+	{
+		user.Body_type = "Normal";
+	}
+	else if(user.Body_type.length > 16 && displayType == "smallDisplay" )
+	{
+		user.Body_type = (user.Body_type).substring(0,16) + "...";
+	}
+	
+	//Dummy data/truncation
+	if(user.Department == "" || user.Department == null)
+	{
+		user.Department = "No Department....";
+	}
+	else if (user.Department.length > 16 && displayType == "smallDisplay")
+	{
+		user.Department = (user.Department).substring(0,16) + "...";
+	}
+	
 	if(displayType == "smallDisplay")
 	{
 		var html = 

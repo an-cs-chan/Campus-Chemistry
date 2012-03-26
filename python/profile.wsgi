@@ -33,12 +33,7 @@ def application(environ, start_response):
     
     #finding the age of the user
     now = datetime.date.today()
-    print now
-    print row[5]
-    print now - row[5]
-    print "a"
     userAge = now - row[5]
-    print "b"
     userAge = math.floor(userAge.days/365)
     
     

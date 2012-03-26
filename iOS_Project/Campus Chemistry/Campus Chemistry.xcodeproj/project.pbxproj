@@ -63,6 +63,7 @@
 		49A345F11516619700B358F3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A345EF1516619700B358F3 /* RegisterViewController.m */; };
 		49A345F21516619700B358F3 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A345F01516619700B358F3 /* RegisterViewController.xib */; };
 		49A345F6151661A700B358F3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A345F5151661A700B358F3 /* LoginViewController.m */; };
+		49B2B54F151FBD340022A988 /* SearchOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B2B54E151FBD340022A988 /* SearchOptionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,7 @@
 		49A345F01516619700B358F3 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = "Campus Chemistry/Register/RegisterViewController.xib"; sourceTree = "<group>"; };
 		49A345F4151661A700B358F3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		49A345F5151661A700B358F3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
+		49B2B54E151FBD340022A988 /* SearchOptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOptionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				49344804151E3A2F00D214B1 /* SearchOptionViewController.h */,
 				49344805151E3A2F00D214B1 /* SearchOptionViewController.m */,
+				49B2B54E151FBD340022A988 /* SearchOptionViewController.xib */,
 				49344806151E3A2F00D214B1 /* SearchViewController.h */,
 				49344807151E3A2F00D214B1 /* SearchViewController.m */,
 				49344808151E3A2F00D214B1 /* SearchViewController.xib */,
@@ -262,6 +265,7 @@
 				494405361513D0FB0005BB97 /* AppDelegate.m */,
 				494405351513D0FB0005BB97 /* AppDelegate.h */,
 				49A1329F151A9557002C019D /* Classes */,
+				49DA1AC7151E9B6500794B0F /* User */,
 				4918A063151BF11700C47A4D /* Inbox */,
 				4996BE38151ABB5B0051EDEB /* Profile */,
 				4918A07D151BF90200C47A4D /* Search */,
@@ -375,6 +379,14 @@
 			path = SBJson;
 			sourceTree = "<group>";
 		};
+		49DA1AC7151E9B6500794B0F /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = User;
+			path = Inbox;
+			sourceTree = "<group>";
+		};
 		49F2AF5015140EAA00478A94 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +495,7 @@
 				4967D8FD151E4A1600BB674A /* ProfileInterestsViewController.xib in Resources */,
 				4967D8FF151E4A1600BB674A /* ProfilePhotoViewController.xib in Resources */,
 				4967D901151E4A1600BB674A /* ProfileViewController.xib in Resources */,
+				49B2B54F151FBD340022A988 /* SearchOptionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +673,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Campus Chemistry/Campus Chemistry-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Campus Chemistry/Campus Chemistry-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -672,6 +686,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Campus Chemistry/Campus Chemistry-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Campus Chemistry/Campus Chemistry-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";

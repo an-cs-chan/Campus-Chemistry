@@ -156,8 +156,9 @@ function onLoadQuizComplete(data) {
 
 function onLoadAnswersComplete(data) {
     if (data != null) {
-        $("#quizAlreadyCompleteWarning").css("display", "");
+        $("#quizAboutText").html("You've already completed the compatability test.<br/>You can re-take the test, but you're previous answers will be overwritten.");
     }
+    $("#quizAboutText").css("display", "");
     
     $("#quizPanelOverlay").find(".loader").css("display", "none");
     $("#quizPanelOverlay").find(".overlayContent").css("display", "");
@@ -192,7 +193,7 @@ function startQuiz() {
     
     $("#quizPanelOverlay").find(".overlayContent").css("display", "none");
     $("#quizPanelOverlay").css("display", "none");
-    $("#quizAlreadyCompleteWarning").css("display", "none");
+    $("#quizAboutText").css("display", "none");
     $("#quizPanelLeft").css("display", "");
     $("#quizPanelRight").css("display", "");
 }

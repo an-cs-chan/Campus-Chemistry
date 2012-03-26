@@ -53,7 +53,7 @@ $(document).ready(function() {
 
 function makeMatches()
 {	
-	$("#warningArea").hide("fast");
+	$("#matches").html("");
 	
 	$.ajax({
         type: "POST",
@@ -102,16 +102,12 @@ function createUserBlock (user, id, displayType)
 	}
 		
 	var html = 
-		"<div id='displayUser_" + id + "' class='displayMatch' style='float:right'>" +
+		"<div id='displayUser_" + id + "' class='displayUser' style='float:right'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
-			"<a href='Profile.html?uid="+user.User_ID+"'><img class='userPicture' src='"+user.Profile_Picture+"' /></a>" +
+			"<a href='otherprofile.html?uid="+user.User_ID+"'><img class='userPicture' src='"+user.Profile_Picture+"' /></a>" +
 			"<span class='matchInfoPanel'>" +								
 				"<span class='matchInfoLabel'>" +
 					"<span id='matchNameText' class='matchInfoText'>"+user.User_Name+"</span>" +
-				"</span>" +
-				"<br />" +
-				"<span class='matchInfoLabel'>" +
-					"<span class='matchInfoText'>"+user.Body_type+"</span>" +
 				"</span>" +
 				"<br />" +
 				"<span class='matchInfoLabel'>" +
@@ -119,7 +115,7 @@ function createUserBlock (user, id, displayType)
 				"</span>" +
 				"<br />" +
 				"<span class='matchAction'>" +
-					"<img id='dateUser' onclick='openDateRequestDialog(\""+user.User_Name+"\","+user.User_ID+");' src='images/Martini_small.png'>" +
+					"<img id='dateUser' onclick='openDateRequestDialog(\""+user.User_Name+"\",\""+user.User_ID+"\");' src='images/Martini_small.png'>" +
 				"</span>" +
 				"<span class='matchAction'>" +
 					""+compat+"%" +
@@ -132,6 +128,7 @@ function createUserBlock (user, id, displayType)
 
 function getDates()
 {
+	$("#requestsArea").html("");
 	$.ajax({
         type: "POST",
         url: "python/getDates.wsgi",
@@ -189,7 +186,7 @@ function createDateBlock (date, id)
 		var html = 
 		"<div id='displayUser_" + id + "' class='displayMatch' style='float:right'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
-			"<a href='Profile.html?uid="+date.From_ID+"'><img class='userPicture' src='"+date.From_Pic+"' /></a>" +
+			"<a href='otherprofile?uid="+date.From_ID+"'><img class='userPicture' src='"+date.From_Pic+"' /></a>" +
 			"<span class='dateInfoPanel'>" +
 				"<br />" +							
 				"<span class='dateInfoLabel'>" +
@@ -229,7 +226,7 @@ function createDateBlock (date, id)
 		var html = 
 		"<div id='displayUser_" + id + "' class='displayMatch' style='float:right'>" +
 			"<img class='closeButton' src='images/close.png' onclick='removeSearchItem("+id+");' />" +
-			"<a href='Profile.html?uid="+date.To_ID+"'><img class='userPicture' src='"+date.To_Pic+"' /></a>" +
+			"<a href='otherprofile?uid="+date.To_ID+"'><img class='userPicture' src='"+date.To_Pic+"' /></a>" +
 			"<span class='dateInfoPanel'>" +	
 				"<br />" +							
 				"<span class='dateInfoLabel'>" +
@@ -303,7 +300,7 @@ function removeSearchItem(id)
 
 //Javascript class for storing user information
 function UserInformation(User_Name, Department, User_ID, Body_type, About_Me, Profile_Picture, Email_ID, Compatibility)
-{
+{ 
 	this.User_Name = User_Name;
 	this.Department = Department;
 	this.User_ID = User_ID;

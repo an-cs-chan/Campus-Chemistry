@@ -83,7 +83,7 @@
 		$("#department").text("Department: ");
 		$("#department").append(user.department);
 		
-		document.getElementById("profilePicture").src = user.photo;
+		//document.getElementById("profilePicture").src = user.photo;
 		
 		//display the interests of the user, to keep it short only 6 interests to be displayed
 		if(user.about_me!=null){

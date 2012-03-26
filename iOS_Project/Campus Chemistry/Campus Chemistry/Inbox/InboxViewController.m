@@ -1,6 +1,6 @@
 //
 //  InboxViewController.m
-//  tabbedapp
+//  
 //
 //  Created by Inderjeet Singh on 12-03-19.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
@@ -8,23 +8,21 @@
 
 #import "InboxViewController.h"
 #import "DetailViewController.h"
-
+#import "SBJson.h"
+#import "AppDelegate.h"
 
 @implementation InboxViewController
 
 @synthesize detailViewInbox;
-@synthesize dataArray;
+@synthesize inboxmessage;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    //self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+   
     if (self) {
         self.title = NSLocalizedString(@"Inbox", @"Inbox");
-        dataArray = [[NSArray alloc] initWithObjects:@"Message1",@"Message2",@"Message3", nil];
-        //_dataArray = [NSArray arrayWithContentsOfURL:[NSURL URLWithString:@"http://icodeblog.com/wp-content/uploads/2009/08/foo.plist"]];
-        //self.tabBarItem.image = [UIImage imageNamed:@"first"];
-        
-    }
+               }
     return self;
 }
 
@@ -33,7 +31,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [dataArray count];
+    return [inboxmessage count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -46,11 +44,30 @@
     }
     
     // Configure the cell.
-    cell.textLabel.text = [dataArray objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text =[dataArray objectAtIndex:indexPath.row];
+    if (indexPath.row < [inboxmessage count]){
+    cell.textLabel.text = [[inboxmessage objectAtIndex:indexPath.row] email];
+    cell.detailTextLabel.text =[[inboxmessage objectAtIndex:indexPath.row] message];
+    } 
     return cell;
 }
-							
+
+
+//to call the Detail View
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.detailViewInbox = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+        
+    detailViewInbox.emaildetail = [[inboxmessage objectAtIndex:indexPath.row] email];
+    detailViewInbox.messagedetail = [[inboxmessage objectAtIndex:indexPath.row] message];
+    
+    NSLog(@"Email: %@, Show: %@, another:  %@", self.detailViewInbox.emaildetail, self.detailViewInbox.messagedetail, [[inboxmessage objectAtIndex:indexPath.row] message]);
+    
+    //NSLog(@"didSelectRowAtIndexPath: row=%d", indexPath.row);
+    [self.navigationController pushViewController:self.detailViewInbox animated:YES];
+}
+
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -61,22 +78,55 @@
 
 - (void)viewDidLoad
 {
+    returnUser = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (!self.detailViewInbox) 
-    {
-        self.detailViewInbox = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-        self.detailViewInbox.detailDescriptionLabel = [dataArray objectAtIndex:indexPath.row];
-      
-    }
-     NSLog(@"didSelectRowAtIndexPath: row=%d", indexPath.row);
+    inboxmessage = [[NSMutableArray alloc] init];
+       
+    NSLog(@"User:%@", [returnUser getUserEmail]);    
     
-    [self.navigationController setNavigationBarHidden:NO];
-    [self.navigationController pushViewController:self.detailViewInbox animated:YES];
+    NSString *email = [returnUser getUserEmail];  
+        
+    NSString *args = [NSString stringWithFormat:@"userid=%@", email];    
+     
+    NSString *msgLength = [NSString stringWithFormat:@"@d", [args length]];
+    
+    NSURL *url = [NSURL URLWithString:@"http://ec2-107-22-123-18.compute-1.amazonaws.com/python/inbox.wsgi"];
+     
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
+     [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-type"];
+     [request addValue:msgLength forHTTPHeaderField:@"Content-Length" ];
+     [request setHTTPMethod:@"POST"];   
+     [request setHTTPBody:[args dataUsingEncoding:NSUTF8StringEncoding]];
+     
+    NSURLResponse *response;
+    
+    NSError* error = nil;
+     
+     //Capturing server response
+    NSData* result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];   
+    
+    NSString *resultString = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];    
+      
+    //NSString *resultString = @"[{\"fromUserID\": \"makendall@shaw.ca\", \"date\": \"Feb 24, 12:46 PM\", \"message\": \"sdfsd\", \"readStatus\": \"1\", \"messageid\": 7}, {\"fromUserID\": \"makendall@shaw.ca\", \"date\": \"Feb 24, 12:54 PM\", \"message\": \"empty\", \"readStatus\": \"1\", \"messageid\": 8}, {\"fromUserID\": \"makendall@shaw.ca\", \"date\": \"Feb 26, 1:00 AM\", \"message\": \"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravid\", \"readStatus\": \"1\", \"messageid\": 15}, {\"fromUserID\": \"makendall@shaw.ca\", \"date\": \"Feb 26, 1:00 AM\", \"message\": \"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravid\", \"readStatus\": \"1\", \"messageid\": 16}]";
+    
+    NSLog(@"Output: %@", resultString);
+    
+    //Parse json into dict
+    SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+    NSArray *jsonObjets = [jsonParser objectWithString:resultString error:&error];
+    
+      
+    for (NSDictionary *dict in jsonObjets)
+    {
+        Message *inbox = [[Message alloc] init];
+        [inbox setEmail:[dict objectForKey:@"fromUserID"]];
+        [inbox setMessage:[dict objectForKey:@"message"]];
+        
+        [inboxmessage addObject:inbox];
+    }
+    //NSLog(@"%@", message);
 }
 
 - (void)viewDidUnload
