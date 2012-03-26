@@ -10,15 +10,11 @@
 #import "SBJson.h"
 
 @implementation RegisterViewController
+
 @synthesize emailText;
 @synthesize passwordText;
 @synthesize confirmText;
-@synthesize userTabController;
 
-@synthesize mailBoxViewController;
-//@synthesize quizViewController;
-@synthesize searchViewController;
-@synthesize profileViewController;
 @synthesize scrollView;
 @synthesize activeTextField;
 
@@ -67,46 +63,6 @@
 }
 
 
-- (void)setUpUserTabController
-{
-    if(self.userTabController == nil)
-    {
-        self.userTabController = [[UITabBarController alloc] init];
- 
-        
-        if(mailBoxViewController == nil)
-        {
-            MailBoxViewController *inboxView = [[MailBoxViewController alloc] initWithNibName:@"MailBoxViewController" bundle:nil];
-            
-            self.mailBoxViewController = inboxView;
-        }
-        
-        /*if(quizViewController == nil)
-        {            
-            QuizViewController *quizView = [[QuizViewController alloc] initWithNibName:@"QuizViewController" bundle:nil];
-            
-            self.quizViewController = quizView;                                   
-        }*/
-        
-        if(searchViewController == nil)
-        {
-            SearchViewController *searchView = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
-            
-            self.searchViewController = searchView;
-        }
-        
-        if(profileViewController == nil)
-        {
-            ProfileViewController *profileView = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
-            
-            self.profileViewController = profileView;
-        }
-        
-        self.userTabController.viewControllers = [NSArray arrayWithObjects: self.mailBoxViewController.navigationController, self.searchViewController, self.profileViewController.navigationController, nil];
-        self.userTabController.selectedViewController = [self.userTabController.viewControllers objectAtIndex:0];
-    }
-}
-
 -(IBAction)registerButtonPressed:(id)sender
 {    
     NSString *email = emailText.text;
@@ -133,10 +89,9 @@
                 [alert setTitle:@"Sucess"];
                 [alert setMessage:@"User account created."];
                 [alert show];
-                
-                [self setUpUserTabController];
         
-                appDelegate.window.rootViewController = userTabController;
+                appDelegate.window.rootViewController = appDelegate.userViewTabController;
+                [appDelegate.window makeKeyAndVisible];
             }
             else
             {
@@ -238,11 +193,19 @@
 
 - (void)viewDidLoad
 {
+   
+    [self registerForKeyboardNotifications];
+    
     [passwordText setSecureTextEntry:YES];
     [confirmText setSecureTextEntry:YES];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[appDelegate.loginNavController navigationBar] setHidden:NO];
 }
 
 - (void)viewDidUnload
@@ -251,7 +214,6 @@
     [self setEmailText:nil];
     [self setPasswordText:nil];
     [self setConfirmText:nil];
-    [self setUserTabController:nil];
     //[self setQuizViewController:nil];
     
     // Release any retained subviews of the main view.

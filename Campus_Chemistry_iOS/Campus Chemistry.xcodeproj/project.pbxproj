@@ -63,7 +63,6 @@
 		49A345F11516619700B358F3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A345EF1516619700B358F3 /* RegisterViewController.m */; };
 		49A345F21516619700B358F3 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A345F01516619700B358F3 /* RegisterViewController.xib */; };
 		49A345F6151661A700B358F3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A345F5151661A700B358F3 /* LoginViewController.m */; };
-		49B2B54F151FBD340022A988 /* SearchOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B2B54E151FBD340022A988 /* SearchOptionViewController.xib */; };
 		C21079FC151FE54600AF72CC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21079FB151FE54600AF72CC /* MainWindow.xib */; };
 		C2107A0E151FF8C100AF72CC /* DefaultQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2107A04151FF8C100AF72CC /* DefaultQuizViewController.m */; };
 		C2107A0F151FF8C100AF72CC /* DefaultQuizView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2107A05151FF8C100AF72CC /* DefaultQuizView.xib */; };
@@ -72,6 +71,7 @@
 		C2107A12151FF8C100AF72CC /* FinishQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2107A0A151FF8C100AF72CC /* FinishQuizViewController.m */; };
 		C2107A13151FF8C100AF72CC /* FinishQuizView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2107A0B151FF8C100AF72CC /* FinishQuizView.xib */; };
 		C2107A14151FF8C100AF72CC /* QuizQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = C2107A0D151FF8C100AF72CC /* QuizQuestion.m */; };
+		C2A2164D1520235300D515DD /* SearchOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A2164C1520235300D515DD /* SearchOptionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,8 +177,7 @@
 		49A345F01516619700B358F3 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = "Campus Chemistry/Register/RegisterViewController.xib"; sourceTree = "<group>"; };
 		49A345F4151661A700B358F3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
 		49A345F5151661A700B358F3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
-		49B2B54E151FBD340022A988 /* SearchOptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOptionViewController.xib; sourceTree = "<group>"; };
-		C21079FB151FE54600AF72CC /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
+		C21079FB151FE54600AF72CC /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		C2107A03151FF8C100AF72CC /* DefaultQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultQuizViewController.h; sourceTree = "<group>"; };
 		C2107A04151FF8C100AF72CC /* DefaultQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultQuizViewController.m; sourceTree = "<group>"; };
 		C2107A05151FF8C100AF72CC /* DefaultQuizView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultQuizView.xib; sourceTree = "<group>"; };
@@ -190,6 +189,7 @@
 		C2107A0B151FF8C100AF72CC /* FinishQuizView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinishQuizView.xib; sourceTree = "<group>"; };
 		C2107A0C151FF8C100AF72CC /* QuizQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizQuestion.h; sourceTree = "<group>"; };
 		C2107A0D151FF8C100AF72CC /* QuizQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizQuestion.m; sourceTree = "<group>"; };
+		C2A2164C1520235300D515DD /* SearchOptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOptionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,9 +239,9 @@
 		4918A07D151BF90200C47A4D /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				C2A2164C1520235300D515DD /* SearchOptionViewController.xib */,
 				49344804151E3A2F00D214B1 /* SearchOptionViewController.h */,
 				49344805151E3A2F00D214B1 /* SearchOptionViewController.m */,
-				49B2B54E151FBD340022A988 /* SearchOptionViewController.xib */,
 				49344806151E3A2F00D214B1 /* SearchViewController.h */,
 				49344807151E3A2F00D214B1 /* SearchViewController.m */,
 				49344808151E3A2F00D214B1 /* SearchViewController.xib */,
@@ -252,6 +252,7 @@
 		494405171513D0FB0005BB97 = {
 			isa = PBXGroup;
 			children = (
+				C21079FB151FE54600AF72CC /* MainWindow.xib */,
 				4944052C1513D0FB0005BB97 /* Campus Chemistry */,
 				4944054D1513D0FC0005BB97 /* Campus ChemistryTests */,
 				494405251513D0FB0005BB97 /* Frameworks */,
@@ -282,7 +283,6 @@
 		4944052C1513D0FB0005BB97 /* Campus Chemistry */ = {
 			isa = PBXGroup;
 			children = (
-				C21079FB151FE54600AF72CC /* MainWindow.xib */,
 				494405361513D0FB0005BB97 /* AppDelegate.m */,
 				494405351513D0FB0005BB97 /* AppDelegate.h */,
 				C21079FE151FF88100AF72CC /* Quiz */,
@@ -535,11 +535,11 @@
 				4967D8FD151E4A1600BB674A /* ProfileInterestsViewController.xib in Resources */,
 				4967D8FF151E4A1600BB674A /* ProfilePhotoViewController.xib in Resources */,
 				4967D901151E4A1600BB674A /* ProfileViewController.xib in Resources */,
-				49B2B54F151FBD340022A988 /* SearchOptionViewController.xib in Resources */,
 				C21079FC151FE54600AF72CC /* MainWindow.xib in Resources */,
 				C2107A0F151FF8C100AF72CC /* DefaultQuizView.xib in Resources */,
 				C2107A11151FF8C100AF72CC /* QuizView.xib in Resources */,
 				C2107A13151FF8C100AF72CC /* FinishQuizView.xib in Resources */,
+				C2A2164D1520235300D515DD /* SearchOptionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

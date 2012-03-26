@@ -11,18 +11,15 @@
 #import "Person.h"
 #import "SearchOptionViewController.h"
 
+@class AppDelegate;
+
 @interface SearchViewController : UITableViewController {
     
     IBOutlet UIView *search;
     NSMutableData *responseData;
     NSMutableArray *people;
+    AppDelegate *appDelegate;
 }
-
-// CHANGED BY JMAN
-//@property (nonatomic, strong) UINavigationItem *naviItem;
-//@property (nonatomic, strong) UINavigationController *navigationController;
-
-//@property (nonatomic, retain) SearchOptionViewController *searchOptionViewController;
 
 @end
 

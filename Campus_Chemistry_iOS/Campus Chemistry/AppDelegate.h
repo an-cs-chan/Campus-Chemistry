@@ -19,8 +19,10 @@
     IBOutlet UINavigationController *profileNavController;
     IBOutlet UINavigationController *quizNavController;
     IBOutlet UINavigationController *mailBoxNavController;
+    IBOutlet UINavigationController *loginNavController;
     
     NSMutableArray *quizQuestions;
+    NSString *searchParams;
     NSString *userID;
 }
 
@@ -31,8 +33,10 @@
 @property (strong, nonatomic) IBOutlet UINavigationController *profileNavController;
 @property (strong, nonatomic) IBOutlet UINavigationController *quizNavController;
 @property (strong, nonatomic) IBOutlet UINavigationController *mailBoxNavController;
+@property (strong, nonatomic) IBOutlet UINavigationController *loginNavController;
 
 @property (nonatomic, retain) NSMutableArray *quizQuestions;
+@property (nonatomic, retain) NSString *searchParams;
 
 
 

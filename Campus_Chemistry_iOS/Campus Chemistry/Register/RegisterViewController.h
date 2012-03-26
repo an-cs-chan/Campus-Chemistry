@@ -22,13 +22,6 @@
 @property (nonatomic, retain) IBOutlet UITextField *emailText;
 @property (nonatomic, retain) IBOutlet UITextField *passwordText;
 @property (nonatomic, retain) IBOutlet UITextField *confirmText;
-
-@property (strong, nonatomic) UITabBarController *userTabController;
-
-@property (nonatomic, retain) MailBoxViewController *mailBoxViewController;
-//@property (nonatomic, retain) QuizViewController *quizViewController;
-@property (nonatomic, retain) SearchViewController *searchViewController;
-@property (nonatomic, retain) ProfileViewController *profileViewController;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) UITextField *activeTextField;
 

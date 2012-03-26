@@ -11,63 +11,16 @@
 
 @implementation LoginViewController
 
-@synthesize userTabController;
 @synthesize registerViewController;
-@synthesize mailBoxViewController;
-//@synthesize quizViewController;
-@synthesize searchViewController;
-@synthesize profileViewController;
 @synthesize scrollView;
 @synthesize usernameText;
 @synthesize passwordText;
 @synthesize activeTextField;
 
-- (void)setUpUserTabController
-{
-      if(self.userTabController == nil)
-    {
-        self.userTabController = [[UITabBarController alloc] init];
-        
-        
-        if(mailBoxViewController == nil)
-        {
-            MailBoxViewController *inboxView = [[MailBoxViewController alloc] initWithNibName:@"MailBoxViewController" bundle:nil];
-            
-            self.mailBoxViewController = inboxView;
-        }
-        
-        /*if(quizViewController == nil)
-        {            
-            QuizViewController *quizView = [[QuizViewController alloc] initWithNibName:@"QuizViewController" bundle:nil];
-            
-            self.quizViewController = quizView;                                   
-        }*/
-        
-        if(searchViewController == nil)
-        {
-            SearchViewController *searchView = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
-            
-            self.searchViewController = searchView;
-        }
-        
-        if(profileViewController == nil)
-        {
-            ProfileViewController *profileView = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
-            
-            self.profileViewController = profileView;
-        }
-        
-        self.userTabController.viewControllers = [NSArray arrayWithObjects: self.mailBoxViewController.navigationController, self.searchViewController.navigationController, self.profileViewController.navigationController, nil];
-        self.userTabController.selectedViewController = [self.userTabController.viewControllers objectAtIndex:0];
-    }
-}
-
 - (BOOL)openLoginURL:(NSString *)username:(NSString *)password
 {
     NSString *message = @"";
-    //TODO
-    NSString *args = [NSString stringWithFormat:@"loginEmail=tsweet22@gmail.com&loginPassword=123", username, password];
-    //NSString *args = [NSString stringWithFormat:@"loginEmail=%@&loginPassword=%@", username, password];
+    NSString *args = [NSString stringWithFormat:@"loginEmail=%@&loginPassword=%@", username, password];
     
     NSString *msgLength = [NSString stringWithFormat:@"@d", [args length]];
     
@@ -173,9 +126,6 @@
         {
             [appDelegate assignUser:username];
             
-            //TODO:
-            //[self setUpUserTabController];
-            
             appDelegate.window.rootViewController = appDelegate.userViewTabController;
             [appDelegate.window makeKeyAndVisible];
        }
@@ -190,14 +140,16 @@
 
 - (IBAction)registerButtonPressed:(id)sender 
 {
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
     if(self.registerViewController == nil)
     {
         RegisterViewController *registerView = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
         self.registerViewController = registerView;
+        [self.registerViewController setTitle:@"Register"];
     }
-    //TODO:
-    //[appDelegate.navigationController setNavigationBarHidden:NO];
-    //[appDelegate.navigationController pushViewController:self.registerViewController animated:YES];
+    
+    [delegate.loginNavController pushViewController:self.registerViewController animated:YES];
     
 }
 
@@ -246,7 +198,6 @@
     // e.g. self.myOutlet = nil;
     [self setScrollView:nil];
     [self setActiveTextField:nil];
-    [self setUserTabController:nil];
         
     // unregister for keyboard notifications while not visible.
     [[NSNotificationCenter defaultCenter] removeObserver:self 
@@ -261,6 +212,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [[appDelegate.loginNavController navigationBar] setHidden:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
