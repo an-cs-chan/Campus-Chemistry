@@ -16,11 +16,14 @@
 @synthesize loginViewController = _viewController;
 
 @synthesize navigationController;
+@synthesize searchParams;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //[[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
+    searchParams = @"";
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
