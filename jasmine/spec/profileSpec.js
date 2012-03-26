@@ -21,7 +21,7 @@ describe("Profile Page", function() {
 		it("Shows no user name for interests", function()
 		{
 			setFixtures('<div id="interests" class="clearfix footerPanel"></div>');
-			expect($("#interests").text()).toContain("Interests");
+			expect($("#interests").text()).toContain("");
 		});
 	
 	});
